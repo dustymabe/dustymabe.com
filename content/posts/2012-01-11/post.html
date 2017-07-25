@@ -1,0 +1,94 @@
+
+<! Create a screencast of a terminal session using scriptreplay.  >
+<br><br>
+
+I recently ran into an issue where I needed to demo a project without
+actually being present for the demo. I thought about recording (into
+some video format) a screencast of my terminal window and then having
+my audience play it at the time of the demo. This would have worked
+just fine, but, as I was browsing the internet searching for exactly
+how to record a screencast of this nature, I ran across a
+<a href="http://linux.byexamples.com/archives/279/record-the-terminal-session-and-replay-later/">
+blog post
+</a>
+talking about how to play back terminal sessions using the output of
+the <code> script</code> program. This piqued my interest for several
+reasons:
+
+<ol>
+    <li>
+I have used script many times to log results of tests. 
+    <li>
+This method of recording a shell session is much more efficient than
+recording it into video because it only stores the actual text of the
+output as well as some timing information. 
+</ol>
+
+<br><br>
+
+In order to "record" using script you store the terminal 
+output and the timing information to two different files using a
+command like the following:
+
+<br><br>
+
+<blockquote>
+script -t 2> screencast.timing screencast.log
+</blockquote>
+
+<br><br>
+
+The <code> -t</code> in the command causes script to output timing
+data to standard error. The <code> 2> screencast.timing</code> causes
+standard error to be redirected to the file <b>screencast.timing</b>.
+The <b>screencast.log</b> file will hold everything printed on the
+terminal during the course of the screencast session.  
+
+<br><br>
+
+After running the command, execute a few programs (<code>ls</code>, 
+<code>echo "Hi Planet"</code>, etc...) and then type <code>exit</code>
+to end the session. 
+
+<br><br>
+
+Now the screencast is stored in the two files. You can play back the
+screencast using:
+
+<br><br>
+
+<blockquote>
+scriptreplay screencast.timing screencast.log
+</blockquote>
+
+<br><br>
+
+And Voila. As long as your target audience has a box with
+script/scriptreplay installed then they can view your screencast!
+
+<br><br>
+
+I have included a 
+<a href="http://dustymabe.com/content/2012-01-11/screencast.timing">
+<b>screencast.timing</b>
+</a>
+and a
+<a href="http://dustymabe.com/content/2012-01-11/screencast.log">
+<b>screencast.log</b>
+</a>
+file you can
+download and use with <code>scriptreplay</code> if you would like to demo this out.
+The files combined are under 5K in size for a 1 minute 40 second
+screencast, however I think the actual size of the files depends
+more on how much data was output rather than the length of the
+screencast.
+
+<br><br>
+
+Even better than using my screencast, create one yourself!
+
+<br><br>
+
+Enjoy!
+
+

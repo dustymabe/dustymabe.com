@@ -1,0 +1,388 @@
+
+<! OS Upgrade and Rollback Using BTRFS >
+
+<br>
+
+I recently decided to try out the snapshotting capabilities of the  
+relatively new
+<a href="http://en.wikipedia.org/wiki/Btrfs">
+BTRFS
+</a>
+filesystem. 
+I have been using the snapshot and rollback capability of LVM (using
+<code>lvconvert --merge</code>) for a while now so I figured I would 
+check out BTRFS
+to see how it stacks up. 
+
+<br><br>
+
+To get up to speed on how to use BTRFS I found the 
+<a href="http://www.funtoo.org/wiki/BTRFS_Fun">
+BTRFS Fun
+</a> 
+web page a good reference. I converted an existing Fedora 17 virtual
+machine  
+to use BTRFS for the filesystems
+(I may cover how I did this in a later post). The <i>disk</i> inside
+the virtual machine contains three 
+partitions as is shown below:
+
+<br><br>
+
+<blockquote>
+[root@guest1 ~]# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sr0     11:0    1  4.2G  0 rom
+vda    252:0    0   20G  0 disk
+├─vda1 252:1    0  500M  0 part /boot
+├─vda2 252:2    0    4G  0 part [SWAP]
+└─vda3 252:3    0 15.6G  0 part /
+[root@guest1 ~]#
+</blockquote>
+
+<br>
+
+As you can see from the output, <code>vda1</code> is for <code>/boot</code>
+while <code>vda3</code> is for <code>/</code>; the root partition.
+After converting from ext4, both <code>vda1</code> and
+<code>vda3</code> have BTRFS <b><i>volumes</i></b> (filesystems) on them. 
+Now I am free to snapshot them as I please. 
+
+<br>
+
+<h4><i> Taking The Snapshots </i></h4>
+
+<br>
+
+In BTRFS snapshots are actually 
+<b><i>subvolumes</i></b>  
+(see 
+<a href="http://www.funtoo.org/wiki/BTRFS_Fun#Playing_with_subvolumes_and_snapshots">
+here
+</a> for an explanation of subvolumes). This means when I create a
+snapshot of <code>/boot</code> and <code>/</code> it is actually
+creating a subvolume.
+
+<br><br>
+
+To create the snapshots you use the
+<code>btrfs subvolume snapshot</code>
+command and you must specify where in the filesystem you want the
+snapshot to reside. To help myself not get confused I created a
+<code>/boot/.snapshots</code> directory and a 
+<code>/.snapshots</code> directory which is where I will create the 
+snapshots. The creation of the snapshots is shown below: 
+
+<br><br>
+
+
+<blockquote>
+[root@guest1 ~]# mkdir /boot/.snapshots
+[root@guest1 ~]# mkdir /.snapshots
+[root@guest1 ~]#
+[root@guest1 ~]# btrfs subvolume snapshot /boot /boot/.snapshots/snap1
+Create a snapshot of '/boot' in '/boot/.snapshots/snap1'
+[root@guest1 ~]#
+[root@guest1 ~]# btrfs subvolume snapshot / /.snapshots/snap1
+Create a snapshot of '/' in '/.snapshots/snap1'
+[root@guest1 ~]#
+[root@guest1 ~]#
+[root@guest1 ~]# btrfs subvolume list /boot
+ID 256 top level 5 path .snapshots/snap1
+[root@guest1 ~]#
+[root@guest1 ~]# btrfs subvolume list /
+ID 270 top level 5 path .snapshots/snap1
+[root@guest1 ~]#
+</blockquote>
+
+<br>
+
+If you notice in the output of the <code>btrfs subvolume list</code>
+commands above, the subvolumes (snapshots) that were created have a
+unique ID associated with them. For each BTRFS filesystem there is
+also an implicit "<i><b>root subvolume</b></i>" with an ID of
+<code>0</code>. 
+
+<br><br>
+
+These IDs can be used to set which subvolume is the
+one that is used when the BTRFS filesystem is mounted. 
+In order to be able to easily identify if I had mounted a snapshot or
+the root subvolume, I placed a single file <code>snap1_sub</code> into the 
+root directory of each snapshot.
+
+<br><br>
+
+<blockquote>
+[root@guest1 ~]# touch /boot/.snapshots/snap1/snap1_sub
+[root@guest1 ~]#
+[root@guest1 ~]# touch /.snapshots/snap1/snap1_sub
+</blockquote>
+
+<h4><i> Upgrade From F17 to F18 Beta </i></h4>
+
+<br>
+
+At this point the snapshots were all set up and I could go ahead with
+upgrading from Fedora 17 to the Fedora 18 beta. I followed the steps
+from the 
+<a href="https://fedoraproject.org/wiki/Upgrading_Fedora_using_yum">
+Fedora Web Site
+</a>
+on how to do this. After rebooting I indeed had upgraded to Fedora 18: 
+
+
+<br>
+
+
+<blockquote>
+[root@guest1 ~]# cat /etc/redhat-release
+Fedora release 18 (Spherical Cow)
+[root@guest1 ~]#
+</blockquote>
+
+<br>
+
+However, as usual the upgrade didn't yield a perfectly working
+system. As far as the command line was concerned everything
+seemed to be fine but my desktop session was a no go and the logs 
+indicated there was something awry with the X configuration.
+
+<br><br>
+
+No need to fear! The snapshots are there! 
+
+<h4><i> Reverting The Snapshots </i></h4>
+
+<br>
+
+What we want to do now is revert the changes and go back to Fedora 17.
+How do we do that?
+
+<br><br>
+
+One way is to make the snapshot subvolume be the default subvolume
+that is used when the filesystem is mounted. I set both
+<code>/boot</code> and <code>/</code> to default to their snapshots by
+using the <code>btrfs subvolume set-default</code> command:  
+
+<br><br>
+
+<blockquote>
+[root@guest1 ~]# btrfs subvolume list /boot/
+ID 256 gen 29 top level 5 path .snapshots/snap1
+[root@guest1 ~]#
+[root@guest1 ~]# btrfs subvolume set-default 256 /boot/
+[root@guest1 ~]#
+[root@guest1 ~]#
+[root@guest1 ~]#
+[root@guest1 ~]# btrfs subvolume list /
+ID 270 gen 139 top level 5 path .snapshots/snap1
+[root@guest1 ~]#
+[root@guest1 ~]# btrfs subvolume set-default 270 /
+[root@guest1 ~]#
+[root@guest1 ~]# reboot
+</blockquote>
+
+<br>
+
+After a quick reboot I was back up and running. I wanted to verify I
+was in the snapshot so I checked to see if the files I had created
+were in the root of the filesystems:
+
+<br><br>
+
+<blockquote>
+[root@guest1 ~]# ls -l /boot/snap1_sub
+-rw-r--r-- 1 root root 0 Jan  4 23:20 /boot/snap1_sub
+[root@guest1 ~]#
+[root@guest1 ~]# ls -l /snap1_sub
+-rw-r--r-- 1 root root 0 Jan  4 23:20 /snap1_sub
+[root@guest1 ~]#
+[root@guest1 ~]# cat /etc/redhat-release
+Fedora release 17 (Beefy Miracle)
+</blockquote>
+
+<br>
+
+The next step was to restore the root subvolume (ID=0) of each filesystem. I
+started with <code>/boot</code> (from <code>vda1</code>). To do this
+you mount the root subvolume and then use <code>rsync</code> to restore any files
+that were changed. 
+
+<br><br>
+
+<b>NOTE:</b> In the <code>rsync</code> command I was careful to exclude the file
+that I created to let me know I was in the snapshot as well as the 
+directory that is used for the snapshots. 
+
+<br><br>
+
+<blockquote>
+[root@guest1 ~]# mount -o subvolid=0 /dev/vda1 /mnt
+[root@guest1 ~]#
+[root@guest1 ~]# time rsync --delete -avHAX --exclude=snap1_sub --exclude=/.snapshots /boot/ /mnt/
+sending incremental file list
+./
+deleting vmlinuz-3.6.10-4.fc18.x86_64
+deleting initrd-plymouth.img
+deleting initramfs-3.6.10-4.fc18.x86_64.img
+deleting config-3.6.10-4.fc18.x86_64
+deleting System.map-3.6.10-4.fc18.x86_64
+deleting .vmlinuz-3.6.10-4.fc18.x86_64.hmac
+grub/
+grub/splash.xpm.gz
+grub2/
+grub2/grub.cfg
+grub2/themes/
+grub2/themes/system/
+deleting grub2/themes/system/unicode.pf2
+deleting grub2/themes/system/fireworks.png
+deleting grub2/themes/system/DejaVuSans-Bold-14.pf2
+deleting grub2/themes/system/DejaVuSans-12.pf2
+deleting grub2/themes/system/DejaVuSans-10.pf2
+grub2/themes/system/background.png
+grub2/themes/system/dejavu.pf2
+grub2/themes/system/theme.txt
+
+sent 4216333 bytes  received 234 bytes  8433134.00 bytes/sec
+total size is 36454169  speedup is 8.65
+
+real    0m0.135s
+user    0m0.023s
+sys     0m0.018s
+[root@guest1 ~]#
+</blockquote>
+
+<br>
+
+From the output we can see that upgrading caused about 34M (36454169
+bytes) of changes to the filesystem and it took less than a second to
+revert the changes. 
+
+<br><br>
+
+Now that the <code>/boot</code> filesystem has been restored we need
+to set the default subvolume to mount again. We need to reset it back
+to automatically mount the root subvolume. 
+
+<br><br>
+
+<b>NOTE:</b> When setting the default subvolume you have to be careful 
+and make sure to specify the location where the root subvolume is
+mounted (in this case <code>/mnt</code>). There is a small bit of text
+that attempts to explain why this is necessary on the
+<a href="http://www.funtoo.org/wiki/BTRFS_Fun#Way_.231:_Fiddle_with_the_default_subvolume_number">
+BTRFS Fun
+</a>
+web page. 
+
+<br>
+
+
+<blockquote>
+[root@guest1 ~]# btrfs subvolume set-default 0 /mnt
+[root@guest1 ~]# umount /mnt
+</blockquote>
+
+<br>
+
+Now on to the <code>/</code> filesystem. For this one I needed to tweak the
+<code>rsync</code> command to make sure that it didn't attempt to sync anything 
+outside of the 
+filesystem; we don't care to sync fake filesystems like
+<code>/dev</code> 
+<code>/proc</code> 
+<code>/sys</code> 
+etc.. Also we wanted to exclude <code>/mnt</code> since that is where
+the root subvolume is mounted. 
+
+<br><br>
+
+<blockquote>
+[root@guest1 ~]# mount -o subvolid=0 /dev/vda3 /mnt
+[root@guest1 ~]#
+[root@guest1 ~]# time rsync --one-file-system --delete -avHAX --exclude=/snap1_sub --exclude=/.snapshots --exclude=/mnt / /mnt 
+sending incremental file list
+...
+...
+sent 2822450331 bytes  received 3425590 bytes  5429156.43 bytes/sec
+total size is 3109809657  speedup is 1.10
+
+real    8m40.348s
+user    0m19.899s
+sys     0m36.568s
+[root@guest1 ~]#
+[root@guest1 ~]#
+[root@guest1 ~]# btrfs subvolume set-default 0 /mnt
+[root@guest1 ~]# umount /mnt
+[root@guest1 ~]#
+[root@guest1 ~]# reboot
+</blockquote>
+
+<br>
+
+And we are done.. It took less than 10 minutes to revert ~3G of
+changes that were made. After the reboot my Fedora 17 instance was
+fully restored and we were in the root subvolumes as can be seen below
+from the absence of the <code>snap1_sub</code> files that I had
+created. 
+
+<br><br>
+
+<blockquote>
+[root@guest1 ~]# cat /etc/redhat-release
+Fedora release 17 (Beefy Miracle)
+[root@guest1 ~]#
+[root@guest1 ~]# ls -l /boot/snap1_sub
+ls: cannot access /boot/snap1_sub: No such file or directory
+[root@guest1 ~]#
+[root@guest1 ~]# ls -l /snap1_sub
+ls: cannot access /snap1_sub: No such file or directory
+[root@guest1 ~]#
+[root@guest1 ~]#
+</blockquote>
+
+<br>
+
+The final step was to delete the snapshots as they are no longer
+needed. 
+
+<br><br>
+
+<blockquote>
+[root@guest1 ~]# btrfs subvolume delete /boot/.snapshots/snap1
+Delete subvolume '/boot/.snapshots/snap1'
+[root@guest1 ~]#
+[root@guest1 ~]# btrfs subvolume delete /.snapshots/snap1
+Delete subvolume '/.snapshots/snap1'
+</blockquote>
+
+<h4><i> Conclusions </i></h4>
+
+Overall I believe the snapshotting feature of BTRFS is quite useful.
+I like the fact that you don't have to carve out new storage for the
+snapshots like in LVM, but at the same time I don't like how it
+doesn't seem to be very easy to detect how much space the snapshots
+are using up. I also don't like the fact that reverting the snapshots
+are a bit <i>manual</i> and require an external tool like
+<code>rsync</code>. In LVM it is handled all in one command: 
+<code>lvconvert --merge</code>. That being said, just from experience
+it does seem that reverting the snapshots seems to be a bit faster
+with BTRFS than with LVM snapshots. I would have to run another test
+to be sure of this.  
+
+<br>
+Happy New Year Everyone! 
+
+<br><br>
+Dusty
+
+<br><br>
+
+References: 
+<br>
+<br>
+http://www.funtoo.org/wiki/BTRFS_Fun
+<br>
+https://c59951.ssl.cf2.rackcdn.com/4376-bacik_0.pdf

@@ -1,0 +1,76 @@
+
+<! Share a Folder Between KVM Host and Guest >
+
+<br>
+
+I often find myself in situations where I need to share information
+or files between a KVM host and KVM guest. With libvirt version 0.8.5
+and newer there is support for mounting a
+shared folder between a host and guest. I decided to try this out on
+my Fedora 17 host, with a Fedora 17 guest. 
+
+<br><br>
+
+Using the libvirt
+<a href="http://libvirt.org/formatdomain.html#elementsFilesystems">
+<code>&ltfilesystem&gt</code>
+</a>
+xml tag I created the following xml that defines a <i>filesystem</i> device. 
+
+<br><br>
+
+<blockquote>
+&ltfilesystem type='mount' accessmode='mapped'&gt
+    &ltsource dir='/tmp/shared'/&gt
+    &lttarget dir='tag'/&gt
+&lt/filesystem&gt
+</blockquote>
+
+<br>
+
+Note that target dir is not necessarily a mount point, but rather a
+string that is exported to the guest that we will use when mounting in
+the guest. 
+
+<br><br>
+
+In order to get this xml into the guest I had to use <code>virsh edit
+F17</code> where F17 is the domain name of my guest. This opens the
+guest xml in the VI text editor. I then inserted the xml at the end of
+the <code>&ltdevices&gt</code>
+section of the guest xml, closed VI, and started the guest. 
+
+<br><br>
+
+Once the guest had booted I used the following command to mount the
+shared folder in the guest. 
+
+<br><br>
+
+<blockquote>
+[root@F17 ~]# mount -t 9p -o trans=virtio,version=9p2000.L tag /mnt/shared/
+</blockquote>
+
+<br>
+
+And voila! I can now access the /tmp/ directory of the host inside of
+the guest. 
+
+<br><br>
+
+Note: I had some SELinux denials as a result of doing this. If I was
+using this as a long term solution I would clean them up, but for now
+I just disabled SELinux temporarily by using <code>sudo setenforce 0</code>
+in the host. 
+
+<br><br>
+Resources:<br>
+<a href="http://www.linux-kvm.org/page/9p_virtio">
+http://www.linux-kvm.org/page/9p_virtio
+</a><br>
+<a href="http://wiki.qemu.org/Documentation/9psetup">
+http://wiki.qemu.org/Documentation/9psetup
+</a><br>
+<a href="http://libvirt.org/formatdomain.html#elementsFilesystems">
+http://libvirt.org/formatdomain.html#elementsFilesystems
+</a><br>

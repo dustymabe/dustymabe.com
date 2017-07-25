@@ -1,0 +1,25 @@
+set args 4 10
+
+break squared
+command
+silent
+backtrace 1
+continue 
+end
+
+break modulo
+command
+silent
+backtrace 1
+continue 
+end
+
+break plus 
+command
+silent
+backtrace 1
+continue 
+end
+
+run
+

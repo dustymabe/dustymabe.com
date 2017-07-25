@@ -1,0 +1,43 @@
+<! Send Magic SysRq to a KVM guest using virsh >
+
+<br>
+
+When a linux computer is "hung" or "frozen" you can use a 
+<a href="http://en.wikipedia.org/wiki/Magic_SysRq_key">Magic SysRq</a>
+key sequence to send various low level requests to the kernel in order
+to try to recover from or investigate the problem. This is extremely
+useful when troubleshooting server lockups, but until recently
+<a href="http://en.wikipedia.org/wiki/Libvirt">libvirt</a>
+did not expose this functionality for 
+<a
+href="http://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine">KVM</a>
+guests.
+
+<br><br>
+
+In v0.9.3 (and newer) of libvirt you can send a Magic SysRq sequence to a guest by
+utilizing the <code>send-key</code> subcommand provided by
+<code>virsh</code>. In other words, sending the 'h' Magic SysRq
+command is as simple as:
+
+
+<br><br>
+
+<blockquote>
+dustymabe@media: ~>virsh send-key guest1 KEY_LEFTALT KEY_SYSRQ KEY_H
+</blockquote>
+
+<br>
+
+After executing the command a help message will be printed to the
+console of the guest known as 'guest1'. Any other character
+can be sent as well by substituting KEY_H with KEY_X, where X is the
+character.
+
+<br><br>
+
+Happy Investigating!
+
+<br><br>
+
+Dusty

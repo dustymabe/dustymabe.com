@@ -1,0 +1,151 @@
+
+
+<! Automatically Extend LVM Snapshots >
+
+<br>
+
+<a href="http://tldp.org/HOWTO/LVM-HOWTO/snapshotintro.html">Snapshot logical volumes</a>
+are a great way to save the state of an LV (a special block device) at
+a particular point in time. Essentially this provides the ability to
+snapshot block devices and then revert them back at a later
+date. In other words you can rest easy when that big upgrade 
+comes along :)
+
+<br><br>
+
+This all seems fine and dandy until your snapshot runs out of space!
+Yep, the size of the snapshot does matter. Snapshot LVs are
+Copy-On-Write (COW) devices. <b>Old</b> blocks from the origin LV get
+<i>"Copied"</i> to
+the snapshot LV only when <b>new</b> blocks are <i>"Written"</i> to in the origin LV.
+Additionally, <b>only</b> the blocks that get written to in the origin LV get copied over to the
+snapshot LV. 
+
+<br><br>
+
+Thus, you can make a snapshot LV much smaller than the origin LV and as
+long as the snapshot never fills up then you are fine. If it
+does fill up, then the snapshot is invalid and you can no longer use
+it.
+
+<br><br>
+
+The problem with this is the fact that it becomes quite tricky to
+determine how much space you actually need in your snapshot. If you
+notice that your snapshot is becoming full then you can use
+<code>lvextend</code> to increase the size of the snapshot, but this
+is not very desirable as it's not automated and requires user
+intervention.
+
+<br><br>
+
+The good news is that recently there was an addition to
+<code>lvm</code> that allows for autoextension of snapshot LVs! The
+bugzilla report <a href="https://bugzilla.redhat.com/show_bug.cgi?id=427298"># 427298</a>
+tracked the request and it has now been released in lvm2-2.02.84-1.
+The lvm-devel <a
+href="http://www.redhat.com/archives/lvm-devel/2010-October/msg00010.html">email</a>
+from when the patch came through contains some good details on how to
+use the new functionality. 
+
+<br><br>
+
+To summarize, you edit <code>/etc/lvm/lvm.conf</code> and set the
+<code>snapshot_autoextend_threshold</code> to something other than
+100 (100 is the default value and also disables automatic extension).
+In addition, you also edit the <code>snapshot_autoextend_percent</code>.
+This value will be the amount you want to extend the snapshot LV. 
+
+<br><br>
+
+To test this out I edited my <code>/etc/lvm/lvm.conf</code> file to
+have the following values:
+
+<br><br>
+
+<blockquote>
+    snapshot_autoextend_threshold = 80
+    snapshot_autoextend_percent = 20
+</blockquote>
+
+<br>
+
+These values indicate that once the snapshot is 80% full then extend
+it's size by 20%. To get the <code>lvm</code> monitoring to pick up the changes the
+<code>lvm2-monitor</code> service needs to be restarted (this varies
+by platform).
+
+<br><br>
+
+Now, lets test it out! We will create an LV, make a filesystem, mount
+it, and then snapshot the LV. 
+
+<br><br>
+
+<blockquote>
+[root@F17 ~]#  lvcreate --size=1G --name=lv1 --addtag @lv1 vg1
+  Logical volume "lv1" created
+[root@F17 ~]#
+[root@F17 ~]# mkfs.ext4 /dev/vg1/lv1 > /dev/null
+mke2fs 1.42 (29-Nov-2011)
+[root@F17 ~]#
+[root@F17 ~]# mount /dev/vg1/lv1 /mnt/
+[root@F17 ~]#
+[root@F17 ~]# lvcreate --snapshot --size=500M --name=snap1 --addtag @lv1 /dev/vg1/lv1
+  Logical volume "snap1" created
+[root@F17 ~]#
+</blockquote>
+
+<br>
+
+Verify the snapshot was created by using <code>lvs</code>.
+
+<br><br>
+
+<blockquote>
+
+[root@F17 ~]# lvs -o lv_name,vg_name,lv_size,origin,snap_percent @lv1
+  LV    VG   LSize   Origin Snap%
+  lv1   vg1    1.00g
+  snap1 vg1  500.00m lv1      0.00
+</blockquote>
+
+<br>
+
+Finally, I can test the snapshot autoextension. Since my snapshot is
+500M in size let's create a file that is ~420M in the origin LV. This
+will be just over 80% of the snapsphot size so it should get resized.  
+
+<br><br>
+
+<blockquote>
+[root@F17 ~]# dd if=/dev/zero of=/mnt/file bs=1M count=420
+420+0 records in
+420+0 records out
+440401920 bytes (440 MB) copied, 134.326 s, 3.3 MB/s
+[root@F17 ~]#
+[root@F17 ~]# ls -lh /mnt/file
+-rw-r--r--. 1 root root 420M Mar  4 11:36 /mnt/file
+</blockquote>
+
+<br>
+
+A quick run of <code>lvs</code> reveals that the underlying
+monitoring code did it's job and extended the LV by 20% to 600M!! 
+
+<br><br>
+
+<blockquote>
+
+[root@F17 ~]# lvs -o lv_name,vg_name,lv_size,origin,snap_percent @lv1
+  LV    VG   LSize   Origin Snap%
+  lv1   vg1    1.00g
+  snap1 vg1  600.00m lv1     70.29
+[root@F17 ~]#
+</blockquote>
+<br><br>
+
+
+Dusty Mabe
+
+

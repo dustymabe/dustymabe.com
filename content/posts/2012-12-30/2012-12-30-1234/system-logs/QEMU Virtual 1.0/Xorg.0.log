@@ -1,0 +1,410 @@
+
+X.Org X Server 1.12.0
+Release Date: 2012-03-04
+X Protocol Version 11, Revision 0
+Build Operating System: x86-01 2.6.32-220.4.1.el6.x86_64 
+Current Operating System: Linux guest1 3.3.4-5.fc17.x86_64 #1 SMP Mon May 7 17:29:34 UTC 2012 x86_64
+Kernel command line: BOOT_IMAGE=/vmlinuz-3.3.4-5.fc17.x86_64 root=UUID=5518eaea-67eb-4153-8765-3b84a201ffd2 ro rd.md=0 rd.lvm=0 rd.dm=0 SYSFONT=True KEYTABLE=us rd.luks=0 LANG=en_US.UTF-8 rhgb quiet
+Build Date: 14 March 2012  03:02:21PM
+Build ID: xorg-x11-server 1.12.0-2.fc17 
+Current version of pixman: 0.24.4
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(==) Log file: "/var/log/Xorg.0.log", Time: Sat Dec 29 18:30:43 2012
+(==) Using config directory: "/etc/X11/xorg.conf.d"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+(==) No Layout section.  Using the first Screen section.
+(==) No screen section available. Using defaults.
+(**) |-->Screen "Default Screen Section" (0)
+(**) |   |-->Monitor "<default monitor>"
+(==) No monitor specified for screen "Default Screen Section".
+	Using a default monitor configuration.
+(==) Automatically adding devices
+(==) Automatically enabling devices
+(==) FontPath set to:
+	catalogue:/etc/X11/fontpath.d,
+	built-ins
+(==) ModulePath set to "/usr/lib64/xorg/modules"
+(II) The server relies on udev to provide the list of input devices.
+	If no devices become available, reconfigure udev or disable AutoAddDevices.
+(II) Loader magic: 0x7c5ac0
+(II) Module ABI versions:
+	X.Org ANSI C Emulation: 0.4
+	X.Org Video Driver: 12.0
+	X.Org XInput driver : 16.0
+	X.Org Server Extension : 6.0
+(--) PCI:*(0:0:2:0) 1013:00b8:1af4:1100 rev 0, Mem @ 0xfc000000/33554432, 0xfebf0000/4096, BIOS @ 0x????????/65536
+(II) LoadModule: "extmod"
+(II) Loading /usr/lib64/xorg/modules/extensions/libextmod.so
+(II) Module extmod: vendor="X.Org Foundation"
+	compiled for 1.12.0, module version = 1.0.0
+	Module class: X.Org Server Extension
+	ABI class: X.Org Server Extension, version 6.0
+(II) Loading extension SELinux
+(II) Loading extension MIT-SCREEN-SAVER
+(II) Loading extension XFree86-VidModeExtension
+(II) Loading extension XFree86-DGA
+(II) Loading extension DPMS
+(II) Loading extension XVideo
+(II) Loading extension XVideo-MotionCompensation
+(II) Loading extension X-Resource
+(II) LoadModule: "dbe"
+(II) Loading /usr/lib64/xorg/modules/extensions/libdbe.so
+(II) Module dbe: vendor="X.Org Foundation"
+	compiled for 1.12.0, module version = 1.0.0
+	Module class: X.Org Server Extension
+	ABI class: X.Org Server Extension, version 6.0
+(II) Loading extension DOUBLE-BUFFER
+(II) LoadModule: "glx"
+(II) Loading /usr/lib64/xorg/modules/extensions/libglx.so
+(II) Module glx: vendor="X.Org Foundation"
+	compiled for 1.12.0, module version = 1.0.0
+	ABI class: X.Org Server Extension, version 6.0
+(==) AIGLX enabled
+(II) Loading extension GLX
+(II) LoadModule: "record"
+(II) Loading /usr/lib64/xorg/modules/extensions/librecord.so
+(II) Module record: vendor="X.Org Foundation"
+	compiled for 1.12.0, module version = 1.13.0
+	Module class: X.Org Server Extension
+	ABI class: X.Org Server Extension, version 6.0
+(II) Loading extension RECORD
+(II) LoadModule: "dri"
+(II) Loading /usr/lib64/xorg/modules/extensions/libdri.so
+(II) Module dri: vendor="X.Org Foundation"
+	compiled for 1.12.0, module version = 1.0.0
+	ABI class: X.Org Server Extension, version 6.0
+(II) Loading extension XFree86-DRI
+(II) LoadModule: "dri2"
+(II) Loading /usr/lib64/xorg/modules/extensions/libdri2.so
+(II) Module dri2: vendor="X.Org Foundation"
+	compiled for 1.12.0, module version = 1.2.0
+	ABI class: X.Org Server Extension, version 6.0
+(II) Loading extension DRI2
+(==) Matched cirrus as autoconfigured driver 0
+(==) Matched vesa as autoconfigured driver 1
+(==) Matched fbdev as autoconfigured driver 2
+(==) Assigned the driver to the xf86ConfigLayout
+(II) LoadModule: "cirrus"
+(II) Loading /usr/lib64/xorg/modules/drivers/cirrus_drv.so
+(II) Module cirrus: vendor="X.Org Foundation"
+	compiled for 1.12.0, module version = 1.3.2
+	Module class: X.Org Video Driver
+	ABI class: X.Org Video Driver, version 12.0
+(II) LoadModule: "vesa"
+(II) Loading /usr/lib64/xorg/modules/drivers/vesa_drv.so
+(II) Module vesa: vendor="X.Org Foundation"
+	compiled for 1.11.99.901, module version = 2.3.0
+	Module class: X.Org Video Driver
+	ABI class: X.Org Video Driver, version 12.0
+(II) LoadModule: "fbdev"
+(II) Loading /usr/lib64/xorg/modules/drivers/fbdev_drv.so
+(II) Module fbdev: vendor="X.Org Foundation"
+	compiled for 1.11.99.901, module version = 0.4.2
+	ABI class: X.Org Video Driver, version 12.0
+(II) CIRRUS: driver for Cirrus chipsets: CLGD5430, CLGD5434-4, CLGD5434-8,
+	CLGD5436, CLGD5446, CLGD5480, CL-GD5462, CL-GD5464, CL-GD5464BD,
+	CL-GD5465, CL-GD7548, CL-GD7555, CL-GD7556
+(II) VESA: driver for VESA chipsets: vesa
+(II) FBDEV: driver for framebuffer: fbdev
+(++) using VT number 1
+
+(WW) Falling back to old probe method for cirrus
+(--) Assigning device section with no busID to primary device
+(--) Chipset CLGD5446 found
+(II) Loading sub module "cirrus_alpine"
+(II) LoadModule: "cirrus_alpine"
+(II) Loading /usr/lib64/xorg/modules/drivers/cirrus_alpine.so
+(II) Module cirrus_alpine: vendor="X.Org Foundation"
+	compiled for 1.12.0, module version = 1.0.0
+	ABI class: X.Org Video Driver, version 12.0
+(WW) Falling back to old probe method for vesa
+(WW) Falling back to old probe method for fbdev
+(II) Loading sub module "fbdevhw"
+(II) LoadModule: "fbdevhw"
+(II) Loading /usr/lib64/xorg/modules/libfbdevhw.so
+(II) Module fbdevhw: vendor="X.Org Foundation"
+	compiled for 1.12.0, module version = 0.0.2
+	ABI class: X.Org Video Driver, version 12.0
+(II) Loading sub module "vgahw"
+(II) LoadModule: "vgahw"
+(II) Loading /usr/lib64/xorg/modules/libvgahw.so
+(II) Module vgahw: vendor="X.Org Foundation"
+	compiled for 1.12.0, module version = 0.1.0
+	ABI class: X.Org Video Driver, version 12.0
+(II) CIRRUS(0): vgaHWGetIOBase: hwp->IOBase is 0x03d0
+(II) CIRRUS(0): Creating default Display subsection in Screen section
+	"Default Screen Section" for depth/fbbpp 16/16
+(--) CIRRUS(0): Depth 16, (==) framebuffer bpp 16
+(==) CIRRUS(0): RGB weight 565
+(==) CIRRUS(0): Default visual is TrueColor
+(==) CIRRUS(0): Using SW cursor
+(--) CIRRUS(0): Linear framebuffer at 0xFC000000
+(--) CIRRUS(0): Using MMIO
+(--) CIRRUS(0): MMIO registers at 0xFEBF0000
+(II) Loading sub module "i2c"
+(II) LoadModule: "i2c"
+(II) Module "i2c" already built-in
+(II) Loading sub module "ddc"
+(II) LoadModule: "ddc"
+(II) Module "ddc" already built-in
+(II) CIRRUS(0): I2C bus "I2C bus 1" initialized.
+(II) CIRRUS(0): I2C bus "I2C bus 2" initialized.
+(II) CIRRUS(0): I2C device "I2C bus 1:ddc2" registered at address 0xA0.
+(==) CIRRUS(0): Using gamma correction (1.0, 1.0, 1.0)
+(--) CIRRUS(0): Memory Config reg 1 is 0x98
+(--) CIRRUS(0): Memory Config reg 2 is 0x20
+(--) CIRRUS(0): VideoRAM: 4096 kByte
+(==) CIRRUS(0): Min pixel clock is 12 MHz
+(--) CIRRUS(0): Max pixel clock is 85 MHz
+(II) CIRRUS(0): <default monitor>: Using default hsync range of 31.50-48.00 kHz
+(II) CIRRUS(0): <default monitor>: Using default vrefresh range of 50.00-70.00 Hz
+(II) CIRRUS(0): <default monitor>: Using default maximum pixel clock of 65.00 MHz
+(WW) CIRRUS(0): Unable to estimate virtual size
+(II) CIRRUS(0): Clock range:  12.00 to  85.50 MHz
+(II) CIRRUS(0): Not using default mode "640x350" (vrefresh out of range)
+(II) CIRRUS(0): Not using default mode "320x175" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "640x400" (vrefresh out of range)
+(II) CIRRUS(0): Not using default mode "320x200" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "720x400" (vrefresh out of range)
+(II) CIRRUS(0): Not using default mode "360x200" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "320x240" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "640x480" (vrefresh out of range)
+(II) CIRRUS(0): Not using default mode "320x240" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "640x480" (vrefresh out of range)
+(II) CIRRUS(0): Not using default mode "320x240" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "640x480" (vrefresh out of range)
+(II) CIRRUS(0): Not using default mode "320x240" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "400x300" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "400x300" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "800x600" (vrefresh out of range)
+(II) CIRRUS(0): Not using default mode "400x300" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "800x600" (vrefresh out of range)
+(II) CIRRUS(0): Not using default mode "400x300" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "800x600" (hsync out of range)
+(II) CIRRUS(0): Not using default mode "400x300" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1024x768i" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "512x384i" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "512x384" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1024x768" (hsync out of range)
+(II) CIRRUS(0): Not using default mode "512x384" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1024x768" (hsync out of range)
+(II) CIRRUS(0): Not using default mode "512x384" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1024x768" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "512x384" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1152x864" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "576x432" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1280x960" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "640x480" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1280x960" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "640x480" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1280x1024" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "640x512" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1280x1024" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "640x512" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1280x1024" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "640x512" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1600x1200" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "800x600" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1600x1200" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "800x600" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1600x1200" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "800x600" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1600x1200" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "800x600" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1600x1200" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "800x600" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1792x1344" (insufficient memory for mode)
+(II) CIRRUS(0): Not using default mode "896x672" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1792x1344" (insufficient memory for mode)
+(II) CIRRUS(0): Not using default mode "896x672" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1856x1392" (insufficient memory for mode)
+(II) CIRRUS(0): Not using default mode "928x696" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1856x1392" (insufficient memory for mode)
+(II) CIRRUS(0): Not using default mode "928x696" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1920x1440" (insufficient memory for mode)
+(II) CIRRUS(0): Not using default mode "960x720" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1920x1440" (insufficient memory for mode)
+(II) CIRRUS(0): Not using default mode "960x720" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "832x624" (hsync out of range)
+(II) CIRRUS(0): Not using default mode "416x312" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1400x1050" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "700x525" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1400x1050" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "700x525" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "1920x1440" (insufficient memory for mode)
+(II) CIRRUS(0): Not using default mode "960x720" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "2048x1536" (insufficient memory for mode)
+(II) CIRRUS(0): Not using default mode "1024x768" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "2048x1536" (insufficient memory for mode)
+(II) CIRRUS(0): Not using default mode "1024x768" (bad mode clock/interlace/doublescan)
+(II) CIRRUS(0): Not using default mode "2048x1536" (insufficient memory for mode)
+(II) CIRRUS(0): Not using default mode "1024x768" (bad mode clock/interlace/doublescan)
+(--) CIRRUS(0): Virtual size is 1024x768 (pitch 1024)
+(**) CIRRUS(0): *Default mode "1024x768": 65.0 MHz, 48.4 kHz, 60.0 Hz
+(II) CIRRUS(0): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz zd)
+(**) CIRRUS(0): *Default mode "800x600": 40.0 MHz, 37.9 kHz, 60.3 Hz
+(II) CIRRUS(0): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz zd)
+(**) CIRRUS(0): *Default mode "800x600": 36.0 MHz, 35.2 kHz, 56.2 Hz
+(II) CIRRUS(0): Modeline "800x600"x56.2   36.00  800 824 896 1024  600 601 603 625 +hsync +vsync (35.2 kHz zd)
+(**) CIRRUS(0): *Default mode "640x480": 25.2 MHz, 31.5 kHz, 59.9 Hz
+(II) CIRRUS(0): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz zd)
+(==) CIRRUS(0): DPI set to (96, 96)
+(II) Loading sub module "fb"
+(II) LoadModule: "fb"
+(II) Loading /usr/lib64/xorg/modules/libfb.so
+(II) Module fb: vendor="X.Org Foundation"
+	compiled for 1.12.0, module version = 1.0.0
+	ABI class: X.Org ANSI C Emulation, version 0.4
+(II) UnloadModule: "vesa"
+(II) Unloading vesa
+(II) UnloadModule: "fbdev"
+(II) Unloading fbdev
+(II) UnloadSubModule: "fbdevhw"
+(II) Unloading fbdevhw
+(II) CIRRUS(0): vgaHWGetIOBase: hwp->IOBase is 0x03d0
+(==) CIRRUS(0): Silken mouse enabled
+(==) CIRRUS(0): DPMS enabled
+(==) RandR enabled
+(II) Initializing built-in extension Generic Event Extension
+(II) Initializing built-in extension SHAPE
+(II) Initializing built-in extension MIT-SHM
+(II) Initializing built-in extension XInputExtension
+(II) Initializing built-in extension XTEST
+(II) Initializing built-in extension BIG-REQUESTS
+(II) Initializing built-in extension SYNC
+(II) Initializing built-in extension XKEYBOARD
+(II) Initializing built-in extension XC-MISC
+(II) Initializing built-in extension XINERAMA
+(II) Initializing built-in extension XFIXES
+(II) Initializing built-in extension RENDER
+(II) Initializing built-in extension RANDR
+(II) Initializing built-in extension COMPOSITE
+(II) Initializing built-in extension DAMAGE
+(II) SELinux: Disabled on system
+(II) AIGLX: Screen 0 is not DRI2 capable
+(II) AIGLX: Screen 0 is not DRI capable
+(II) AIGLX: Loaded and initialized swrast
+(II) GLX: Initialized DRISWRAST GL provider for screen 0
+(II) XKB: Reusing cached keymap
+(II) config/udev: Adding input device Power Button (/dev/input/event0)
+(**) Power Button: Applying InputClass "evdev keyboard catchall"
+(**) Power Button: Applying InputClass "system-setup-keyboard"
+(II) LoadModule: "evdev"
+(II) Loading /usr/lib64/xorg/modules/input/evdev_drv.so
+(II) Module evdev: vendor="X.Org Foundation"
+	compiled for 1.12.0, module version = 2.7.0
+	Module class: X.Org XInput Driver
+	ABI class: X.Org XInput driver, version 16.0
+(II) Using input driver 'evdev' for 'Power Button'
+	Option "XkbRules" "evdev"
+	Option "XkbModel" "pc105+inet"
+	Option "XkbLayout" "us"
+	Option "_source" "server/udev"
+	Option "name" "Power Button"
+	Option "path" "/dev/input/event0"
+	Option "device" "/dev/input/event0"
+	Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXPWRBN:00/input/input0/event0"
+	Option "driver" "evdev"
+	Option "XkbOptions" "terminate:ctrl_alt_bksp,"
+(**) Power Button: always reports core events
+(**) evdev: Power Button: Device: "/dev/input/event0"
+(--) evdev: Power Button: Vendor 0 Product 0x1
+(--) evdev: Power Button: Found keys
+(II) evdev: Power Button: Configuring as keyboard
+(**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXPWRBN:00/input/input0/event0"
+(II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 6)
+(**) Option "xkb_rules" "evdev"
+(**) Option "xkb_model" "pc105+inet"
+(**) Option "xkb_layout" "us"
+(**) Option "xkb_options" "terminate:ctrl_alt_bksp,"
+(II) config/udev: Adding input device AT Translated Set 2 keyboard (/dev/input/event1)
+(**) AT Translated Set 2 keyboard: Applying InputClass "evdev keyboard catchall"
+(**) AT Translated Set 2 keyboard: Applying InputClass "system-setup-keyboard"
+(II) Using input driver 'evdev' for 'AT Translated Set 2 keyboard'
+	Option "XkbRules" "evdev"
+	Option "XkbModel" "pc105+inet"
+	Option "XkbLayout" "us"
+	Option "_source" "server/udev"
+	Option "name" "AT Translated Set 2 keyboard"
+	Option "path" "/dev/input/event1"
+	Option "device" "/dev/input/event1"
+	Option "config_info" "udev:/sys/devices/platform/i8042/serio0/input/input1/event1"
+	Option "driver" "evdev"
+	Option "XkbOptions" "terminate:ctrl_alt_bksp,"
+(**) AT Translated Set 2 keyboard: always reports core events
+(**) evdev: AT Translated Set 2 keyboard: Device: "/dev/input/event1"
+(--) evdev: AT Translated Set 2 keyboard: Vendor 0x1 Product 0x1
+(--) evdev: AT Translated Set 2 keyboard: Found keys
+(II) evdev: AT Translated Set 2 keyboard: Configuring as keyboard
+(**) Option "config_info" "udev:/sys/devices/platform/i8042/serio0/input/input1/event1"
+(II) XINPUT: Adding extended input device "AT Translated Set 2 keyboard" (type: KEYBOARD, id 7)
+(**) Option "xkb_rules" "evdev"
+(**) Option "xkb_model" "pc105+inet"
+(**) Option "xkb_layout" "us"
+(**) Option "xkb_options" "terminate:ctrl_alt_bksp,"
+(II) XKB: Reusing cached keymap
+(II) config/udev: Adding input device ImExPS/2 Generic Explorer Mouse (/dev/input/event2)
+(**) ImExPS/2 Generic Explorer Mouse: Applying InputClass "evdev pointer catchall"
+(II) Using input driver 'evdev' for 'ImExPS/2 Generic Explorer Mouse'
+	Option "XkbRules" "evdev"
+	Option "XkbModel" "evdev"
+	Option "XkbLayout" "us"
+	Option "_source" "server/udev"
+	Option "name" "ImExPS/2 Generic Explorer Mouse"
+	Option "path" "/dev/input/event2"
+	Option "device" "/dev/input/event2"
+	Option "config_info" "udev:/sys/devices/platform/i8042/serio1/input/input2/event2"
+	Option "driver" "evdev"
+(**) ImExPS/2 Generic Explorer Mouse: always reports core events
+(**) evdev: ImExPS/2 Generic Explorer Mouse: Device: "/dev/input/event2"
+(--) evdev: ImExPS/2 Generic Explorer Mouse: Vendor 0x2 Product 0x6
+(--) evdev: ImExPS/2 Generic Explorer Mouse: Found 9 mouse buttons
+(--) evdev: ImExPS/2 Generic Explorer Mouse: Found scroll wheel(s)
+(--) evdev: ImExPS/2 Generic Explorer Mouse: Found relative axes
+(--) evdev: ImExPS/2 Generic Explorer Mouse: Found x and y relative axes
+(II) evdev: ImExPS/2 Generic Explorer Mouse: Configuring as mouse
+(II) evdev: ImExPS/2 Generic Explorer Mouse: Adding scrollwheel support
+(**) evdev: ImExPS/2 Generic Explorer Mouse: YAxisMapping: buttons 4 and 5
+(**) evdev: ImExPS/2 Generic Explorer Mouse: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
+(**) Option "config_info" "udev:/sys/devices/platform/i8042/serio1/input/input2/event2"
+(II) XINPUT: Adding extended input device "ImExPS/2 Generic Explorer Mouse" (type: MOUSE, id 8)
+(II) evdev: ImExPS/2 Generic Explorer Mouse: initialized for relative axes.
+(**) ImExPS/2 Generic Explorer Mouse: (accel) keeping acceleration scheme 1
+(**) ImExPS/2 Generic Explorer Mouse: (accel) acceleration profile 0
+(**) ImExPS/2 Generic Explorer Mouse: (accel) acceleration factor: 2.000
+(**) ImExPS/2 Generic Explorer Mouse: (accel) acceleration threshold: 4
+(II) config/udev: Adding input device ImExPS/2 Generic Explorer Mouse (/dev/input/mouse0)
+(**) ImExPS/2 Generic Explorer Mouse: Applying InputClass "vmmouse"
+(II) LoadModule: "vmmouse"
+(II) Loading /usr/lib64/xorg/modules/input/vmmouse_drv.so
+(II) Module vmmouse: vendor="X.Org Foundation"
+	compiled for 1.11.99.901, module version = 12.8.0
+	Module class: X.Org XInput Driver
+	ABI class: X.Org XInput driver, version 16.0
+(II) VMWARE(0): VMMOUSE module was loaded
+(II) Using input driver 'vmmouse' for 'ImExPS/2 Generic Explorer Mouse'
+	Option "_source" "server/udev"
+	Option "name" "ImExPS/2 Generic Explorer Mouse"
+	Option "path" "/dev/input/mouse0"
+	Option "device" "/dev/input/mouse0"
+	Option "config_info" "udev:/sys/devices/platform/i8042/serio1/input/input2/mouse0"
+	Option "driver" "vmmouse"
+(**) ImExPS/2 Generic Explorer Mouse: always reports core events
+(II) VMWARE(0): vmmouse is available
+(**) Option "Device" "/dev/input/mouse0"
+(**) ImExPS/2 Generic Explorer Mouse: ZAxisMapping: buttons 4 and 5
+(**) Option "config_info" "udev:/sys/devices/platform/i8042/serio1/input/input2/mouse0"
+(II) XINPUT: Adding extended input device "ImExPS/2 Generic Explorer Mouse" (type: MOUSE, id 9)
+(II) VMWARE(0): VMMOUSE DEVICE_INIT
+(**) ImExPS/2 Generic Explorer Mouse: (accel) keeping acceleration scheme 1
+(**) ImExPS/2 Generic Explorer Mouse: (accel) acceleration profile 0
+(**) ImExPS/2 Generic Explorer Mouse: (accel) acceleration factor: 2.000
+(**) ImExPS/2 Generic Explorer Mouse: (accel) acceleration threshold: 4
+(II) VMWARE(0): VMMOUSE DEVICE_ON
+(**) Option "Device" "/dev/input/mouse0"
+(II) VMWARE(0): vmmouse enabled
+(II) VMWARE(0): vmmouse enable absolute mode

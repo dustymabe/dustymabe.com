@@ -1,0 +1,6 @@
+
+# This just converts the rst to html.
+cat atomic-testing.rst | pandoc -r rst -t html | sed 's|<code>|<blockquote>|' | sed 's|</code>|</blockquote>|' > ./poo.html
+
+# After the conversion I had to do some fixups and I also added some
+# custom content. 

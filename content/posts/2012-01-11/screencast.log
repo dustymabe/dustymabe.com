@@ -1,0 +1,70 @@
+Script started on Tue 29 Nov 2011 02:23:02 PM EST
+]0;dustymabe@guest:~/Projects\[dustymabe@guest Projects]$ 
+]0;dustymabe@guest:~/Projects\[dustymabe@guest Projects]$ ssh root@bb.raleigh
+root@bb.raleigh's password: 
+Permission denied, please try again.
+root@bb.raleigh's password: 
+Permission denied, please try again.
+root@bb.raleigh's password: 
+Permission denied (publickey,password).
+]0;dustymabe@guest:~/Projects\[dustymabe@guest Projects]$ 
+]0;dustymabe@guest:~/Projects\[dustymabe@guest Projects]$ ssh root@bb.raleigh
+root@bb.raleigh's password: 
+Permission denied, please try again.
+root@bb.raleigh's password: 
+root@beagleboard:~# 
+root@beagleboard:~# 
+root@beagleboard:~# 
+root@beagleboard:~# ./pmu-s us[8Droot@beagleboard:~# ./pmu-user [J
+USEREN value is: 0
+root@beagleboard:~# 
+root@beagleboard:~# insmroot@beagleboard:~# insmod[J prroot@beagleboard:~# insmod project4.ko [J
+root@beagleboard:~# tail      dmesg | tail
+[ 6793.820495] Alignment trap in kernel: swapper (0) PC=0xbf05d850 Instr=0xe898000a Address=0xdf1f002e FSR 0x001
+[ 6793.830505] Alignment trap in kernel: swapper (0) PC=0xbf05d850 Instr=0xe898000a Address=0xdf1f002e FSR 0x001
+[ 6793.840484] Alignment trap in kernel: swapper (0) PC=0xbf05d850 Instr=0xe898000a Address=0xdf1f002e FSR 0x001
+[ 6793.850463] Alignment trap in kernel: swapper (0) PC=0xbf05d8a0 Instr=0xe896000a Address=0xdf1f001e FSR 0x001
+[ 6793.860443] Alignment trap in kernel: swapper (0) PC=0xc0253170 Instr=0xe891400e Address=0xdf1f002e FSR 0x001
+[ 6793.870422] Alignment trap in kernel: swapper (0) PC=0xc0253184 Instr=0xe890000f Address=0xdf1f001e FSR 0x001
+[ 6977.382537] load: project4 module being loaded.
+[ 6977.388183] load: USEREN initial Value: 0
+[ 6977.392364] load: USEREN final value: 1
+[ 6977.396820] load: user-mode access to performance registers enabled
+root@beagleboard:~# 
+root@beagleboard:~# ./pmu[5Droot@beagleboard:~# ./pmu-user [J
+USEREN value is: 1
+root@beagleboard:~# 
+root@beagleboard:~# rmmroot@beagleboard:~# rmmod[J prroot@beagleboard:~# rmmod project4.ko [J
+root@beagleboard:~# 
+root@beagleboard:~# root@beagleboard:~# rmmod project4.ko [Jroot@beagleboard:~# ./pmu-user [Jroot@beagleboard:~# rmmod project4.ko [Jroot@beagleboard:~# [Jdmesg | tail
+[ 6793.860443] Alignment trap in kernel: swapper (0) PC=0xc0253170 Instr=0xe891400e Address=0xdf1f002e FSR 0x001
+[ 6793.870422] Alignment trap in kernel: swapper (0) PC=0xc0253184 Instr=0xe890000f Address=0xdf1f001e FSR 0x001
+[ 6977.382537] load: project4 module being loaded.
+[ 6977.388183] load: USEREN initial Value: 0
+[ 6977.392364] load: USEREN final value: 1
+[ 6977.396820] load: user-mode access to performance registers enabled
+[ 7002.873809] unload: project4 module being unloaded.
+[ 7002.879638] unload: USEREN initial Value: 1
+[ 7002.883972] unload: USEREN final value: 0
+[ 7002.888336] unload: user-mode access to performance registers disabled
+root@beagleboard:~# 
+root@beagleboard:~# 
+root@beagleboard:~# ./pmu-u[7Droot@beagleboard:~# ./pmu-user [J
+USEREN value is: 0
+root@beagleboard:~# 
+root@beagleboard:~# 
+root@beagleboard:~# 
+root@beagleboard:~# 
+root@beagleboard:~# 
+root@beagleboard:~# 
+root@beagleboard:~# 
+root@beagleboard:~# 
+root@beagleboard:~# 
+root@beagleboard:~# 
+root@beagleboard:~# 
+root@beagleboard:~# exit
+Connection to bb.raleigh closed.
+]0;dustymabe@guest:~/Projects\[dustymabe@guest Projects]$ 
+]0;dustymabe@guest:~/Projects\[dustymabe@guest Projects]$ exit
+
+Script done on Tue 29 Nov 2011 02:24:42 PM EST

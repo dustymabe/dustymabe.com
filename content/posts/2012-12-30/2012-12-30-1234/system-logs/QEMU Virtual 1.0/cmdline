@@ -1,0 +1,1 @@
+BOOT_IMAGE=/vmlinuz-3.3.4-5.fc17.x86_64 root=UUID=5518eaea-67eb-4153-8765-3b84a201ffd2 ro rd.md=0 rd.lvm=0 rd.dm=0 SYSFONT=True KEYTABLE=us rd.luks=0 LANG=en_US.UTF-8 rhgb quiet

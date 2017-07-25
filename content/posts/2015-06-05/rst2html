@@ -1,0 +1,1 @@
+tail -n +8 post.rst | pandoc --email-obfuscation=references -r rst -t html > post.html

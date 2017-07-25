@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--Phoronix Test Suite v4.2.0 (Randaberg) [ http://www.phoronix-test-suite.com/ ]-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" font-family="sans-serif" viewbox="0 0 287 531" width="287" height="531">
+  <rect x="1" y="1" width="285" height="530" fill="#FEFEFE" stroke="#757575" stroke-width="1"/>
+  <rect x="2" y="1" width="284" height="38" fill="#231f20" stroke="#757575" stroke-width="1"/>
+  <text x="143.5" y="19" font-size="17" fill="#FEFEFE" text-anchor="middle">2012-12-30-1234</text>
+  <a xlink:href="http://www.phoronix-test-suite.com/" xlink:show="new">
+    <text x="4" y="36" font-size="8" fill="#FEFEFE" text-anchor="start" xlink:show="new">PHORONIX-TEST-SUITE.COM</text>
+  </a>
+  <a xlink:href="http://www.phoronix-test-suite.com/" xlink:show="new">
+    <text x="283" y="36" font-size="8" fill="#FEFEFE" text-anchor="end" xlink:show="new">Phoronix Test Suite 4.2.0</text>
+  </a>
+  <line x1="0" y1="39" x2="287" y2="39" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="48" font-size="7" fill="#065695" text-anchor="end">Processor</text>
+  <a xlink:href="http://openbenchmarking.org/s/QEMU Virtual 1.0" xlink:show="new">
+    <text x="143.5" y="52" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Processor: QEMU Virtual 1.0 @ 3.39GHz (1 Core)" font-weight="bold">QEMU Virtual 1.0 @ 3.39GHz (1 Core)</text>
+  </a>
+  <rect x="0" y="55" width="287" height="16" fill="#949494"/>
+  <line x1="0" y1="55" x2="287" y2="55" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="64" font-size="7" fill="#065695" text-anchor="end">Motherboard</text>
+  <a xlink:href="http://openbenchmarking.org/s/Bochs" xlink:show="new">
+    <text x="143.5" y="68" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Motherboard: Bochs" font-weight="bold">Bochs</text>
+  </a>
+  <line x1="0" y1="71" x2="287" y2="71" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="80" font-size="7" fill="#065695" text-anchor="end">Chipset</text>
+  <a xlink:href="http://openbenchmarking.org/s/Red Hat Virtio" xlink:show="new">
+    <text x="143.5" y="84" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Chipset: Red Hat Virtio" font-weight="bold">Red Hat Virtio</text>
+  </a>
+  <rect x="0" y="87" width="287" height="16" fill="#949494"/>
+  <line x1="0" y1="87" x2="287" y2="87" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="96" font-size="7" fill="#065695" text-anchor="end">Memory</text>
+  <text x="143.5" y="100" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Memory: 2048MB" font-weight="bold">2048MB</text>
+  <line x1="0" y1="103" x2="287" y2="103" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="112" font-size="7" fill="#065695" text-anchor="end">Disk</text>
+  <text x="143.5" y="116" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Disk: 16GB" font-weight="bold">16GB</text>
+  <rect x="0" y="119" width="287" height="16" fill="#949494"/>
+  <line x1="0" y1="119" x2="287" y2="119" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="128" font-size="7" fill="#065695" text-anchor="end">Graphics</text>
+  <a xlink:href="http://openbenchmarking.org/s/AMD Radeon HD 7500" xlink:show="new">
+    <text x="143.5" y="132" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Graphics: AMD Radeon HD 7500" font-weight="bold">AMD Radeon HD 7500</text>
+  </a>
+  <line x1="0" y1="135" x2="287" y2="135" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="144" font-size="7" fill="#065695" text-anchor="end">Network</text>
+  <a xlink:href="http://openbenchmarking.org/s/Realtek RTL-8139" xlink:show="new">
+    <text x="143.5" y="148" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Network: Realtek RTL-8139/8139C/8139C+" font-weight="bold">Realtek RTL-8139/8139C/8139C+</text>
+  </a>
+  <rect x="0" y="151" width="287" height="16" fill="#949494"/>
+  <line x1="0" y1="151" x2="287" y2="151" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="160" font-size="7" fill="#065695" text-anchor="end">OS</text>
+  <a xlink:href="http://openbenchmarking.org/s/Fedora 17" xlink:show="new">
+    <text x="143.5" y="164" font-size="10" fill="#065695" text-anchor="middle" xlink:title="OS: Fedora 17 (Beefy Miracle)" font-weight="bold">Fedora 17 (Beefy Miracle)</text>
+  </a>
+  <line x1="0" y1="167" x2="287" y2="167" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="176" font-size="7" fill="#065695" text-anchor="end">Kernel</text>
+  <a xlink:href="http://openbenchmarking.org/s/3.3.4-5.fc17.x86_64" xlink:show="new">
+    <text x="143.5" y="180" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Kernel: 3.3.4-5.fc17.x86_64 (x86_64)" font-weight="bold">3.3.4-5.fc17.x86_64 (x86_64)</text>
+  </a>
+  <rect x="0" y="183" width="287" height="16" fill="#949494"/>
+  <line x1="0" y1="183" x2="287" y2="183" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="192" font-size="7" fill="#065695" text-anchor="end">Desktop</text>
+  <text x="143.5" y="196" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Desktop: GNOME Shell 3.4.1" font-weight="bold">GNOME Shell 3.4.1</text>
+  <line x1="0" y1="199" x2="287" y2="199" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="208" font-size="7" fill="#065695" text-anchor="end">Display Server</text>
+  <a xlink:href="http://openbenchmarking.org/s/X Server 1.12.0" xlink:show="new">
+    <text x="143.5" y="212" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Display Server: X Server 1.12.0" font-weight="bold">X Server 1.12.0</text>
+  </a>
+  <rect x="0" y="215" width="287" height="16" fill="#949494"/>
+  <line x1="0" y1="215" x2="287" y2="215" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="224" font-size="7" fill="#065695" text-anchor="end">Display Driver</text>
+  <a xlink:href="http://openbenchmarking.org/s/vesa 2.3.0" xlink:show="new">
+    <text x="143.5" y="228" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Display Driver: vesa 2.3.0" font-weight="bold">vesa 2.3.0</text>
+  </a>
+  <line x1="0" y1="231" x2="287" y2="231" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="240" font-size="7" fill="#065695" text-anchor="end">OpenGL</text>
+  <a xlink:href="http://openbenchmarking.org/s/4.2.11733" xlink:show="new">
+    <text x="143.5" y="244" font-size="10" fill="#065695" text-anchor="middle" xlink:title="OpenGL: 4.2.11733" font-weight="bold">4.2.11733</text>
+  </a>
+  <rect x="0" y="247" width="287" height="16" fill="#949494"/>
+  <line x1="0" y1="247" x2="287" y2="247" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="256" font-size="7" fill="#065695" text-anchor="end">Compiler</text>
+  <a xlink:href="http://openbenchmarking.org/s/GCC 4.7.2 20120921" xlink:show="new">
+    <text x="143.5" y="260" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Compiler: GCC 4.7.2 20120921" font-weight="bold">GCC 4.7.2 20120921</text>
+  </a>
+  <line x1="0" y1="263" x2="287" y2="263" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="272" font-size="7" fill="#065695" text-anchor="end">File-System</text>
+  <a xlink:href="http://openbenchmarking.org/s/btrfs" xlink:show="new">
+    <text x="143.5" y="276" font-size="10" fill="#065695" text-anchor="middle" xlink:title="File-System: btrfs" font-weight="bold">btrfs</text>
+  </a>
+  <rect x="0" y="279" width="287" height="16" fill="#949494"/>
+  <line x1="0" y1="279" x2="287" y2="279" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="288" font-size="7" fill="#065695" text-anchor="end">Screen Resolution</text>
+  <text x="143.5" y="292" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Screen Resolution: 1280x1024" font-weight="bold">1280x1024</text>
+  <line x1="0" y1="295" x2="287" y2="295" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="304" font-size="7" fill="#065695" text-anchor="end">System Layer</text>
+  <text x="143.5" y="308" font-size="10" fill="#065695" text-anchor="middle" xlink:title="System Layer: QEMU 1.0" font-weight="bold">QEMU 1.0</text>
+  <rect x="1" y="311" width="285" height="220" fill="#231f20"/>
+  <a xlink:href="http://www.phoronix-test-suite.com/" xlink:show="new">
+    <image xlink:href="data:image/png;base64,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" x="10" y="485" width="80" height="42"/>
+  </a>
+  <text x="4" y="332" font-size="9" fill="#FEFEFE" text-anchor="start" xlink:title="">
+    <tspan x="4" y="332" dx="0" dy="0">- --build=x86_64-redhat-linux</tspan>
+    <tspan x="4" y="332" dx="5" dy="10"> --disable-build-poststage1-with-cxx</tspan>
+    <tspan x="4" y="332" dx="5" dy="20"> --disable-build-with-cxx --disable-dssi</tspan>
+    <tspan x="4" y="332" dx="5" dy="30"> --disable-libjava-multilib</tspan>
+    <tspan x="4" y="332" dx="5" dy="40"> --disable-libunwind-exceptions</tspan>
+    <tspan x="4" y="332" dx="5" dy="50"> --enable-__cxa_atexit --enable-bootstrap</tspan>
+    <tspan x="4" y="332" dx="5" dy="60"> --enable-checking=release</tspan>
+    <tspan x="4" y="332" dx="5" dy="70"> --enable-gnu-unique-object --enable-initfini-array</tspan>
+    <tspan x="4" y="332" dx="5" dy="80"> --enable-java-awt=gtk</tspan>
+    <tspan x="4" y="332" dx="5" dy="90"> --enable-java-maintainer-mode</tspan>
+    <tspan x="4" y="332" dx="5" dy="100"> --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto</tspan>
+    <tspan x="4" y="332" dx="5" dy="110"> --enable-libgcj-multifile --enable-plugin</tspan>
+    <tspan x="4" y="332" dx="5" dy="120"> --enable-shared --enable-threads=posix</tspan>
+    <tspan x="4" y="332" dx="5" dy="130"> --mandir=/usr/share/man --with-arch_32=i686</tspan>
+    <tspan x="4" y="332" dx="5" dy="140"> --with-cloog</tspan>
+    <tspan x="4" y="332" dx="5" dy="150"> --with-ecj-jar=/usr/share/java/eclipse-ecj.jar</tspan>
+    <tspan x="4" y="332" dx="5" dy="160"> --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-1.5.0.0/jre</tspan>
+    <tspan x="4" y="332" dx="5" dy="170"> --with-linker-hash-style=gnu --with-ppl --with-tune=generic </tspan>
+  </text>
+  <text x="4" y="530" font-size="9" fill="#FEFEFE" text-anchor="start" width="283">- CFQ / relatime,rw,space_cache</text>
+</svg>

@@ -1,0 +1,103 @@
+
+<! TermRecord: Terminal Screencast in a Self-Contained HTML File >
+
+<h4><i> Introduction </i></h4>
+
+<br>
+
+Some time ago I wrote a few posts (
+<a href="http://dustymabe.com/2012/01/11/create-a-screencast-of-a-terminal-session-using-scriptreplay/">1,</a>
+<a href="http://dustymabe.com/2012/04/15/terminal-screencast-revisit-log-output-from-a-multiplexed-terminal/">2</a>
+) on how to use <code>script</code> to record a terminal session
+and then <code>scriptreplay</code> to play it back. This functionality 
+can be very useful by enabling you the power to <i>show</i> others
+what happens when you do <i><b>insert anything here</b></i>.
+
+<br><br>
+
+I have been happy with this solution for a while until one day 
+<a href="http://www.cs.cmu.edu/~worichte/">Wolfgang Richter</a>
+commented on my original 
+<a href="http://dustymabe.com/2012/01/11/create-a-screencast-of-a-terminal-session-using-scriptreplay/">post</a>
+and shared a project he has been working on known as 
+<a href="https://github.com/theonewolf/TermRecord">TermRecord.</a>
+
+<br><br>
+
+I gave it a spin and have been using it quite a bit. Sharing a
+terminal recording now becomes much easier as you can simply email the .html
+file or you can host it yourself and share links. As long the 
+people you are sharing with have a browser then they can watch the
+playback. Thus, it is not tied to a system with a particular piece of
+software and clicking a link to view is very easy to do :)
+
+
+<h4><i> Basics of TermRecord </i></h4>
+
+<br>
+
+Before anything else we need to install <code>TermRecord</code>. Currently
+<a href="https://pypi.python.org/pypi/TermRecord">TermRecord</a>
+is available in the 
+<a href="http://pypi.python.org/pypi/">python package index</a>
+(hopefully will be packaged in some major distributions soon)
+and can be installed using <code>pip</code>.
+
+<br>
+
+<blockquote>
+[root@localhost ~]# pip install TermRecord                                                                                                                                                                     
+Downloading/unpacking TermRecord
+  Downloading TermRecord-1.1.3.tar.gz (49kB): 49kB downloaded
+  Running setup.py egg_info for package TermRecord
+...
+...
+Successfully installed TermRecord Jinja2 markupsafe
+Cleaning up...
+</blockquote>
+
+Now you can make a self-contained html file for sharing in a couple of ways.
+
+<br><br>
+
+First, you can use TermRecord to convert already existing timing and 
+log files that were created using the <code>script</code> command by specifying
+them as inputs to <code>TermRecord</code>:
+
+<br>
+
+<blockquote>
+[root@localhost ~]# TermRecord -o screencast.html -t screencast.timing -s screencast.log
+</blockquote>
+
+<br>
+
+The other option is to create a new recording using <code>TermRecord</code> like so:
+
+<br>
+
+<blockquote>
+[root@localhost ~]# TermRecord -o screencast.html 
+Script started, file is /tmp/tmp5I4SYq
+[root@localhost ~]# 
+[root@localhost ~]# #This is a screencast.
+[root@localhost ~]# exit
+exit
+Script done, file is /tmp/tmp5I4SYq
+</blockquote>
+
+<br>
+
+And.. Done. Now you can email or share the html file any way you like. If you would like to see 
+some examples of terminal recordings you can check out the 
+<a href="https://github.com/theonewolf/TermRecord">TermRecord github page</a>
+or
+<a href="http://dustymabe.com/content/2014-05-10/screencast.html">here</a> is one from my
+previous post on wordpress/docker. 
+
+<br><br>
+
+
+Cheers,
+<br>
+Dusty

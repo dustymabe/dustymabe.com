@@ -1,0 +1,27 @@
+Module                  Size  Used by
+lockd                  84836  0 
+sunrpc                235511  1 lockd
+bnep                   19584  2 
+bluetooth             273667  7 bnep
+rfkill                 21384  2 bluetooth
+nf_conntrack_ipv4      14622  2 
+nf_defrag_ipv4         12673  1 nf_conntrack_ipv4
+ip6t_REJECT            12939  2 
+nf_conntrack_ipv6      14297  3 
+nf_defrag_ipv6         18095  1 nf_conntrack_ipv6
+xt_state               12578  5 
+nf_conntrack           82339  3 xt_state,nf_conntrack_ipv6,nf_conntrack_ipv4
+ip6table_filter        12815  1 
+ip6_tables             27073  1 ip6table_filter
+8139too                33456  0 
+8139cp                 27835  0 
+mii                    13527  2 8139cp,8139too
+i2c_piix4              13694  0 
+i2c_core               38028  1 i2c_piix4
+virtio_balloon         13394  0 
+microcode              19252  0 
+uinput                 17673  0 
+btrfs                 680541  2 
+libcrc32c              12603  1 btrfs
+zlib_deflate           26614  1 btrfs
+virtio_blk             17549  4 

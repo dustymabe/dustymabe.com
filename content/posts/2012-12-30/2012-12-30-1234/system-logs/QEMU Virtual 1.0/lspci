@@ -1,0 +1,82 @@
+Slot:	00:00.0
+Class:	Host bridge [0600]
+Vendor:	Intel Corporation [8086]
+Device:	440FX - 82441FX PMC [Natoma] [1237]
+SVendor:	Red Hat, Inc [1af4]
+SDevice:	Qemu virtual machine [1100]
+Rev:	02
+
+Slot:	00:01.0
+Class:	ISA bridge [0601]
+Vendor:	Intel Corporation [8086]
+Device:	82371SB PIIX3 ISA [Natoma/Triton II] [7000]
+SVendor:	Red Hat, Inc [1af4]
+SDevice:	Qemu virtual machine [1100]
+PhySlot:	1
+
+Slot:	00:01.1
+Class:	IDE interface [0101]
+Vendor:	Intel Corporation [8086]
+Device:	82371SB PIIX3 IDE [Natoma/Triton II] [7010]
+SVendor:	Red Hat, Inc [1af4]
+SDevice:	Qemu virtual machine [1100]
+PhySlot:	1
+ProgIf:	80
+Driver:	ata_piix
+
+Slot:	00:01.2
+Class:	USB Controller [0c03]
+Vendor:	Intel Corporation [8086]
+Device:	82371SB PIIX3 USB [Natoma/Triton II] [7020]
+SVendor:	Red Hat, Inc [1af4]
+SDevice:	Qemu virtual machine [1100]
+PhySlot:	1
+Rev:	01
+Driver:	uhci_hcd
+
+Slot:	00:01.3
+Class:	Bridge [0680]
+Vendor:	Intel Corporation [8086]
+Device:	82371AB/EB/MB PIIX4 ACPI [7113]
+SVendor:	Red Hat, Inc [1af4]
+SDevice:	Qemu virtual machine [1100]
+PhySlot:	1
+Rev:	03
+Driver:	piix4_smbus
+
+Slot:	00:02.0
+Class:	VGA compatible controller [0300]
+Vendor:	Cirrus Logic [1013]
+Device:	GD 5446 [00b8]
+SVendor:	Red Hat, Inc [1af4]
+SDevice:	Device [1100]
+PhySlot:	2
+
+Slot:	00:03.0
+Class:	Ethernet controller [0200]
+Vendor:	Realtek Semiconductor Co., Ltd. [10ec]
+Device:	RTL-8139/8139C/8139C+ [8139]
+SVendor:	Red Hat, Inc [1af4]
+SDevice:	Device [1100]
+PhySlot:	3
+Rev:	20
+Driver:	8139cp
+
+Slot:	00:04.0
+Class:	SCSI storage controller [0100]
+Vendor:	Red Hat, Inc [1af4]
+Device:	Virtio block device [1001]
+SVendor:	Red Hat, Inc [1af4]
+SDevice:	Device [0002]
+PhySlot:	4
+Driver:	virtio-pci
+
+Slot:	00:05.0
+Class:	RAM memory [0500]
+Vendor:	Red Hat, Inc [1af4]
+Device:	Virtio memory balloon [1002]
+SVendor:	Red Hat, Inc [1af4]
+SDevice:	Device [0005]
+PhySlot:	5
+Driver:	virtio-pci
+

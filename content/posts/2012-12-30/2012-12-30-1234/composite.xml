@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v4.2.0 (Randaberg)-->
+<?xml-stylesheet type="text/xsl" href="pts-results-viewer.xsl"?>
+<PhoronixTestSuite>
+  <Generated>
+    <Title>2012-12-30-1234</Title>
+    <LastModified>2012-12-30 12:34:57</LastModified>
+    <TestClient>Phoronix Test Suite v4.2.0 (Randaberg)</TestClient>
+    <Description>QEMU 1.0 testing on Fedora 17 (Beefy Miracle) via the Phoronix Test Suite.</Description>
+  </Generated>
+  <System>
+    <Identifier>QEMU Virtual 1.0</Identifier>
+    <Hardware>Processor: QEMU Virtual 1.0 @ 3.39GHz (1 Core), Motherboard: Bochs, Chipset: Red Hat Virtio, Memory: 2048MB, Disk: 16GB, Graphics: AMD Radeon HD 7500, Network: Realtek RTL-8139/8139C/8139C+</Hardware>
+    <Software>OS: Fedora 17 (Beefy Miracle), Kernel: 3.3.4-5.fc17.x86_64 (x86_64), Desktop: GNOME Shell 3.4.1, Display Server: X Server 1.12.0, Display Driver: vesa 2.3.0, OpenGL: 4.2.11733, Compiler: GCC 4.7.2 20120921, File-System: btrfs, Screen Resolution: 1280x1024, System Layer: QEMU 1.0</Software>
+    <User></User>
+    <TimeStamp>2012-12-30 12:34:57</TimeStamp>
+    <TestClientVersion>4.2.0</TestClientVersion>
+    <Notes>Disk Scheduler: CFQ.</Notes>
+    <JSON>{"compiler-configuration":"--build=x86_64-redhat-linux --disable-build-poststage1-with-cxx --disable-build-with-cxx --disable-dssi --disable-libjava-multilib --disable-libunwind-exceptions --enable-__cxa_atexit --enable-bootstrap --enable-checking=release --enable-gnu-unique-object --enable-initfini-array --enable-java-awt=gtk --enable-java-maintainer-mode --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-libgcj-multifile --enable-plugin --enable-shared --enable-threads=posix --mandir=\/usr\/share\/man --with-arch_32=i686 --with-cloog --with-ecj-jar=\/usr\/share\/java\/eclipse-ecj.jar --with-java-home=\/usr\/lib\/jvm\/java-1.5.0-gcj-1.5.0.0\/jre --with-linker-hash-style=gnu --with-ppl --with-tune=generic","disk-scheduler":"CFQ","disk-mount-options":"relatime,rw,space_cache"}</JSON>
+  </System>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 1m -s 2048M -i0 -i1</Arguments>
+    <Description>Record Size: 1MB - File Size: 2GB - Disk Test: Read Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>251.01</Value>
+        <RawString>55.68359375:51.07421875:323.580078125:361.1318359375:358.412109375:356.1650390625</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 1m -s 4096M -i0 -i1</Arguments>
+    <Description>Record Size: 1MB - File Size: 4GB - Disk Test: Read Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>61.81</Value>
+        <RawString>44.8466796875:48.4033203125:63.8232421875:64.6982421875:70.76953125:78.3466796875</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 4k -s 2048M -i0 -i1</Arguments>
+    <Description>Record Size: 4Kb - File Size: 2GB - Disk Test: Read Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>310.25</Value>
+        <RawString>69.1640625:356.9609375:359.337890625:360.9228515625:359.6376953125:355.4794921875</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 4k -s 4096M -i0 -i1</Arguments>
+    <Description>Record Size: 4Kb - File Size: 4GB - Disk Test: Read Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>64.20</Value>
+        <RawString>45.748046875:64.611328125:48.703125:71.8642578125:78.240234375:76.0234375</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 1m -s 2048M -i0</Arguments>
+    <Description>Record Size: 1MB - File Size: 2GB - Disk Test: Write Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>37.82</Value>
+        <RawString>38.61328125:39.7783203125:33.2568359375:38.3955078125:35.0048828125:41.875</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 1m -s 4096M -i0</Arguments>
+    <Description>Record Size: 1MB - File Size: 4GB - Disk Test: Write Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>36.55</Value>
+        <RawString>34.49609375:37.125:38.0859375:35.728515625:37.4033203125:36.490234375</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 4k -s 2048M -i0</Arguments>
+    <Description>Record Size: 4Kb - File Size: 2GB - Disk Test: Write Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>39.25</Value>
+        <RawString>34.5380859375:41.6591796875:37.7412109375:38.521484375:37.36328125:45.6982421875</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 4k -s 4096M -i0</Arguments>
+    <Description>Record Size: 4Kb - File Size: 4GB - Disk Test: Write Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>38.94</Value>
+        <RawString>39.15625:37.4931640625:40.1787109375</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 64k -s 2048M -i0 -i1</Arguments>
+    <Description>Record Size: 64Kb - File Size: 2GB - Disk Test: Read Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>357.87</Value>
+        <RawString>357.8603515625:356.810546875:358.953125</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 64k -s 4096M -i0 -i1</Arguments>
+    <Description>Record Size: 64Kb - File Size: 4GB - Disk Test: Read Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>64.22</Value>
+        <RawString>64.677734375:59.0986328125:54.224609375:78.0791015625:72.05859375:57.197265625</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 1m -s 512M -i0 -i1</Arguments>
+    <Description>Record Size: 1MB - File Size: 512MB - Disk Test: Read Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>3582.75</Value>
+        <RawString>5143.3056640625:2337.6845703125:1430.21875:3241.9013671875:3849.85546875:5493.552734375</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 4k -s 512M -i0 -i1</Arguments>
+    <Description>Record Size: 4Kb - File Size: 512MB - Disk Test: Read Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>3783.93</Value>
+        <RawString>2118.845703125:3838.625:3235.5517578125:4388.9716796875:5122.205078125:3999.404296875</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 64k -s 2048M -i0</Arguments>
+    <Description>Record Size: 64Kb - File Size: 2GB - Disk Test: Write Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>38.03</Value>
+        <RawString>38.2158203125:36.0078125:40.3603515625:41.4794921875:38.251953125:33.884765625</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 64k -s 4096M -i0</Arguments>
+    <Description>Record Size: 64Kb - File Size: 4GB - Disk Test: Write Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>33.57</Value>
+        <RawString>35.92578125:33.8330078125:32.3349609375:33.537109375:34.5859375:31.197265625</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 1m -s 512M -i0</Arguments>
+    <Description>Record Size: 1MB - File Size: 512MB - Disk Test: Write Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>37.70</Value>
+        <RawString>38.677734375:36.8798828125:37.533203125</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 4k -s 512M -i0</Arguments>
+    <Description>Record Size: 4Kb - File Size: 512MB - Disk Test: Write Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>31.40</Value>
+        <RawString>32.1748046875:26.876953125:36.4296875:32.9130859375:31.7939453125:28.1943359375</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 64k -s 512M -i0 -i1</Arguments>
+    <Description>Record Size: 64Kb - File Size: 512MB - Disk Test: Read Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>3661.26</Value>
+        <RawString>2365.2236328125:1463.31640625:4891.7529296875:5595.015625:3027.7939453125:4624.4814453125</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/iozone-1.8.0</Identifier>
+    <Title>IOzone</Title>
+    <AppVersion>3.405</AppVersion>
+    <Arguments>-r 64k -s 512M -i0</Arguments>
+    <Description>Record Size: 64Kb - File Size: 512MB - Disk Test: Write Performance</Description>
+    <Scale>MB/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>35.53</Value>
+        <RawString>39.876953125:36.078125:31.3466796875:34.751953125:35.80859375:35.3310546875</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-O3"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/compress-7zip-1.6.0</Identifier>
+    <Title>7-Zip Compression</Title>
+    <AppVersion>9.20.1</AppVersion>
+    <Arguments></Arguments>
+    <Description>Compress Speed Test</Description>
+    <Scale>MIPS</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>4271</Value>
+        <RawString>3979:4329:4333:4329:4301:4357</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CXX","compiler":"g++","compiler-options":"-pipe -lpthread"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+</PhoronixTestSuite>

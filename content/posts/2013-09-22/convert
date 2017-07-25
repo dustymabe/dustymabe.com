@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+
+# 0/5 4096 4096
+# 0/262 0 0
+# 0/263 292208640 292208640
+
+while (<STDIN>) {
+    my @fields = split(" ", $_);
+    $fields[1] = $fields[1]/1024/1024;
+    $fields[2] = $fields[2]/1024/1024;
+    printf("%s\t%dM\t%dM\n", $fields[0], $fields[1], $fields[2]);
+}
+
+

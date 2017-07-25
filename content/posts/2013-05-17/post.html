@@ -1,0 +1,169 @@
+
+<! Easy getopt for a BASH script >
+
+<br>
+
+<a href="http://en.wikipedia.org/wiki/Getopt">getopt</a> is extremely
+useful for quickly being able to add options and arguments to your
+program without having to worry much about the parsing yourself. There
+are getopt libraries for many languages but what about BASH? It turns
+out there are actually two versions of getopt that you can use in your
+BASH scripts; a command line utility <code>getopt</code> provided by
+the util-linux package, and a bash builtin <code>getopts</code>. I have provided a brief overview of each in the following sections. 
+
+<h4><i> getopt: The command line utility </i></h4>
+
+<br>
+
+An example of a bash script using <code>getopt</code> to allow the
+user to specify one of three colors (blue, red, or green) is
+shown below. The user can specify <code>-b</code> to imply the color
+is blue or can specify <code>--color=blue</code> to do the same. If
+the user uses the long option <code>--color</code> they must specify
+an argument to denote what color. 
+
+<br><br>
+
+<blockquote>
+#!/bin/bash
+
+# Call getopt to validate the provided input. 
+options=$(getopt -o brg --long color: -- "$@")
+[ $? -eq 0 ] || { 
+    echo "Incorrect options provided"
+    exit 1
+}
+eval set -- "$options"
+while true; do
+    case "$1" in
+    -b)
+        COLOR=BLUE
+        ;;
+    -r)
+        COLOR=RED
+        ;;
+    -g)
+        COLOR=GREEN
+        ;;
+    --color)
+        shift; # The arg is next in position args
+        COLOR=$1
+        [[ ! $COLOR =~ BLUE|RED|GREEN ]] && {
+            echo "Incorrect options provided"
+            exit 1
+        }
+        ;;
+    --)
+        shift
+        break
+        ;;
+    esac
+    shift
+done
+
+echo "Color is $COLOR"
+exit 0;
+</blockquote>
+
+<br>
+
+And here are the outputs from some test runs:
+
+<br><br>
+
+<blockquote>
+dusty@media: content>./test -b
+Color is BLUE
+dusty@media: content>./test -r
+Color is RED
+dusty@media: content>./test -g
+Color is GREEN
+dusty@media: content>./test -z
+getopt: invalid option -- 'z'
+Incorrect options provided
+dusty@media: content>./test --color=BLUE
+Color is BLUE
+dusty@media: content>./test --color
+getopt: option '--color' requires an argument
+Incorrect options provided
+dusty@media: content>./test --color=YELLOW
+Incorrect options provided
+</blockquote>
+
+<br>
+
+<h4><i> getopts: The bash builtin </i></h4>
+
+<br>
+
+We can almost exactly perform the same task with the <code>getopts</code> 
+builtin. Unfortunately the <code>getopts</code> builtin does not
+support long options so I created a new <code>-c</code> short option
+and added a <code>:</code> to the line to specify that it takes an argument (just like <code>--color</code> from the first
+example). The code is shown below. Notice that <code>getopts</code>
+actually uses the <code>$OPTARG</code> variable for options that have
+arguments which makes for easy to read code. 
+<br><br>
+
+<blockquote>
+#!/bin/bash
+
+while getopts "brgc:" OPTION; do
+    case $OPTION in
+    b)
+        COLOR=BLUE
+        ;;
+    r)
+        COLOR=RED
+        ;;
+    g)
+        COLOR=GREEN
+        ;;
+    c)
+        COLOR=$OPTARG
+        [[ ! $COLOR =~ BLUE|RED|GREEN ]] && {
+            echo "Incorrect options provided"
+            exit 1
+        }
+        ;;
+    *)
+        echo "Incorrect options provided"
+        exit 1
+        ;;
+    esac
+done
+
+echo "Color is $COLOR"
+exit 0;
+</blockquote>
+
+<br>
+
+And finally a similar set of output from test runs:
+
+<blockquote>
+dusty@media: content>./test2 -b
+Color is BLUE
+dusty@media: content>./test2 -r
+Color is RED
+dusty@media: content>./test2 -g
+Color is GREEN
+dusty@media: content>./test2 -z
+./test2: illegal option -- z
+Incorrect options provided
+dusty@media: content>./test2 -c BLUE
+Color is BLUE
+dusty@media: content>./test2 -c
+./test2: option requires an argument -- c
+Incorrect options provided
+dusty@media: content>./test2 -c YELLOW
+Incorrect options provided
+dusty@media: content>
+</blockquote>
+<br>
+
+
+Cheers!
+<br><br>
+
+Dusty Mabe

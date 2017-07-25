@@ -1,0 +1,59 @@
+
+<! Mount Complex Disk Images Using libguestfs >
+
+<br>
+
+In my previous
+<a
+href="http://dustymabe.com/2012/12/15/mounting-a-partition-within-a-disk-image/">
+post
+</a>
+I went over two ways to mount a partition within a disk image file.
+There is actually another easy way to do this by utilizing some of the
+tools that the <i>virt</i> community has provided us in recent years. 
+
+<br><br>
+
+<a href="http://libguestfs.org/">
+libguestfs
+</a>
+is a fairly comprehensive library for manipulating guest disk images
+and filesystems. It turns out that the tools work pretty well even for
+disk images that aren't specific to any virtualized guest; after all
+a disk image is a disk image. 
+
+<br><br>
+
+The <code>guestmount</code> utility is
+provided as part of the <i>libguestfs-tools-c</i> package in Fedora 17
+and allows us the ability to (in)directly mount the second partition of
+our disk image. This is shown below:
+
+<br><br>
+
+<blockquote>
+dustymabe@media: > guestmount -a /mnt/lenovo.img -m /dev/sda2 --ro /tmp/mnt
+dustymabe@media: > ls /tmp/mnt/Users/
+All Users  Default  Default User  desktop.ini  dustymabe  Public
+</blockquote>
+
+<br>
+
+The only drawback I can see at this point from using this tool is that
+it is using 
+<a href="http://fuse.sourceforge.net/">
+fuse
+</a>
+under the covers to mount the filesystem. This has some advantages and
+disadvantages but typically results in lower performance.
+Nevertheless, <code>guestmount</code> and the other tools provided by
+<i>libguestfs</i> are no doubt becoming very useful for manipulating
+disk images. 
+
+<br><br>
+
+Cheers! 
+
+<br><br>
+
+Dusty Mabe

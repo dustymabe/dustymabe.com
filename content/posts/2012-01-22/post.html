@@ -1,0 +1,107 @@
+
+<! Recover Space By Finding Deleted Files That Are Still Held Open.  >
+<br><br>
+
+The other day I was trying to clean out some space on an almost full
+filesystem that I use to hold some video files. The output from
+<code> df</code> looked like:
+
+<br><br>
+
+<blockquote>
+media:~ # df -kh /docs/videos/
+Filesystem                  Size  Used Avail Use% Mounted on
+/dev/mapper/vgvolume-videos 5.0G  4.2G  526M  90% /docs/videos
+</blockquote>
+
+<br>
+
+I then found the largest file I wanted to delete (a 700M avi
+video I had recently watched), and removed it. <code> df</code>
+should now report that I freed up some space right? NOPE!
+
+<br><br>
+
+<blockquote>
+media:~ # df -kh /docs/videos/
+Filesystem                  Size  Used Avail Use% Mounted on
+/dev/mapper/vgvolume-videos 5.0G  4.2G  526M  90% /docs/videos
+</blockquote>
+
+<br>
+
+Why wasn't I able to recover the space on the filesystem? At first I
+didn't know. I then decided to unmount and remount the filesystem to
+see if the changes would take effect. During this process, I found out
+that I couldn't unmont the fs because the device was busy:
+
+
+<br><br>
+
+<blockquote>
+media:~ # umount /docs/videos/
+umount: /docs/videos: device is busy.
+    (In some cases useful info about processes that use
+     the device is found by lsof(8) or fuser(1))
+</blockquote>
+
+
+<br>
+
+Ahh, so a program still has some files open on the fs. <code>
+lsof</code> lets us find out what files. 
+
+<br><br>
+
+<blockquote>
+media:~ # lsof /docs/videos/
+COMMAND     PID      USER   FD   TYPE DEVICE  SIZE/OFF NODE NAME
+bash      10889 dustymabe  cwd    DIR  253,6      4096    2 /docs/videos
+vlc       11244 dustymabe  cwd    DIR  253,6      4096    2 /docs/videos
+vlc       11244 dustymabe   11r   REG  253,6 732297098   14 /docs/videos/video1.avi (deleted)
+xdg-scree 11281 dustymabe  cwd    DIR  253,6      4096    2 /docs/videos
+xprop     11285 dustymabe  cwd    DIR  253,6      4096    2 /docs/videos
+</blockquote>
+
+
+<br>
+
+So <code> lsof</code> shows us what files are open but it also let me us know
+something else key to my investigation. The file I had deleted was actually still 
+being held open by VLC media player (I had recently been watching the video and 
+vlc was still up and paused in the middle of playback). <code> lsof</code> let us know
+that the file had been deleted as well. 
+
+After closing vlc the space was then released back to the filesystem :)
+
+<br>
+
+<blockquote>
+media:~ # df -kh /docs/videos/
+Filesystem                  Size  Used Avail Use% Mounted on
+/dev/mapper/vgvolume-videos 5.0G  3.5G  1.2G  75% /docs/videos
+</blockquote>
+
+<br><br>
+-------------------------------------------------------------------
+<br><br>
+
+As a side note it is worth mentioning that all files that have been
+deleted but are still be held open by running processes are listed as 
+"(deleted)" when performing an <code> ls -l</code>  in the proc file system.
+
+For example, to find the file that I deleted that was still being held open
+by vlc then I would use <code> ls -lR /proc/11244/fd/ | grep deleted</code>.
+An example of the output is shown below:
+
+<br><br>
+
+<blockquote>
+media:~ # ls -l /proc/11244/fd/ | grep deleted
+lr-x------ 1 dustymabe users 64 Jan 22 21:58 11 -> /docs/videos/video1.avi (deleted)
+</blockquote>
+
+<br><br>
+
+Cheers!
+                      

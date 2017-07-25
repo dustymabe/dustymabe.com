@@ -1,0 +1,809 @@
+[root@guest1 phoronix-test-suite]#
+[root@guest1 phoronix-test-suite]# phoronix-test-suite batch-benchmark pts/iozone pts/compress-7zip
+
+The following dependencies are needed and will be installed:
+
+- gcc
+- gcc-c++
+- make
+- autoconf
+- automake
+- glibc-static
+- patch
+
+This process may take several minutes.
+Please enter your root password below:
+
+Loaded plugins: langpacks, presto, refresh-packagekit
+Resolving Dependencies
+--> Running transaction check
+---> Package autoconf.noarch 0:2.68-4.fc17 will be installed
+---> Package automake.noarch 0:1.11.6-1.fc17 will be installed
+---> Package gcc.x86_64 0:4.7.2-2.fc17 will be installed
+--> Processing Dependency: libgomp = 4.7.2-2.fc17 for package: gcc-4.7.2-2.fc17.x86_64
+--> Processing Dependency: cpp = 4.7.2-2.fc17 for package: gcc-4.7.2-2.fc17.x86_64
+--> Processing Dependency: libgcc >= 4.7.2-2.fc17 for package: gcc-4.7.2-2.fc17.x86_64
+--> Processing Dependency: glibc-devel >= 2.2.90-12 for package: gcc-4.7.2-2.fc17.x86_64
+--> Processing Dependency: cloog-ppl >= 0.15 for package: gcc-4.7.2-2.fc17.x86_64
+--> Processing Dependency: binutils >= 2.20.51.0.2-12 for package: gcc-4.7.2-2.fc17.x86_64
+--> Processing Dependency: libmpc.so.2()(64bit) for package: gcc-4.7.2-2.fc17.x86_64
+---> Package gcc-c++.x86_64 0:4.7.2-2.fc17 will be installed
+--> Processing Dependency: libstdc++-devel = 4.7.2-2.fc17 for package: gcc-c++-4.7.2-2.fc17.x86_64
+--> Processing Dependency: libstdc++ = 4.7.2-2.fc17 for package: gcc-c++-4.7.2-2.fc17.x86_64
+---> Package glibc-static.x86_64 0:2.15-58.fc17 will be installed
+---> Package make.x86_64 1:3.82-9.fc17 will be updated
+---> Package make.x86_64 1:3.82-13.fc17 will be an update
+---> Package patch.x86_64 0:2.6.1-12.fc17 will be installed
+--> Running transaction check
+---> Package binutils.x86_64 0:2.22.52.0.1-10.fc17 will be installed
+---> Package cloog-ppl.x86_64 0:0.15.11-3.fc17.1 will be installed
+--> Processing Dependency: libppl_c.so.4()(64bit) for package: cloog-ppl-0.15.11-3.fc17.1.x86_64
+--> Processing Dependency: libppl.so.9()(64bit) for package: cloog-ppl-0.15.11-3.fc17.1.x86_64
+---> Package cpp.x86_64 0:4.7.2-2.fc17 will be installed
+---> Package glibc-devel.x86_64 0:2.15-58.fc17 will be installed
+--> Processing Dependency: glibc-headers = 2.15-58.fc17 for package: glibc-devel-2.15-58.fc17.x86_64
+--> Processing Dependency: glibc = 2.15-58.fc17 for package: glibc-devel-2.15-58.fc17.x86_64
+--> Processing Dependency: glibc-headers for package: glibc-devel-2.15-58.fc17.x86_64
+---> Package libgcc.x86_64 0:4.7.0-5.fc17 will be updated
+---> Package libgcc.x86_64 0:4.7.2-2.fc17 will be an update
+---> Package libgomp.x86_64 0:4.7.0-5.fc17 will be updated
+---> Package libgomp.x86_64 0:4.7.2-2.fc17 will be an update
+---> Package libmpc.x86_64 0:0.9-2.fc17.2 will be installed
+---> Package libstdc++.x86_64 0:4.7.0-5.fc17 will be updated
+---> Package libstdc++.x86_64 0:4.7.2-2.fc17 will be an update
+---> Package libstdc++-devel.x86_64 0:4.7.2-2.fc17 will be installed
+--> Running transaction check
+---> Package glibc.x86_64 0:2.15-37.fc17 will be updated
+--> Processing Dependency: glibc = 2.15-37.fc17 for package: glibc-common-2.15-37.fc17.x86_64
+---> Package glibc.x86_64 0:2.15-58.fc17 will be an update
+---> Package glibc-headers.x86_64 0:2.15-58.fc17 will be installed
+--> Processing Dependency: kernel-headers >= 2.2.1 for package: glibc-headers-2.15-58.fc17.x86_64
+--> Processing Dependency: kernel-headers for package: glibc-headers-2.15-58.fc17.x86_64
+---> Package ppl.x86_64 0:0.11.2-8.fc17 will be installed
+--> Processing Dependency: libpwl.so.5()(64bit) for package: ppl-0.11.2-8.fc17.x86_64
+--> Running transaction check
+---> Package glibc-common.x86_64 0:2.15-37.fc17 will be updated
+---> Package glibc-common.x86_64 0:2.15-58.fc17 will be an update
+---> Package kernel-headers.x86_64 0:3.6.10-2.fc17 will be installed
+---> Package ppl-pwl.x86_64 0:0.11.2-8.fc17 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package              Arch        Version                    Repository    Size
+================================================================================
+Installing:
+ autoconf             noarch      2.68-4.fc17                updates      871 k
+ automake             noarch      1.11.6-1.fc17              updates      649 k
+ gcc                  x86_64      4.7.2-2.fc17               updates       14 M
+ gcc-c++              x86_64      4.7.2-2.fc17               updates      5.9 M
+ glibc-static         x86_64      2.15-58.fc17               updates      1.4 M
+ patch                x86_64      2.6.1-12.fc17              fedora        91 k
+Updating:
+ make                 x86_64      1:3.82-13.fc17             updates      415 k
+Installing for dependencies:
+ binutils             x86_64      2.22.52.0.1-10.fc17        fedora       3.5 M
+ cloog-ppl            x86_64      0.15.11-3.fc17.1           fedora        93 k
+ cpp                  x86_64      4.7.2-2.fc17               updates      4.8 M
+ glibc-devel          x86_64      2.15-58.fc17               updates      990 k
+ glibc-headers        x86_64      2.15-58.fc17               updates      615 k
+ kernel-headers       x86_64      3.6.10-2.fc17              updates      862 k
+ libmpc               x86_64      0.9-2.fc17.2               fedora        48 k
+ libstdc++-devel      x86_64      4.7.2-2.fc17               updates      1.4 M
+ ppl                  x86_64      0.11.2-8.fc17              fedora       1.4 M
+ ppl-pwl              x86_64      0.11.2-8.fc17              fedora        36 k
+Updating for dependencies:
+ glibc                x86_64      2.15-58.fc17               updates      3.5 M
+ glibc-common         x86_64      2.15-58.fc17               updates       11 M
+ libgcc               x86_64      4.7.2-2.fc17               updates       81 k
+ libgomp              x86_64      4.7.2-2.fc17               updates       93 k
+ libstdc++            x86_64      4.7.2-2.fc17               updates      275 k
+
+Transaction Summary
+================================================================================
+Install  6 Packages (+10 Dependent packages)
+Upgrade  1 Package  (+ 5 Dependent packages)
+
+Total download size: 52 M
+Downloading Packages:
+Setting up and reading Presto delta metadata
+Processing delta metadata
+Download delta size: 11 M
+Presto reduced the update size by 28% (from 15 M to 11 M).
+--------------------------------------------------------------------------------
+Total                                           1.7 MB/s |  37 MB     00:21
+Running Transaction Check
+Running Transaction Test
+Transaction Test Succeeded
+Running Transaction
+  Updating   : libgcc-4.7.2-2.fc17.x86_64                                  1/28
+  Updating   : glibc-2.15-58.fc17.x86_64                                   2/28
+  Updating   : glibc-common-2.15-58.fc17.x86_64                            3/28
+  Updating   : libstdc++-4.7.2-2.fc17.x86_64                               4/28
+  Installing : libmpc-0.9-2.fc17.2.x86_64                                  5/28
+  Installing : cpp-4.7.2-2.fc17.x86_64                                     6/28
+  Installing : binutils-2.22.52.0.1-10.fc17.x86_64                         7/28
+  Installing : ppl-pwl-0.11.2-8.fc17.x86_64                                8/28
+  Installing : ppl-0.11.2-8.fc17.x86_64                                    9/28
+  Installing : cloog-ppl-0.15.11-3.fc17.1.x86_64                          10/28
+  Installing : libstdc++-devel-4.7.2-2.fc17.x86_64                        11/28
+  Updating   : libgomp-4.7.2-2.fc17.x86_64                                12/28
+  Installing : autoconf-2.68-4.fc17.noarch                                13/28
+  Installing : kernel-headers-3.6.10-2.fc17.x86_64                        14/28
+  Installing : glibc-headers-2.15-58.fc17.x86_64                          15/28
+  Installing : glibc-devel-2.15-58.fc17.x86_64                            16/28
+  Installing : gcc-4.7.2-2.fc17.x86_64                                    17/28
+  Installing : gcc-c++-4.7.2-2.fc17.x86_64                                18/28
+  Installing : glibc-static-2.15-58.fc17.x86_64                           19/28
+  Installing : automake-1.11.6-1.fc17.noarch                              20/28
+  Updating   : 1:make-3.82-13.fc17.x86_64                                 21/28
+  Installing : patch-2.6.1-12.fc17.x86_64                                 22/28
+  Cleanup    : libstdc++-4.7.0-5.fc17.x86_64                              23/28
+  Cleanup    : libgomp-4.7.0-5.fc17.x86_64                                24/28
+  Cleanup    : 1:make-3.82-9.fc17.x86_64                                  25/28
+  Cleanup    : glibc-common-2.15-37.fc17.x86_64                           26/28
+  Cleanup    : glibc-2.15-37.fc17.x86_64                                  27/28
+  Cleanup    : libgcc-4.7.0-5.fc17.x86_64                                 28/28
+  Verifying  : glibc-devel-2.15-58.fc17.x86_64                             1/28
+  Verifying  : libstdc++-4.7.2-2.fc17.x86_64                               2/28
+  Verifying  : automake-1.11.6-1.fc17.noarch                               3/28
+  Verifying  : glibc-static-2.15-58.fc17.x86_64                            4/28
+  Verifying  : kernel-headers-3.6.10-2.fc17.x86_64                         5/28
+  Verifying  : binutils-2.22.52.0.1-10.fc17.x86_64                         6/28
+  Verifying  : cpp-4.7.2-2.fc17.x86_64                                     7/28
+  Verifying  : 1:make-3.82-13.fc17.x86_64                                  8/28
+  Verifying  : libmpc-0.9-2.fc17.2.x86_64                                  9/28
+  Verifying  : glibc-common-2.15-58.fc17.x86_64                           10/28
+  Verifying  : glibc-headers-2.15-58.fc17.x86_64                          11/28
+  Verifying  : gcc-c++-4.7.2-2.fc17.x86_64                                12/28
+  Verifying  : libgomp-4.7.2-2.fc17.x86_64                                13/28
+  Verifying  : autoconf-2.68-4.fc17.noarch                                14/28
+  Verifying  : patch-2.6.1-12.fc17.x86_64                                 15/28
+  Verifying  : ppl-pwl-0.11.2-8.fc17.x86_64                               16/28
+  Verifying  : ppl-0.11.2-8.fc17.x86_64                                   17/28
+  Verifying  : libgcc-4.7.2-2.fc17.x86_64                                 18/28
+  Verifying  : gcc-4.7.2-2.fc17.x86_64                                    19/28
+  Verifying  : glibc-2.15-58.fc17.x86_64                                  20/28
+  Verifying  : cloog-ppl-0.15.11-3.fc17.1.x86_64                          21/28
+  Verifying  : libstdc++-devel-4.7.2-2.fc17.x86_64                        22/28
+  Verifying  : libgcc-4.7.0-5.fc17.x86_64                                 23/28
+  Verifying  : libstdc++-4.7.0-5.fc17.x86_64                              24/28
+  Verifying  : glibc-common-2.15-37.fc17.x86_64                           25/28
+  Verifying  : libgomp-4.7.0-5.fc17.x86_64                                26/28
+  Verifying  : glibc-2.15-37.fc17.x86_64                                  27/28
+  Verifying  : 1:make-3.82-9.fc17.x86_64                                  28/28
+
+Installed:
+  autoconf.noarch 0:2.68-4.fc17            automake.noarch 0:1.11.6-1.fc17
+  gcc.x86_64 0:4.7.2-2.fc17                gcc-c++.x86_64 0:4.7.2-2.fc17
+  glibc-static.x86_64 0:2.15-58.fc17       patch.x86_64 0:2.6.1-12.fc17
+
+Dependency Installed:
+  binutils.x86_64 0:2.22.52.0.1-10.fc17  cloog-ppl.x86_64 0:0.15.11-3.fc17.1
+  cpp.x86_64 0:4.7.2-2.fc17              glibc-devel.x86_64 0:2.15-58.fc17
+  glibc-headers.x86_64 0:2.15-58.fc17    kernel-headers.x86_64 0:3.6.10-2.fc17
+  libmpc.x86_64 0:0.9-2.fc17.2           libstdc++-devel.x86_64 0:4.7.2-2.fc17
+  ppl.x86_64 0:0.11.2-8.fc17             ppl-pwl.x86_64 0:0.11.2-8.fc17
+
+Updated:
+  make.x86_64 1:3.82-13.fc17
+
+Dependency Updated:
+  glibc.x86_64 0:2.15-58.fc17           glibc-common.x86_64 0:2.15-58.fc17
+  libgcc.x86_64 0:4.7.2-2.fc17          libgomp.x86_64 0:4.7.2-2.fc17
+  libstdc++.x86_64 0:4.7.2-2.fc17
+
+Complete!
+
+Phoronix Test Suite v4.2.0
+
+    To Install: pts/iozone-1.8.0
+    To Install: pts/compress-7zip-1.6.0
+
+    Determining File Requirements ..........................................
+    Searching Download Caches ..............................................
+
+    2 Tests To Install
+        2 Files To Download [5.28MB]
+        13MB Of Disk Space Is Needed
+
+    pts/iozone-1.8.0:
+        Test Installation 1 of 2
+        1 File Needed [1.62 MB]
+        Downloading: iozone3_405.tar                                [1.62MB]
+        Downloading ........................................................
+        Installation Size: 2.3 MB
+        Installing Test @ 12:34:19
+
+    pts/compress-7zip-1.6.0:
+        Test Installation 2 of 2
+        1 File Needed [3.66 MB / 1 Minute]
+        Downloading: p7zip_9.20.1_src_all.tar.bz2                   [3.66MB]
+        Estimated Download Time: 1m ........................................
+        Installation Size: 10 MB
+        Installing Test @ 12:34:31
+
+
+System Information
+
+Hardware:
+Processor: QEMU Virtual 1.0 @ 3.39GHz (1 Core), Motherboard: Bochs, Chipset: Red Hat Virtio, Memory: 204
+16GB, Graphics: AMD Radeon HD 7500, Network: Realtek RTL-8139/8139C/8139C+
+
+Software:
+OS: Fedora 17 (Beefy Miracle), Kernel: 3.3.4-5.fc17.x86_64 (x86_64), Desktop: GNOME Shell 3.4.1, Display
+Server 1.12.0, Display Driver: vesa 2.3.0, OpenGL: 4.2.11733, Compiler: GCC 4.7.2 20120921, File-System:
+een Resolution: 1280x1024, System Layer: QEMU 1.0
+
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 1MB - File Size: 2GB - Disk Test: Read Performance]
+    Test 1 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 3 Hours, 54 Minutes
+        Started Run 1 @ 12:34:57
+        Started Run 2 @ 12:38:41
+        Started Run 3 @ 12:42:01  [Std. Dev: 108.76%]
+        Started Run 4 @ 12:44:12  [Std. Dev: 84.68%]
+        Started Run 5 @ 12:46:27  [Std. Dev: 70.40%]
+        Started Run 6 @ 12:48:41  [Std. Dev: 61.23%]
+
+    Test Results:
+        55.68359375
+        51.07421875
+        323.580078125
+        361.1318359375
+        358.412109375
+        356.1650390625
+
+    Average: 251.01 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 1MB - File Size: 4GB - Disk Test: Read Performance]
+    Test 2 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 3 Hours, 44 Minutes
+        Started Run 1 @ 12:51:17
+        Started Run 2 @ 13:00:04
+        Started Run 3 @ 13:06:32  [Std. Dev: 19.27%]
+        Started Run 4 @ 13:12:30  [Std. Dev: 18.56%]
+        Started Run 5 @ 13:18:29  [Std. Dev: 19.22%]
+        Started Run 6 @ 13:24:24  [Std. Dev: 20.89%]
+
+    Test Results:
+        44.8466796875
+        48.4033203125
+        63.8232421875
+        64.6982421875
+        70.76953125
+        78.3466796875
+
+    Average: 61.81 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 1MB - File Size: 8GB - Disk Test: Read Performance]
+    Test 3 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 3 Hours, 35 Minutes
+        Started Run 1 @ 13:30:23
+        The test run did not produce a result.
+        Started Run 2 @ 13:34:30
+        The test run did not produce a result.
+        Started Run 3 @ 13:37:54
+        The test run did not produce a result.
+
+    Test Results:
+
+    Average: 0 MB/s
+    This test failed to run properly.
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 4Kb - File Size: 2GB - Disk Test: Read Performance]
+    Test 4 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 3 Hours, 25 Minutes
+        Started Run 1 @ 13:42:07
+        Started Run 2 @ 13:44:36
+        Started Run 3 @ 13:46:51  [Std. Dev: 63.73%]
+        Started Run 4 @ 13:48:41  [Std. Dev: 50.58%]
+        Started Run 5 @ 13:50:38  [Std. Dev: 43.07%]
+        Started Run 6 @ 13:52:35  [Std. Dev: 38.07%]
+
+    Test Results:
+        69.1640625
+        356.9609375
+        359.337890625
+        360.9228515625
+        359.6376953125
+        355.4794921875
+
+    Average: 310.25 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 4Kb - File Size: 4GB - Disk Test: Read Performance]
+    Test 5 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 3 Hours, 16 Minutes
+        Started Run 1 @ 13:54:59
+        Started Run 2 @ 14:02:14
+        Started Run 3 @ 14:08:34  [Std. Dev: 19.14%]
+        Started Run 4 @ 14:15:48  [Std. Dev: 21.73%]
+        Started Run 5 @ 14:21:40  [Std. Dev: 22.99%]
+        Started Run 6 @ 14:27:39  [Std. Dev: 21.77%]
+
+    Test Results:
+        45.748046875
+        64.611328125
+        48.703125
+        71.8642578125
+        78.240234375
+        76.0234375
+
+    Average: 64.20 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 4Kb - File Size: 8GB - Disk Test: Read Performance]
+    Test 6 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 3 Hours, 6 Minutes
+        Started Run 1 @ 14:33:30
+        The test run did not produce a result.
+        Started Run 2 @ 14:37:36
+        The test run did not produce a result.
+        Started Run 3 @ 14:41:22
+        The test run did not produce a result.
+
+    Test Results:
+
+    Average: 0 MB/s
+    This test failed to run properly.
+
+[NOTICE] file_put_contents(): Only 0 of 3742 bytes written, possibly out of free disk space in pts_stora
+hp:61
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 1MB - File Size: 2GB - Disk Test: Write Performance]
+    Test 7 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 2 Hours, 56 Minutes
+        Started Run 1 @ 14:45:25
+        Started Run 2 @ 14:47:25
+        Started Run 3 @ 14:49:15  [Std. Dev: 9.35%]
+        Started Run 4 @ 14:51:12  [Std. Dev: 7.73%]
+        Started Run 5 @ 14:53:08  [Std. Dev: 7.43%]
+        Started Run 6 @ 14:55:09  [Std. Dev: 8.36%]
+
+    Test Results:
+        38.61328125
+        39.7783203125
+        33.2568359375
+        38.3955078125
+        35.0048828125
+        41.875
+
+    Average: 37.82 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 1MB - File Size: 4GB - Disk Test: Write Performance]
+    Test 8 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 2 Hours, 47 Minutes
+        Started Run 1 @ 14:57:05
+        Started Run 2 @ 15:01:01
+        Started Run 3 @ 15:04:55  [Std. Dev: 5.08%]
+        Started Run 4 @ 15:08:53  [Std. Dev: 4.33%]
+        Started Run 5 @ 15:13:00  [Std. Dev: 3.94%]
+        Started Run 6 @ 15:16:52  [Std. Dev: 3.53%]
+
+    Test Results:
+        34.49609375
+        37.125
+        38.0859375
+        35.728515625
+        37.4033203125
+        36.490234375
+
+    Average: 36.55 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 1MB - File Size: 8GB - Disk Test: Write Performance]
+    Test 9 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 2 Hours, 37 Minutes
+        Started Run 1 @ 15:20:55
+        The test run did not produce a result.
+        Started Run 2 @ 15:24:54
+        The test run did not produce a result.
+        Started Run 3 @ 15:28:53
+        The test run did not produce a result.
+
+    Test Results:
+
+    Average: 0 MB/s
+    This test failed to run properly.
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 4Kb - File Size: 2GB - Disk Test: Write Performance]
+    Test 10 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 2 Hours, 28 Minutes
+        Started Run 1 @ 15:32:50
+        Started Run 2 @ 15:35:02
+        Started Run 3 @ 15:36:54  [Std. Dev: 9.39%]
+        Started Run 4 @ 15:38:48  [Std. Dev: 7.67%]
+        Started Run 5 @ 15:40:37  [Std. Dev: 6.73%]
+        Started Run 6 @ 15:42:47  [Std. Dev: 9.93%]
+
+    Test Results:
+        34.5380859375
+        41.6591796875
+        37.7412109375
+        38.521484375
+        37.36328125
+        45.6982421875
+
+    Average: 39.25 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 4Kb - File Size: 4GB - Disk Test: Write Performance]
+    Test 11 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 2 Hours, 18 Minutes
+        Started Run 1 @ 15:44:34
+        Started Run 2 @ 15:48:22
+        Started Run 3 @ 15:52:32  [Std. Dev: 3.48%]
+
+    Test Results:
+        39.15625
+        37.4931640625
+        40.1787109375
+
+    Average: 38.94 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 4Kb - File Size: 8GB - Disk Test: Write Performance]
+    Test 12 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 2 Hours, 9 Minutes
+        Started Run 1 @ 15:56:20
+        The test run did not produce a result.
+        Started Run 2 @ 16:00:22
+        The test run did not produce a result.
+        Started Run 3 @ 16:04:18
+        The test run did not produce a result.
+
+    Test Results:
+
+    Average: 0 MB/s
+    This test failed to run properly.
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 64Kb - File Size: 2GB - Disk Test: Read Performance]
+    Test 13 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 1 Hour, 59 Minutes
+        Started Run 1 @ 16:08:03
+        Started Run 2 @ 16:10:09
+        Started Run 3 @ 16:12:12  [Std. Dev: 0.30%]
+
+    Test Results:
+        357.8603515625
+        356.810546875
+        358.953125
+
+    Average: 357.87 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 64Kb - File Size: 4GB - Disk Test: Read Performance]
+    Test 14 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 1 Hour, 50 Minutes
+        Started Run 1 @ 16:14:23
+        Started Run 2 @ 16:19:57
+        Started Run 3 @ 16:26:08  [Std. Dev: 8.82%]
+        Started Run 4 @ 16:32:26  [Std. Dev: 16.09%]
+        Started Run 5 @ 16:38:12  [Std. Dev: 14.65%]
+        Started Run 6 @ 16:44:21  [Std. Dev: 14.43%]
+
+    Test Results:
+        64.677734375
+        59.0986328125
+        54.224609375
+        78.0791015625
+        72.05859375
+        57.197265625
+
+    Average: 64.22 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 64Kb - File Size: 8GB - Disk Test: Read Performance]
+    Test 15 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 1 Hour, 40 Minutes
+        Started Run 1 @ 16:50:53
+        The test run did not produce a result.
+        Started Run 2 @ 16:55:02
+        The test run did not produce a result.
+        Started Run 3 @ 16:59:45
+        The test run did not produce a result.
+
+    Test Results:
+
+    Average: 0 MB/s
+    This test failed to run properly.
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 1MB - File Size: 512MB - Disk Test: Read Performance]
+    Test 16 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 1 Hour, 30 Minutes
+        Started Run 1 @ 17:04:06
+        Started Run 2 @ 17:04:45
+        Started Run 3 @ 17:05:15  [Std. Dev: 65.17%]
+        Started Run 4 @ 17:05:58  [Std. Dev: 52.21%]
+        Started Run 5 @ 17:06:45  [Std. Dev: 44.40%]
+        Started Run 6 @ 17:07:26  [Std. Dev: 44.06%]
+
+    Test Results:
+        5143.3056640625
+        2337.6845703125
+        1430.21875
+        3241.9013671875
+        3849.85546875
+        5493.552734375
+
+    Average: 3582.75 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 4Kb - File Size: 512MB - Disk Test: Read Performance]
+    Test 17 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 1 Hour, 21 Minutes
+        Started Run 1 @ 17:08:04
+        Started Run 2 @ 17:08:50
+        Started Run 3 @ 17:09:25  [Std. Dev: 28.48%]
+        Started Run 4 @ 17:09:55  [Std. Dev: 28.65%]
+        Started Run 5 @ 17:10:31  [Std. Dev: 30.55%]
+        Started Run 6 @ 17:11:05  [Std. Dev: 27.16%]
+
+    Test Results:
+        2118.845703125
+        3838.625
+        3235.5517578125
+        4388.9716796875
+        5122.205078125
+        3999.404296875
+
+    Average: 3783.93 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 64Kb - File Size: 2GB - Disk Test: Write Performance]
+    Test 18 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 1 Hour, 11 Minutes
+        Started Run 1 @ 17:11:43
+        Started Run 2 @ 17:13:43
+        Started Run 3 @ 17:15:46  [Std. Dev: 5.70%]
+        Started Run 4 @ 17:17:37  [Std. Dev: 6.20%]
+        Started Run 5 @ 17:19:27  [Std. Dev: 5.46%]
+        Started Run 6 @ 17:21:21  [Std. Dev: 7.31%]
+
+    Test Results:
+        38.2158203125
+        36.0078125
+        40.3603515625
+        41.4794921875
+        38.251953125
+        33.884765625
+
+    Average: 38.03 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 64Kb - File Size: 4GB - Disk Test: Write Performance]
+    Test 19 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 1 Hour, 2 Minutes
+        Started Run 1 @ 17:23:19
+        Started Run 2 @ 17:27:02
+        Started Run 3 @ 17:31:28  [Std. Dev: 5.30%]
+        Started Run 4 @ 17:35:58  [Std. Dev: 4.40%]
+        Started Run 5 @ 17:40:30  [Std. Dev: 3.90%]
+        Started Run 6 @ 17:44:56  [Std. Dev: 4.95%]
+
+    Test Results:
+        35.92578125
+        33.8330078125
+        32.3349609375
+        33.537109375
+        34.5859375
+        31.197265625
+
+    Average: 33.57 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 64Kb - File Size: 8GB - Disk Test: Write Performance]
+    Test 20 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 52 Minutes
+        Started Run 1 @ 17:49:29
+        The test run did not produce a result.
+        Started Run 2 @ 17:54:01
+        The test run did not produce a result.
+        Started Run 3 @ 17:58:31
+        The test run did not produce a result.
+
+    Test Results:
+
+    Average: 0 MB/s
+    This test failed to run properly.
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 1MB - File Size: 512MB - Disk Test: Write Performance]
+    Test 21 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 43 Minutes
+        Started Run 1 @ 18:02:56
+        Started Run 2 @ 18:03:30
+        Started Run 3 @ 18:04:04  [Std. Dev: 2.41%]
+
+    Test Results:
+        38.677734375
+        36.8798828125
+        37.533203125
+
+    Average: 37.70 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 4Kb - File Size: 512MB - Disk Test: Write Performance]
+    Test 22 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 33 Minutes
+        Started Run 1 @ 18:04:58
+        Started Run 2 @ 18:05:42
+        Started Run 3 @ 18:06:21  [Std. Dev: 15.04%]
+        Started Run 4 @ 18:06:56  [Std. Dev: 12.29%]
+        Started Run 5 @ 18:07:30  [Std. Dev: 10.67%]
+        Started Run 6 @ 18:08:04  [Std. Dev: 10.95%]
+
+    Test Results:
+        32.1748046875
+        26.876953125
+        36.4296875
+        32.9130859375
+        31.7939453125
+        28.1943359375
+
+    Average: 31.40 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 64Kb - File Size: 512MB - Disk Test: Read Performance]
+    Test 23 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 23 Minutes
+        Started Run 1 @ 18:08:44
+        Started Run 2 @ 18:09:19
+        Started Run 3 @ 18:09:53  [Std. Dev: 61.14%]
+        Started Run 4 @ 18:10:29  [Std. Dev: 55.27%]
+        Started Run 5 @ 18:11:05  [Std. Dev: 49.89%]
+        Started Run 6 @ 18:11:38  [Std. Dev: 44.20%]
+
+    Test Results:
+        2365.2236328125
+        1463.31640625
+        4891.7529296875
+        5595.015625
+        3027.7939453125
+        4624.4814453125
+
+    Average: 3661.26 MB/s
+
+
+IOzone 3.405:
+    pts/iozone-1.8.0 [Record Size: 64Kb - File Size: 512MB - Disk Test: Write Performance]
+    Test 24 of 25
+    Estimated Trial Run Count:    3
+    Estimated Test Run-Time:      10 Minutes
+    Estimated Time To Completion: 14 Minutes
+        Started Run 1 @ 18:12:12
+        Started Run 2 @ 18:12:41
+        Started Run 3 @ 18:13:23  [Std. Dev: 11.95%]
+        Started Run 4 @ 18:13:58  [Std. Dev: 9.93%]
+        Started Run 5 @ 18:14:43  [Std. Dev: 8.59%]
+        Started Run 6 @ 18:15:15  [Std. Dev: 7.70%]
+
+    Test Results:
+        39.876953125
+        36.078125
+        31.3466796875
+        34.751953125
+        35.80859375
+        35.3310546875
+
+    Average: 35.53 MB/s
+
+
+7-Zip Compression 9.20.1:
+    pts/compress-7zip-1.6.0
+    Test 25 of 25
+    Estimated Trial Run Count:    3
+    Estimated Time To Completion: 4 Minutes
+        Started Run 1 @ 18:15:56
+        Started Run 2 @ 18:16:25
+        Started Run 3 @ 18:16:50  [Std. Dev: 4.82%]
+        Started Run 4 @ 18:17:15  [Std. Dev: 4.14%]
+        Started Run 5 @ 18:17:40  [Std. Dev: 3.63%]
+        Started Run 6 @ 18:18:06  [Std. Dev: 3.38%]
+
+    Test Results:
+        3979
+        4329
+        4333
+        4329
+        4301
+        4357
+
+    Average: 4271 MIPS
+
+
+The following tests failed to properly run:
+
+        - pts/iozone-1.8.0: Record Size: 1MB - File Size: 8GB - Disk Test: Read Performance
+        - pts/iozone-1.8.0: Record Size: 4Kb - File Size: 8GB - Disk Test: Read Performance
+        - pts/iozone-1.8.0: Record Size: 1MB - File Size: 8GB - Disk Test: Write Performance
+        - pts/iozone-1.8.0: Record Size: 4Kb - File Size: 8GB - Disk Test: Write Performance
+        - pts/iozone-1.8.0: Record Size: 64Kb - File Size: 8GB - Disk Test: Read Performance
+        - pts/iozone-1.8.0: Record Size: 64Kb - File Size: 8GB - Disk Test: Write Performance
+
+
+
+[root@guest1 phoronix-test-suite]#
+[root@guest1 phoronix-test-suite]#
+[
+

@@ -1,0 +1,69 @@
+[root@f24 example-voting-app ((4f2f1c9...))]# iptables -vnL -t nat
+Chain PREROUTING (policy ACCEPT 21 packets, 4473 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+   23  1380 DOCKER     all  --  *      *       0.0.0.0/0            0.0.0.0/0            ADDRTYPE match dst-type LOCAL
+
+Chain INPUT (policy ACCEPT 21 packets, 4473 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 8 packets, 828 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+   13   780 DOCKER     all  --  *      *       0.0.0.0/0           !127.0.0.0/8          ADDRTYPE match dst-type LOCAL
+
+Chain POSTROUTING (policy ACCEPT 13 packets, 1128 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 MASQUERADE  all  --  *      !br-5760e64b9176  172.19.0.0/16        0.0.0.0/0           
+    0     0 MASQUERADE  all  --  *      !br-cd8ecb4c0556  172.18.0.0/16        0.0.0.0/0           
+    0     0 MASQUERADE  all  --  *      !docker0  172.17.0.0/16        0.0.0.0/0           
+    0     0 MASQUERADE  tcp  --  *      *       172.19.0.2           172.19.0.2           tcp dpt:6379
+    0     0 MASQUERADE  tcp  --  *      *       172.18.0.2           172.18.0.2           tcp dpt:80
+    0     0 MASQUERADE  tcp  --  *      *       172.18.0.3           172.18.0.3           tcp dpt:80
+
+Chain DOCKER (2 references)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 RETURN     all  --  br-5760e64b9176 *       0.0.0.0/0            0.0.0.0/0           
+    0     0 RETURN     all  --  br-cd8ecb4c0556 *       0.0.0.0/0            0.0.0.0/0           
+    0     0 RETURN     all  --  docker0 *       0.0.0.0/0            0.0.0.0/0           
+    0     0 DNAT       tcp  --  !br-5760e64b9176 *       0.0.0.0/0            0.0.0.0/0            tcp dpt:32773 to:172.19.0.2:6379
+    4   240 DNAT       tcp  --  !br-cd8ecb4c0556 *       0.0.0.0/0            0.0.0.0/0            tcp dpt:5000 to:172.18.0.2:80
+    1    60 DNAT       tcp  --  !br-cd8ecb4c0556 *       0.0.0.0/0            0.0.0.0/0            tcp dpt:5001 to:172.18.0.3:80
+[root@f24 example-voting-app ((4f2f1c9...))]# 
+[root@f24 example-voting-app ((4f2f1c9...))]#
+[root@f24 example-voting-app ((4f2f1c9...))]# iptables -vnL
+Chain INPUT (policy ACCEPT 3389 packets, 233K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+ 4008  389K DOCKER-ISOLATION  all  --  *      *       0.0.0.0/0            0.0.0.0/0           
+ 4008  389K DOCKER     all  --  *      br-5760e64b9176  0.0.0.0/0            0.0.0.0/0           
+ 4001  389K ACCEPT     all  --  *      br-5760e64b9176  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
+    0     0 ACCEPT     all  --  br-5760e64b9176 !br-5760e64b9176  0.0.0.0/0            0.0.0.0/0           
+    7   420 ACCEPT     all  --  br-5760e64b9176 br-5760e64b9176  0.0.0.0/0            0.0.0.0/0           
+    0     0 DOCKER     all  --  *      br-cd8ecb4c0556  0.0.0.0/0            0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      br-cd8ecb4c0556  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
+    0     0 ACCEPT     all  --  br-cd8ecb4c0556 !br-cd8ecb4c0556  0.0.0.0/0            0.0.0.0/0           
+    0     0 ACCEPT     all  --  br-cd8ecb4c0556 br-cd8ecb4c0556  0.0.0.0/0            0.0.0.0/0           
+    0     0 DOCKER     all  --  *      docker0  0.0.0.0/0            0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      docker0  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
+    0     0 ACCEPT     all  --  docker0 !docker0  0.0.0.0/0            0.0.0.0/0           
+    0     0 ACCEPT     all  --  docker0 docker0  0.0.0.0/0            0.0.0.0/0           
+
+Chain OUTPUT (policy ACCEPT 2286 packets, 207K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain DOCKER (3 references)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 ACCEPT     tcp  --  !br-5760e64b9176 br-5760e64b9176  0.0.0.0/0            172.19.0.2           tcp dpt:6379
+    0     0 ACCEPT     tcp  --  !br-cd8ecb4c0556 br-cd8ecb4c0556  0.0.0.0/0            172.18.0.2           tcp dpt:80
+    0     0 ACCEPT     tcp  --  !br-cd8ecb4c0556 br-cd8ecb4c0556  0.0.0.0/0            172.18.0.3           tcp dpt:80
+
+Chain DOCKER-ISOLATION (1 references)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 DROP       all  --  br-cd8ecb4c0556 br-5760e64b9176  0.0.0.0/0            0.0.0.0/0           
+    0     0 DROP       all  --  br-5760e64b9176 br-cd8ecb4c0556  0.0.0.0/0            0.0.0.0/0           
+    0     0 DROP       all  --  docker0 br-5760e64b9176  0.0.0.0/0            0.0.0.0/0           
+    0     0 DROP       all  --  br-5760e64b9176 docker0  0.0.0.0/0            0.0.0.0/0           
+    0     0 DROP       all  --  docker0 br-cd8ecb4c0556  0.0.0.0/0            0.0.0.0/0           
+    0     0 DROP       all  --  br-cd8ecb4c0556 docker0  0.0.0.0/0            0.0.0.0/0           
+ 302K   29M RETURN     all  --  *      *       0.0.0.0/0            0.0.0.0/0

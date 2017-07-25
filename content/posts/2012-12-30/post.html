@@ -1,0 +1,235 @@
+
+<! Running Benchmarks With the Phoronix Test Suite! >
+
+<br>
+
+Benchmarking software can be invaluable when testing new hardware/software configurations. 
+The
+<a href="http://www.phoronix-test-suite.com">
+Phoronix Test Suite
+</a>
+ is a collection of open source software benchmarks that are fairly easy to use
+and the results are presented in a such a way that is easy to understand; even
+if you don't understand the tests that were run. Today I'll give a brief run
+down of how to install the test suite and run the benchmarks.
+
+<br><br>
+
+Phoronix can be used on almost all operating systems. The only requirement of
+the Phoronix Test Suite is PHP.  For this demonstration I
+am using a Fedora 17 virtual machine, however your experience should be fairly
+similar on whatever Linux distribution you may be using.
+<br><br>
+
+The first thing I needed to do was install a few PHP packages. A quick 
+call to <code>yum</code> will take care of this for us:
+
+<br>
+
+<blockquote>
+[root@guest1 ~]# yum -y install php-cli php-xml php-gd
+...
+</blockquote>
+
+<br>
+
+Next I downloaded and extracted the software and ran their
+<code>install.sh</code> script to install it. 
+
+<br>
+
+<blockquote>
+[root@guest1 phoronix]# mkdir /tmp/phoronix
+[root@guest1 phoronix]# cd /tmp/phoronix
+[root@guest1 phoronix]# 
+[root@guest1 phoronix]# wget --quiet --output-document=phoronix-test-suite-4.2.0.tar.gz http://www.phoronix-test-suite.com/download.php?file=phoronix-test-suite-4.2.0
+[root@guest1 phoronix]# 
+[root@guest1 phoronix]# tar xf phoronix-test-suite-4.2.0.tar.gz
+[root@guest1 phoronix]#
+[root@guest1 phoronix]# cd phoronix-test-suite
+[root@guest1 phoronix-test-suite]#
+[root@guest1 phoronix-test-suite]# ./install-sh
+
+Phoronix Test Suite Installation Completed
+
+Executable File: /usr/bin/phoronix-test-suite
+Documentation: /usr/share/doc/phoronix-test-suite/
+Phoronix Test Suite Files: /usr/share/phoronix-test-suite/
+
+[root@guest1 phoronix-test-suite]#
+</blockquote>
+
+<br>
+
+Now that the phoronix software is installed you can run any of the phoronix
+tests by using the <code>phoronix-test-suite</code> command. You can run the
+<code> phoronix-test-suite list-suites</code> command to view what test suites
+are available for you to use. Some of the most notable ones are the
+<b><i>disk</i></b> test suite and the <b><i>cpu</i></b> test suites. 
+
+
+<br><br>
+
+<b>NOTE:</b> A license message will appear upon the first run of
+<code>phoronix-test-suite</code> and will require you to answer a few questions.
+
+
+<br><br>
+
+In order to view the actual tests within the test suite the
+<code>phoronix-test-suite info</code> command is useful. For example, to see
+the tests within the <b><i>disk</i></b> test suite you would call 
+<code>phoronix-test-suite info disk</code> as is done below: 
+
+<br>
+
+<blockquote>
+[root@guest1 phoronix-test-suite]# phoronix-test-suite info disk
+
+
+Phoronix Test Suite v4.2.0
+Disk Test Suite
+
+Run Identifier: pts/disk-1.2.1
+Suite Version: 1.2.1
+Maintainer: Michael Larabel
+Suite Type: Disk
+Unique Tests: 13
+Suite Description: This test suite is designed to contain real-world disk and file-system tests.
+
+pts/disk-1.2.1
+  * pts/compress-gzip
+  * pts/sqlite
+  * pts/apache
+  * pts/pgbench
+  * pts/compilebench
+  * pts/iozone
+  * pts/dbench
+  * pts/fs-mark
+  * pts/fio
+  * pts/tiobench
+  * pts/postmark
+  * pts/aio-stress
+  * pts/unpack-linux
+
+[root@guest1 phoronix-test-suite]#
+</blockquote>
+
+<br>
+
+So how do you run these tests? I like to run my tests in <i>batch</i> mode so
+that no questions are asked to me during the test execution. To set
+this up run the <code>phoronix-test-suite batch-setup</code> command in order to
+answer a few questions that will apply to all of the future <i>batch</i> runs.
+The answers that I chose are shown in the output below:
+
+<br>
+
+<blockquote>
+[root@guest1 phoronix-test-suite]# phoronix-test-suite batch-setup
+
+These are the default configuration options for when running the Phoronix Test Suite in a batch mode (i.e. running phoronix-test-suite batch-benchmark universe). Running in a batch mode is designed to be as autonomous as possible, except for where you'd like any end-user interaction.
+
+    Save test results when in batch mode (Y/n): Y
+    Open the web browser automatically when in batch mode (y/N): N
+    Auto upload the results to OpenBenchmarking.org (Y/n): n
+    Prompt for test identifier (Y/n): n
+    Prompt for test description (Y/n): n
+    Prompt for saved results file-name (Y/n): n
+    Run all test options (Y/n): Y
+
+Batch settings saved.
+
+[root@guest1 phoronix-test-suite]#
+</blockquote>
+
+<br>
+
+Now that we have <i>batch</i> set up we can run a few tests using the 
+<code>phoronix-test-suite batch-benchmark</code> 
+command. I chose to run the
+<i>pts/iozone</i> and <i>pts/compress-7zip</i> benchmarks. 
+
+<br>
+
+<blockquote>
+
+[root@guest1 phoronix-test-suite]# phoronix-test-suite batch-benchmark pts/iozone pts/compress-7zip
+<a href="/content/2012-12-30/output.txt">
+... CLICK TO SEE OUTPUT ...
+</a>
+</blockquote>
+
+<br>
+
+It should take quite some time for the tests to run. After the tests are
+complete the results are stored in the <code>
+~/.phoronix-test-suite/test-results/</code> directory.
+For example, from my test run all files were stored in 
+<code>~/.phoronix-test-suite/test-results/2012-12-30-1234/</code>.
+The best way I have found to view the test results is to fire up a web browser and
+point it to the index.html file within the test results directory: 
+
+
+<br>
+
+<blockquote>
+[root@guest1 phoronix-test-suite]# firefox ~/.phoronix-test-suite/test-results/2012-12-30-1234/index.html
+</blockquote>
+
+<br>
+
+An example of
+the test results output for the test I ran can be found
+<a href="/content/2012-12-30/2012-12-30-1234/index.html">
+HERE
+</a> 
+
+<br><br>
+
+The test results for a single test run are nice, but the graphs really help when
+comparing runs from multiple tests. i.e you tweak some setting and then run the
+benchmarks again to see the performance impact. I performed two runs of the
+<i>compress-7zip</i> benchmark to do just this. The two test runs were placed
+into the <code>2012-12-30-2102</code> and <code>2012-12-30-2106</code>
+directories within the test-results directory. In order to compare the outputs
+side by side the <code>phoronix-test-suite merge-results</code> command is used. 
+
+<br><br>
+
+<blockquote>
+[root@guest1 phoronix-test-suite]# phoronix-test-suite merge-results 2012-12-30-2102 2012-12-30-2106
+Merged Results Saved To:
+/root/.phoronix-test-suite/test-results/merge-1844/composite.xml
+
+    Do you want to view the results in your web browser (y/N): N
+
+[root@guest1 phoronix-test-suite]#
+</blockquote>
+
+<br>
+
+For these test runs I didn't tweak any settings on
+the system so they are pretty much the same result, but 
+take a look at the merged test results 
+<a href="/content/2012-12-30/merge-1844/index.html">
+HERE
+</a>
+to get an idea of what I mean about the side-by-side comparison. 
+
+<br><br>
+
+Take an opportunity to check out the phoronix 
+<a href="/content/2012-12-30/phoronix-test-suite.pdf">
+documentation
+</a> or the <code>phoronix-test-suite</code> man page to discover more features! 
+
+<br><br>
+
+
+Happy Benchmarking!
+
+<br><br>
+
+Dusty Mabe
+

@@ -1,0 +1,241 @@
+Script started on Sat 14 Apr 2012 07:19:06 AM EDT
+[?1034hdustymabe@fedorabook: tmpdocs>
+dustymabe@fedorabook: tmpdocs>
+dustymabe@fedorabook: tmpdocs>tmu [Kx -2
+[?1049h(B[m[?1l>[H[2J[?12l[?25h[?1000l[?25l[1;1H/home/dustymabe/.tmux.conf: 12: unknown option: mouse-select-pane                         [30m[43m[0/0][2;1H(B[m[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[42m[0] 0:bash*                                                        "fedorabook" 07:19 14-Apr-12(B[m[24;1H[1;24r[H[?12l[?25h[?1000h[?25l[24d[30m[42m[0] 0:[tmux]*                                                      "fedorabook" 07:19 14-Apr-12(B[m[1;1H[?12l[?25h[?25l[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[H[?12l[?25h[?1000l[1;23rdustymabe@fedorabook: tmpdocs>[1;24r[H[30C[?25l[24;1H[30m[42m[0] 0:bash*                                                        "fedorabook" 07:19 14-Apr-12(B[m[1;31H[?12l[?25h[32m[12;1H───────────────────────────────────────────────────────────────────────────────────────────────[?25l[1;1H(B[mdustymabe@fedorabook: tmpdocs>[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[2B[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[42m[0] 0:bash*                                                        "fedorabook" 07:19 14-Apr-12(B[m[13;1H[?12l[?25h[H[K[1;11rdustymabe@fedorabook: tmpdocs>[1;24r[H[13d[13;23r[H[13ddustymabe@fedorabook: tmpdocs>[1;24r[H[13;31H[32m[12;1H───────────────────────────────────────────────────────────────────────────────────────────────[1;31H(B[m[1;11r[H[30Ct[1;24r[H[31C[1;11r[H[31Co[1;24r[H[32C[1;11r[H[32Cp[1;24r[H[33C
+[?25l[24d[30m[42m[0] 0:top*                                                         "fedorabook" 07:19 14-Apr-12(B[m[2;1H[?12l[?25h[1;11r[H[K
+[K[1B[K[1B[K[1B[K[1B[K[1B[K[1B[K[1B[K[1B[K[1B[K[Htop - 07:19:22 up 8 min,  5 users,  load average: 0.37, 0.75, 0.57[K
+Tasks: 195 total,   3 running, 191 sleeping,   0 stopped,   1 zombie[K
+Cpu(s):  9.4%us,  4.6%sy,  3.0%ni, 68.4%id, 14.2%wa,  0.0%hi,  0.3%si,  0.0%st[K
+Mem:   1769792k total,  1488112k used,   281680k free,    46908k buffers[K
+Swap:  3947328k total,        0k used,  3947328k free,   682368k cached[K[1;24r[H[5B[1;11r[H[7d[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                           (B[m[7;95H[K
+ 1786 dustymab  39  19  432m  56m 7524 S 17.7  3.2   0:22.07 virtuoso-t                        [9;1H 1832 dustymab  20   0 1515m  64m  15m S  9.8  3.7   0:12.11 dropbox                           [10;1H 1763 dustymab  39  19 1320m  22m  14m S  5.9  1.3   0:06.78 nepomukservices                   [11;1H 1538 dustymab  20   0 23316 2136  704 S  3.9  0.1   0:01.22 dbus-daemon                       [6;1H[K[1;24r[H[5B[32m[6B───────────────────────────────────────────────────────────────────────────────────────────────[13;31H(B[m[?25l[24;1H[30m[42m[0] 0:bash*                                                        "fedorabook" 07:19 14-Apr-12(B[m[13;31H[?12l[?25h[13;23r[H[13;31Hc[1;24r[H[13;32H[13;23r[H[13;32Ha[1;24r[H[13;33H[1;11r[Htop - 07:19:25 up 8 min,  5 users,  load average: 0.34, 0.74, 0.56[K
+Tasks: 192 total,   2 running, 189 sleeping,   0 stopped,   1 zombie[K
+Cpu(s):  6.0%us,  5.3%sy, 10.9%ni, 68.0%id,  9.6%wa,  0.0%hi,  0.2%si,  0.0%st[K
+Mem:   1769792k total,  1481592k used,   288200k free,    47032k buffers[K
+Swap:  3947328k total,        0k used,  3947328k free,   682440k cached[K[1;24r[H[13;33H[1;11r[H[7d[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                           (B[m[7;95H[K
+ 1786 dustymab  39  19  432m  56m 7524 S 15.6  3.2   0:22.54 virtuoso-t                        [9;1H 1832 dustymab  20   0 1515m  64m  15m S  5.0  3.7   0:12.26 dropbox                           [10;1H 2305 dustymab  20   0  439m  35m  21m S  4.0  2.1   0:15.54 qt-recordMyDesk                   [11;1H 1763 dustymab  39  19 1320m  22m  14m S  3.7  1.3   0:06.89 nepomukservices                   [6;1H[K[1;24r[H[13;33H[13;23r[H[13;33Ht[1;24r[H[13;34H[13;23r[H[13;34H [1;24r[H[13;35H[13;23r[H[13;35H/[1;24r[H[13;36H[13;23r[H[13;36Hp[1;24r[H[13;37H[13;23r[H[13;37Hr[1;24r[H[13;38H[13;23r[H[13;38Hoc/[1;24r[H[13;41H[13;23r[H[13;41Hm[1;24r[H[13;42H[13;23r[H[13;42He[1;24r[H[13;43H[13;23r[H[13;43Hm[1;24r[H[13;44H[13;23r[H[13;44Hinfo [1;24r[H[13;49H[1;11r[Htop - 07:19:28 up 8 min,  5 users,  load average: 0.34, 0.74, 0.56[K
+Tasks: 192 total,   2 running, 189 sleeping,   0 stopped,   1 zombie[K
+Cpu(s):  7.6%us,  5.0%sy, 11.4%ni, 60.0%id, 15.9%wa,  0.0%hi,  0.0%si,  0.0%st[K
+Mem:   1769792k total,  1482492k used,   287300k free,    47256k buffers[K
+Swap:  3947328k total,        0k used,  3947328k free,   682708k cached[K[1;24r[H[13;49H[1;11r[H[7d[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                           (B[m[7;95H[K
+ 1786 dustymab  39  19  432m  56m 7524 S 17.3  3.2   0:23.06 virtuoso-t                        [9;1H 1832 dustymab  20   0 1515m  64m  15m S  8.6  3.7   0:12.52 dropbox                           [10;1H 1763 dustymab  39  19 1320m  22m  14m S  3.7  1.3   0:07.00 nepomukservices                   [11;1H 2305 dustymab  20   0  439m  35m  21m S  3.0  2.1   0:15.63 qt-recordMyDesk                   [6;1H[K[1;24r[H[13;49H
+[13;23r[H[14dMemTotal:        1769792 kB[1;24r[H[14;28H
+[13;23r[H[15dMemFree:          287200 kB[1;24r[H[15;28H
+[13;23r[H[16dBuffers:           47296 kB[1;24r[H[16;28H
+[13;23r[H[17dCached:           682764 kB[1;24r[H[17;28H
+[13;23r[H[18dSwapCached:            0 kB[1;24r[H[18;28H
+[13;23r[H[19dActive:           807832 kB[1;24r[H[19;28H
+[13;23r[H[20dInactive:         466836 kB[1;24r[H[20;28H
+[13;23r[H[21dActive(anon):     545232 kB[1;24r[H[21;28H
+[13;23r[H[22dInactive(anon):     4332 kB[1;24r[H[22;28H
+[13;23r[H[23dActive(file):     262600 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dInactive(file):   462504 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dUnevictable:           0 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dMlocked:               0 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dSwapTotal:       3947328 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dSwapFree:        3947328 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dDirty:               176 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dWriteback:             0 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dAnonPages:        544716 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dMapped:           176228 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dShmem:              4964 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dSlab:              75392 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dSReclaimable:      40868 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dSUnreclaim:        34524 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dKernelStack:        3568 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dPageTables:        55956 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dNFS_Unstable:          0 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dBounce:                0 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dWritebackTmp:          0 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dCommitLimit:     4832224 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dCommitted_AS:    2178800 kB[1;24r[H[23;28H[13;23r[H[23d
+[1;24r[H[23d[13;23r[H[23dVmallocTotal:   34359738367 kB[1;24r[H[23;31H[13;23r[H[23d
+VmallocUsed:      135736 kB
+VmallocChunk:   34359590592 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    131072 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       11436 kB
+DirectMap2M:     1798144 kB
+[1;24r[H[23d[13;23r[H[23ddustymabe@fedorabook: tmpdocs>[1;24r[H[23;31H[13;23r[H[23d
+dustymabe@fedorabook: tmpdocs>[1;24r[H[23;31H[13;23r[H[23d
+dustymabe@fedorabook: tmpdocs>[1;24r[H[23;31H[1;11r[Htop - 07:19:31 up 8 min,  5 users,  load average: 0.31, 0.73, 0.56[K
+Tasks: 192 total,   1 running, 190 sleeping,   0 stopped,   1 zombie[K
+Cpu(s):  7.1%us,  5.5%sy, 12.0%ni, 65.4%id,  9.8%wa,  0.0%hi,  0.2%si,  0.0%st[K
+Mem:   1769792k total,  1482584k used,   287208k free,    47388k buffers[K
+Swap:  3947328k total,        0k used,  3947328k free,   682976k cached[K[7;1H[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                           (B[m[7;95H[K
+ 1786 dustymab  39  19  432m  56m 7524 S 17.6  3.2   0:23.59 virtuoso-t                        [8;1H[1;24r[H[23;31H[1;11r[H[9d 1832 dustymab  20   0 1515m  64m  15m S  6.3  3.7   0:12.71 dropbox                           [10;1H 1763 dustymab  39  19 1320m  22m  14m S  3.6  1.3   0:07.11 nepomukservices                   [11;1H 2305 dustymab  20   0  439m  35m  21m S  3.6  2.1   0:15.74 qt-recordMyDesk                   [6;1H[K[1;24r[H[23;31H[13;23r[H[23d
+dustymabe@fedorabook: tmpdocs>[1;24r[H[23;31H[13;23r[H[23;31Hcat /proc/meminfo [1;24r[H[23;49H[13;23r[H[23;49H|[1;24r[H[23;50H[13;23r[H[23;50H [1;24r[H[23;51H[1;11r[Htop - 07:19:34 up 8 min,  5 users,  load average: 0.37, 0.73, 0.56[K
+Tasks: 192 total,   1 running, 190 sleeping,   0 stopped,   1 zombie[K
+Cpu(s):  7.0%us,  5.0%sy, 12.0%ni, 63.3%id, 12.6%wa,  0.0%hi,  0.2%si,  0.0%st[K
+Mem:   1769792k total,  1483492k used,   286300k free,    47556k buffers[K
+Swap:  3947328k total,        0k used,  3947328k free,   683152k cached[K[1;24r[H[23;51H[1;11r[H[7d[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                           (B[m[7;95H[K
+ 1786 dustymab  39  19  432m  56m 7524 S 17.6  3.2   0:24.12 virtuoso-t                        [9;1H 1832 dustymab  20   0 1515m  64m  15m S  7.0  3.7   0:12.92 dropbox                           [10;1H 1763 dustymab  39  19 1320m  22m  14m S  4.3  1.3   0:07.24 nepomukservices                   [11;1H 2305 dustymab  20   0  439m  35m  21m S  4.0  2.1   0:15.86 qt-recordMyDesk                   [6;1H[K[1;24r[H[23;51H[13;23r[H[23;51Hl[1;24r[H[23;52H[13;23r[H[23;52He[1;24r[H[23;53H[13;23r[H[23;53Hs[1;24r[H[23;54H[13;23r[H[23;54Hs[1;24r[H[23;55H[13;23r[H[23d
+[1;24r[H[23d[?25l[10AMemTotal:        1769792 kB[K
+MemFree:          286068 kB[K
+Buffers:           47616 kB[K
+Cached:           683132 kB[K
+SwapCached:            0 kB[K
+Active:           808108 kB[K
+Inactive:         467452 kB[K
+Active(anon):     545436 kB[K
+Inactive(anon):     4332 kB[K
+Active(file):     262672 kB[K
+:[K[?12l[?25h[?1h=[K[13;23r[H[23dInactive(file):   463120 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       3947328 kB
+SwapFree:        3947328 kB
+Dirty:               228 kB
+Writeback:             0 kB
+AnonPages:        544988 kB
+Mapped:           176228 kB
+Shmem:              4964 kB
+:[K[1;24r[H[23;2H[K[13;23r[H[23dSlab:              75412 kB
+SReclaimable:      40888 kB
+SUnreclaim:        34524 kB
+KernelStack:        3568 kB
+PageTables:        56080 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     4832224 kB
+Committed_AS:    2179760 kB
+:[K[1;24r[H[23;2H[K[13;23r[H[23dVmallocTotal:   34359738367 kB
+VmallocUsed:      135736 kB
+VmallocChunk:   34359590592 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    131072 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+:[K[1;24r[H[23;2H[1;11r[Htop - 07:19:37 up 8 min,  5 users,  load average: 0.37, 0.73, 0.56[K[1;24r[H[23;2H[1;11r[H
+Tasks: 193 total,   1 running, 191 sleeping,   0 stopped,   1 zombie[K[1;24r[H[23;2H[1;11r[H[2BCpu(s):  7.3%us,  4.5%sy,  9.2%ni, 59.0%id, 20.0%wa,  0.0%hi,  0.0%si,  0.0%st[K[1;24r[H[23;2H[1;11r[H[3BMem:   1769792k total,  1486948k used,   282844k free,    47816k buffers[K[1;24r[H[23;2H[1;11r[H[4BSwap:  3947328k total,        0k used,  3947328k free,   683624k cached[K[1;24r[H[23;2H[1;11r[H[7d[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                           (B[m[7;95H[K[1;24r[H[23;2H[1;11r[H[8d 1786 dustymab  39  19  432m  58m 7524 S 13.6  3.4   0:24.53 virtuoso-t                        [8;1H[1;24r[H[23;2H[1;11r[H[9d 1832 dustymab  20   0 1515m  64m  15m S  8.6  3.7   0:13.18 dropbox                           [9;1H[1;24r[H[23;2H[1;11r[H[10d 2305 dustymab  20   0  439m  35m  21m S  3.0  2.1   0:15.95 qt-recordMyDesk                   [10;1H[1;24r[H[23;2H[1;11r[H[11d 1763 dustymab  39  19 1320m  22m  14m S  2.7  1.3   0:07.32 nepomukservices                   [6;1H[K[1;24r[H[23;2H[K[13;23r[H[23dDirectMap4k:       11436 kB
+DirectMap2M:     1798144 kB
+[7m(END) (B[m[K[1;24r[H[23;7H[K[K[13;23r[H[23d[7m(END) (B[m[K[1;24r[H[23;7H[K[?25l[10AHugePages_Free:        0[K
+HugePages_Rsvd:        0[K
+HugePages_Surp:        0[K
+Hugepagesize:       2048 kB[K
+DirectMap4k:       11436 kB[K
+DirectMap2M:     1798144 kB[K
+dustymabe@fedorabook: tmpdocs>[K
+dustymabe@fedorabook: tmpdocs>[K
+dustymabe@fedorabook: tmpdocs>[K
+dustymabe@fedorabook: tmpdocs>cat /proc/meminfo | less[K
+[K[?12l[?25h[?1l>[13;23r[H[23ddustymabe@fedorabook: tmpdocs>[1;24r[H[23;31H[13;23r[H[23d
+dustymabe@fedorabook: tmpdocs>[1;24r[H[23;31H[13;23r[H[23d
+dustymabe@fedorabook: tmpdocs>[1;24r[H[23;31H[13;23r[H[23d
+dustymabe@fedorabook: tmpdocs>[1;24r[H[23;31H[13;23r[H[23d
+dustymabe@fedorabook: tmpdocs>[1;24r[H[23;31H[13;23r[H[23d
+dustymabe@fedorabook: tmpdocs>[1;24r[H[23;31H[13;23r[H[23d
+dustymabe@fedorabook: tmpdocs>[1;24r[H[23;31H[13;23r[H[23d
+dustymabe@fedorabook: tmpdocs>[1;24r[H[23;31H[13;23r[H[23d
+dustymabe@fedorabook: tmpdocs>[1;24r[H[23;31H[1;11r[Htop - 07:19:40 up 8 min,  5 users,  load average: 0.50, 0.76, 0.57[K
+Tasks: 192 total,   1 running, 190 sleeping,   0 stopped,   1 zombie[K
+Cpu(s):  8.0%us,  5.5%sy, 10.6%ni, 58.1%id, 17.8%wa,  0.0%hi,  0.0%si,  0.0%st[K
+Mem:   1769792k total,  1486540k used,   283252k free,    48068k buffers[K
+Swap:  3947328k total,        0k used,  3947328k free,   683872k cached[K[1;24r[H[23;31H[1;11r[H[7d[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                           (B[m[7;95H[K
+ 1786 dustymab  39  19  432m  56m 7524 S 16.3  3.2   0:25.02 virtuoso-t                        [9;1H 1832 dustymab  20   0 1515m  64m  15m S  9.0  3.7   0:13.45 dropbox                           [10;1H 1763 dustymab  39  19 1320m  22m  14m S  3.7  1.3   0:07.43 nepomukservices                   [11;1H 2305 dustymab  20   0  439m  35m  21m S  3.7  2.1   0:16.06 qt-recordMyDesk                   [6;1H[K[1;24r[H[23;31H[13;23r[H[23;31Hlogout
+[1;24r[H[23d[?25l[Htop - 07:19:40 up 8 min,  5 users,  load average: 0.50, 0.76, 0.57[K
+Tasks: 192 total,   1 running, 190 sleeping,   0 stopped,   1 zombie[K
+Cpu(s):  8.0%us,  5.5%sy, 10.6%ni, 58.1%id, 17.8%wa,  0.0%hi,  0.0%si,  0.0%st[K
+Mem:   1769792k total,  1486540k used,   283252k free,    48068k buffers[K
+Swap:  3947328k total,        0k used,  3947328k free,   683872k cached[K
+[K
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                           [8;1H(B[m 1786 dustymab  39  19  432m  56m 7524 S 16.3  3.2   0:25.02 virtuoso-t                        [9;1H 1832 dustymab  20   0 1515m  64m  15m S  9.0  3.7   0:13.45 dropbox                           [10;1H 1763 dustymab  39  19 1320m  22m  14m S  3.7  1.3   0:07.43 nepomukservices                   [11;1H 2305 dustymab  20   0  439m  35m  21m S  3.7  2.1   0:16.06 qt-recordMyDesk                   [12;1H[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[42m[0] 0:bash*                                                        "fedorabook" 07:19 14-Apr-12(B[m[6;1H[?12l[?25h[1;23r[Htop - 07:19:41 up 8 min,  5 users,  load average: 0.50, 0.76, 0.57[K
+Tasks: 191 total,   1 running, 189 sleeping,   0 stopped,   1 zombie[K
+Cpu(s):  6.7%us,  8.2%sy, 16.5%ni, 58.2%id, 10.3%wa,  0.0%hi,  0.0%si,  0.0%st[K[1;24r[H[3B[1;23r[H[3BMem:   1769792k total,  1483840k used,   285952k free,    48116k buffers[K
+Swap:  3947328k total,        0k used,  3947328k free,   683884k cached[K[7;1H[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                           (B[m[7;95H[K
+ 1786 dustymab  39  19  432m  56m 7524 S 23.6  3.2   0:25.25 virtuoso-t                        [9;1H    9 root      20   0     0    0    0 S  5.1  0.0   0:01.35 kworker/1:0                       [10;1H 1763 dustymab  39  19 1320m  22m  14m S  5.1  1.3   0:07.48 nepomukservices                   [11;1H 1832 dustymab  20   0 1515m  64m  15m S  5.1  3.7   0:13.50 dropbox                           [12;1H 2305 dustymab  20   0  439m  35m  21m S  4.1  2.1   0:16.10 qt-recordMyDesk                   [13;1H 2277 dustymab  39  19  617m  28m  15m S  3.1  1.6   0:05.44 nepomukservices                   [14;1H 1409 root      20   0  154m  29m 9760 S  2.1  1.7   0:23.10 X                                 [15;1H 1538 dustymab  20   0 23316 2136  704 S  2.1  0.1   0:01.49 dbus-daemon                       [15;1H[1;24r[H[16d[1;23r[H[16d 1741 dustymab  20   0  469m  13m  10m S  2.1  0.8   0:00.66 akonadi_nepomuk                   [17;1H 2275 dustymab  39  19  535m  24m  18m S  2.1  1.4   0:00.61 nepomukservices                   [18;1H 1677 dustymab  20   0  383m  12m 9708 S  1.0  0.7   0:00.61 kactivitymanage                   [19;1H 1680 dustymab  20   0 1136m  26m  16m S  1.0  1.5   0:08.67 knotify4                          [20;1H 2272 dustymab  39  19  534m  15m  12m S  1.0  0.9   0:01.40 nepomukservices                   [21;1H 2278 dustymab  39  19  462m  15m  12m S  1.0  0.9   0:00.62 nepomukservices                   [22;1H 2279 dustymab  39  19  580m  15m  12m S  1.0  0.9   0:00.59 nepomukservices                   [23;1H 2363 root      20   0     0    0    0 S  1.0  0.0   0:00.20 kworker/0:2                       [6;1H[K[1;24r[H[5B[?25l[24d[30m[42m[0] 0:top*                                                         "fedorabook" 07:19 14-Apr-12(B[m[6;1H[?12l[?25h[1;23r[H[23d
+[1;24r[H[23d[1;23r[H[23ddustymabe@fedorabook: tmpdocs>[1;24r[H[23;31H[?25l
+[30m[42m[0] 0:bash*                                                        "fedorabook" 07:19 14-Apr-12(B[m[23;31H[?12l[?25h[1;23r[H[23;31Hlogout
+[1;24r[H[23d[1;24r(B[m[?1l>[H[2J[?12l[?25h[?1000l[?1049l[exited]
+dustymabe@fedorabook: tmpdocs>
+dustymabe@fedorabook: tmpdocs>
+dustymabe@fedorabook: tmpdocs>exit
+
+Script done on Sat 14 Apr 2012 07:19:49 AM EDT

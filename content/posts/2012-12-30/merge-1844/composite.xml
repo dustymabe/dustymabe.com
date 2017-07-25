@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v4.2.0 (Randaberg)-->
+<?xml-stylesheet type="text/xsl" href="pts-results-viewer.xsl"?>
+<PhoronixTestSuite>
+  <Generated>
+    <Title>2012-12-30-2102</Title>
+    <LastModified>2012-12-30 21:18:58</LastModified>
+    <TestClient>Phoronix Test Suite v4.2.0 (Randaberg)</TestClient>
+    <Description>QEMU 1.0 testing on Fedora 17 (Beefy Miracle) via the Phoronix Test Suite.</Description>
+  </Generated>
+  <System>
+    <Identifier>QEMU Virtual 1.0</Identifier>
+    <Hardware>Processor: QEMU Virtual 1.0 @ 3.39GHz (1 Core), Motherboard: Bochs, Chipset: Red Hat Virtio, Memory: 2048MB, Disk: 16GB, Graphics: AMD Radeon HD 7500, Network: Realtek RTL-8139/8139C/8139C+</Hardware>
+    <Software>OS: Fedora 17 (Beefy Miracle), Kernel: 3.3.4-5.fc17.x86_64 (x86_64), Desktop: GNOME Shell 3.4.1, Display Server: X Server 1.12.0, Display Driver: vesa 2.3.0, OpenGL: 4.2.11733, Compiler: GCC 4.7.2 20120921, File-System: btrfs, Screen Resolution: 1280x1024, System Layer: QEMU 1.0</Software>
+    <User></User>
+    <TimeStamp>2012-12-30 21:02:35</TimeStamp>
+    <TestClientVersion>4.2.0</TestClientVersion>
+    <Notes>Firefox was running on this system.</Notes>
+    <JSON>{"compiler-configuration":"--build=x86_64-redhat-linux --disable-build-poststage1-with-cxx --disable-build-with-cxx --disable-dssi --disable-libjava-multilib --disable-libunwind-exceptions --enable-__cxa_atexit --enable-bootstrap --enable-checking=release --enable-gnu-unique-object --enable-initfini-array --enable-java-awt=gtk --enable-java-maintainer-mode --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-libgcj-multifile --enable-plugin --enable-shared --enable-threads=posix --mandir=\/usr\/share\/man --with-arch_32=i686 --with-cloog --with-ecj-jar=\/usr\/share\/java\/eclipse-ecj.jar --with-java-home=\/usr\/lib\/jvm\/java-1.5.0-gcj-1.5.0.0\/jre --with-linker-hash-style=gnu --with-ppl --with-tune=generic"}</JSON>
+  </System>
+  <System>
+    <Identifier>QEMU Virtual 1.0</Identifier>
+    <Hardware>Processor: QEMU Virtual 1.0 @ 3.39GHz (1 Core), Motherboard: Bochs, Chipset: Red Hat Virtio, Memory: 2048MB, Disk: 16GB, Graphics: AMD Radeon HD 7500, Network: Realtek RTL-8139/8139C/8139C+</Hardware>
+    <Software>OS: Fedora 17 (Beefy Miracle), Kernel: 3.3.4-5.fc17.x86_64 (x86_64), Desktop: GNOME Shell 3.4.1, Display Server: X Server 1.12.0, Display Driver: vesa 2.3.0, OpenGL: 4.2.11733, Compiler: GCC 4.7.2 20120921, File-System: btrfs, Screen Resolution: 1280x1024, System Layer: QEMU 1.0</Software>
+    <User></User>
+    <TimeStamp>2012-12-30 21:06:00</TimeStamp>
+    <TestClientVersion>4.2.0</TestClientVersion>
+    <Notes>Firefox was running on this system.</Notes>
+    <JSON>{"compiler-configuration":"--build=x86_64-redhat-linux --disable-build-poststage1-with-cxx --disable-build-with-cxx --disable-dssi --disable-libjava-multilib --disable-libunwind-exceptions --enable-__cxa_atexit --enable-bootstrap --enable-checking=release --enable-gnu-unique-object --enable-initfini-array --enable-java-awt=gtk --enable-java-maintainer-mode --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-libgcj-multifile --enable-plugin --enable-shared --enable-threads=posix --mandir=\/usr\/share\/man --with-arch_32=i686 --with-cloog --with-ecj-jar=\/usr\/share\/java\/eclipse-ecj.jar --with-java-home=\/usr\/lib\/jvm\/java-1.5.0-gcj-1.5.0.0\/jre --with-linker-hash-style=gnu --with-ppl --with-tune=generic"}</JSON>
+  </System>
+  <Result>
+    <Identifier>pts/compress-7zip-1.6.0</Identifier>
+    <Title>7-Zip Compression</Title>
+    <AppVersion>9.20.1</AppVersion>
+    <Arguments></Arguments>
+    <Description>Compress Speed Test</Description>
+    <Scale>MIPS</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>4315</Value>
+        <RawString>4328:4336:4280</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CXX","compiler":"g++","compiler-options":"-pipe -lpthread"}}</JSON>
+      </Entry>
+      <Entry>
+        <Identifier>QEMU Virtual 1.0</Identifier>
+        <Value>4280</Value>
+        <RawString>4268:4303:4270</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CXX","compiler":"g++","compiler-options":"-pipe -lpthread"}}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+</PhoronixTestSuite>

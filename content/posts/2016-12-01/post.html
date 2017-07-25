@@ -1,0 +1,100 @@
+<h1 id="introduction">Introduction</h1>
+<p><a href="https://github.com/kubernetes-incubator/kompose/">Kompose</a> is a tool to convert from higher level abstractions of application definitions into more detailed Kubernetes artifacts. These artifacts can then be used to bring up the application in a Kubernetes cluster. What higher level application abstraction should kompose use?</p>
+<p>One of the most popular application definition formats for developers is the <code>docker-compose.yml</code> format for use with <code>docker-compose</code> that communicates with the docker daemon to bring up the application. Since this format has gained some traction we decided to make it the initial focus of Kompose to support converting this format to Kubernetes. So, where you would choose <code>docker-compose</code> to bring up the application in docker, you can use <code>kompose</code> to bring up the same application in Kubernetes, if that is your preferred platform.</p>
+<h1 id="how-did-we-get-here">How Did We Get Here?</h1>
+<p>At Red Hat, we had initially started on a project similar to Kompose, called <a href="https://github.com/redhat-developer/henge">Henge</a>. We soon found Kompose and realized we had a lot of overlap in our goals so we decided to jump on board with the folks at <a href="http://www.skippbox.com/">Skippbox</a> and Google who were already working on it.</p>
+<p>TL;DR We have been working hard with the Kompose and Kubernetes communities. Kompose is <a href="http://blog.kubernetes.io/2016/11/kompose-tool-go-from-docker-compose-to-kubernetes.html">now a part of the Kuberetes Incubator</a> and we also have added support in Kompose for getting up and running into your target environment in one command:</p>
+<pre><span class="inner-pre" style="font-weight: 300">$ kompose up </span></pre>
+<p>In this blog I'll run you through a simple application example and use <code>kompose up</code> to bring up the application on Kuberenetes and OpenShift.</p>
+<h1 id="getting-an-environment">Getting an Environment</h1>
+<p>It is now easier than ever to get up and running with Kubernetes and Openshift. If you want hosted you can spin up clusters in many cloud environments including <a href="https://cloud.google.com/container-engine/">Google Container Engine</a> and <a href="https://www.openshift.com/devpreview/">OpenShift Online</a> (with the developer preview). If you want a local experience for trying out Kubernetes/OpenShift on your laptop, there is the RHEL based <a href="http://developers.redhat.com/products/cdk/overview/">CDK</a>, (and the <a href="https://github.com/projectatomic/adb-atomic-developer-bundle">ADB</a> for upstream components), <a href="https://github.com/openshift/origin/blob/master/docs/cluster_up_down.md">oc cluster up</a>, <a href="https://github.com/kubernetes/minikube">minikube</a>, and the list goes on!</p>
+<p>Any way you look at it, there are many options for trying out Kubernetes and OpenShift these days. For this blog I'll choose to run on OpenShift Online, but the steps should work on any Openshift or Kubernetes environment.</p>
+<p>Once I had logged in to the openshift console at <a href="https://api.preview.openshift.com">api.preview.openshift.com</a> I was able to grab a token by visiting <a href="https://api.preview.openshift.com/oauth/token/request" class="uri">https://api.preview.openshift.com/oauth/token/request</a> and clicking <code>Request another token</code>. It then will show you the <code>oc</code> command you can run to log your local machine into openshift online.</p>
+<p>I'll log in below and create a new project for this example blog:</p>
+<pre><span class="inner-pre" style="font-weight: 300">$ oc login --token=xxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --server=https://api.preview.openshift.com
+Logged into &quot;https://api.preview.openshift.com:443&quot; as &quot;dustymabe&quot; using the token provided.
+
+You don&#39;t have any projects. You can try to create a new project, by running
+
+    $ oc new-project &lt;projectname&gt;
+
+$ oc new-project blogpost
+Now using project &quot;blogpost&quot; on server &quot;https://api.preview.openshift.com:443&quot;.
+
+You can add applications to this project with the &#39;new-app&#39; command. For example, try:
+
+    $ oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-hello-world.git
+
+to build a new hello-world application in Ruby.
+$</span></pre>
+<h1 id="example-application">Example Application</h1>
+<p>Now that I have an environment to run my app in I need to give it an app to run! I took the example <code>mlbparks</code> application that we have been using for openshift for some time and converted the <a href="https://raw.githubusercontent.com/gshipley/openshift3mlbparks/master/mlbparks-template-wildfly.json">template</a> to a more simplified definition of the application using the <code>docker-compose.yml</code> format:</p>
+<pre><span class="inner-pre" style="font-weight: 300">$ cat docker-compose.yml
+version: &quot;2&quot;
+services:
+  mongodb:
+    image: centos/mongodb-26-centos7
+    ports:
+      - &#39;27017&#39;
+    volumes:
+      - /var/lib/mongodb/data
+    environment:
+      MONGODB_USER: user
+      MONGODB_PASSWORD: mypass
+      MONGODB_DATABASE: mydb
+      MONGODB_ADMIN_PASSWORD: myrootpass
+  mlbparks:
+    image: dustymabe/mlbparks
+    ports:
+      - &#39;8080&#39;
+    environment:
+      MONGODB_USER: user
+      MONGODB_PASSWORD: mypass
+      MONGODB_DATABASE: mydb
+      MONGODB_ADMIN_PASSWORD: myrootpass</span></pre>
+<p>Basically we have the <code>mongodb</code> service and then the <code>mlbparks</code> service which is backed by the <code>dustymabe/mlbparks</code> image. I simply generated this image from the <a href="https://github.com/gshipley/openshift3mlbparks">openshift3mlbparks source code</a> using <a href="https://github.com/openshift/source-to-image">s2i</a> with the following command:</p>
+<pre><span class="inner-pre" style="font-weight: 300">$ s2i build https://github.com/gshipley/openshift3mlbparks openshift/wildfly-100-centos7 dustymabe/mlbparks </span></pre>
+<p>Now that we have our compose yaml file we can use <code>kompose</code> to bring it up. I am using kompose version v0.1.2 here:</p>
+<pre><span class="inner-pre" style="font-weight: 300">$ kompose --version
+kompose version 0.1.2 (92ea047)
+$ kompose --provider openshift up
+We are going to create OpenShift DeploymentConfigs, Services and PersistentVolumeClaims for your Dockerized application. 
+If you need different kind of resources, use the &#39;kompose convert&#39; and &#39;oc create -f&#39; commands instead. 
+
+INFO[0000] Successfully created Service: mlbparks       
+INFO[0000] Successfully created Service: mongodb        
+INFO[0000] Successfully created DeploymentConfig: mlbparks 
+INFO[0000] Successfully created ImageStream: mlbparks   
+INFO[0000] Successfully created DeploymentConfig: mongodb 
+INFO[0000] Successfully created ImageStream: mongodb    
+INFO[0000] Successfully created PersistentVolumeClaim: mongodb-claim0 
+
+Your application has been deployed to OpenShift. You can run &#39;oc get dc,svc,is,pvc&#39; for details.</span></pre>
+<p>Ok what happened here... We created an <code>mlbparks</code> Service, DeploymentConfig and ImageStream as well as a <code>mongodb</code> Service, DeploymentConfig, and ImageStream. We also created a PersistentVolumeClaim named <code>mongodb-claim0</code> for the <code>/var/lib/mongodb/data</code>.</p>
+<p><strong>Note</strong>: If you don't have Persistent Volumes the application will never come up because the claim will never get satisfied. If you want to deploy somewhere without Persistent Volumes then add <code>--emptyvols</code> to your command like <code>kompose --provider openshift up --emptyvols</code>.</p>
+<p>So let's see what is going on in OpenShift by querying from the CLI:</p>
+<pre><span class="inner-pre" style="font-weight: 300">$ oc get dc,svc,is,pvc
+NAME             REVISION                               REPLICAS       TRIGGERED BY
+mlbparks         1                                      1              config,image(mlbparks:latest)
+mongodb          1                                      1              config,image(mongodb:latest)
+NAME             CLUSTER-IP                             EXTERNAL-IP    PORT(S)     AGE
+mlbparks         172.30.67.72                           &lt;none&gt;         8080/TCP    4m
+mongodb          172.30.111.51                          &lt;none&gt;         27017/TCP   4m
+NAME             DOCKER REPO                            TAGS           UPDATED
+mlbparks         172.30.47.227:5000/blogpost/mlbparks   latest         4 minutes ago
+mongodb          172.30.47.227:5000/blogpost/mongodb    latest         4 minutes ago
+NAME             STATUS                                 VOLUME         CAPACITY   ACCESSMODES   AGE
+mongodb-claim0   Bound                                  pv-aws-adbb5   100Mi      RWO           4m</span></pre>
+<p>and the web console looks like:</p>
+<p><img src="https://rhdevelopers.files.wordpress.com/2016/12/openshift.png" alt="image" /></p>
+<p>One final thing we have to do is set it up so that we can connect to the service (i.e. the service is exposed to the outside world). On OpenShift, we need to expose a route. This will be done for us automatically in the future (follow along at <a href="https://github.com/kubernetes-incubator/kompose/issues/140">#140</a>), but for now the following command will suffice:</p>
+<pre><span class="inner-pre" style="font-weight: 300">$ oc expose svc/mlbparks
+route &quot;mlbparks&quot; exposed
+$ oc get route mlbparks 
+NAME       HOST/PORT                                          PATH      SERVICE         TERMINATION   LABELS
+mlbparks   mlbparks-blogpost.44fs.preview.openshiftapps.com             mlbparks:8080                 service=mlbparks</span></pre>
+<p>For me this means I can now access the mlbparks application by pointing my web browswer to <code>mlbparks-blogpost.44fs.preview.openshiftapps.com</code>.</p>
+<p>Let's try it out:</p>
+<p><img src="https://rhdevelopers.files.wordpress.com/2016/12/mlbparks.png" alt="image" /></p>
+<p>Success!<br />
+Dusty</p>

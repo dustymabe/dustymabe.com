@@ -1,0 +1,149 @@
+<! F21 Atomic Test Day && Test steps for Atomic Host>
+
+
+<h3 id="intro">Test Day on Thursday 11/20</h3>
+
+<p>The F21 test day for atomic is this Thursday, November 20th. If anyone can participate 
+please do drop into #atomic on freenode as it will be great to have more people involved in 
+helping build/test this new technology.</p>
+
+<p>In anticipation of the test day I have put together some test notes for other people to follow
+in hopes that it will help smooth things along.</p>
+
+<h3 id="booting-with-cloud-init">Booting with cloud-init</h3>
+<p>First step is to start an atomic host using any method/cloud provider you like. For me I decided to use openstack since I have Juno running on F21 here in my apartment. I used this user-data for the atomic host:</p>
+<pre><blockquote>#cloud-config
+password: passw0rd
+chpasswd: { expire: False }
+ssh_pwauth: True
+runcmd:
+ - [ sh, -c, &#39;echo -e &quot;ROOT_SIZE=4G\nDATA_SIZE=10G&quot; &gt; /etc/sysconfig/docker-storage-setup&#39;]</blockquote></pre>
+<p>Note that the build of atomic I used for this testing resides <a href="https://kojipkgs.fedoraproject.org//work/tasks/8904/8118904/Fedora-Cloud-Atomic-20141112-21.x86_64.qcow2">here</a></p>
+<h3 id="verifying-docker-storage-setup">Verifying docker-storage-setup</h3>
+<p><strong>docker-storage-setup</strong> is a service that can be used to configure the storage configuration for docker in different ways on instance bringup. Notice in the user-data above that I decided to set config variables for <strong>docker-storage-setup</strong>. They basically mean that I want to resize my <strong>atomicos/root</strong> LV to 4G and I want to create an <strong>atomicos/docker-data</strong> LV and make it 10G in size.</p>
+<p>To verify the storage was set up successfully, log in (as the fedora user) and become root (usind sudo su -). Now you can check if <strong>docker-storage-setup</strong> worked by checking the logs as well as looking at the output from <strong>lsblk</strong>:</p>
+<pre><blockquote># journalctl -o cat --unit docker-storage-setup.service
+CHANGED: partition=2 start=411648 old: size=12171264 end=12582912 new: size=41531232,end=41942880
+Physical volume &quot;/dev/vda2&quot; changed
+1 physical volume(s) resized / 0 physical volume(s) not resized
+Size of logical volume atomicos/root changed from 1.95 GiB (500 extents) to 4.00 GiB (1024 extents).
+Logical volume root successfully resized
+Rounding up size to full physical extent 24.00 MiB
+Logical volume &quot;docker-meta&quot; created
+Logical volume &quot;docker-data&quot; created
+#
+# lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+vda                       252:0    0   20G  0 disk 
+├─vda1                    252:1    0  200M  0 part /boot
+└─vda2                    252:2    0 19.8G  0 part 
+  ├─atomicos-root         253:0    0    4G  0 lvm  /sysroot
+  ├─atomicos-docker--meta 253:1    0   24M  0 lvm  
+  └─atomicos-docker--data 253:2    0   10G  0 lvm</blockquote></pre>
+<h3 id="verifying-docker-lifecycle">Verifying Docker Lifecycle</h3>
+<p>To verify Docker runs fine on the atomic host we will perform a simple run of the busybox docker image. This will contact the docker hub, pull down the image, and run /bin/true:</p>
+<pre><blockquote># docker run -it --rm busybox true &amp;&amp; echo &quot;PASS&quot; || echo &quot;FAIL&quot;
+Unable to find image &#39;busybox&#39; locally
+Pulling repository busybox
+e72ac664f4f0: Download complete 
+511136ea3c5a: Download complete 
+df7546f9f060: Download complete 
+e433a6c5b276: Download complete 
+PASS</blockquote></pre>
+<p>After the Docker daemon has started the LVs that were created by <strong>docker-storage-setup</strong> will be used by device mapper as shown in the <strong>lsblk</strong> output below:</p>
+<pre><blockquote># lsblk
+NAME                              MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+vda                               252:0    0   20G  0 disk 
+├─vda1                            252:1    0  200M  0 part /boot
+└─vda2                            252:2    0 19.8G  0 part 
+  ├─atomicos-root                 253:0    0    4G  0 lvm  /sysroot
+  ├─atomicos-docker--meta         253:1    0   24M  0 lvm  
+  │ └─docker-253:0-6298462-pool   253:3    0   10G  0 dm   
+  │   └─docker-253:0-6298462-base 253:4    0   10G  0 dm   
+  └─atomicos-docker--data         253:2    0   10G  0 lvm  
+    └─docker-253:0-6298462-pool   253:3    0   10G  0 dm   
+      └─docker-253:0-6298462-base 253:4    0   10G  0 dm</blockquote></pre>
+<h3 id="atomic-host-upgrade">Atomic Host: Upgrade</h3>
+<p>Now on to an atomic upgrade. First let's check what commit we are currently at and store a file in <strong>/etc/file1</strong> to save it for us:</p>
+<pre><blockquote># rpm-ostree status
+  TIMESTAMP (UTC)         ID             OSNAME                 REFSPEC
+* 2014-11-12 22:28:04     1877f1fa64     fedora-atomic-host     fedora-atomic:fedora-atomic/f21/x86_64/docker-host     
+# 
+# ostree admin status
+* fedora-atomic-host 1877f1fa64be8bec8adcd43de6bd4b5c39849ec7842c07a6d4c2c2033651cd84.0
+    origin refspec: fedora-atomic:fedora-atomic/f21/x86_64/docker-host
+# 
+# cat /ostree/repo/refs/heads/ostree/0/1/0
+1877f1fa64be8bec8adcd43de6bd4b5c39849ec7842c07a6d4c2c2033651cd84
+# 
+# cat /ostree/repo/refs/heads/ostree/0/1/0 &gt; /etc/file1</blockquote></pre>
+<p>Now run an upgrade to the latest atomic compose:</p>
+<pre><blockquote># rpm-ostree upgrade
+Updating from: fedora-atomic:fedora-atomic/f21/x86_64/docker-host
+
+14 metadata, 19 content objects fetched; 33027 KiB transferred in 16 seconds
+Copying /etc changes: 26 modified, 4 removed, 39 added
+Transaction complete; bootconfig swap: yes deployment count change: 1)
+Updates prepared for next boot; run &quot;systemctl reboot&quot; to start a reboot</blockquote></pre>
+<p>And do a bit of poking around right before we reboot:</p>
+<pre><blockquote># rpm-ostree status
+  TIMESTAMP (UTC)         ID             OSNAME                 REFSPEC                                                
+  2014-11-13 10:52:06     18e02c4166     fedora-atomic-host     fedora-atomic:fedora-atomic/f21/x86_64/docker-host     
+* 2014-11-12 22:28:04     1877f1fa64     fedora-atomic-host     fedora-atomic:fedora-atomic/f21/x86_64/docker-host     
+# 
+# ostree admin status
+  fedora-atomic-host 18e02c41666ef5f426bc43d01c4ce1b7ffc0611e993876cf332600e2ad8aa7c0.0
+    origin refspec: fedora-atomic:fedora-atomic/f21/x86_64/docker-host
+* fedora-atomic-host 1877f1fa64be8bec8adcd43de6bd4b5c39849ec7842c07a6d4c2c2033651cd84.0
+    origin refspec: fedora-atomic:fedora-atomic/f21/x86_64/docker-host
+#
+# reboot</blockquote></pre>
+
+<p> Note that the <strong>*</strong> in the above output indicates which tree is currently booted.</p>
+<p>After reboot now the new tree should be booted. Let's check things out and make <strong>/etc/file2</strong> with our new commit hash in it:</p>
+<pre><blockquote># rpm-ostree status
+  TIMESTAMP (UTC)         ID             OSNAME                 REFSPEC                                                
+* 2014-11-13 10:52:06     18e02c4166     fedora-atomic-host     fedora-atomic:fedora-atomic/f21/x86_64/docker-host     
+  2014-11-12 22:28:04     1877f1fa64     fedora-atomic-host     fedora-atomic:fedora-atomic/f21/x86_64/docker-host     
+# 
+# ostree admin status
+* fedora-atomic-host 18e02c41666ef5f426bc43d01c4ce1b7ffc0611e993876cf332600e2ad8aa7c0.0
+    origin refspec: fedora-atomic:fedora-atomic/f21/x86_64/docker-host
+  fedora-atomic-host 1877f1fa64be8bec8adcd43de6bd4b5c39849ec7842c07a6d4c2c2033651cd84.0
+    origin refspec: fedora-atomic:fedora-atomic/f21/x86_64/docker-host
+# 
+# cat /ostree/repo/refs/heads/ostree/1/1/0
+18e02c41666ef5f426bc43d01c4ce1b7ffc0611e993876cf332600e2ad8aa7c0
+# 
+# cat /ostree/repo/refs/heads/ostree/1/1/0 &gt; /etc/file2</blockquote></pre>
+<p>As one final item let's boot up a docker container to make sure things still work there:</p>
+<pre><blockquote># docker run -it --rm busybox true &amp;&amp; echo &quot;PASS&quot; || echo &quot;FAIL&quot;
+PASS</blockquote></pre>
+<h3 id="atomic-host-rollback">Atomic Host: Rollback</h3>
+<p>Atomic host provides the ability to revert to the previous working tree if things go awry with the new tree. Lets revert our upgrade now and make sure things still work:</p>
+<pre><blockquote># rpm-ostree rollback
+Moving &#39;1877f1fa64be8bec8adcd43de6bd4b5c39849ec7842c07a6d4c2c2033651cd84.0&#39; to be first deployment
+Transaction complete; bootconfig swap: yes deployment count change: 0)
+Sucessfully reset deployment order; run &quot;systemctl reboot&quot; to start a reboot
+#
+# rpm-ostree status
+  TIMESTAMP (UTC)         ID             OSNAME                 REFSPEC                                                
+  2014-11-12 22:28:04     1877f1fa64     fedora-atomic-host     fedora-atomic:fedora-atomic/f21/x86_64/docker-host     
+* 2014-11-13 10:52:06     18e02c4166     fedora-atomic-host     fedora-atomic:fedora-atomic/f21/x86_64/docker-host
+#
+# reboot</blockquote></pre>
+<p>After reboot:</p>
+<pre><blockquote># rpm-ostree status
+  TIMESTAMP (UTC)         ID             OSNAME                 REFSPEC                                                
+* 2014-11-12 22:28:04     1877f1fa64     fedora-atomic-host     fedora-atomic:fedora-atomic/f21/x86_64/docker-host     
+  2014-11-13 10:52:06     18e02c4166     fedora-atomic-host     fedora-atomic:fedora-atomic/f21/x86_64/docker-host     
+# 
+# cat /etc/file1 
+1877f1fa64be8bec8adcd43de6bd4b5c39849ec7842c07a6d4c2c2033651cd84
+# cat /etc/file2
+cat: /etc/file2: No such file or directory</blockquote></pre>
+<p>Notice that <strong>/etc/file2</strong> did not exist until after the upgrade so it did not persist during the rollback.</p>
+<p>And the final item on the list is to make sure Docker still works:</p>
+<pre><blockquote># docker run -it --rm busybox true &amp;&amp; echo &quot;PASS&quot; || echo &quot;FAIL&quot;
+PASS</blockquote></pre>
+<p>Anddd Boom.. You have just put atomic through some paces.</p>

@@ -1,0 +1,100 @@
+<h1 id="intro">Introduction</h1>
+We're trying to focus more on developer experience in the Red Hat ecosystem. In the process we've started to incorporate the Vagrant tool into our standard offerings. As part of that effort, we're seeking a shared folder solution that doesn't include a bunch of if/else logic to figure out exactly which one you should use based on the OS/hypervisor you use under Vagrant.
+
+The current options for shared folder support can make you want to tear your hair out when you try to figure out which one you should use in your environment. This led us to look for a better answer for the user, so they no longer have to make these choices on their own based on their environment.
+<h1 id="current-vagrant-synced-folder-landscape">Current synced folder solutions</h1>
+"So what is the fuss about? Is it really that hard?" Well it's certainly doable, but we want it to be easier. Here are the currently available synced folder options within vagrant today:
+<ul>
+    <li><dl><dt><a href="https://www.vagrantup.com/docs/synced-folders/virtualbox.html">virtualbox</a></dt><dd>
+<ul>
+    <li>This synced folder type uses a kernel module from the VirtualBox Guest Additions software to talk to the hypervisor. It requires you to be running on top of the Virtualbox hypervisor, and that the VirtualBox Guest Additions are installed in the Vagrant Box you launch. Licensing can also make distribution of the compiled Guest Additions problematic.</li>
+    <li>Hypervisor Limitation: VirtualBox</li>
+    <li>Host OS Limitation: None</li>
+</ul>
+</dd></dl></li>
+    <li><dl><dt><a href="https://www.vagrantup.com/docs/synced-folders/nfs.html">nfs</a></dt><dd>
+<ul>
+    <li>This synced folder type uses NFS mounts. It requires you to be running on top of a Linux or Mac OS X host.</li>
+    <li>Hypervisor Limitation: None</li>
+    <li>Host OS Limitation: Linux, Mac</li>
+</ul>
+</dd></dl></li>
+    <li><dl><dt><a href="https://www.vagrantup.com/docs/synced-folders/smb.html">smb</a></dt><dd>
+<ul>
+    <li>This synced folder type uses Samba mounts. It requires you to be running on top of a Windows host and to have Samba client software in the guest.</li>
+    <li>Hypervisor Limitation: None</li>
+    <li>Host OS Limitation: Windows</li>
+</ul>
+</dd></dl></li>
+    <li><dl><dt><a href="https://github.com/pradels/vagrant-libvirt#synced-folders">9p</a></dt><dd>
+<ul>
+    <li>This synced folder implementation uses 9p file sharing within the libvirt/KVM hypervisor. It requires the hypervisor to be libvirt/KVM and thus also requires Linux to be the host OS.</li>
+    <li>Hypervisor Limitation: Libvirt</li>
+    <li>Host OS Limitation: Linux</li>
+</ul>
+</dd></dl></li>
+    <li><dl><dt><a href="https://www.vagrantup.com/docs/synced-folders/rsync.html">rsync</a></dt><dd>
+<ul>
+    <li>This synced folder implementation simply syncs folders between host and guest using rsync. Unfortunately this isn't actually shared folders, because the files are simply copied back and forth and can become out of sync.</li>
+    <li>Hypervisor Limitation: None</li>
+    <li>Host OS Limitation: None</li>
+</ul>
+</dd></dl></li>
+</ul>
+So depending on your environment you are rather limited in which options work. You have to choose carefully to get something working without much hassle.
+<h1 id="what-about-sshfs">What about SSHFS?</h1>
+As part of this discovery process I had a simple question: "why not <strong><a href="https://github.com/libfuse/sshfs">sshfs</a></strong>?" It turns out that <a href="https://github.com/fabiokr">Fabio Kreusch</a> had a similar idea a while back and <a href="https://github.com/fabiokr/vagrant-sshfs">wrote a plugin</a> to do mounts via SSHFS.
+
+When I first found this I was excited because I thought I had the answer in my hands and someone had already written it! Unfortunately the old implementation didn't implement a synced folder plugin like all of the other synced folder plugins. In other words, it didn't inherit the synced folder class and implement the functions. It also, by default, mounted a guest folder onto the host rather than the other way around like most synced folder implementations do.
+
+One of my goals is to have SSHFS be a supported synced folder plugin and get it committed back up into Vagrant core one day. So I reached out to Fabio to find out if he would be willing to accept patches to get things working more along the lines of a traditional synced folder plugin. He kindly let me know he didn't have much time to work on vagrant-sshfs these days, and he no longer used it. I volunteered to take over.
+<h1 id="the-vagrant-sshfs-plugin">The vagrant-sshfs plugin</h1>
+To make the plugin follow along the traditional synced folder plugin model I decided to rewrite the plugin. I based most of the original code off of the NFS synced folder plugin code. The new code repo is <a href="https://github.com/dustymabe/vagrant-sshfs">here on Github</a>.
+
+So now we have a plugin that will do SSHFS mounts of host folders into the guest. It works without any setup on the host, but it requires that the <em>sftp-server</em> software exist on the host. <em>sftp-server</em> is usually provided by OpenSSH, and thus is easily available on Windows/Mac/Linux.
+
+To compare with the other implementations on environment restrictions here is what the SSHFS implementation looks like:
+<ul>
+    <li><dl><dt><a href="https://github.com/libfuse/sshfs">sshfs</a></dt><dd>
+<ul>
+    <li>This synced folder implementation uses SSHFS to share folders between host and guest. The only requirement is that the <em>sftp-server</em> executable exist on the host.</li>
+    <li>Hypervisor Limitation: None</li>
+    <li>Host OS Limitation: None</li>
+</ul>
+</dd></dl></li>
+</ul>
+Here are the overall benefits of using <em>vagrant-sshfs</em>:
+<ul>
+    <li><dl><dt>Works on any host platform</dt><dd>
+<ul>
+    <li>Windows, Linux, Mac OS X</li>
+</ul>
+</dd></dl></li>
+    <li><dl><dt>Works on any type-2 hypervisor</dt><dd>
+<ul>
+    <li>VirtualBox, Libvirt/KVM, Hyper-V, VMWare</li>
+</ul>
+</dd></dl></li>
+    <li><dl><dt>Seamlessly Works on Remote Vagrant Solutions</dt><dd>
+<ul>
+    <li>Works with <em>vagrant-aws</em>, <em>vagrant-openstack</em>, etc..</li>
+</ul>
+</dd></dl></li>
+</ul>
+<h1 id="where-do-i-get-this-plugin">Where to get the plugin</h1>
+This plugin is hot off the presses, so it hasn't quite made it into Fedora yet. There are a few ways you can get it though. First, you can use Vagrant itself to retrieve the plugin from rubygems:
+<pre>$ vagrant plugin install vagrant-sshfs</pre>
+Alternatively you can get the RPM package from <a href="https://copr.fedorainfracloud.org/coprs/dustymabe/vagrant-sshfs/">my copr</a>:
+<pre>$ sudo dnf copr enable dustymabe/vagrant-sshfs
+$ sudo dnf install vagrant-sshfs</pre>
+<h1 id="your-first-vagrant-sshfs-mount">Your first vagrant-sshfs mount</h1>
+To use the plugin, you must tell Vagrant what folder you want mounted into the guest and where, by adding it to your <em>Vagrantfile</em>. An example <em>Vagrantfile</em> is below:
+<pre>Vagrant.configure(2) do |config|
+  config.vm.box = "fedora/23-cloud-base"
+  config.vm.synced_folder "/path/on/host", "/path/on/guest", type: "sshfs"
+end</pre>
+This will start a Fedora 23 base cloud image and will mount the <em>/path/on/host</em> directory from the host into the running vagrant box under the <em>/path/on/guest</em> directory.
+<h1 id="conclusion">Conclusion</h1>
+We've tried to find the option that is easiest for the user to configure. While SSHFS may have some drawbacks as compared to the others, such as speed, we believe it solves most people's use cases and is dead simple to configure out of the box.
+
+Please give it a try and let us know how it works for you! Drop a mail to <a class="email" href="mailto:cloud@lists.fedoraproject.org">cloud@lists.fedoraproject.org</a> or open an issue on <a href="https://github.com/dustymabe/vagrant-sshfs/issues">Github</a>.

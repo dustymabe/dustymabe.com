@@ -1,0 +1,2 @@
+# To convert to html for fedora mazagine
+cat post.rst | pandoc -r rst -t html > postsss.html

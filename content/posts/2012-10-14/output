@@ -1,0 +1,21 @@
+
+dustymabe@laptop: gdbpost>gdb -quiet -command=gdb_commands ./a.out 
+Reading symbols from
+/content/gdbpost/a.out...done.
+Breakpoint 1 at 0x400533: file file.c, line 6.
+Breakpoint 2 at 0x400546: file file.c, line 7.
+Breakpoint 3 at 0x40055f: file file.c, line 8.
+#0  squared (x=4) at file.c:6
+#0  squared (x=10) at file.c:6
+#0  modulo (x=100, y=16) at file.c:7
+#0  plus (x=100, y=100) at file.c:8
+#0  modulo (x=200, y=16) at file.c:7
+#0  plus (x=200, y=100) at file.c:8
+#0  modulo (x=300, y=16) at file.c:7
+#0  plus (x=300, y=100) at file.c:8
+#0  modulo (x=400, y=16) at file.c:7
+LCM is 400
+[Inferior 1 (process 4214) exited with code 013]
+Missing separate debuginfos, use: debuginfo-install
+glibc-2.15-56.fc17.x86_64
+(gdb) quit
