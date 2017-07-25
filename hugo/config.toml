@@ -50,3 +50,6 @@ theme = "beautifulhugo"
     name = "Tags"
     url = "tags"
     weight = 3
+
+[permalinks]
+    post = "/:year/:month/:day/:title/"
