@@ -1,3 +1,9 @@
+---
+title: "None"
+tags: [ "1", "2" ]
+date: "2012-02-09"
+published: false
+---
 <h1 id="introduction">Introduction</h1>
 <p><a href="https://github.com/kubernetes-incubator/kompose/">Kompose</a> is a tool to convert from higher level abstractions of application definitions into more detailed Kubernetes artifacts. These artifacts can then be used to bring up the application in a Kubernetes cluster. What higher level application abstraction should kompose use?</p>
 <p>One of the most popular application definition formats for developers is the <code>docker-compose.yml</code> format for use with <code>docker-compose</code> that communicates with the docker daemon to bring up the application. Since this format has gained some traction we decided to make it the initial focus of Kompose to support converting this format to Kubernetes. So, where you would choose <code>docker-compose</code> to bring up the application in docker, you can use <code>kompose</code> to bring up the same application in Kubernetes, if that is your preferred platform.</p>

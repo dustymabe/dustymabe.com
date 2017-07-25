@@ -1,3 +1,9 @@
+---
+title: "None"
+tags: [ "1", "2" ]
+date: "2012-02-09"
+published: false
+---
 
 .. Installing an OpenShift Origin Cluster on Fedora 25 Atomic Host: Part 1
 .. =======================================================================

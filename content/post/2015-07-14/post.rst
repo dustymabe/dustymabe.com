@@ -1,3 +1,9 @@
+---
+title: "None"
+tags: [ "1", "2" ]
+date: "2012-02-09"
+published: false
+---
 
 .. Fedora BTRFS+Snapper PART 1: System Preparation
 .. ===============================================

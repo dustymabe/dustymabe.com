@@ -1,4 +1,10 @@
 ---
+title: "None"
+tags: [ "1", "2" ]
+date: "2012-02-09"
+published: false
+---
+---
 title: 'Fedora Atomic Host Available in DigitalOcean'
 author: dustymabe
 date: 2017-04-27 19:30:06 UTC
