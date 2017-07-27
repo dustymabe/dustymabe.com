@@ -3,6 +3,7 @@ title: "qemu-img Backing Files: A Poor Man's Snapshot/Rollback"
 tags:
 date: "2015-01-11"
 published: true
+url: "/2015/01/11/qemu-img-backing-files-a-poor-mans-snapshotrollback/"
 ---
 
 .. qemu-img Backing Files: A Poor Man's Snapshot/Rollback

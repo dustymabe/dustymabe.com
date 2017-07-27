@@ -3,6 +3,7 @@ title: "Fedora BTRFS+Snapper PART 2: Full System Snapshot/Rollback"
 tags:
 date: "2015-07-19"
 published: true
+url: "/2015/07/19/fedora-btrfssnapper-part-2-full-system-snapshotrollback/"
 ---
 
 .. Fedora BTRFS+Snapper PART 2: Full System Snapshot/Rollback

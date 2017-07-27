@@ -3,6 +3,7 @@ title: "Encrypting More: /boot Joins The Party"
 tags:
 date: "2015-07-06"
 published: true
+url: "/2015/07/06/encrypting-more-boot-joins-the-party/"
 ---
 
 .. Encrypting More: /boot Joins The Party

@@ -3,6 +3,7 @@ title: "Fedora BTRFS+Snapper PART 1: System Preparation"
 tags:
 date: "2015-07-14"
 published: true
+url: "/2015/07/14/fedora-btrfssnapper-part-1-system-preparation/"
 ---
 
 .. Fedora BTRFS+Snapper PART 1: System Preparation

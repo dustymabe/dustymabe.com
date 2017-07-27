@@ -3,6 +3,7 @@ title: "Installing/Starting Systemd Services Using Cloud-Init"
 tags:
 date: "2015-08-03"
 published: true
+url: "/2015/08/03/installingstarting-systemd-services-using-cloud-init/"
 ---
 
 .. Installing/Starting Systemd Services Using Cloud-Init

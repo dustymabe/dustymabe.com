@@ -3,6 +3,7 @@ title: "Fedora BTRFS+Snapper - The Fedora 25 Edition"
 tags:
 date: "2017-02-12"
 published: true
+url: "2017/02/12/fedora-btrfssnapper-the-fedora-25-edition/"
 ---
 
 .. Fedora BTRFS+Snapper - The Fedora 25 Edition
