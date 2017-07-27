@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Fedora 25 available in DigitalOcean"
+tags:
+date: "2016-11-29"
+published: true
 ---
 
 .. Fedora 25 available in DigitalOcean

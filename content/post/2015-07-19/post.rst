@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Fedora BTRFS+Snapper PART 2: Full System Snapshot/Rollback"
+tags:
+date: "2015-07-19"
+published: true
 ---
 
 .. Fedora BTRFS+Snapper PART 2: Full System Snapshot/Rollback

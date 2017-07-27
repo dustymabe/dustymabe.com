@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Installing/Starting Systemd Services Using Cloud-Init"
+tags:
+date: "2015-08-03"
+published: true
 ---
 
 .. Installing/Starting Systemd Services Using Cloud-Init

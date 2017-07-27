@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Fedora BTRFS+Snapper - The Fedora 24 Edition"
+tags:
+date: "2016-04-23"
+published: true
 ---
 
 .. Fedora BTRFS+Snapper - The Fedora 24 Edition

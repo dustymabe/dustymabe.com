@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Vagrant: Sharing Folders with vagrant-sshfs"
+tags:
+date: "2016-04-05"
+published: true
 ---
 
 .. Vagrant: Sharing Folders with vagrant-sshfs

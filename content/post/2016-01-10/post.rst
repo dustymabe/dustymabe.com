@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Archived-At Email Header From Mailman 3 Lists"
+tags:
+date: "2016-01-10"
+published: true
 ---
 
 .. Archived-At Email Header From Mailman 3 Lists

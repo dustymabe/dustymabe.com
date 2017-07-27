@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Atomic Host Red Hat Summit Lab"
+tags:
+date: "2015-06-26"
+published: true
 ---
 .. Atomic Host Red Hat Summit Lab
 .. ==============================

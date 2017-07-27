@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Crisis Averted.. I'm using Atomic Host"
+tags:
+date: "2015-01-31"
+published: true
 ---
 
 

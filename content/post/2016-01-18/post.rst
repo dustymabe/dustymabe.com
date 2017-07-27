@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Running Nulecules in Openshift via oc new-app"
+tags:
+date: "2016-01-18"
+published: true
 ---
 
 .. Running Nulecules in Openshift via oc new-app

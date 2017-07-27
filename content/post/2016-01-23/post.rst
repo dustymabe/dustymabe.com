@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "The CentOS CI Infrastructure: A Getting Started Guide"
+tags:
+date: "2016-01-23"
+published: true
 ---
 
 .. The CentOS CI Infrastructure: A Getting Started Guide

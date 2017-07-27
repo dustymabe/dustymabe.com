@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Fedora Cloud Vagrant Boxes in Atlas"
+tags:
+date: "2015-11-08"
+published: true
 ---
 
 .. Fedora Cloud Vagrant Boxes in Atlas 

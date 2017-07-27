@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "802.11ac on Linux With NetGear A6100 (RTL8811AU) USB Adapter"
+tags:
+date: "2016-01-24"
+published: true
 ---
 
 .. 802.11ac on Linux With NetGear A6100 (RTL8811AU) USB Adapter

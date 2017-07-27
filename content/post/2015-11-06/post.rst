@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Fedora 23: In the Ocean Again"
+tags:
+date: "2015-11-06"
+published: true
 ---
 
 .. Fedora 23: In the Ocean Again

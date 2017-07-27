@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Sharing a Go library to Python (using CFFI)"
+tags:
+date: "2016-09-13"
+published: true
 ---
 
 .. Sharing a Go library to Python (using CFFI)

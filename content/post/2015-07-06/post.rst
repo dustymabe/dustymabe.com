@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Encrypting More: /boot Joins The Party"
+tags:
+date: "2015-07-06"
+published: true
 ---
 
 .. Encrypting More: /boot Joins The Party

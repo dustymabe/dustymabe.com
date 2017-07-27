@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "qemu-img Backing Files: A Poor Man's Snapshot/Rollback"
+tags:
+date: "2015-01-11"
+published: true
 ---
 
 .. qemu-img Backing Files: A Poor Man's Snapshot/Rollback

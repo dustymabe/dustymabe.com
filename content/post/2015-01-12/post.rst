@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Fedora 21 now available on Digital Ocean"
+tags:
+date: "2015-01-12"
+published: true
 ---
 
 .. Fedora 21 now available on Digital Ocean

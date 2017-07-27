@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Getting Ansible Working on Fedora 23"
+tags:
+date: "2015-11-05"
+published: true
 ---
 
 .. Getting Ansible Working on Fedora 23

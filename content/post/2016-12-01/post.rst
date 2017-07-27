@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Kompose Up for OpenShift and Kubernetes"
+tags:
+date: "2016-12-01"
+published: true
 ---
 
 .. Kompose Up for OpenShift and Kubernetes

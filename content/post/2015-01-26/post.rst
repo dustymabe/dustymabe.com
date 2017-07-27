@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "quick audit rules for sanity check"
+tags:
+date: "2015-01-26"
+published: true
 ---
 .. quick audit rules for sanity check
 .. ==================================

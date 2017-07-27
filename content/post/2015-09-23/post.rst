@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "kubernetes skydns setup for testing on a single node"
+tags:
+date: "2015-09-23"
+published: true
 ---
 
 .. kubernetes skydns setup for testing on a single node

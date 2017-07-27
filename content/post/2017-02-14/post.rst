@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Matching Fedora OSTree Released Content With Each 2 Week Atomic Release"
+tags:
+date: "2017-02-14"
+published: true
 ---
 .. Matching Fedora OSTree Released Content With Each 2 Week Atomic Release
 .. =======================================================================

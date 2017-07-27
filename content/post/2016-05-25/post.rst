@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Non Deterministic docker Networking and Source Based IP Routing"
+tags:
+date: "2016-05-25"
+published: true
 ---
 
 .. Non Deterministic docker Networking and Source Based IP Routing

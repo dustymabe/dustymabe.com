@@ -1,7 +1,5 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
+# use the html file for now
 published: false
 ---
 

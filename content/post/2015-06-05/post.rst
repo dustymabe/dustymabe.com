@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "Fedora 22 Now Swimming in DigitalOcean"
+tags:
+date: "2015-06-05"
+published: true
 ---
 
 .. Fedora 22 Now Swimming in DigitalOcean

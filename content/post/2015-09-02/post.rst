@@ -1,8 +1,8 @@
 ---
-title: "None"
-tags: [ "1", "2" ]
-date: "2012-02-09"
-published: false
+title: "F23 Cloud Base Test Day September 8th!"
+tags:
+date: "2015-09-02"
+published: true
 ---
 
 .. F23 Cloud Base Test Day September 8th!
