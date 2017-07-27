@@ -21,16 +21,21 @@ to contain a very small subset of tools that are needed for running
 container based applications. A few of it's features are shown below:
 
 - It is Lightweight
+
   * a small base means less potential issues.
 
 - Provides Atomic Upgrades and Rollbacks
+
   * upgrades/rollbacks are staged and take effect on reboot
 
 - Static and Dynamic
+
   * software/binaries in /usr and other similar directories are read-only
+
     + this guarantees no changes have been made to the software
 
   * configuration and temporary directories are read/write
+
     + you can still make important configuration changes and have them propagate forward
 
 

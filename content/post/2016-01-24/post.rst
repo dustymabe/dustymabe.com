@@ -47,7 +47,7 @@ the sites for the many_ vendors that incorporate the chip:
         - `product page <http://www.tp-link.se/download/Archer-T4UH.html#Driver>`_
         - `download link <http://www.tp-link.se/res/down/soft/Archer_T4UH_V1_150821.zip>`_
     - D-Link DWA-182
-        - `product page<http://support.dlink.com/ProductInfo.aspx?m=DWA-182>`_
+        - `product page <http://support.dlink.com/ProductInfo.aspx?m=DWA-182>`_
         - `download link <ftp://ftp2.dlink.com/PRODUCTS/DWA-182/REVC/DWA-182_REVC_DRIVER_4.3.2_LINUX.ZIP>`_
 
 .. _many: https://wikidevi.com/w/index.php?title=Special:Ask&offset=0&limit=500&q=%5B%5BChip1+model%3A%3ARTL8812AU%5D%5D&p=format%3Dbroadtable%2Flink%3Dall%2Fheaders%3Dshow%2Fsearchlabel%3D%E2%80%A6-20further-20results%2Fclass%3Dsortable-20wikitable-20smwtable&po=%3FInterface%0A%3FForm+factor%3DFF%0A%3FInterface+connector+type%3DUSB+conn.%0A%3FFCC+ID%0A%3FManuf%0A%3FManuf+product+model%3DManuf.+mdl%0A%3FVendor+ID%0A%3FDevice+ID%0A%3FChip1+model%0A%3FSupported+802dot11+protocols%3DPHY+modes%0A%3FMIMO+config%0A%3FOUI%0A%3FEstimated+year+of+release%3DEst.+year%0A&order=ASC&eq=yes
