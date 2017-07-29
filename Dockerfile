@@ -27,4 +27,4 @@ USER 1001
 #EXPOSE 80
 
 #CMD cp httpd -DFOREGROUND
-CMD cp -R /context/hugo/public/* /var/www/html/ && /usr/bin/run-httpd
+CMD mkdir -p /var/www/html/ && cp -R /context/hugo/public/* /var/www/html/ && /usr/bin/run-httpd
