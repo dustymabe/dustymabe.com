@@ -4,7 +4,7 @@ title = "A Random Walk Down Tech Street"
 theme = "beautifulhugo"
 
 [Params]
-  subtitle = "Build a beautiful and simple website in minutes"
+  subtitle = "random musings of a computer engineer"
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
@@ -41,10 +41,10 @@ theme = "beautifulhugo"
     url = ""
     weight = 1
 
-[[menu.main]]
-    name = "About"
-    url = "page/about/"
-    weight = 3
+#[[menu.main]]
+#    name = "About"
+#    url = "page/about/"
+#    weight = 3
 
 [[menu.main]]
     name = "Tags"
