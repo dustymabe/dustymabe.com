@@ -1,4 +1,5 @@
-baseURL = "http://example.org/"
+#baseURL = "http://hugo.dustymabe.com"
+baseURL = "https://fedp.org"
 languageCode = "en-us"
 title = "A Random Walk Down Tech Street"
 theme = "beautifulhugo"
