@@ -12,8 +12,13 @@ RUN dnf install -y hugo && dnf clean all
 # Add in files and run hugo to generate static website
 ADD . /context/
 RUN cd /context/hugo && \
-    export GIT_COMMIT_SHA=$(git rev-parse --verify HEAD)      && \
-    export GIT_COMMIT_SHA_SHORT=$(git rev-parse --short HEAD) && \
+# Use git ls-remote for now to determine SHA. This is because
+# Openshift doesn't properly copy over .git directory for now
+# See https://trello.com/c/C1gwxci3/856-3-include-git-repository-during-build-builds
+    export GIT_COMMIT_SHA=$(git ls-remote https://github.com/dustymabe/dustymabe.com.git master | cut -f 1) && \
+    export GIT_COMMIT_SHA_SHORT=${GIT_COMMIT_SHA:0:7} && \
+#   export GIT_COMMIT_SHA=$(git rev-parse --verify HEAD)      && \
+#   export GIT_COMMIT_SHA_SHORT=$(git rev-parse --short HEAD) && \
     hugo || true
 
 # Copy static website files over to html directory to be served
