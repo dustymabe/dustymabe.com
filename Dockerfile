@@ -1,4 +1,3 @@
-#FROM       registry.fedoraproject.org/fedora:rawhide
 FROM       registry.fedoraproject.org/f25/httpd
 
 USER root
@@ -8,7 +7,6 @@ RUN dnf install -y httpd /usr/bin/rst2html && dnf clean all
 
 # Install hugo from copr
 RUN curl -L https://copr.fedorainfracloud.org/coprs/dustymabe/hugo/repo/fedora-rawhide/dustymabe-hugo-fedora-rawhide.repo > /etc/yum.repos.d/dustymabe-hugo-fedora-rawhide.repo
-#RUN dnf install --releasever 27 -y hugo && dnf clean all
 RUN dnf install -y hugo && dnf clean all
 
 # Add in files and run hugo to generate static website
