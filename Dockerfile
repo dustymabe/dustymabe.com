@@ -32,7 +32,5 @@ RUN cd /context/hugo && \
 USER 1001
 #EXPOSE 80
 
-LABEL io.openshift.expose-services 8080/tcp
-
 #CMD cp httpd -DFOREGROUND
 CMD mkdir -p /var/www/html/ && cp -R /context/hugo/public/* /var/www/html/ && /usr/bin/run-httpd
