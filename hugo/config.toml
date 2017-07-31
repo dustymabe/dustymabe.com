@@ -1,5 +1,4 @@
-#baseURL = "http://hugo.dustymabe.com"
-baseURL = "https://fedp.org"
+baseURL = "https://dustymabe.com"
 languageCode = "en-us"
 title = "A Random Walk Down Tech Street"
 theme = "beautifulhugo"
