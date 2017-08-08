@@ -6,6 +6,9 @@ tags: [ fedora, atomic ]
 published: true
 ---
 
+*a more permanent version of this content lives 
+[here](https://pagure.io/atomic-wg/blob/master/f/docs/how-fedora-creates-ostrees.md)*
+
 # Introduction
 
 **NOTE:** For background on OSTree check out the
