@@ -1,0 +1,128 @@
+---
+# Used for fedmag blog post
+# Updated with notes from paul frields
+title: 'Fedora 25->26 Atomic Host Upgrade Guide'
+published: false
+---
+
+<p>In July the Atomic Working Group put out the <a href="http://www.projectatomic.io/blog/2017/07/fedora-atomic-26-release/">first</a> and <a href="http://www.projectatomic.io/blog/2017/07/fedora-atomic-july-25/">second</a> releases of Fedora 26 Atomic Host. This article shows you how to prepare an existing Fedora 25 Atomic Host system for Fedora 26 and do the upgrade.</p>
+<p>If you really don't want to upgrade to Fedora 26 see the later section: <em>Fedora 25 Atomic Host Life Support</em>.</p>
+
+<!--more-->
+<h2 id="preparing-for-upgrade">Preparing for Upgrade</h2>
+<p>Before you perform an update to Fedora 26 Atomic Host, check the filesystem to verify that at least a few GiB of free space exists in the root filesystem. The update to Fedora 26 may retrieve more than 1GiB of new content (not shared with Fedora 25) and thus needs plenty of free space.</p>
+<p>Luckily Upstream OSTree has implemented some <a href="https://github.com/ostreedev/ostree/pull/987">filesystem checks</a> to ensure an upgrade stops before it fills up the filesystem.</p>
+<p>The example here is a Vagrant box. First, check the free space available:</p>
+<pre>[vagrant@host ~]$ sudo df -kh /
+Filesystem                 Size  Used Avail Use% Mounted on
+/dev/mapper/atomicos-root  3.0G  1.4G  1.6G  47% /</pre>
+<p>Only <code>1.6G</code> free means the root filesystem probably needs to be expanded to make sure there is plenty of space. Check the free space by running the following commands:</p>
+<pre>[vagrant@host ~]$ sudo vgs
+  VG       #PV #LV #SN Attr   VSize  VFree
+  atomicos   1   2   0 wz--n- 40.70g 22.60g
+[vagrant@host ~]$ sudo lvs
+  LV          VG       Attr       LSize  Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  docker-pool atomicos twi-a-t--- 15.09g             0.13   0.10                            
+  root        atomicos -wi-ao----  2.93g                                                    </pre>
+<p>The volume group on the system in question has <code>22.60g</code> free and the <code>atomicos/root</code> logical volume is <code>2.93g</code> in size. Increase the size of the root volume group by 3 GiB:</p>
+<pre>[vagrant@host ~]$ sudo lvresize --size=+3g --resizefs atomicos/root
+  Size of logical volume atomicos/root changed from 2.93 GiB (750 extents) to 5.93 GiB (1518 extents).
+  Logical volume atomicos/root successfully resized.
+meta-data=/dev/mapper/atomicos-root isize=512    agcount=4, agsize=192000 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1 spinodes=0 rmapbt=0
+         =                       reflink=0
+data     =                       bsize=4096   blocks=768000, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0 ftype=1
+log      =internal               bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+data blocks changed from 768000 to 1554432
+[vagrant@host ~]$ sudo lvs
+  LV          VG       Attr       LSize  Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  docker-pool atomicos twi-a-t--- 15.09g             0.13   0.10                            
+  root        atomicos -wi-ao----  5.93g                                                    </pre>
+<p>The <code>lvresize</code> command above also resized the filesystem all in one shot. To confirm, check the filesystem usage:</p>
+<pre>[vagrant@host ~]$ sudo df -kh /
+Filesystem                 Size  Used Avail Use% Mounted on
+/dev/mapper/atomicos-root  6.0G  1.4G  4.6G  24% /</pre>
+<h2 id="upgrading">Upgrading</h2>
+<p>Now the system should be ready for upgrade. If you do this on a production system, you may need to prepare services for downtime.</p>
+<p>If you use an orchestration platform, there are a few things to note. If you use Kubernetes, refer to the later section on Kubernetes: <em>Upgrading Systems with Kubernetes</em>. If you use OpenShift Origin (i.e. via being set up by the <a href="http://www.projectatomic.io/blog/2016/12/part1-install-origin-on-f25-atomic-host/">openshift-ansible installer</a>), the upgrade should not need any preparation.</p>
+<p>Currently the system is on Fedora 25 Atomic Host using the <code>fedora-atomic/25/x86_64/docker-host</code> ref.</p>
+<pre>[vagrant@host ~]$ rpm-ostree status
+State: idle
+Deployments:
+● fedora-atomic:fedora-atomic/25/x86_64/docker-host
+                Version: 25.154 (2017-07-04 01:38:10)
+                 Commit: ce555fa89da934e6eef23764fb40e8333234b8b60b6f688222247c958e5ebd5b</pre>
+<p>In order to do the upgrade the location of the Fedora 26 repository needs to be added as a new remote (like a git remote) for <code>ostree</code> to know about:</p>
+<pre>[vagrant@host ~]$ sudo ostree remote add --set=gpgkeypath=/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-26-primary fedora-atomic-26 https://kojipkgs.fedoraproject.org/atomic/26</pre>
+<p>It can be seen from the command that a new remote known as <code>fedora-atomic-26</code> was added with a remote url of <code>https://kojipkgs.fedoraproject.org/atomic/26</code>. The <code>gpgkeypath</code> variable was also set in the configuration for the remote. This tells OSTree that it should verify commit signatures when downloading from a remote.This is something new that was enabled for Fedora 26 Atomic Host.</p>
+<p>Now that the system has the <code>fedora-atomic-26</code> remote the upgrade can be performed:</p>
+<pre>[vagrant@host ~]$ sudo rpm-ostree rebase fedora-atomic-26:fedora/26/x86_64/atomic-host
+
+Receiving metadata objects: 0/(estimating) -/s 0 bytes
+Signature made Sun 23 Jul 2017 03:13:09 AM UTC using RSA key ID 812A6B4B64DAB85D
+  Good signature from &quot;Fedora 26 Primary &lt;fedora-26-primary@fedoraproject.org&gt;&quot;
+
+Receiving delta parts: 0/27 5.3 MB/s 26.7 MB/355.4 MB
+Signature made Sun 23 Jul 2017 03:13:09 AM UTC using RSA key ID 812A6B4B64DAB85D
+  Good signature from &quot;Fedora 26 Primary &lt;fedora-26-primary@fedoraproject.org&gt;&quot;
+
+27 delta parts, 9 loose fetched; 347079 KiB transferred in 105 seconds                                                                                                                                            
+Copying /etc changes: 22 modified, 0 removed, 58 added
+Transaction complete; bootconfig swap: yes deployment count change: 1
+Upgraded:
+  GeoIP 1.6.11-1.fc25 -&gt; 1.6.11-1.fc26
+  GeoIP-GeoLite-data 2017.04-1.fc25 -&gt; 2017.06-1.fc26
+  NetworkManager 1:1.4.4-5.fc25 -&gt; 1:1.8.2-1.fc26
+  ...
+  ...
+  setools-python-4.1.0-3.fc26.x86_64
+  setools-python3-4.1.0-3.fc26.x86_64
+Run &quot;systemctl reboot&quot; to start a reboot
+[vagrant@host ~]$ sudo reboot
+Connection to 192.168.121.217 closed by remote host.
+Connection to 192.168.121.217 closed.</pre>
+<p>After reboot the status looks like:</p>
+<pre>$ vagrant ssh
+[vagrant@host ~]$ rpm-ostree status
+State: idle
+Deployments:
+● fedora-atomic-26:fedora/26/x86_64/atomic-host
+                Version: 26.91 (2017-07-23 03:12:08)
+                 Commit: 0715ce81064c30d34ed52ef811a3ad5e5d6a34da980bf35b19312489b32d9b83
+           GPGSignature: 1 signature
+                         Signature made Sun 23 Jul 2017 03:13:09 AM UTC using RSA key ID 812A6B4B64DAB85D
+                         Good signature from &quot;Fedora 26 Primary &lt;fedora-26-primary@fedoraproject.org&gt;&quot;
+
+  fedora-atomic:fedora-atomic/25/x86_64/docker-host
+                Version: 25.154 (2017-07-04 01:38:10)
+                 Commit: ce555fa89da934e6eef23764fb40e8333234b8b60b6f688222247c958e5ebd5b
+[vagrant@host ~]$ cat /etc/fedora-release
+Fedora release 26 (Twenty Six)</pre>
+<p>The system is now on Fedora 26 Atomic Host. If this were a production system now would be a good time to check services, most likely running in containers, to see if they still work. If a service didn't come up as expected, you can use the rollback command: <code>sudo rpm-ostree rollback.</code></p>
+<p>To track updated commands for upgrading Atomic Host between releases, visit <a href="https://fedoraproject.org/wiki/Atomic_Host_upgrade">this wiki page</a>.</p>
+<h2 id="upgrading-systems-with-kubernetes">Upgrading Systems with Kubernetes</h2>
+<p>Fedora 25 Atomic Host ships with Kubernetes <strong>v1.5.3</strong>, and Fedora 26 Atomic Host ships with Kubernetes <strong>v1.6.7</strong>. <strong>Before</strong> you upgrade systems participating in an existing Kubernetes cluster from 25 to 26, you must make a few configuration changes.</p>
+<h4 id="node-servers">Node Servers</h4>
+<p>In Kubernetes 1.6, the <code>--config</code> argument is no longer valid. If systems exist that have the <code>KUBELET_ARGS</code> variable in <code>/etc/kubernetes/kubelet</code> that point to the manifests directory using the <code>--config</code> argument, you must change the argument name to <code>--pod-manifest-path</code>. Also in <code>KUBELET_ARGS</code>, add an additional argument: <code>--cgroup-driver=systemd</code>.</p>
+<p>For example, if the <code>/etc/kubernetes/kubelet</code> file started with the following:</p>
+<pre>KUBELET_ARGS=&quot;--kubeconfig=/etc/kubernetes/kubelet.kubeconfig <span style="color: #ff0000;">--config</span>=/etc/kubernetes/manifests --cluster-dns=10.254.0.10 --cluster-domain=cluster.local&quot;</pre>
+<p>Then change it to:</p>
+<pre>KUBELET_ARGS=&quot;--kubeconfig=/etc/kubernetes/kubelet.kubeconfig <span style="color: #ff0000;">--pod-manifest-path</span>=/etc/kubernetes/manifests --cluster-dns=10.254.0.10 --cluster-domain=cluster.local <span style="color: #ff0000;">--cgroup-driver=systemd</span>&quot;</pre>
+<h4 id="master-servers">Master Servers</h4>
+<h5 id="staying-with-etcd2">Staying With etcd2</h5>
+<p>From Kubernetes 1.5 to 1.6 upstream <a href="https://kubernetes.io/docs/tasks/administer-cluster/upgrade-1-6/">shifted</a> from using version 2 of the etcd API to version 3. The <a href="https://github.com/kubernetes/kubernetes/blob/93b144c/CHANGELOG.md#internal-storage-layer-1">Kubernetes documentation</a> instructs users to <strong>add</strong> two arguments to the <code>KUBE_API_ARGS</code> variable in the <code>/etc/kubernetes/apiserver</code> file:</p>
+<pre>--storage-backend=etcd2 --storage-media-type=application/json</pre>
+<p>This ensures that Kubernetes continues to find any pods, services or other objects stored in etcd once the upgrade has been completed.</p>
+<h5 id="moving-to-etcd3">Moving To etcd3</h5>
+<p>You can migrate etcd data to the v3 API later. First, stop the etcd and kube-apiserver services. Then, assuming the data is stored in <code>/var/lib/etcd</code>, run the following command to migrate to etcd3:</p>
+<pre># ETCDCTL_API=3 etcdctl --endpoints https://YOUR-ETCD-IP:2379 migrate --data-dir=/var/lib/etcd</pre>
+<p>After the data migration, remove the <code>--storage-backend=etcd2</code> and <code>--storage-media-type=application/json</code> arguments from the <code>/etc/kubernetes/apiserver</code> file and then restart etcd and kube-apiserver services.</p>
+<h2 id="fedora-25-atomic-host-life-support">Fedora 25 Atomic Host Life Support</h2>
+<p>The Atomic WG <a href="https://pagure.io/atomic-wg/issue/303">decided</a> to keep updating the <code>fedora-atomic/25/x86_64/docker-host</code> ref every day when Bodhi runs within Fedora. A new update is created every day. However, it is recommended you upgrade systems to Fedora 26 because future testing and development focus on Fedora 26 Atomic Host. Fedora 25 OSTrees won't be explicitly tested.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The transition to Fedora 26 Atomic Host should be a smooth process. If you have issues or want to be involved in the future direction of Atomic Host, please join us in IRC (#atomic on <a href="https://freenode.net/">freenode</a>) or on the <a href="https://lists.projectatomic.io/mailman/listinfo/atomic-devel">atomic-devel</a> mailing list.</p>
