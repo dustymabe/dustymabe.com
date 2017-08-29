@@ -1,0 +1,36 @@
+# Images Download Information:
+
+- qcow (you must know how to use cloud-init)
+	* https://download.fedoraproject.org/pub/alt/atomic/stable/Fedora-Atomic-26-20170821.0/CloudImages/x86_64/images/Fedora-Atomic-26-20170821.0.x86_64.qcow2
+
+- vagrant libvirt (most likely what you'll use on Fedora laptop)
+    * https://download.fedoraproject.org/pub/alt/atomic/stable/Fedora-Atomic-26-20170821.0/CloudImages/x86_64/images/Fedora-Atomic-Vagrant-26-20170821.0.x86_64.vagrant-libvirt.box
+
+- vagrant virtualbox (most likely for windows/Mac laptops)
+	* https://download.fedoraproject.org/pub/alt/atomic/stable/Fedora-Atomic-26-20170821.0/CloudImages/x86_64/images/Fedora-Atomic-Vagrant-26-20170821.0.x86_64.vagrant-virtualbox.box
+
+- checksums
+	* https://download.fedoraproject.org/pub/alt/atomic/stable/Fedora-Atomic-26-20170821.0/CloudImages/x86_64/images/Fedora-CloudImages-26-20170821.0-x86_64-CHECKSUM
+
+
+# AMI Image Information:
+
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (ap-northeast-1) ami-643bc902   hvm  gp2            
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (ap-southeast-1) ami-db0066b8   hvm  gp2            
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (ap-southeast-2) ami-e2c3d881   hvm  gp2            
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (eu-central-1)   ami-34fb505b   hvm  gp2            
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (eu-west-1)      ami-cef40bb7   hvm  gp2            
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (sa-east-1)      ami-3e037352   hvm  gp2            
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (us-east-1)      ami-61d3e81a   hvm  gp2            
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (us-west-1)      ami-ed7a4f8d   hvm  gp2            
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (us-west-2)      ami-4e1ef136   hvm  gp2            
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (ap-northeast-1) ami-a536c4c3   hvm  standard       
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (ap-southeast-1) ami-7901671a   hvm  standard       
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (ap-southeast-2) ami-4bcdd628   hvm  standard       
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (eu-central-1)   ami-8ffb50e0   hvm  standard       
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (eu-west-1)      ami-02f20d7b   hvm  standard       
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (sa-east-1)      ami-bc0272d0   hvm  standard       
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (us-east-1)      ami-03dde678   hvm  standard       
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (us-west-1)      ami-797a4f19   hvm  standard       
+Fedora-Atomic-26-20170821.0.x86_64  EC2 (us-west-2)      ami-c61ff0be   hvm  standard
+
