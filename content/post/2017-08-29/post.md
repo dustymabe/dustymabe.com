@@ -23,13 +23,15 @@ and interested in learning a new technology.
 The entire lab will cover quite a few features of Atomic Host
 including:
 
+- Getting Familiar With Atomic Host
+- Viewing Changes To A Deployed System
 - Configuring Storage for Containers
 - Atomic Host Rebasing 
 - Atomic Host Upgrades and Rollbacks
-- Viewing Changes To A Deployed System
 - Browsing OS History
 - Package Layering
-- Experimental Features (livefs, override, remove)
+- Experimental Features (livefs, remove, replace)
+- Containerized and Non-Containerized Applications
 
 In *Part 0: Preparation* we are going to set up an existing Fedora 26
 Atomic Host for the rest of the lab sections.
@@ -181,10 +183,12 @@ that `ostree` pulls from that local server:
 
 Let's take it one step farther and tell the current deployment
 on the system to track the `fedora/26/x86_64/updates/atomic-host` 
-ref from the `local` remote.
+ref from the `local` remote. We'll then restart `rpm-ostreed` to
+make the system pick up the changes.
 
 ```nohighlight
 [root@localhost ~]# ostree admin set-origin --index 0 local http://localhost:8000/ostreerepo/ fedora/26/x86_64/updates/atomic-host
+[root@localhost ~]# systemctl restart rpm-ostreed.service
 ```
 
 Finally, we'll delete all existing YUM repositories and add our
@@ -204,4 +208,6 @@ EOF
 
 Part 0 of this lab has been specifically to get the system prepared
 for later sections of the lab. You may have some questions. That's OK.
-Hopefully we'll answer them in the later sections of this lab.
+Hopefully we'll answer them in the later sections of this lab. In the
+[next post](/2017/08/30/atomic-host-101-lab-part-1-getting-familiar/)
+we'll get more familiar with Atomic Host.
