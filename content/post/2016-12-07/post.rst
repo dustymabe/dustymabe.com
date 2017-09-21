@@ -354,7 +354,7 @@ python3 as the interpreter for ansible by specifying
 We snipped pretty much all of the output. You can download the log file
 in its entirety from here_.
 
-.. _here: http://dustymabe.com/content/2016-12-07/output.txt.gz
+.. _here: /2016-12-07/output.txt.gz
 
 So now the installer has run, and our systems should be up and running.
 There is only one more thing we have to do before we can take this

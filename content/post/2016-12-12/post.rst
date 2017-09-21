@@ -131,29 +131,29 @@ was load balanced and/or performed round robin to either worker node.
 Now that we have explored the install, let's try out logging in as
 ``admin`` to the openshift web console at ``https://54.175.0.44:8443``:
 
-.. image:: http://dustymabe.com/content/2016-12-12/login.jpeg
+.. image:: /2016-12-12/login.jpeg
 
 And after we've logged in, we see the list of **projects** that the
 ``admin`` user has access to:
 
-.. image:: http://dustymabe.com/content/2016-12-12/logged_in.jpeg
+.. image:: /2016-12-12/logged_in.jpeg
 
 We then select the ``default`` project and can view the same
 applications that we looked at before using the ``oc`` command:
 
-.. image:: http://dustymabe.com/content/2016-12-12/logged_in_default.jpeg
+.. image:: /2016-12-12/logged_in_default.jpeg
 
 At the top, there is the registry console. Let's try out accessing the
 registry console by clicking the 
 ``https://registry-console-default.54.204.208.138.xip.io/`` link
 in the top right. Note that this is the link from the exposed route:
 
-.. image:: http://dustymabe.com/content/2016-12-12/registry_console_login.jpeg
+.. image:: /2016-12-12/registry_console_login.jpeg
 
 We can log in with the same ``admin/OriginAdmin`` credentials that we
 used to log in to the OpenShift web console. 
 
-.. image:: http://dustymabe.com/content/2016-12-12/registry_console_logged_in.jpeg
+.. image:: /2016-12-12/registry_console_logged_in.jpeg
 
 After logging in, there are links to each project so we can see images
 that belong to each project, and we see recently pushed images.
@@ -313,12 +313,12 @@ on ``ruby-ex-myproject.54.204.208.138.xip.io``. Before we do that
 we'll log in to the openshift console as the ``user`` user and view
 the running pods in project ``myproject``:
 
-.. image:: http://dustymabe.com/content/2016-12-12/logged_in_user_ruby_ex.jpeg
+.. image:: /2016-12-12/logged_in_user_ruby_ex.jpeg
 
 And pointing the browser to ``ruby-ex-myproject.54.204.208.138.xip.io`` 
 we see:
 
-.. image:: http://dustymabe.com/content/2016-12-12/ruby-ex-half.jpeg
+.. image:: /2016-12-12/ruby-ex-half.jpeg
 
 Woot!
 

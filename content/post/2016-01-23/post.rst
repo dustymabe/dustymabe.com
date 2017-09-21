@@ -114,7 +114,7 @@ a new job. To create a new job select **New Item** from the menu on
 the left hand side of the screen. Enter a name for your job and
 **Freestyle Project** as shown below:
 
-.. image:: http://dustymabe.com/content/2016-01-23/ci-new-job.png
+.. image:: /2016-01-23/ci-new-job.png
    :align: center
 
 After clicking OK, the next page that appears is the page for
@@ -125,18 +125,18 @@ configuring your job. The following items need to be filled in:
 
 As you can see below, for me this was the ``atomicapp-shared`` label.
 
-.. image:: http://dustymabe.com/content/2016-01-23/ci-restrict-nodes.png
+.. image:: /2016-01-23/ci-restrict-nodes.png
    :align: center
 
 - Check **Inject environment variables to the build process** under **Build Environment**
     - Populate the environment variables as shown below:
 
-.. image:: http://dustymabe.com/content/2016-01-23/ci-env-vars.png
+.. image:: /2016-01-23/ci-env-vars.png
    :align: center
 
 - Click on the **Add Build Step** Dropdown and Select **Execute Python Script**
 
-.. image:: http://dustymabe.com/content/2016-01-23/ci-exec-python.png
+.. image:: /2016-01-23/ci-exec-python.png
    :align: center
 
 - Populate a python script in the text box
@@ -145,9 +145,9 @@ As you can see below, for me this was the ``atomicapp-shared`` label.
     - This script can be found on GitHub_ or here_
 
 .. _GitHub: https://github.com/dustymabe/centos-ci-example/blob/master/jjb/run.py
-.. _here: http://dustymabe.com/content/2016-01-23/run.py
+.. _here: /2016-01-23/run.py
 
-.. image:: http://dustymabe.com/content/2016-01-23/ci-python-script.png
+.. image:: /2016-01-23/ci-python-script.png
    :align: center
 
 Now you are all done configuring your job for the first time. There are plenty of more 
@@ -155,7 +155,7 @@ options that Jenkins gives you, but for now click **Save** and then run the job.
 can do this by clicking **Build Now** and then viwing the output by selecting 
 **Console Output** as shown in the screenshot below:
 
-.. image:: http://dustymabe.com/content/2016-01-23/ci-build-now.png
+.. image:: /2016-01-23/ci-build-now.png
    :align: center
 
 Your Next Job: Jenkins Job Builder
@@ -203,7 +203,7 @@ Update the file to have the real API_KEY.
 
 The last component is ``run.py``, which is the python script we pasted in before::
 
-    # curl http://dustymabe.com/content/2016-01-23/run.py > run.py
+    # curl https://dustymabe.com/2016-01-23/run.py > run.py
 
 
 Now you can run ``jenkins-jobs`` and update the job::

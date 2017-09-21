@@ -49,7 +49,7 @@ Camp. If desired there is also an archive of that git repo here_.
 .. _blog post: https://blog.filippo.io/building-python-modules-with-go-1-5/
 .. _CFFI: https://cffi.readthedocs.io/en/latest/overview.html#overview
 .. _git repo: https://github.com/dustymabe/go2python-example
-.. _here: http://dustymabe.com/content/2016-09-13/repo-f17357a.tar.gz
+.. _here: /2016-09-13/repo-f17357a.tar.gz
 
 
 System Set Up

@@ -198,7 +198,7 @@ So let's see what is going on in OpenShift by querying from the CLI::
 
 and the web console looks like:
 
-.. image:: http://dustymabe.com/content/2016-12-01/openshift.png
+.. image:: /2016-12-01/openshift.png
    :align: center 
 
 One final thing we have to do is set it up so that we can connect to the service (i.e.
@@ -219,7 +219,7 @@ web browser to ``mlbparks-blogpost.44fs.preview.openshiftapps.com``.
 
 Let's try it out:
 
-.. image:: http://dustymabe.com/content/2016-12-01/mlbparks.png
+.. image:: /2016-12-01/mlbparks.png
    :align: center 
 
 | Success!

@@ -39,7 +39,7 @@ configure the system with ``LUKS`` + ``LVM`` + ``BTRFS``. The script
 will need to be run in an Anaconda environment just like the manual
 steps were done in part1_ last time. 
 
-.. _script: http://dustymabe.com/content/2017-02-12/script.sh
+.. _script: /2017-02-12/script.sh
 
 You can easily enable ``ssh`` access to your Anaconda booted machine by
 adding ``inst.sshd`` to the kernel command line arguments. After 
@@ -54,7 +54,7 @@ doesn't really leverage Anaconda at all because it simply runs a
 Anaconda to run a bash script, but allows you to do it in an automated way.
 None of the kickstart directives at the top of the kickstart file actually get used. 
 
-.. _kickstart file: http://dustymabe.com/content/2017-02-12/ks.cfg
+.. _kickstart file: /2017-02-12/ks.cfg
 
 Installing and Configuring Snapper
 ----------------------------------

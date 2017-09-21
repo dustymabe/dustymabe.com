@@ -100,7 +100,7 @@ if you are interested. This works fine if you only have one network interface
 per container but can break down when you have multiple interfaces attached to 
 a container.
 
-.. _iptables output: http://dustymabe.com/content/2016-05-25/iptables.txt
+.. _iptables output: /2016-05-25/iptables.txt
 
 Let's jump in to the ``examplevotingapp_voting-app_1`` container and
 check out some of the networking::

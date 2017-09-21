@@ -73,7 +73,7 @@ get the USB adapters working on Linux.
 archive of it here_ for posterity. The commit id at head at the time
 of this use is ``9fc227c2987f23a6b2eeedf222526973ed7a9d63``.
 
-.. _here: http://dustymabe.com/content/2016-01-24/rtl8812au_rtl8821au-master.zip
+.. _here: /2016-01-24/rtl8812au_rtl8821au-master.zip
 
 The first step is to set up your system for DKMS_ to make it so that
 you don't have to recompile the kernel module every time you install a

@@ -61,18 +61,18 @@ Getting Started with the Web UI
 You can create a Fedora 25 Atomic instance just like you can any other droplet within
 DigitalOcean. On the **Create Droplets** page we can select ``25 x64 Atomic``:
 
-.. image:: http://dustymabe.com/content/2017-04-27/select-fedora-atomic.png
+.. image:: /2017-04-27/select-fedora-atomic.png
 
 Then, after selecting ``size`` and ``region``, we can populate the user-data in the
 ``Select additional options`` section:
 
-.. image:: http://dustymabe.com/content/2017-04-27/cloud-init-user-data.png
+.. image:: /2017-04-27/cloud-init-user-data.png
 
 After that we can go ahead and create the Droplet. Once it is up and
 running we have a nice little status that shows us the IP address of
 the machine:
 
-.. image:: http://dustymabe.com/content/2017-04-27/droplet-created.png
+.. image:: /2017-04-27/droplet-created.png
 
 And finally we should be able to access our droplet::
 

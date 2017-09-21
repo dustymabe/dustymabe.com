@@ -97,7 +97,7 @@ And finally we need to reinstall the ``GRUB`` bootloader with
 
 After a reboot you now get your grub prompt:
 
-.. image:: http://dustymabe.com/content/2015-07-06/grubdecrypt.png
+.. image:: /2015-07-06/grubdecrypt.png
 
 
 Unfortunately this does mean that you have to type your password twice on boot

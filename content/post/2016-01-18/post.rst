@@ -88,7 +88,7 @@ in this case it is ``guestbook-proj1.e8ca.engint.openshiftapps.com``. A quick vi
 with Firefox gives us:
 
 
-.. image:: http://dustymabe.com/content/2016-01-18/guestbook.png
+.. image:: /2016-01-18/guestbook.png
    :align: center
    
 
