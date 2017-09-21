@@ -26,8 +26,8 @@ This setup is not new. I have fully documented the steps I took in the past for 
 systems in two blog posts: part1_ and part2_. This is a condensed continuation of
 those posts for Fedora 25.
 
-.. _part1: http://dustymabe.com/2015/07/14/fedora-btrfssnapper-part-1-system-preparation/
-.. _part2: http://dustymabe.com/2015/07/19/fedora-btrfssnapper-part-2-full-system-snapshotrollback/
+.. _part1: /2015/07/14/fedora-btrfssnapper-part-1-system-preparation/
+.. _part2: /2015/07/19/fedora-btrfssnapper-part-2-full-system-snapshotrollback/
 
 Setting up System with LUKS + LVM + BTRFS
 -----------------------------------------
@@ -70,7 +70,7 @@ support on ``BTRFS``. I covered how to do this in a `previous post`_::
     --------         ----         ---- 
     0/5         999.80MiB    999.80MiB
 
-.. _previous post: http://dustymabe.com/2013/09/22/btrfs-how-big-are-my-snapshots/
+.. _previous post: /2013/09/22/btrfs-how-big-are-my-snapshots/
 
 Next up is installing/configuring ``snapper``. I am also going to
 install the ``dnf`` plugin for snapper so that rpm transactions will

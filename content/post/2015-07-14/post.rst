@@ -47,13 +47,13 @@ on top of. I mentioned before that I wanted to put ``/boot/`` just as a
 directory on the ``BTRFS`` filesystem. I also wanted it to be encrypted
 as I have done in the past_.
 
-.. _past: http://dustymabe.com/2015/07/06/encrypting-more-boot-joins-the-party/
+.. _past: /2015/07/06/encrypting-more-boot-joins-the-party/
 
 This means I have yet another setup that is funky_ and I'll need to
 basically install it from scratch using Anaconda and a chroot
 environment.
 
-.. _funky: http://dustymabe.com/2014/05/29/manual-linux-installs-with-funky-storage-configurations/
+.. _funky: /2014/05/29/manual-linux-installs-with-funky-storage-configurations/
 
 After getting up and running in anaconda I then switched to a
 different virtual terminal and formatted my hard disk, set up an

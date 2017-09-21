@@ -30,7 +30,7 @@ we'll be using have the following roles and IP address configurations::
     |    worker   | 54.204.208.138 | 10.0.251.101 |
     +-------------+----------------+--------------+
 
-.. _part 1: http://dustymabe.com/2016/12/07/installing-an-openshift-origin-cluster-on-fedora-25-atomic-host-part-1/
+.. _part 1: /2016/12/07/installing-an-openshift-origin-cluster-on-fedora-25-atomic-host-part-1/
 .. _Fedora 25 Atomic Host: https://getfedora.org/en/atomic/
 .. _Openshift Origin: https://github.com/openshift/origin
 .. _OpenShift Ansible Installer: https://github.com/openshift/openshift-ansible

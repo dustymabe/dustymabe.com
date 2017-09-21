@@ -20,7 +20,7 @@ snapshotting and recovery. In this final post of the series I will
 give an overview of how to get ``snapper`` installed and configured on
 the system and walk through using it to do a rollback.
 
-.. _part 1: http://dustymabe.com/2015/07/14/fedora-btrfssnapper-part-1-system-preparation/
+.. _part 1: /2015/07/14/fedora-btrfssnapper-part-1-system-preparation/
 
 
 Installing and Configuring Snapper
@@ -42,7 +42,7 @@ enabled ``quota`` on the ``BTRFS`` filesystem::
     0/5         975.90MiB    975.90MiB 
     0/258        16.00KiB     16.00KiB
 
-.. _previous post: http://dustymabe.com/2013/09/22/btrfs-how-big-are-my-snapshots/
+.. _previous post: /2013/09/22/btrfs-how-big-are-my-snapshots/
 
 You can see from the output that we currently have two subvolumes. One
 of them is the *root subvolume* while the other is a subvolume
