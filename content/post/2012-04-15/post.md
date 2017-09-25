@@ -10,7 +10,7 @@ output of a simple "single session" terminal window. However, if you
 capture the timing data from `script` you can actually log much more
 than that.\
 \
-In a [previous post](/2012/01/11/create-a-screencast-of-a-terminal-session-using-scriptreplay./)
+In a [previous post](/2012/01/11/create-a-screencast-of-a-terminal-session-using-scriptreplay/)
 I talked about how to save the timing data using `script` and then play
 it back using `scriptreplay`. If you use this technique and also use a a
 terminal multiplexer such as `screen` or `tmux` you can capture much

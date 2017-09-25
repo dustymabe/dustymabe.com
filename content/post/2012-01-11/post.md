@@ -3,6 +3,7 @@ title: "Create a screencast of a terminal session using scriptreplay."
 tags:
 date: "2012-01-11"
 published: true
+url: /2012/01/11/create-a-screencast-of-a-terminal-session-using-scriptreplay/
 ---
 
 \
