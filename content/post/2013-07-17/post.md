@@ -2,50 +2,35 @@
 title: "Thin LVM Snapshots: Why Size Is Less Important"
 tags:
 date: "2013-07-17"
-published: false
+published: true
 ---
 
-<! Thin LVM Snapshots: Why Size Is Less Important >
+Traditionally with LVM snapshots you need to be especially careful when
+choosing how big to make your snapshots; if it is too small it will fill
+up and become *invalid*. If taking many snapshots with limited space
+then it becomes quite difficult to decide which snapshots need more
+space than others.\
+\
+One approach has been to leave some extra space in the VG and let
+dmeventd periodically poll and `lvextend` the snapshot if necessary (I
+covered this in a previous
+[post](/2012/03/04/automatically-extend-lvm-snapshots/) ). However, a
+reader of mine has pointed out that this polling mechanism does not work
+very well for small snapshots.\
+\
+Fortunately, with the addition of thin logical volume support within LVM
+(I believe initially in RHEL/CentOS 6.4 and/or Fedora 17), size is much
+less important to consider when taking a snapshot. If you create a thin
+LV and then *"snapshot"* the thin LV, what you actually end up with are
+two thin LVs. They both use extents from the same pool and the size will
+grow dynamically as needed.\
+\
+As always, examples help. In my system I have a 20G `sdb`. I'll create a
+VG, `vgthin`, that uses `sdb` and then a 10G thin pool, `lvpool`, within
+`vgthin`.\
+\
 
-
-<br>
-
-Traditionally with LVM snapshots you need to be especially careful
-when choosing how big to make your snapshots; if it is too small it
-will fill up and become <i>invalid</i>. If 
-taking many snapshots with limited space then it becomes quite
-difficult to decide which snapshots need more space than others.
-
-<br><br>
-One
-approach has been to leave some extra space in the VG and let dmeventd
-periodically poll and <code>lvextend</code> the snapshot if necessary
-(I covered this in a previous 
-<a href="/2012/03/04/automatically-extend-lvm-snapshots/">
-post
-</a>
-). However, a reader of mine has pointed out that
-this polling mechanism does not work very well for small snapshots. 
-
-<br><br>
-
-Fortunately, with the addition of thin logical volume support within
-LVM (I believe initially in RHEL/CentOS 6.4 and/or Fedora 17), size is
-much less important to consider when taking a snapshot. If you create
-a thin LV and then <i>"snapshot"</i> the thin LV, 
-what you actually end up with are two thin LVs.
-They both use extents from the same pool and the size will grow
-dynamically as needed. 
-
-<br><br>
-
-As always, examples help. In my system I have a 20G <code>sdb</code>.
-I'll create a VG, <code>vgthin</code>, that uses <code>sdb</code> and
-then a 10G thin pool, <code>lvpool</code>, within <code>vgthin</code>. 
-
-<br><br>
-
-<blockquote>
+```nohighlight
 [root@localhost ~]# lsblk /dev/sdb
 NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
 sdb    8:16   0  20G  0 disk 
@@ -55,16 +40,13 @@ sdb    8:16   0  20G  0 disk
 [root@localhost ~]# 
 [root@localhost ~]# lvcreate --thinpool lvpool --size 10G vgthin
   Logical volume "lvpool" created
-</blockquote>
+```
 
-<br>
+\
+Next, I'll create a thin LV (`lvthin`), add a filesystem and mount it.\
+\
 
-Next, I'll create a thin LV (<code>lvthin</code>), add a filesystem
-and mount it.
-
-<br><br>
-
-<blockquote>
+```nohighlight
 [root@localhost ~]# lvcreate --name lvthin --virtualsize 5G --thin vgthin/lvpool
   Logical volume "lvthin" created
 [root@localhost ~]# 
@@ -77,18 +59,16 @@ and mount it.
   LV     VG     Attr      LSize  Pool   Origin Data%  Move Log Copy%  Convert
   lvpool vgthin twi-a-tz- 10.00g                 1.27                        
   lvthin vgthin Vwi-a-tz-  5.00g lvpool          2.54                        
-</blockquote>
+```
 
-<br>
-
+\
 I'll go ahead and create the snapshot now, but just as a sanity check
-I'll create a file, <code>A</code>, that exists before the
-snapshot. After the snapshot I'll create a file, <code>B</code>. This
-file should NOT be visible in the snapshot if it is working properly.
+I'll create a file, `A`, that exists before the snapshot. After the
+snapshot I'll create a file, `B`. This file should NOT be visible in the
+snapshot if it is working properly.\
+\
 
-<br><br>
-
-<blockquote>
+```nohighlight
 [root@localhost ~]# touch /mnt/origin/A
 [root@localhost ~]# 
 [root@localhost ~]# lvcreate --name lvsnap --snapshot vgthin/lvthin 
@@ -103,76 +83,62 @@ file should NOT be visible in the snapshot if it is working properly.
 A  B  lost+found
 [root@localhost ~]# ls /mnt/snapshot/
 A  lost+found
-</blockquote>
+```
 
-<br>
-
+\
 Perfect! Snapshotting is working as expected. What are our
-utilizations?
+utilizations?\
+\
 
-<br><br>
-
-<blockquote>
+```nohighlight
 [root@localhost ~]# lvs
   LV     VG     Attr      LSize  Pool   Origin Data%  Move Log Copy%  Convert
   lvpool vgthin twi-a-tz- 10.00g                 2.05                        
   lvsnap vgthin Vwi-aotz-  5.00g lvpool lvthin   4.10                        
   lvthin vgthin Vwi-aotz-  5.00g lvpool          4.10                        
-</blockquote>
+```
 
-<br>
-
+\
 Since we just created the snapshot our current utilization for both
-<code>lvthin</code> and <code>lvsnap</code>
-are the same. Take note also that the overall data usage
-for the entire pool actually shows us that <code>lvthin</code> and
-<code>lvsnap</code> are sharing the blocks that were present at the
-time the snapshot was taken. This will continue to be true as long as
-those blocks don't change. 
+`lvthin` and `lvsnap` are the same. Take note also that the overall data
+usage for the entire pool actually shows us that `lvthin` and `lvsnap`
+are sharing the blocks that were present at the time the snapshot was
+taken. This will continue to be true as long as those blocks don't
+change.\
+\
+A few more sanity checks.. If we add a 1G file into the filesystem on
+`lvthin` we should see only the usage of `lvthin` increase.\
+\
 
-<br><br>
-
-A few more sanity checks.. If we add a 1G file into the filesystem on <code>lvthin</code> we
-should see only the usage of <code>lvthin</code> increase.
-
-<br><br>
-
-<blockquote>
+```nohighlight
 [root@localhost ~]# cp /root/1Gfile /mnt/origin/
 [root@localhost ~]# lvs
   LV     VG     Attr      LSize  Pool   Origin Data%  Move Log Copy%  Convert
   lvpool vgthin twi-a-tz- 10.00g                12.06                        
   lvsnap vgthin Vwi-aotz-  5.00g lvpool lvthin   4.10                        
   lvthin vgthin Vwi-aotz-  5.00g lvpool         24.10                        
-</blockquote>
+```
 
-<br>
+\
+If we add a 512M file into the snapshot then we should see only the
+usage of `lvsnap` increase.\
+\
 
-If we add a 512M file into the snapshot then we
-should see only the usage of <code>lvsnap</code> increase.
-
-<br><br>
-
-<blockquote>
+```nohighlight
 [root@localhost ~]# cp /root/512Mfile /mnt/snapshot/
 [root@localhost ~]# lvs
   LV     VG     Attr      LSize  Pool   Origin Data%  Move Log Copy%  Convert
   lvpool vgthin twi-a-tz- 10.00g                17.06                        
   lvsnap vgthin Vwi-aotz-  5.00g lvpool lvthin  14.10                        
   lvthin vgthin Vwi-aotz-  5.00g lvpool         24.10                        
-</blockquote>
+```
 
-<br>
-
+\
 And thats it.. Not that exciting, but it is dynamic allocation of
 snapshots (did I also mention there is support for snapshots of
 snapshots of snapshots?). As long as there is still space within the
-pool the snapshot will grow dynamically.  
-
-<br><br>
-
-Cheers
-
-<br><br>
-
+pool the snapshot will grow dynamically.\
+\
+Cheers\
+\
 Dusty

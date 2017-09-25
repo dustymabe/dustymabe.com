@@ -2,44 +2,27 @@
 title: "Guest Discard/FSTRIM On Thin LVs"
 tags:
 date: "2013-06-21"
-published: false
+published: true
 url: "/2013/06/21/guest-discardfstrim-on-thin-lvs/"
 ---
 
-
-<! Guest Discard/FSTRIM On Thin LVs >
-
-
-<br>
-
-In my last 
-<a href="/2013/06/11/recover-space-from-vm-disk-images-by-using-discardfstrim/"> post </a>
+In my last
+[post](/2013/06/11/recover-space-from-vm-disk-images-by-using-discardfstrim/)
 I showed how to recover space from disk images backed by sparse files.
 As a small addition I'd like to also show how to do the same with a
-guest disk image that is backed by a 
-<a href="http://www.redhat.com/archives/linux-lvm/2012-January/msg00018.html">
-thinly provisioned Logical Volume.
-</a>
+guest disk image that is backed by a [thinly provisioned Logical
+Volume.](http://www.redhat.com/archives/linux-lvm/2012-January/msg00018.html)\
+\
+First things first, I modified the `/etc/lvm/lvm.conf` file to have the
+`issue_discards = 1` option set. I'm not 100% sure this is needed but I
+did it at the time so I wanted to include it here.\
+\
+Next I created a new VG (`vgthin`) out of a spare partition and then
+created an thin LV pool (`lvthinpool`) inside the VG. Finally I created
+a thin LV within the pool (`lvthin`). This is all shown below:\
+\
 
-<br>
-<br>
-
-
-First things first, I modified the <code>/etc/lvm/lvm.conf</code> file
-to have the <code>issue_discards = 1</code> option set. I'm not 100%
-sure this is needed but I did it at the time so I wanted to include it
-here.
-
-<br><br>
-
-Next I created a new VG (<code>vgthin</code>) out of a spare 
-partition and then created an thin LV pool (<code>lvthinpool</code>) inside 
-the VG. Finally I created a thin LV within the pool
-(<code>lvthin</code>). This is all shown below:
-
-<br><br>
-
-<blockquote>
+```nohighlight
 [root@host ~]# vgcreate vgthin /dev/sda3
   Volume group "vgthin" successfully created
 [root@host ~]# lvcreate --thinpool lvthinpool --size 20G vgthin
@@ -47,70 +30,59 @@ the VG. Finally I created a thin LV within the pool
 [root@host ~]# 
 [root@host ~]# lvcreate --name lvthin --virtualsize 10G --thin vgthin/lvthinpool
   Logical volume "lvthin" created
-</blockquote>
+```
 
-<br>
-
+\
 To observe the usages of the thin LV and the thin pool you can use the
-<code>lvs</code> command and take note of the Data% column:
+`lvs` command and take note of the Data% column:\
+\
 
-
-<br><br>
-
-<blockquote>
+```nohighlight
 [root@host ~]# lvs vgthin
   LV         VG     Attr      LSize  Pool       Origin Data%  Move Log Copy%  Convert
   lvthin     vgthin Vwi-aotz- 10.00g lvthinpool          0.00                        
   lvthinpool vgthin twi-a-tz- 20.00g                     0.00
-</blockquote>
+```
 
-<br>
+\
+Next I needed to add the disk to the guest. I did it using the following
+xml and `virsh` command. Note from my previous post that the scsi
+controller inside of my guest is a `virtio-scsi` controller and that I
+am adding the `discard='unmap'` option.\
+\
 
-Next I needed to add the disk to the guest. I did it using the
-following xml and <code>virsh</code> command. Note from my previous
-post that the scsi controller inside of my guest is a
-<code>virtio-scsi</code> controller and that I am adding the
-<code>discard='unmap'</code> option.
-
-<br><br>
-
-<blockquote>
-[root@host ~]# cat &lt&ltEOF &gt /tmp/thinLV.xml 
-    &ltdisk type='block' device='disk'&gt
-      &ltdriver name='qemu' type='raw' discard='unmap'/&gt
-      &ltsource dev='/dev/vgthin/lvthin'/&gt
-      &lttarget dev='sdb' bus='scsi'/&gt
-    &lt/disk&gt
+```nohighlight
+[root@host ~]# cat <<EOF > /tmp/thinLV.xml 
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' discard='unmap'/>
+      <source dev='/dev/vgthin/lvthin'/>
+      <target dev='sdb' bus='scsi'/>
+    </disk>
 EOF
 [root@host ~]#
 [root@host ~]# virsh attach-device Fedora19 /tmp/thinLV.xml --config 
 ...
-</blockquote>
+```
 
-<br>
-
+\
 After a quick power cycle of the guest I then created a filesystem on
-the new disk (<code>sdb</code>) and mounted it within the guest. 
+the new disk (`sdb`) and mounted it within the guest.\
+\
 
-<br><br>
-
-<blockquote>
+```nohighlight
 [root@guest ~]# mkfs.ext4 /dev/sdb 
 ...
 [root@guest ~]# 
 [root@guest ~]# mount /dev/sdb /mnt/
-</blockquote>
+```
 
-<br>
-
+\
 Same as last time, I then copied a large file into the guest. After I
-did so you can see from the <code>lvs</code> output that the thin LV
-is now using 11% of its allotted space within the pool.
+did so you can see from the `lvs` output that the thin LV is now using
+11% of its allotted space within the pool.\
+\
 
-
-<br><br>
-
-<blockquote>
+```nohighlight
 [root@host ~]# lvs vgthin
   LV         VG     Attr      LSize  Pool       Origin Data%  Move Log Copy%  Convert
   lvthin     vgthin Vwi-aotz- 10.00g lvthinpool          1.34                        
@@ -124,15 +96,13 @@ code.tar.gz                        100% 1134MB  29.8MB/s   00:38
   LV         VG     Attr      LSize  Pool       Origin Data%  Move Log Copy%  Convert
   lvthin     vgthin Vwi-aotz- 10.00g lvthinpool         11.02                        
   lvthinpool vgthin twi-a-tz- 20.00g
-</blockquote>
+```
 
-<br>
+\
+It was then time for a little TRIM action:\
+\
 
-It was then time for a little TRIM action:
-
-<br><br>
-
-<blockquote>
+```nohighlight
 [root@guest ~]# df -kh /mnt/
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/sdb        9.8G  1.2G  8.1G  13% /mnt
@@ -146,38 +116,26 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/sdb        9.8G   23M  9.2G   1% /mnt
 [root@guest ~]# fstrim -v /mnt/
 /mnt/: 1.2 GiB (1329049600 bytes) trimmed
-</blockquote>
+```
 
-<br>
+\
+And from within the host we can see that the utilization of the thin LV
+has appropriately dwindled back down to \~2.85%\
+\
 
-And from within the host we can see that the utilization of the thin
-LV has appropriately dwindled back down to ~2.85%
-
-
-<br><br>
-
-<blockquote>
+```nohighlight
 [root@host ~]# lvs vgthin
   LV         VG     Attr      LSize  Pool       Origin Data%  Move Log Copy%  Convert
   lvthin     vgthin Vwi-aotz- 10.00g lvthinpool          2.85                        
   lvthinpool vgthin twi-a-tz- 20.00g                     1.42
-</blockquote>
+```
 
-<br>
-
+\
 Again I have posted my full guest libvirt XML
-<a href="/2013-06-21/guest.xml">
-here.
-</a>
-
-
-<br><br>
-
-Dusty
-
-<br> <br>
-PS See 
-<a href="http://lxadm.wordpress.com/2012/10/17/lvm-thin-provisioning/">
-here
-</a> 
-for a more thorough example of creating thin LVs.
+[here.](/2013-06-21/guest.xml)\
+\
+Dusty\
+\
+PS See
+[here](http://lxadm.wordpress.com/2012/10/17/lvm-thin-provisioning/) for
+a more thorough example of creating thin LVs.

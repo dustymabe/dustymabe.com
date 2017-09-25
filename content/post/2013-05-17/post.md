@@ -2,35 +2,29 @@
 title: "Easy getopt for a BASH script"
 tags:
 date: "2013-05-17"
-published: false
+published: true
 ---
 
-<! Easy getopt for a BASH script >
+[getopt](http://en.wikipedia.org/wiki/Getopt) is extremely useful for
+quickly being able to add options and arguments to your program without
+having to worry much about the parsing yourself. There are getopt
+libraries for many languages but what about BASH? It turns out there are
+actually two versions of getopt that you can use in your BASH scripts; a
+command line utility `getopt` provided by the util-linux package, and a
+bash builtin `getopts`. I have provided a brief overview of each in the
+following sections.
 
-<br>
+#### *getopt: The command line utility*
 
-<a href="http://en.wikipedia.org/wiki/Getopt">getopt</a> is extremely
-useful for quickly being able to add options and arguments to your
-program without having to worry much about the parsing yourself. There
-are getopt libraries for many languages but what about BASH? It turns
-out there are actually two versions of getopt that you can use in your
-BASH scripts; a command line utility <code>getopt</code> provided by
-the util-linux package, and a bash builtin <code>getopts</code>. I have provided a brief overview of each in the following sections. 
+\
+An example of a bash script using `getopt` to allow the user to specify
+one of three colors (blue, red, or green) is shown below. The user can
+specify `-b` to imply the color is blue or can specify `--color=blue` to
+do the same. If the user uses the long option `--color` they must
+specify an argument to denote what color.\
+\
 
-<h4><i> getopt: The command line utility </i></h4>
-
-<br>
-
-An example of a bash script using <code>getopt</code> to allow the
-user to specify one of three colors (blue, red, or green) is
-shown below. The user can specify <code>-b</code> to imply the color
-is blue or can specify <code>--color=blue</code> to do the same. If
-the user uses the long option <code>--color</code> they must specify
-an argument to denote what color. 
-
-<br><br>
-
-<blockquote>
+```nohighlight
 #!/bin/bash
 
 # Call getopt to validate the provided input. 
@@ -69,15 +63,13 @@ done
 
 echo "Color is $COLOR"
 exit 0;
-</blockquote>
+```
 
-<br>
+\
+And here are the outputs from some test runs:\
+\
 
-And here are the outputs from some test runs:
-
-<br><br>
-
-<blockquote>
+```nohighlight
 dusty@media: content>./test -b
 Color is BLUE
 dusty@media: content>./test -r
@@ -94,24 +86,23 @@ getopt: option '--color' requires an argument
 Incorrect options provided
 dusty@media: content>./test --color=YELLOW
 Incorrect options provided
-</blockquote>
+```
 
-<br>
+\
 
-<h4><i> getopts: The bash builtin </i></h4>
+#### *getopts: The bash builtin*
 
-<br>
+\
+We can almost exactly perform the same task with the `getopts` builtin.
+Unfortunately the `getopts` builtin does not support long options so I
+created a new `-c` short option and added a `:` to the line to specify
+that it takes an argument (just like `--color` from the first example).
+The code is shown below. Notice that `getopts` actually uses the
+`$OPTARG` variable for options that have arguments which makes for easy
+to read code.\
+\
 
-We can almost exactly perform the same task with the <code>getopts</code> 
-builtin. Unfortunately the <code>getopts</code> builtin does not
-support long options so I created a new <code>-c</code> short option
-and added a <code>:</code> to the line to specify that it takes an argument (just like <code>--color</code> from the first
-example). The code is shown below. Notice that <code>getopts</code>
-actually uses the <code>$OPTARG</code> variable for options that have
-arguments which makes for easy to read code. 
-<br><br>
-
-<blockquote>
+```nohighlight
 #!/bin/bash
 
 while getopts "brgc:" OPTION; do
@@ -141,13 +132,12 @@ done
 
 echo "Color is $COLOR"
 exit 0;
-</blockquote>
+```
 
-<br>
-
+\
 And finally a similar set of output from test runs:
 
-<blockquote>
+```nohighlight
 dusty@media: content>./test2 -b
 Color is BLUE
 dusty@media: content>./test2 -r
@@ -165,11 +155,9 @@ Incorrect options provided
 dusty@media: content>./test2 -c YELLOW
 Incorrect options provided
 dusty@media: content>
-</blockquote>
-<br>
+```
 
-
-Cheers!
-<br><br>
-
+\
+Cheers!\
+\
 Dusty Mabe
