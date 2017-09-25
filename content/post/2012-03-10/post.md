@@ -2,26 +2,18 @@
 title: "Hard Drive Monitoring and E-mail Alerts Using smartd"
 tags:
 date: "2012-03-10"
-published: false
+published: true
 ---
 
-<! Hard Drive Monitoring and E-mail Alerts Using smartd >
+A while back I set up `mdadm` to monitor my RAID array and send email
+alerts to notify me of failures. At the same time I also set up `smartd`
+(see [S.M.A.R.T.](http://en.wikipedia.org/wiki/S.M.A.R.T.) ) to monitor
+the hard drives themselves and to send me email alerts.\
+\
+To do this you edit the `/etc/smartd.conf` file. After I was done my
+`/etc/smartd.conf` file looked like the following:
 
-<br>
-
-A while back I set up <code>mdadm</code> to monitor my RAID array and
-send email alerts to notify me of failures. At the same time I also set
-up <code>smartd</code> (see 
-<a href="http://en.wikipedia.org/wiki/S.M.A.R.T.">S.M.A.R.T.</a> 
-) to monitor the hard drives themselves and to send me email alerts. 
-
-<br><br>
-
-To do this you edit the <code>/etc/smartd.conf</code> file. After I
-was done my <code>/etc/smartd.conf</code> file looked like the
-following:
-
-<blockquote>
+```nohighlight
 #
 # HERE IS A LIST OF DIRECTIVES FOR THIS CONFIGURATION FILE.
 # PLEASE SEE THE smartd.conf MAN PAGE FOR DETAILS
@@ -60,31 +52,21 @@ following:
 # If the test string DEVICESCAN is the first uncommented text
 # then smartd will scan for devices /dev/hd[a-l] and /dev/sd[a-z]
 DEVICESCAN -o on -H -l error -l selftest -t -m dustymabe@gmail.com -M test
+```
 
-</blockquote>
-
-<br>
-
+\
 It is pretty much all comments except for the last line. You can see
-from the comments what each option on the last line means. To
-summarize I am telling <code>smartd</code> to:
-
-<br><br>
-
-<i>"Monitor the health status as well as the error and selftest logs
-of all /dev/hd[a-l] and /dev/sd[a-z] devices that are discovered to have
-SMART capabilities. Report any errors/failures as well as startup test
-messages to dustymabe@gmail.com."
-</i>
-
-<br><br>
-
-Now just make sure the <code>smartd</code> service is configured to run by
-default and your disks should be monitored! You can check this by
-looking to see if you get an email when <code>smartd</code> starts
-(make sure to check your spam filter).  
-
-<br><br>
-
-Dusty Mabe 
-
+from the comments what each option on the last line means. To summarize
+I am telling `smartd` to:\
+\
+*"Monitor the health status as well as the error and selftest logs of
+all /dev/hd\[a-l\] and /dev/sd\[a-z\] devices that are discovered to
+have SMART capabilities. Report any errors/failures as well as startup
+test messages to dustymabe@gmail.com."*\
+\
+Now just make sure the `smartd` service is configured to run by default
+and your disks should be monitored! You can check this by looking to see
+if you get an email when `smartd` starts (make sure to check your spam
+filter).\
+\
+Dusty Mabe

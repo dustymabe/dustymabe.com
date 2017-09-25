@@ -2,37 +2,23 @@
 title: "Trace Function Calls Using GDB Revisited!"
 tags:
 date: "2012-12-17"
-published: false
+published: true
 ---
 
-<! Trace Function Calls Using GDB Revisited! >
+In an earlier [post](/2012/10/14/trace-function-calls-using-gdb/) I
+discussed how to trace calls using GDB so that function calls and their
+arguments can easily be viewed. What I neglected to mention was
+[`rbreak`](http://sourceware.org/gdb/onlinedocs/gdb/Set-Breaks.html) , a
+feature of GDB to be able to set breakpoints using a regular
+expression.\
+\
+Using `rbreak` you can get the same functionality but with much less
+effort. For example, to get the same behavior as before (setting a
+breakpoint on each function call and printing a trace of the bottom most
+level) all you need to provide to GDB are the following commands:\
+\
 
-<br>
-
-In an earlier
-<a
-href="/2012/10/14/trace-function-calls-using-gdb/">
-post
-</a>
-I discussed how to trace calls using GDB so that function
-calls and their arguments can easily be viewed. What I neglected to mention
-was 
-<a href="http://sourceware.org/gdb/onlinedocs/gdb/Set-Breaks.html">
-<code>rbreak</code>
-</a>
-, a feature of GDB to be able to set breakpoints using a regular expression. 
-
-<br><br>
-
-Using <code>rbreak</code> you can get the same functionality but with
-much less effort. For example, to get the same behavior as before
-(setting a breakpoint on each function call and printing a trace of
- the bottom most level) all you need to provide to GDB are the following
-commands:
-
-<br><br>
-
-<blockquote>
+```nohighlight
 set args 4 10
 
 rbreak file.c:.
@@ -43,19 +29,16 @@ continue
 end
 
 run
-</blockquote>
+```
 
-<br> 
+\
+I have placed these commands in a file called gdb\_commands. The
+`rbreak` command above tells GDB to set a breakpoint on any function
+call within file.c. With a quick call to GDB we find almost the exact
+same functionality as we had before.\
+\
 
-I have placed these commands in a file called gdb_commands. The
-<code>rbreak</code>
-command above tells GDB to set a breakpoint on any function call
-within file.c. With a quick call to GDB we find almost the exact same
-functionality as we had before.
-
-<br><br> 
-
-<blockquote>
+```nohighlight
 dustymabe@laptop: gdbpost>gdb -quiet -command=gdb_commands ./a.out
 Reading symbols from
 /content/gdbpost/a.out...done.
@@ -82,33 +65,26 @@ LCM is 400
 Missing separate debuginfos, use: debuginfo-install
 glibc-2.15-56.fc17.x86_64
 (gdb) quit
-</blockquote>
+```
 
-<br>
-
-In my previous example, if you had 50 functions that
-you wanted to trace, you needed 50 <code>break</code> commands as well
-as 50 <code>command</code> blocks.
-
-<br><br>
-
-Considering this fact, it is apparent that <code>rbreak</code> is much
-more efficient and friendly for when you are setting breakpoints
-from the GDB cli. Another extremely useful feature is that it also
-works for c++ classes, so you can break on any function in a class
-regardless of what file the function is defined in. 
-
-<br><br>
-
-To show an example of this I converted all the math function calls
-from the program in file.c to a c++ class. I put the result in a file
-called file.cc (shown below).
-
-<br><br>
-
-<blockquote>
-#include &ltstdio.h&gt
-#include &ltstdlib.h&gt
+\
+In my previous example, if you had 50 functions that you wanted to
+trace, you needed 50 `break` commands as well as 50 `command` blocks.\
+\
+Considering this fact, it is apparent that `rbreak` is much more
+efficient and friendly for when you are setting breakpoints from the GDB
+cli. Another extremely useful feature is that it also works for c++
+classes, so you can break on any function in a class regardless of what
+file the function is defined in.\
+\
+To show an example of this I converted all the math function calls from
+the program in file.c to a c++ class. I put the result in a file called
+file.cc (shown below).\
+\
+    
+```nohighlight
+#include <stdio.h>
+#include <stdlib.h>
 // A program that will square two integers and then find the LCM
 // of the resulting two integers. 
 class Math {
@@ -135,17 +111,16 @@ int main(int argc, char *argv[]) {
     }
     printf("LCM is %d\n", tmp);
 }
-</blockquote>
+```
 
-<br><br>
+\
+\
+I then used the `rbreak Math::` command in the following GDB commands
+file (I named this one gdb\_commands2) to run GDB and set up the break
+points.\
+\
 
-I then used the <code>rbreak Math::</code> command in the following
-GDB commands file (I named this one gdb_commands2) to run GDB and set 
-up the break points. 
-
-<br><br>
-
-<blockquote>
+```nohighlight
 set args 4 10
 
 rbreak Math::
@@ -156,15 +131,13 @@ continue
 end
 
 run
-</blockquote>
+```
 
-<br>
+\
+And.. Here we are with the final result:\
+\
 
-And.. Here we are with the final result:
-
-<br><br>
-
-<blockquote>
+```nohighlight
 dustymabe@laptop: gdbpost>gdb -quiet -command=gdb_commands2 ./a.out
 Reading symbols from
 /content/gdbpost/a.out...done.
@@ -189,19 +162,12 @@ Missing separate debuginfos, use: debuginfo-install
 glibc-2.15-56.fc17.x86_64 libgcc-4.7.0-5.fc17.x86_64
 libstdc++-4.7.0-5.fc17.x86_64
 (gdb) quit
-</blockquote>
+```
 
-
-<br>
-Enjoy!
-
-<br><br>
-Dusty
-
-<br><br>
-
-PS - If you are new to GDB I have found a great reference for
-beginners
-<a href="http://betterexplained.com/articles/debugging-with-gdb/">
-here
-</a>.
+\
+Enjoy!\
+\
+Dusty\
+\
+PS - If you are new to GDB I have found a great reference for beginners
+[here](http://betterexplained.com/articles/debugging-with-gdb/).

@@ -2,46 +2,33 @@
 title: "Trace Function Calls Using GDB"
 tags:
 date: "2012-10-14"
-published: false
+published: true
 ---
 
-<! Trace Function Calls Using GDB >
-
-<br>
-
-Sometimes it is easier to debug when you are able to view a call trace of all function
-calls in a particular program. This is especially true when working
-with code that isn't yours or when debugging issues such as infinite
-loops in your own code. The way I typically do this is by creating a
-GDB commands file that defines breakpoints for each function I would like to
-see in the trace. 
-
-<br><br>
-
-For each function breakpoint, I instruct GDB to print a short
-backtrace and then continue execution. I can then stop the program run
-at any time using <code>CTRL-C</code> and observe where the program
-is, what functions are being called, and what arguments they are being
-called with.
-
-<br><br>
-
+Sometimes it is easier to debug when you are able to view a call trace
+of all function calls in a particular program. This is especially true
+when working with code that isn't yours or when debugging issues such as
+infinite loops in your own code. The way I typically do this is by
+creating a GDB commands file that defines breakpoints for each function
+I would like to see in the trace.\
+\
+For each function breakpoint, I instruct GDB to print a short backtrace
+and then continue execution. I can then stop the program run at any time
+using `CTRL-C` and observe where the program is, what functions are
+being called, and what arguments they are being called with.\
+\
 To illustrate this, consider the following short program that accepts
 two arguments. It takes these two arguments, squares them, and then
 finds the lowest common multiple of their squares. This means if you
-pass in 4 and 10, it will find the LCM of 16 and 100. 
+pass in 4 and 10, it will find the LCM of 16 and 100.\
+\
+**NOTE:** I have defined functions for basic operations such as squaring
+a number and adding two numbers just for illustrative purposes.\
+\
 
-<br><br>
-
-<b>NOTE:</b> I have defined functions for basic operations such as
-squaring a number and adding two numbers just for illustrative
-purposes. 
-
-<br><br>
-
-<blockquote>
-#include &ltstdio.h&gt
-#include &ltstdlib.h&gt
+```nohighlight
+#include <stdio.h>
+#include <stdlib.h>
 // A program that will square two integers and then find the LCM
 // of the resulting two integers. 
 
@@ -64,16 +51,14 @@ int main(int argc, char *argv[]) {
     }
     printf("LCM is %d\n", tmp);
 }
-</blockquote>
+```
 
-<br>
+\
+I then use the following GDB commands file to define the breakpoints and
+the commands to run for each breakpoint.\
+\
 
-I then use the following GDB commands file to define the breakpoints
-and the commands to run for each breakpoint. 
-
-<br><br>
-
-<blockquote>
+```nohighlight
 set args 4 10
 
 break squared
@@ -98,17 +83,14 @@ continue
 end
 
 run
-</blockquote>
+```
 
-<br>
+\
+After compiling my program (making sure to use `gcc -g` to add in debug
+information) I can run the program using `gdb` and view the trace.\
+\
 
-After compiling my program (making sure to use <code>gcc -g</code> to
-add in debug information) I can run the program using <code>gdb</code> and view the
-trace. 
-
-<br><br>
-
-<blockquote>
+```nohighlight
 dustymabe@laptop: gdbpost>gdb -quiet -command=gdb_commands ./a.out 
 Reading symbols from
 /content/gdbpost/a.out...done.
@@ -129,6 +111,4 @@ LCM is 400
 Missing separate debuginfos, use: debuginfo-install
 glibc-2.15-56.fc17.x86_64
 (gdb) quit
-
-</blockquote>
-
+```
