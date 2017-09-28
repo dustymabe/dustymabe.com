@@ -1,13 +1,22 @@
 ---
-# use the html file for now
-published: false
+title: "F21 Atomic Test Day && Test steps for Atomic Host"
+tags:
+date: "2014-11-18"
+published: false 
 ---
 
-Test steps for atomic
-=====================
+Test Day on Thursday 11/20
+--------------------------
 
 Below are some steps to roughly test an atomic host from Project Atomic.
+The F21 test day for atomic is this Thursday, November 20th. If anyone
+can participate please do drop into #atomic on freenode as it will be
+great to have more people involved in helping build/test this new
+technology.
 
+In anticipation of the test day I have put together some test notes
+for other people to follow in hopes that it will help smooth things
+along.
 
 Booting with cloud-init
 -----------------------
@@ -171,7 +180,7 @@ As one final item let's boot up a docker container to make sure things still wor
 
 
 Atomic Host: Rollback
---------------------
+---------------------
 
 Atomic host provides the ability to revert to the previous working tree if things go
 awry with the new tree. Lets revert our upgrade now and make sure things still work::
