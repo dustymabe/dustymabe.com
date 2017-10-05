@@ -217,10 +217,12 @@ WantedBy=timers.target
 EOF
 ```
 
-Finally reload systemd to pick up the changes
+Finally reload systemd to pick up the changes and enable the timer:
 
 ```nohighlight
 [root@compose-server ~]# systemctl daemon-reload
+[root@compose-server ~]# systemctl enable f27-updates-testing-rpm-ostree-compose.timer 
+Created symlink /etc/systemd/system/timers.target.wants/f27-updates-testing-rpm-ostree-compose.timer → /etc/systemd/system/f27-updates-testing-rpm-ostree-compose.timer.
 ```
 
 After a day you can see the logs by inspecting the
