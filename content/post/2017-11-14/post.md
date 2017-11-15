@@ -6,6 +6,8 @@ tags: [ fedora, atomic ]
 published: true
 ---
 
+*cross posted with [this](http://www.projectatomic.io/blog/2017/11/fedora-atomic-26-to-27-upgrade/)
+Project Atomic blog post*
 
 # Introduction
 
@@ -203,7 +205,8 @@ kubernetes the flexibility to use whatever version they may want.
 
 You can still install kubernetes via package layering, or you can use
 system containers to run kubernetes fully containerized. Please check
-out Jason Brooks' [series](link) on this topic.
+out Jason Brooks' [post](http://www.projectatomic.io/blog/2017/11/migrating-kubernetes-on-fedora-atomic-host-27/)
+on this topic.
 
 # Appendix B: Fedora 26 Atomic Host Life Support
 
