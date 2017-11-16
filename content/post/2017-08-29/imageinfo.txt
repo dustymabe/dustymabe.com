@@ -1,16 +1,16 @@
 # Images Download Information:
 
 - qcow (you must know how to use cloud-init)
-    * https://dustymabe.fedorapeople.org/atomic-host-lab-2017-08-29/Fedora-Atomic-26-20170821.0.x86_64.qcow2
+    * https://201708-atomic-host-lab.nyc3.digitaloceanspaces.com/Fedora-Atomic-26-20170821.0.x86_64.qcow2
 
 - vagrant libvirt (most likely what you'll use on Fedora laptop)
-    * https://dustymabe.fedorapeople.org/atomic-host-lab-2017-08-29/Fedora-Atomic-Vagrant-26-20170821.0.x86_64.vagrant-libvirt.box
+    * https://201708-atomic-host-lab.nyc3.digitaloceanspaces.com/Fedora-Atomic-Vagrant-26-20170821.0.x86_64.vagrant-libvirt.box
 
 - vagrant virtualbox (most likely for windows/Mac laptops)
-    * https://dustymabe.fedorapeople.org/atomic-host-lab-2017-08-29/Fedora-Atomic-Vagrant-26-20170821.0.x86_64.vagrant-virtualbox.box
+    * https://201708-atomic-host-lab.nyc3.digitaloceanspaces.com/Fedora-Atomic-Vagrant-26-20170821.0.x86_64.vagrant-virtualbox.box
 
 - checksums
-    * https://dustymabe.fedorapeople.org/atomic-host-lab-2017-08-29/Fedora-CloudImages-26-20170821.0-x86_64-CHECKSUM
+    * https://201708-atomic-host-lab.nyc3.digitaloceanspaces.com/Fedora-CloudImages-26-20170821.0-x86_64-CHECKSUM
 
 
 # AMI Image Information:

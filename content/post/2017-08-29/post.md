@@ -109,7 +109,7 @@ and stored them in a tar.gz for consumption. It also means that a
 user should be able to execute this lab any time in the future without
 worrying about missing necessary files that are no longer on the web.
 
-Please download the [atomic-host-lab.tar.gz](https://s3.amazonaws.com/atomic-host-lab/atomic-host-lab.tar.gz)
+Please download the [atomic-host-lab.tar.gz](https://201708-atomic-host-lab.nyc3.digitaloceanspaces.com/atomic-host-lab.tar.gz)
 file into the `/srv/localweb` directory on the running atomic host:
 
 **NOTE:** If you downloaded the `atomic-host-lab.tar.gz` file before
