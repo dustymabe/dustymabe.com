@@ -119,7 +119,7 @@ file into the `/srv/localweb` directory on the running atomic host:
 ```nohighlight
 [root@localhost ~]# mkdir /srv/localweb && chmod 777 /srv/localweb
 [root@localhost ~]# cd /srv/localweb
-[root@localhost localweb]# curl -O https://s3.amazonaws.com/atomic-host-lab/atomic-host-lab.tar.gz
+[root@localhost localweb]# curl -O https://201708-atomic-host-lab.nyc3.digitaloceanspaces.com/atomic-host-lab.tar.gz
 ...
 [root@localhost localweb]# tar -xf atomic-host-lab.tar.gz
 [root@localhost localweb]# rm atomic-host-lab.tar.gz
