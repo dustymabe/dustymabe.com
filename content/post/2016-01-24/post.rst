@@ -8,6 +8,12 @@ published: true
 .. 802.11ac on Linux With NetGear A6100 (RTL8811AU) USB Adapter
 .. ============================================================
 
+**UPDATE - 2018-02-01:** I was informed by `@nmccrina`_ that the repo linked to in
+this post is no longer maintained. Please use https://github.com/paspro/rtl8812au 
+instead.
+
+.. _@nmccrina: https://twitter.com/nmccrina
+
 **NOTE:** Most of the content from this post comes from a `blog post`_ I found
 that concentrated on getting the driver set up on Fedora 21. I did
 mostly the same steps with a few tweaks.
