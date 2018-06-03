@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/f26/httpd
+FROM registry.fedoraproject.org/f27/httpd
 
 USER root
 
