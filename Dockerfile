@@ -8,6 +8,10 @@ RUN dnf install -y git /usr/bin/rst2html && dnf clean all
 # Install hugo from f27 (not in f26)
 RUN dnf install --releasever=27 -y hugo && dnf clean all
 
+# Generate SSL certs
+# XXX put bug # here
+RUN /usr/libexec/httpd-ssl-gencerts
+
 # Add in files and run hugo to generate static website
 ADD . /context/
 RUN cd /context/hugo && \
