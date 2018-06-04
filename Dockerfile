@@ -11,6 +11,7 @@ RUN dnf install --releasever=27 -y hugo && dnf clean all
 # Generate SSL certs
 # XXX put bug # here
 RUN /usr/libexec/httpd-ssl-gencerts
+RUN chmod 644 /etc/pki/tls/private/localhost.key
 
 # Add in files and run hugo to generate static website
 ADD . /context/
