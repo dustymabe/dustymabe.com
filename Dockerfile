@@ -9,7 +9,7 @@ RUN dnf install -y git /usr/bin/rst2html && dnf clean all
 RUN dnf install --releasever=27 -y hugo && dnf clean all
 
 # Generate SSL certs
-# XXX put bug # here
+# https://bugzilla.redhat.com/show_bug.cgi?id=1585533
 RUN /usr/libexec/httpd-ssl-gencerts
 RUN chmod 644 /etc/pki/tls/private/localhost.key
 
