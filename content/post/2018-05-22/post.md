@@ -5,6 +5,9 @@ date: "2018-05-22"
 published: true
 ---
 
+*cross posted with [this](http://www.projectatomic.io/blog/2018/05/pinning-deployments-ostree-based-systems/)
+Project Atomic blog post*
+
 
 # Introduction
 
