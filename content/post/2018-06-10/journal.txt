@@ -1,0 +1,1054 @@
+-- Logs begin at Sun 2018-06-10 21:05:20 UTC, end at Sun 2018-06-10 23:29:09 UTC. --
+Jun 10 21:19:42 ip-10-0-246-17.ec2.internal systemd[1]: Starting RPM-OSTree Bisect Testing...
+Jun 10 21:19:45 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Using data file at: /var/lib/rpm-ostree-bisect.json
+Jun 10 21:20:05 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+Jun 10 21:20:05 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Found mtu 1500. Test Fails
+Jun 10 21:20:05 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Deploying new commit for testing
+Jun 10 21:20:05 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   e71bd0da34e393381691dc1bafb1efc8ddab83c17422129f2c495002f1aa0f8a : 27.76
+Jun 10 21:20:05 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Trying to run '['/usr/bin/rpm-ostree', 'deploy', 'e71bd0da34e393381691dc1bafb1efc8ddab83c17422129f2c495002f1aa0f8a']'
+Jun 10 21:20:05 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Validating checksum 'e71bd0da34e393381691dc1bafb1efc8ddab83c17422129f2c495002f1aa0f8a'
+Jun 10 21:20:07 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: 1 metadata, 0 content objects fetched; 569 B transferred in 0 seconds
+Jun 10 21:20:08 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Scanning metadata: 6
+Jun 10 21:20:09 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: 11 metadata, 0 content objects fetched; 6 KiB transferred in 1 seconds
+Jun 10 21:20:11 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Scanning metadata: 15
+Jun 10 21:20:12 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: 21 metadata, 0 content objects fetched; 11 KiB transferred in 3 seconds
+Jun 10 21:20:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 13/(estimating) 3.7 kB/s 7.4 kB
+Jun 10 21:20:15 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Scanning metadata: 22
+Jun 10 21:20:17 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 39/(estimating) 4.4 kB/s 22.2 kB
+Jun 10 21:20:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 9/(estimating) 5.1 kB/s 5.1 kB
+Jun 10 21:20:20 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Scanning metadata: 18
+Jun 10 21:20:22 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 35/(estimating) 5.0 kB/s 19.9 kB
+Jun 10 21:20:23 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Scanning metadata: 44
+Jun 10 21:20:25 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Scanning metadata: 61
+Jun 10 21:20:27 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Scanning metadata: 78
+Jun 10 21:20:29 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 9/(estimating) 1.9 MB/s 1.9 MB
+Jun 10 21:20:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 25% (124/478) 17.8 MB/s 53.3 MB
+Jun 10 21:20:33 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 67/(estimating) 17.0 MB/s 85.0 MB
+Jun 10 21:20:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 47% (328/694) 16.3 MB/s 97.5 MB
+Jun 10 21:20:36 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 135/(estimating) 13.6 MB/s 108.5 MB
+Jun 10 21:20:37 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 230/(estimating) 12.1 MB/s 108.6 MB
+Jun 10 21:20:38 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 325/(estimating) 10.9 MB/s 108.6 MB
+Jun 10 21:20:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 429/(estimating) 9.9 MB/s 108.7 MB
+Jun 10 21:20:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 537/(estimating) 9.1 MB/s 108.8 MB
+Jun 10 21:20:41 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 650/(estimating) 8.4 MB/s 108.9 MB
+Jun 10 21:20:42 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 759/(estimating) 7.8 MB/s 109.0 MB
+Jun 10 21:20:43 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 858/(estimating) 7.3 MB/s 109.1 MB
+Jun 10 21:20:45 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 1073/(estimating) 6.4 MB/s 109.2 MB
+Jun 10 21:20:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 1179/(estimating) 6.1 MB/s 109.2 MB
+Jun 10 21:20:47 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 1285/(estimating) 5.7 MB/s 109.2 MB
+Jun 10 21:20:48 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 1389/(estimating) 5.5 MB/s 109.2 MB
+Jun 10 21:20:49 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 1495/(estimating) 5.2 MB/s 109.3 MB
+Jun 10 21:20:51 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving metadata objects: 1702/(estimating) 4.8 MB/s 109.4 MB
+Jun 10 21:20:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 22% (2273/10277) 4.4 MB/s 110.2 MB
+Jun 10 21:20:55 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 23% (2462/10277) 4.4 MB/s 119.0 MB
+Jun 10 21:20:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 24% (2562/10277) 4.3 MB/s 120.1 MB
+Jun 10 21:20:57 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 25% (2662/10277) 4.2 MB/s 121.6 MB
+Jun 10 21:20:58 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 26% (2763/10277) 4.1 MB/s 122.9 MB
+Jun 10 21:20:59 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 27% (2857/10277) 4.2 MB/s 129.6 MB
+Jun 10 21:21:00 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 28% (2960/10277) 4.1 MB/s 130.6 MB
+Jun 10 21:21:02 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 30% (3161/10277) 3.9 MB/s 134.2 MB
+Jun 10 21:21:03 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 31% (3263/10277) 3.9 MB/s 135.1 MB
+Jun 10 21:21:04 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 32% (3365/10277) 3.8 MB/s 136.1 MB
+Jun 10 21:21:06 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 34% (3565/10277) 3.7 MB/s 139.4 MB
+Jun 10 21:21:08 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 36% (3768/10277) 3.5 MB/s 141.5 MB
+Jun 10 21:21:09 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 37% (3868/10277) 3.5 MB/s 143.8 MB
+Jun 10 21:21:11 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 39% (4045/10277) 3.4 MB/s 146.2 MB
+Jun 10 21:21:12 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 40% (4138/10277) 3.5 MB/s 154.8 MB
+Jun 10 21:21:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 42% (4325/10277) 3.5 MB/s 161.1 MB
+Jun 10 21:21:15 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 42% (4417/10277) 3.6 MB/s 169.8 MB
+Jun 10 21:21:16 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 43% (4509/10277) 3.6 MB/s 171.5 MB
+Jun 10 21:21:18 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 45% (4689/10277) 3.6 MB/s 181.7 MB
+Jun 10 21:21:20 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 47% (4884/10277) 3.5 MB/s 183.6 MB
+Jun 10 21:21:21 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 48% (4984/10277) 3.5 MB/s 184.5 MB
+Jun 10 21:21:22 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 49% (5083/10277) 3.4 MB/s 185.8 MB
+Jun 10 21:21:23 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 50% (5183/10277) 3.4 MB/s 187.5 MB
+Jun 10 21:21:25 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 52% (5386/10277) 3.3 MB/s 190.2 MB
+Jun 10 21:21:26 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 53% (5488/10277) 3.3 MB/s 191.3 MB
+Jun 10 21:21:27 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 54% (5587/10277) 3.3 MB/s 197.1 MB
+Jun 10 21:21:29 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 56% (5783/10277) 3.3 MB/s 203.1 MB
+Jun 10 21:21:30 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 57% (5883/10277) 3.3 MB/s 204.0 MB
+Jun 10 21:21:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 59% (6085/10277) 3.2 MB/s 206.5 MB
+Jun 10 21:21:33 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 60% (6186/10277) 3.2 MB/s 208.0 MB
+Jun 10 21:21:35 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 62% (6390/10277) 3.2 MB/s 211.3 MB
+Jun 10 21:21:36 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 63% (6490/10277) 3.1 MB/s 212.7 MB
+Jun 10 21:21:38 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 65% (6691/10277) 3.1 MB/s 216.7 MB
+Jun 10 21:21:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 66% (6793/10277) 3.1 MB/s 217.6 MB
+Jun 10 21:21:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 67% (6895/10277) 3.0 MB/s 218.6 MB
+Jun 10 21:21:41 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 68% (6992/10277) 3.0 MB/s 219.9 MB
+Jun 10 21:21:43 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 70% (7196/10277) 3.0 MB/s 222.1 MB
+Jun 10 21:21:45 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 72% (7402/10277) 2.9 MB/s 224.8 MB
+Jun 10 21:21:47 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 74% (7605/10277) 2.9 MB/s 229.8 MB
+Jun 10 21:21:48 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 75% (7708/10277) 2.9 MB/s 230.7 MB
+Jun 10 21:21:50 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 76% (7908/10277) 2.9 MB/s 234.5 MB
+Jun 10 21:21:51 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 77% (7998/10277) 2.8 MB/s 235.6 MB
+Jun 10 21:21:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 79% (8189/10277) 2.8 MB/s 237.7 MB
+Jun 10 21:21:55 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 81% (8381/10277) 2.8 MB/s 243.4 MB
+Jun 10 21:21:57 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 83% (8567/10277) 2.8 MB/s 248.4 MB
+Jun 10 21:21:59 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 85% (8764/10277) 2.8 MB/s 251.0 MB
+Jun 10 21:22:01 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 87% (8957/10277) 2.7 MB/s 254.5 MB
+Jun 10 21:22:02 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 88% (9058/10277) 2.7 MB/s 256.4 MB
+Jun 10 21:22:03 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 89% (9154/10277) 2.7 MB/s 257.7 MB
+Jun 10 21:22:04 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 89% (9232/10277) 2.8 MB/s 270.1 MB
+Jun 10 21:22:06 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 91% (9392/10277) 3.2 MB/s 311.0 MB
+Jun 10 21:22:07 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 92% (9473/10277) 3.3 MB/s 324.3 MB
+Jun 10 21:22:09 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 93% (9624/10277) 3.6 MB/s 364.5 MB
+Jun 10 21:22:10 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 94% (9709/10277) 3.7 MB/s 378.5 MB
+Jun 10 21:22:12 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 96% (9895/10277) 3.7 MB/s 387.3 MB
+Jun 10 21:22:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Receiving objects: 98% (10094/10277) 3.7 MB/s 389.4 MB
+Jun 10 21:22:20 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: 1830 metadata, 8447 content objects fetched; 382358 KiB transferred in 112 seconds
+Jun 10 21:22:26 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Copying /etc changes: 20 modified, 0 removed, 57 added
+Jun 10 21:22:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Transaction complete; bootconfig swap: yes deployment count change: 0
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Downgraded:
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   GeoIP-GeoLite-data 2018.04-1.fc27 -> 2018.01-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   atomic 1.22.1-1.fc27 -> 1.20.1-9.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   atomic-registries 1.22.1-1.fc27 -> 1.20.1-9.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   audit 2.8.3-1.fc27 -> 2.8.2-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   audit-libs 2.8.3-1.fc27 -> 2.8.2-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   audit-libs-python 2.8.3-1.fc27 -> 2.8.2-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   audit-libs-python3 2.8.3-1.fc27 -> 2.8.2-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   bash 4.4.19-1.fc27 -> 4.4.12-13.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   bridge-utils 1.6-1.fc27 -> 1.5-16.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   ca-certificates 2018.2.24-1.0.fc27 -> 2017.2.20-1.0.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   ceph-common 1:12.2.5-1.fc27 -> 1:12.2.2-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   chrony 3.3-1.fc27 -> 3.2-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   cockpit-bridge 166-1.fc27 -> 160-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   cockpit-docker 166-1.fc27 -> 160-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   cockpit-networkmanager 166-1.fc27 -> 160-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   cockpit-ostree 166-1.fc27 -> 160-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   cockpit-system 166-1.fc27 -> 160-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   container-selinux 2:2.61-1.git9b55129.fc27 -> 2:2.42-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   coreutils 8.27-21.fc27 -> 8.27-19.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   coreutils-common 8.27-21.fc27 -> 8.27-19.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   criu 3.8.1-1.fc27 -> 3.6-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   cryptsetup 1.7.5-4.fc27 -> 1.7.5-3.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   cryptsetup-libs 1.7.5-4.fc27 -> 1.7.5-3.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   curl 7.55.1-11.fc27 -> 7.55.1-9.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   dhcp-client 12:4.3.6-10.fc27 -> 12:4.3.6-8.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   dhcp-common 12:4.3.6-10.fc27 -> 12:4.3.6-8.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   dhcp-libs 12:4.3.6-10.fc27 -> 12:4.3.6-8.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   dnsmasq 2.79-1.fc27 -> 2.78-2.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   docker 2:1.13.1-54.git6c336e4.fc27 -> 2:1.13.1-44.git584d391.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   docker-common 2:1.13.1-54.git6c336e4.fc27 -> 2:1.13.1-44.git584d391.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   docker-rhel-push-plugin 2:1.13.1-54.git6c336e4.fc27 -> 2:1.13.1-44.git584d391.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   elfutils-default-yama-scope 0.170-10.fc27 -> 0.170-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   elfutils-libelf 0.170-10.fc27 -> 0.170-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   elfutils-libs 0.170-10.fc27 -> 0.170-1.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   fedora-gpg-keys 27-2 -> 27-1
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   fedora-repos 27-2 -> 27-1
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   file 5.31-11.fc27 -> 5.31-10.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   file-libs 5.31-11.fc27 -> 5.31-10.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   findutils 1:4.6.0-19.fc27 -> 1:4.6.0-14.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   firewalld 0.4.4.5-4.fc27 -> 0.4.4.5-3.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   firewalld-filesystem 0.4.4.5-4.fc27 -> 0.4.4.5-3.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   freetype 2.8-8.fc27 -> 2.8-7.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   glibc 2.26-28.fc27 -> 2.26-24.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   glibc-all-langpacks 2.26-28.fc27 -> 2.26-24.fc27
+Jun 10 21:22:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   glibc-common 2.26-28.fc27 -> 2.26-24.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   glusterfs 3.12.9-1.fc27 -> 3.12.5-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   glusterfs-client-xlators 3.12.9-1.fc27 -> 3.12.5-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   glusterfs-fuse 3.12.9-1.fc27 -> 3.12.5-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   glusterfs-libs 3.12.9-1.fc27 -> 3.12.5-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   gnupg2 2.2.6-1.fc27 -> 2.2.3-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   gnupg2-smime 2.2.6-1.fc27 -> 2.2.3-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   gnutls 3.5.18-2.fc27 -> 3.5.17-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   gpgme 1.10.0-4.fc27.1 -> 1.9.0-6.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   grub2-common 1:2.02-22.fc27 -> 1:2.02-19.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   grub2-efi-x64 1:2.02-22.fc27 -> 1:2.02-19.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   grub2-pc 1:2.02-22.fc27 -> 1:2.02-19.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   grub2-pc-modules 1:2.02-22.fc27 -> 1:2.02-19.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   grub2-tools 1:2.02-22.fc27 -> 1:2.02-19.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   grub2-tools-extra 1:2.02-22.fc27 -> 1:2.02-19.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   grub2-tools-minimal 1:2.02-22.fc27 -> 1:2.02-19.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   grubby 8.40-8.fc27 -> 8.40-7.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   ima-evm-utils 1.1-2.fc27 -> 1.0-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   iproute 4.15.0-1.fc27 -> 4.14.1-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   iproute-tc 4.15.0-1.fc27 -> 4.14.1-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   iptables 1.6.2-3.fc27 -> 1.6.1-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   iptables-libs 1.6.2-3.fc27 -> 1.6.1-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   iptables-services 1.6.2-3.fc27 -> 1.6.1-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   jansson 2.11-1.fc27 -> 2.10-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   kernel 4.16.13-200.fc27 -> 4.14.16-300.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   kernel-core 4.16.13-200.fc27 -> 4.14.16-300.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   kernel-modules 4.16.13-200.fc27 -> 4.14.16-300.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   krb5-libs 1.15.2-9.fc27 -> 1.15.2-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libblkid 2.30.2-3.fc27 -> 2.30.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libcephfs2 1:12.2.5-1.fc27 -> 1:12.2.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libcgroup 0.41-17.fc27 -> 0.41-13.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libcrypt-nss 2.26-28.fc27 -> 2.26-24.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libcurl 7.55.1-11.fc27 -> 7.55.1-9.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libfdisk 2.30.2-3.fc27 -> 2.30.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libgcc 7.3.1-5.fc27 -> 7.2.1-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libgomp 7.3.1-5.fc27 -> 7.2.1-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libidn 1.34-1.fc27 -> 1.33-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libidn2 2.0.5-1.fc27 -> 2.0.4-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libmount 2.30.2-3.fc27 -> 2.30.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libnghttp2 1.31.1-1.fc27 -> 1.25.0-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libpsl 0.18.0-3.fc27 -> 0.18.0-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   librados2 1:12.2.5-1.fc27 -> 1:12.2.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libradosstriper1 1:12.2.5-1.fc27 -> 1:12.2.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   librbd1 1:12.2.5-1.fc27 -> 1:12.2.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libreport-filesystem 2.9.3-3.fc27 -> 2.9.3-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   librgw2 1:12.2.5-1.fc27 -> 1:12.2.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libsmartcols 2.30.2-3.fc27 -> 2.30.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libsolv 0.6.34-1.fc27 -> 0.6.30-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libsss_idmap 1.16.1-8.fc27 -> 1.16.0-5.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libsss_nss_idmap 1.16.1-8.fc27 -> 1.16.0-5.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libsss_sudo 1.16.1-8.fc27 -> 1.16.0-5.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libstdc++ 7.3.1-5.fc27 -> 7.2.1-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libtirpc 1.0.3-2.fc27 -> 1.0.2-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libunistring 0.9.9-1.fc27 -> 0.9.7-3.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libuuid 2.30.2-3.fc27 -> 2.30.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   libzstd 1.3.4-1.fc27 -> 1.3.3-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   linux-firmware 20180525-85.git7518922b.fc27 -> 20171215-82.git2451bb22.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   microcode_ctl 2:2.1-22.fc27 -> 2:2.1-20.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   mpfr 3.1.6-1.fc27 -> 3.1.5-5.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   ncurses 6.0-14.20170722.fc27 -> 6.0-13.20170722.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   ncurses-base 6.0-14.20170722.fc27 -> 6.0-13.20170722.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   ncurses-libs 6.0-14.20170722.fc27 -> 6.0-13.20170722.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   net-tools 2.0-0.47.20160912git.fc27 -> 2.0-0.45.20160912git.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   nmap-ncat 2:7.60-8.fc27 -> 2:7.60-7.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   nspr 4.19.0-1.fc27 -> 4.17.0-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   nss 3.36.1-1.0.fc27 -> 3.34.0-1.0.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   nss-softokn 3.36.1-1.0.fc27 -> 3.34.0-1.0.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   nss-softokn-freebl 3.36.1-1.0.fc27 -> 3.34.0-1.0.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   nss-sysinit 3.36.1-1.0.fc27 -> 3.34.0-1.0.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   nss-tools 3.36.1-1.0.fc27 -> 3.34.0-1.0.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   nss-util 3.36.1-1.0.fc27 -> 3.34.0-1.0.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   oci-register-machine 0-6.1.git66fa845.fc27 -> 0-5.12.git3c01f0b.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   oci-systemd-hook 1:0.1.16-1.git05bd9a0.fc27 -> 1:0.1.15-1.git2d0b8a3.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   oci-umount 2:2.3.3-1.gite3c9055.fc27 -> 2:2.3.2-1.git3025b19.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   openssh 7.6p1-5.fc27 -> 7.6p1-3.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   openssh-clients 7.6p1-5.fc27 -> 7.6p1-3.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   openssh-server 7.6p1-5.fc27 -> 7.6p1-3.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   openssl 1:1.1.0h-3.fc27 -> 1:1.1.0g-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   openssl-libs 1:1.1.0h-3.fc27 -> 1:1.1.0g-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   ostree 2018.3-2.fc27 -> 2018.1-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   ostree-grub2 2018.3-2.fc27 -> 2018.1-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   ostree-libs 2018.3-2.fc27 -> 2018.1-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   p11-kit 0.23.10-1.fc27 -> 0.23.9-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   p11-kit-trust 0.23.10-1.fc27 -> 0.23.9-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   passwd 0.80-2.fc27 -> 0.79-12.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   pcre 8.42-1.fc27 -> 8.41-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   pcre2 10.31-4.fc27 -> 10.30-5.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   policycoreutils 2.7-6.fc27 -> 2.7-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   policycoreutils-python 2.7-6.fc27 -> 2.7-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   policycoreutils-python-utils 2.7-6.fc27 -> 2.7-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   policycoreutils-python3 2.7-6.fc27 -> 2.7-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   procps-ng 3.3.10-16.fc27 -> 3.3.10-15.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   publicsuffix-list-dafsa 20180514-1.fc27 -> 20171228-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python-cephfs 1:12.2.5-1.fc27 -> 1:12.2.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python-rados 1:12.2.5-1.fc27 -> 1:12.2.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python-rbd 1:12.2.5-1.fc27 -> 1:12.2.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python-rgw 1:12.2.5-1.fc27 -> 1:12.2.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python2 2.7.15-2.fc27 -> 2.7.14-6.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python2-libs 2.7.15-2.fc27 -> 2.7.14-6.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python2-pip 9.0.3-2.fc27 -> 9.0.1-14.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python2-requests 2.18.4-2.fc27 -> 2.18.4-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python2-urllib3 1.22-6.fc27 -> 1.22-3.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python3 3.6.5-1.fc27 -> 3.6.4-7.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python3-firewall 0.4.4.5-4.fc27 -> 0.4.4.5-3.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python3-jwt 1.6.1-1.fc27 -> 1.5.3-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python3-libs 3.6.5-1.fc27 -> 3.6.4-7.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python3-pip 9.0.3-2.fc27 -> 9.0.1-14.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python3-requests 2.18.4-2.fc27 -> 2.18.4-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python3-rpm 4.14.1-1.fc27 -> 4.14.0-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python3-sssdconfig 1.16.1-8.fc27 -> 1.16.0-5.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python3-urllib3 1.22-6.fc27 -> 1.22-3.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python3-websocket-client 0.47.0-1.fc27 -> 0.40.0-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   rpm 4.14.1-1.fc27 -> 4.14.0-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   rpm-build-libs 4.14.1-1.fc27 -> 4.14.0-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   rpm-libs 4.14.1-1.fc27 -> 4.14.0-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   rpm-ostree 2018.4-1.fc27 -> 2018.1-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   rpm-ostree-libs 2018.4-1.fc27 -> 2018.1-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   rpm-plugin-selinux 4.14.1-1.fc27 -> 4.14.0-2.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   rsync 3.1.3-2.fc27 -> 3.1.2-7.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   runc 2:1.0.0-31.git0cbfd83.fc27 -> 2:1.0.0-15.rc4.gite6516b3.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   selinux-policy 3.13.1-283.34.fc27 -> 3.13.1-283.21.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   selinux-policy-targeted 3.13.1-283.34.fc27 -> 3.13.1-283.21.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   shared-mime-info 1.9-2.fc27 -> 1.9-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   skopeo 0.1.29-1.git7add6fc.fc27 -> 0.1.27-1.git93876ac.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   skopeo-containers 0.1.29-1.git7add6fc.fc27 -> 0.1.27-1.git93876ac.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   sos 3.5.1-1.fc27 -> 3.5-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   sqlite-libs 3.20.1-3.fc27 -> 3.20.1-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   sssd-client 1.16.1-8.fc27 -> 1.16.0-5.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   strace 4.22-1.fc27 -> 4.20-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   subscription-manager-rhsm-certificates 1.21.2-3.fc27 -> 1.21.1-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   systemd 234-11.git5f8984e.fc27 -> 234-9.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   systemd-container 234-11.git5f8984e.fc27 -> 234-9.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   systemd-libs 234-11.git5f8984e.fc27 -> 234-9.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   systemd-pam 234-11.git5f8984e.fc27 -> 234-9.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   systemd-udev 234-11.git5f8984e.fc27 -> 234-9.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   tmux 2.7-1.fc27 -> 2.5-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   tzdata 2018e-1.fc27 -> 2017c-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   util-linux 2.30.2-3.fc27 -> 2.30.2-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   vim-minimal 2:8.1.026-1.fc27 -> 2:8.0.1451-1.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   xfsprogs 4.15.1-1.fc27 -> 4.12.0-4.fc27
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Removed:
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python2-websocket-client-0.47.0-1.fc27.noarch
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Added:
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   compat-openssl10-1:1.0.2m-1.fc27.x86_64
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python-websocket-client-0.40.0-2.fc27.noarch
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python2-pyOpenSSL-17.2.0-2.fc27.noarch
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]:   python3-pyOpenSSL-17.2.0-2.fc27.noarch
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[763]: Run "systemctl reboot" to start a reboot
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Main process exited, code=killed, status=15/TERM
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal systemd[1]: Stopped RPM-OSTree Bisect Testing.
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Unit entered failed state.
+Jun 10 21:22:40 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Failed with result 'signal'.
+-- Reboot --
+Jun 10 21:23:20 ip-10-0-246-17.ec2.internal systemd[1]: Starting RPM-OSTree Bisect Testing...
+Jun 10 21:23:22 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Using data file at: /var/lib/rpm-ostree-bisect.json
+Jun 10 21:23:42 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Found mtu != 1500. Test Passes
+Jun 10 21:23:42 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Deploying new commit for testing
+Jun 10 21:23:42 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   2e00b712038bd8c67a9e516359b5b8a2c4d55937b596bdf6d5b8766e62500378 : 27.114
+Jun 10 21:23:42 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Trying to run '['/usr/bin/rpm-ostree', 'deploy', '2e00b712038bd8c67a9e516359b5b8a2c4d55937b596bdf6d5b8766e62500378']'
+Jun 10 21:23:43 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Validating checksum '2e00b712038bd8c67a9e516359b5b8a2c4d55937b596bdf6d5b8766e62500378'
+Jun 10 21:23:45 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: 1 metadata, 0 content objects fetched; 569 B transferred in 0 seconds
+Jun 10 21:23:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 7/(estimating) 60.3 kB/s 60.3 kB
+Jun 10 21:23:47 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 16/(estimating) 79.7 kB/s 159.3 kB
+Jun 10 21:23:48 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: 22 metadata, 0 content objects fetched; 213 KiB transferred in 3 seconds
+Jun 10 21:23:49 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Writing objects: 1
+Jun 10 21:23:51 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Writing objects: 1
+Jun 10 21:23:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: 41 metadata, 0 content objects fetched; 389 KiB transferred in 5 seconds
+Jun 10 21:23:55 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 14/(estimating) 60.6 kB/s 121.1 kB
+Jun 10 21:23:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 23/(estimating) 73.5 kB/s 220.5 kB
+Jun 10 21:23:57 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 33/(estimating) 80.1 kB/s 320.5 kB
+Jun 10 21:23:58 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 43/(estimating) 84.1 kB/s 420.5 kB
+Jun 10 21:23:59 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Writing objects: 1
+Jun 10 21:24:00 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Writing objects: 1
+Jun 10 21:24:02 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Writing objects: 1
+Jun 10 21:24:04 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 12/(estimating) 7.0 MB/s 7.0 MB
+Jun 10 21:24:07 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 43% (140/321) 15.2 MB/s 75.9 MB
+Jun 10 21:24:09 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 39% (270/691) 14.2 MB/s 99.6 MB
+Jun 10 21:24:11 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 132/(estimating) 15.0 MB/s 120.0 MB
+Jun 10 21:24:13 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 313/(estimating) 12.0 MB/s 120.2 MB
+Jun 10 21:24:15 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 510/(estimating) 10.0 MB/s 120.4 MB
+Jun 10 21:24:16 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 608/(estimating) 9.3 MB/s 120.5 MB
+Jun 10 21:24:18 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 819/(estimating) 8.0 MB/s 120.5 MB
+Jun 10 21:24:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 925/(estimating) 7.5 MB/s 120.6 MB
+Jun 10 21:24:21 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 1142/(estimating) 6.7 MB/s 120.6 MB
+Jun 10 21:24:22 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 1251/(estimating) 6.3 MB/s 120.6 MB
+Jun 10 21:24:24 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 26% (1734/6478) 5.9 MB/s 124.4 MB
+Jun 10 21:24:26 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 29% (1931/6478) 5.6 MB/s 129.6 MB
+Jun 10 21:24:27 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 31% (2031/6478) 5.5 MB/s 131.3 MB
+Jun 10 21:24:28 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 32% (2131/6478) 5.3 MB/s 133.1 MB
+Jun 10 21:24:30 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 35% (2328/6478) 5.1 MB/s 138.5 MB
+Jun 10 21:24:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 37% (2431/6478) 5.0 MB/s 140.6 MB
+Jun 10 21:24:33 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 40% (2625/6478) 4.7 MB/s 142.5 MB
+Jun 10 21:24:35 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 43% (2801/6478) 5.0 MB/s 166.2 MB
+Jun 10 21:24:37 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 45% (2966/6478) 5.9 MB/s 199.7 MB
+Jun 10 21:24:38 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 47% (3065/6478) 5.8 MB/s 202.2 MB
+Jun 10 21:24:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 48% (3150/6478) 5.9 MB/s 211.6 MB
+Jun 10 21:24:41 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 51% (3355/6478) 5.7 MB/s 214.7 MB
+Jun 10 21:24:43 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 54% (3544/6478) 5.5 MB/s 218.7 MB
+Jun 10 21:24:44 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 56% (3636/6478) 5.4 MB/s 222.7 MB
+Jun 10 21:24:45 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 57% (3736/6478) 5.3 MB/s 223.9 MB
+Jun 10 21:24:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 59% (3828/6478) 5.3 MB/s 226.2 MB
+Jun 10 21:24:48 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 61% (4008/6478) 5.1 MB/s 230.0 MB
+Jun 10 21:24:49 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 63% (4102/6478) 5.2 MB/s 237.6 MB
+Jun 10 21:24:50 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 64% (4194/6478) 5.1 MB/s 239.6 MB
+Jun 10 21:24:51 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 66% (4294/6478) 5.1 MB/s 242.9 MB
+Jun 10 21:24:52 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 67% (4399/6478) 5.0 MB/s 244.0 MB
+Jun 10 21:24:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 69% (4502/6478) 4.9 MB/s 245.0 MB
+Jun 10 21:24:54 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 71% (4605/6478) 4.8 MB/s 246.1 MB
+Jun 10 21:24:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 74% (4804/6478) 4.7 MB/s 249.9 MB
+Jun 10 21:24:57 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 75% (4903/6478) 4.7 MB/s 251.5 MB
+Jun 10 21:24:59 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 78% (5108/6478) 4.5 MB/s 253.9 MB
+Jun 10 21:25:00 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 80% (5213/6478) 4.5 MB/s 255.0 MB
+Jun 10 21:25:01 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 82% (5314/6478) 4.4 MB/s 257.6 MB
+Jun 10 21:25:03 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 85% (5514/6478) 4.4 MB/s 264.3 MB
+Jun 10 21:25:04 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 86% (5620/6478) 4.4 MB/s 265.7 MB
+Jun 10 21:25:06 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 89% (5818/6478) 4.3 MB/s 268.8 MB
+Jun 10 21:25:08 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 92% (6018/6478) 4.2 MB/s 271.7 MB
+Jun 10 21:25:10 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 95% (6216/6478) 4.1 MB/s 276.8 MB
+Jun 10 21:25:12 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 99% (6422/6478) 4.1 MB/s 280.5 MB
+Jun 10 21:25:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: 1313 metadata, 5165 content objects fetched; 274551 KiB transferred in 72 seconds
+Jun 10 21:25:20 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Copying /etc changes: 20 modified, 0 removed, 59 added
+Jun 10 21:25:25 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Transaction complete; bootconfig swap: yes deployment count change: 0
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Upgraded:
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   GeoIP-GeoLite-data 2018.01-1.fc27 -> 2018.04-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   atomic 1.20.1-9.fc27 -> 1.22.1-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   atomic-registries 1.20.1-9.fc27 -> 1.22.1-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   audit 2.8.2-1.fc27 -> 2.8.3-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   audit-libs 2.8.2-1.fc27 -> 2.8.3-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   audit-libs-python 2.8.2-1.fc27 -> 2.8.3-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   audit-libs-python3 2.8.2-1.fc27 -> 2.8.3-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   bash 4.4.12-13.fc27 -> 4.4.19-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   bridge-utils 1.5-16.fc27 -> 1.6-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   ca-certificates 2017.2.20-1.0.fc27 -> 2018.2.22-1.0.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   ceph-common 1:12.2.2-1.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   cockpit-bridge 160-1.fc27 -> 165-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   cockpit-docker 160-1.fc27 -> 165-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   cockpit-networkmanager 160-1.fc27 -> 165-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   cockpit-ostree 160-1.fc27 -> 165-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   cockpit-system 160-1.fc27 -> 165-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   container-selinux 2:2.42-1.fc27 -> 2:2.55-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   coreutils 8.27-19.fc27 -> 8.27-20.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   coreutils-common 8.27-19.fc27 -> 8.27-20.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   criu 3.6-1.fc27 -> 3.7-3.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   curl 7.55.1-9.fc27 -> 7.55.1-10.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   dhcp-client 12:4.3.6-8.fc27 -> 12:4.3.6-9.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   dhcp-common 12:4.3.6-8.fc27 -> 12:4.3.6-9.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   dhcp-libs 12:4.3.6-8.fc27 -> 12:4.3.6-9.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   dnsmasq 2.78-2.fc27 -> 2.79-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   docker 2:1.13.1-44.git584d391.fc27 -> 2:1.13.1-51.git4032bd5.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   docker-common 2:1.13.1-44.git584d391.fc27 -> 2:1.13.1-51.git4032bd5.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   docker-rhel-push-plugin 2:1.13.1-44.git584d391.fc27 -> 2:1.13.1-51.git4032bd5.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   elfutils-default-yama-scope 0.170-1.fc27 -> 0.170-10.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   elfutils-libelf 0.170-1.fc27 -> 0.170-10.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   elfutils-libs 0.170-1.fc27 -> 0.170-10.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   fedora-gpg-keys 27-1 -> 27-2
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   fedora-repos 27-1 -> 27-2
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   findutils 1:4.6.0-14.fc27 -> 1:4.6.0-16.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   freetype 2.8-7.fc27 -> 2.8-8.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   glibc 2.26-24.fc27 -> 2.26-27.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   glibc-all-langpacks 2.26-24.fc27 -> 2.26-27.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   glibc-common 2.26-24.fc27 -> 2.26-27.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   glusterfs 3.12.5-1.fc27 -> 3.12.7-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   glusterfs-client-xlators 3.12.5-1.fc27 -> 3.12.7-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   glusterfs-fuse 3.12.5-1.fc27 -> 3.12.7-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   glusterfs-libs 3.12.5-1.fc27 -> 3.12.7-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   gnupg2 2.2.3-1.fc27 -> 2.2.5-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   gnupg2-smime 2.2.3-1.fc27 -> 2.2.5-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   gnutls 3.5.17-1.fc27 -> 3.5.18-2.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   grub2-common 1:2.02-19.fc27 -> 1:2.02-22.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   grub2-efi-x64 1:2.02-19.fc27 -> 1:2.02-22.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   grub2-pc 1:2.02-19.fc27 -> 1:2.02-22.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   grub2-pc-modules 1:2.02-19.fc27 -> 1:2.02-22.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   grub2-tools 1:2.02-19.fc27 -> 1:2.02-22.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   grub2-tools-extra 1:2.02-19.fc27 -> 1:2.02-22.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   grub2-tools-minimal 1:2.02-19.fc27 -> 1:2.02-22.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   grubby 8.40-7.fc27 -> 8.40-8.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   ima-evm-utils 1.0-2.fc27 -> 1.1-2.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   iproute 4.14.1-4.fc27 -> 4.15.0-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   iproute-tc 4.14.1-4.fc27 -> 4.15.0-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   jansson 2.10-4.fc27 -> 2.11-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   kernel 4.14.16-300.fc27 -> 4.15.14-300.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   kernel-core 4.14.16-300.fc27 -> 4.15.14-300.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   kernel-modules 4.14.16-300.fc27 -> 4.15.14-300.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   krb5-libs 1.15.2-4.fc27 -> 1.15.2-8.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libblkid 2.30.2-1.fc27 -> 2.30.2-3.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libcephfs2 1:12.2.2-1.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libcrypt-nss 2.26-24.fc27 -> 2.26-27.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libcurl 7.55.1-9.fc27 -> 7.55.1-10.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libfdisk 2.30.2-1.fc27 -> 2.30.2-3.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libgcc 7.2.1-2.fc27 -> 7.3.1-5.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libgomp 7.2.1-2.fc27 -> 7.3.1-5.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libidn2 2.0.4-1.fc27 -> 2.0.4-4.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libmount 2.30.2-1.fc27 -> 2.30.2-3.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   librados2 1:12.2.2-1.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libradosstriper1 1:12.2.2-1.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   librbd1 1:12.2.2-1.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libreport-filesystem 2.9.3-1.fc27 -> 2.9.3-3.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   librgw2 1:12.2.2-1.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libsmartcols 2.30.2-1.fc27 -> 2.30.2-3.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libsolv 0.6.30-2.fc27 -> 0.6.34-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libsss_idmap 1.16.0-5.fc27 -> 1.16.1-2.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libsss_nss_idmap 1.16.0-5.fc27 -> 1.16.1-2.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libsss_sudo 1.16.0-5.fc27 -> 1.16.1-2.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libstdc++ 7.2.1-2.fc27 -> 7.3.1-5.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libtirpc 1.0.2-4.fc27 -> 1.0.3-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libunistring 0.9.7-3.fc27 -> 0.9.9-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libuuid 2.30.2-1.fc27 -> 2.30.2-3.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libzstd 1.3.3-1.fc27 -> 1.3.4-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   microcode_ctl 2:2.1-20.fc27 -> 2:2.1-22.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   mpfr 3.1.5-5.fc27 -> 3.1.6-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   net-tools 2.0-0.45.20160912git.fc27 -> 2.0-0.46.20160912git.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   nmap-ncat 2:7.60-7.fc27 -> 2:7.60-8.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   nspr 4.17.0-1.fc27 -> 4.19.0-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   nss 3.34.0-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   nss-softokn 3.34.0-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   nss-softokn-freebl 3.34.0-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   nss-sysinit 3.34.0-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   nss-tools 3.34.0-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   nss-util 3.34.0-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   oci-register-machine 0-5.12.git3c01f0b.fc27 -> 0-6.1.git66fa845.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   oci-umount 2:2.3.2-1.git3025b19.fc27 -> 2:2.3.3-1.gite3c9055.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   openssh 7.6p1-3.fc27 -> 7.6p1-5.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   openssh-clients 7.6p1-3.fc27 -> 7.6p1-5.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   openssh-server 7.6p1-3.fc27 -> 7.6p1-5.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   openssl 1:1.1.0g-1.fc27 -> 1:1.1.0h-3.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   openssl-libs 1:1.1.0g-1.fc27 -> 1:1.1.0h-3.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   ostree 2018.1-1.fc27 -> 2018.3-2.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   ostree-grub2 2018.1-1.fc27 -> 2018.3-2.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   ostree-libs 2018.1-1.fc27 -> 2018.3-2.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   p11-kit 0.23.9-2.fc27 -> 0.23.10-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   p11-kit-trust 0.23.9-2.fc27 -> 0.23.10-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   passwd 0.79-12.fc27 -> 0.80-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   pcre 8.41-4.fc27 -> 8.42-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   pcre2 10.30-5.fc27 -> 10.31-3.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   policycoreutils 2.7-4.fc27 -> 2.7-6.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   policycoreutils-python 2.7-4.fc27 -> 2.7-6.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   policycoreutils-python-utils 2.7-4.fc27 -> 2.7-6.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   policycoreutils-python3 2.7-4.fc27 -> 2.7-6.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   publicsuffix-list-dafsa 20171228-1.fc27 -> 20180328-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python-cephfs 1:12.2.2-1.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python-rados 1:12.2.2-1.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python-rbd 1:12.2.2-1.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python-rgw 1:12.2.2-1.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python2 2.7.14-6.fc27 -> 2.7.14-10.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python2-libs 2.7.14-6.fc27 -> 2.7.14-10.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python3 3.6.4-7.fc27 -> 3.6.4-9.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python3-libs 3.6.4-7.fc27 -> 3.6.4-9.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python3-rpm 4.14.0-2.fc27 -> 4.14.1-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python3-sssdconfig 1.16.0-5.fc27 -> 1.16.1-2.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python3-websocket-client 0.40.0-2.fc27 -> 0.47.0-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   rpm 4.14.0-2.fc27 -> 4.14.1-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   rpm-build-libs 4.14.0-2.fc27 -> 4.14.1-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   rpm-libs 4.14.0-2.fc27 -> 4.14.1-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   rpm-ostree 2018.1-2.fc27 -> 2018.4-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   rpm-ostree-libs 2018.1-2.fc27 -> 2018.4-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   rpm-plugin-selinux 4.14.0-2.fc27 -> 4.14.1-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   rsync 3.1.2-7.fc27 -> 3.1.3-2.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   runc 2:1.0.0-15.rc4.gite6516b3.fc27 -> 2:1.0.0-19.rc5.git4bb1fe4.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   selinux-policy 3.13.1-283.21.fc27 -> 3.13.1-283.30.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   selinux-policy-targeted 3.13.1-283.21.fc27 -> 3.13.1-283.30.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   shared-mime-info 1.9-1.fc27 -> 1.9-2.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   skopeo 0.1.27-1.git93876ac.fc27 -> 0.1.28-1.git0270e56.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   skopeo-containers 0.1.27-1.git93876ac.fc27 -> 0.1.28-1.git0270e56.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   sqlite-libs 3.20.1-1.fc27 -> 3.20.1-2.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   sssd-client 1.16.0-5.fc27 -> 1.16.1-2.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   strace 4.20-1.fc27 -> 4.21-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   subscription-manager-rhsm-certificates 1.21.1-1.fc27 -> 1.21.2-3.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   systemd 234-9.fc27 -> 234-10.git5f8984e.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   systemd-container 234-9.fc27 -> 234-10.git5f8984e.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   systemd-libs 234-9.fc27 -> 234-10.git5f8984e.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   systemd-pam 234-9.fc27 -> 234-10.git5f8984e.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   systemd-udev 234-9.fc27 -> 234-10.git5f8984e.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   tzdata 2017c-1.fc27 -> 2018d-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   util-linux 2.30.2-1.fc27 -> 2.30.2-3.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   vim-minimal 2:8.0.1451-1.fc27 -> 2:8.0.1573-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   xfsprogs 4.12.0-4.fc27 -> 4.15.1-1.fc27
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Removed:
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   compat-openssl10-1:1.0.2m-1.fc27.x86_64
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python-websocket-client-0.40.0-2.fc27.noarch
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Added:
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python2-websocket-client-0.47.0-1.fc27.noarch
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Run "systemctl reboot" to start a reboot
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Main process exited, code=killed, status=15/TERM
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal systemd[1]: Stopped RPM-OSTree Bisect Testing.
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Unit entered failed state.
+Jun 10 21:25:34 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Failed with result 'signal'.
+-- Reboot --
+Jun 10 21:26:14 ip-10-0-246-17.ec2.internal systemd[1]: Starting RPM-OSTree Bisect Testing...
+Jun 10 21:26:17 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Using data file at: /var/lib/rpm-ostree-bisect.json
+Jun 10 21:26:37 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Found mtu != 1500. Test Passes
+Jun 10 21:26:37 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Deploying new commit for testing
+Jun 10 21:26:37 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   dea196c6952ee9326efef86dbc8f36b71212afd2a39d1535c7c158e3d4efdaa3 : 27.133
+Jun 10 21:26:37 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Trying to run '['/usr/bin/rpm-ostree', 'deploy', 'dea196c6952ee9326efef86dbc8f36b71212afd2a39d1535c7c158e3d4efdaa3']'
+Jun 10 21:26:37 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Validating checksum 'dea196c6952ee9326efef86dbc8f36b71212afd2a39d1535c7c158e3d4efdaa3'
+Jun 10 21:26:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: 2 metadata, 0 content objects fetched; 19 KiB transferred in 1 seconds
+Jun 10 21:26:41 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 12/(estimating) 59.8 kB/s 119.5 kB
+Jun 10 21:26:42 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Writing objects: 1
+Jun 10 21:26:44 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Writing objects: 1
+Jun 10 21:26:45 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 20/(estimating) 90.1 kB/s 180.2 kB
+Jun 10 21:26:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 28/(estimating) 86.6 kB/s 259.9 kB
+Jun 10 21:26:47 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 38/(estimating) 89.9 kB/s 359.7 kB
+Jun 10 21:26:49 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 8/(estimating) 1.7 MB/s 1.7 MB
+Jun 10 21:26:50 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 23% (61/263) 14.0 MB/s 28.1 MB
+Jun 10 21:26:51 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 42% (113/263) 12.6 MB/s 50.6 MB
+Jun 10 21:26:54 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 98% (259/263) 17.4 MB/s 104.2 MB
+Jun 10 21:26:57 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 99% (298/301) 15.7 MB/s 141.4 MB
+Jun 10 21:26:59 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 174/(estimating) 15.9 MB/s 174.9 MB
+Jun 10 21:27:00 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 266/(estimating) 14.6 MB/s 175.0 MB
+Jun 10 21:27:01 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 370/(estimating) 13.5 MB/s 175.1 MB
+Jun 10 21:27:02 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 469/(estimating) 12.5 MB/s 175.2 MB
+Jun 10 21:27:03 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 574/(estimating) 11.7 MB/s 175.2 MB
+Jun 10 21:27:04 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 676/(estimating) 11.0 MB/s 175.3 MB
+Jun 10 21:27:05 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 780/(estimating) 10.3 MB/s 175.3 MB
+Jun 10 21:27:06 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 878/(estimating) 9.7 MB/s 175.3 MB
+Jun 10 21:27:08 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 1084/(estimating) 8.8 MB/s 175.4 MB
+Jun 10 21:27:10 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 1288/(estimating) 8.0 MB/s 175.5 MB
+Jun 10 21:27:12 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving metadata objects: 1370/(estimating) 7.3 MB/s 175.7 MB
+Jun 10 21:27:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 24% (1835/7577) 6.8 MB/s 176.8 MB
+Jun 10 21:27:15 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 25% (1938/7577) 6.6 MB/s 177.7 MB
+Jun 10 21:27:16 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 26% (2039/7577) 6.4 MB/s 178.6 MB
+Jun 10 21:27:17 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 28% (2143/7577) 6.2 MB/s 179.5 MB
+Jun 10 21:27:18 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 29% (2234/7577) 6.0 MB/s 180.5 MB
+Jun 10 21:27:20 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 32% (2429/7577) 5.7 MB/s 184.0 MB
+Jun 10 21:27:21 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 33% (2532/7577) 5.6 MB/s 186.0 MB
+Jun 10 21:27:22 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 34% (2634/7577) 5.5 MB/s 187.1 MB
+Jun 10 21:27:24 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 37% (2833/7577) 5.3 MB/s 191.9 MB
+Jun 10 21:27:26 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 40% (3039/7577) 5.1 MB/s 194.3 MB
+Jun 10 21:27:27 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 41% (3142/7577) 5.0 MB/s 196.2 MB
+Jun 10 21:27:28 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 42% (3241/7577) 4.9 MB/s 197.2 MB
+Jun 10 21:27:29 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 43% (3329/7577) 4.8 MB/s 198.1 MB
+Jun 10 21:27:30 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 45% (3425/7577) 4.7 MB/s 198.8 MB
+Jun 10 21:27:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 46% (3526/7577) 4.7 MB/s 200.3 MB
+Jun 10 21:27:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 47% (3616/7577) 4.6 MB/s 201.0 MB
+Jun 10 21:27:33 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 49% (3716/7577) 4.5 MB/s 201.9 MB
+Jun 10 21:27:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 50% (3819/7577) 4.4 MB/s 203.1 MB
+Jun 10 21:27:36 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 52% (4007/7577) 4.3 MB/s 205.9 MB
+Jun 10 21:27:37 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 54% (4104/7577) 4.2 MB/s 207.1 MB
+Jun 10 21:27:38 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 55% (4202/7577) 4.2 MB/s 207.9 MB
+Jun 10 21:27:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 58% (4396/7577) 4.0 MB/s 209.9 MB
+Jun 10 21:27:41 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 59% (4502/7577) 4.0 MB/s 211.1 MB
+Jun 10 21:27:42 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 60% (4608/7577) 3.9 MB/s 212.1 MB
+Jun 10 21:27:43 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 62% (4714/7577) 3.9 MB/s 213.5 MB
+Jun 10 21:27:44 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 63% (4814/7577) 3.8 MB/s 214.6 MB
+Jun 10 21:27:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 65% (4996/7577) 3.7 MB/s 216.8 MB
+Jun 10 21:27:47 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 67% (5090/7577) 3.7 MB/s 218.9 MB
+Jun 10 21:27:48 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 68% (5189/7577) 3.7 MB/s 220.1 MB
+Jun 10 21:27:50 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 70% (5378/7577) 3.6 MB/s 222.9 MB
+Jun 10 21:27:51 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 72% (5472/7577) 3.6 MB/s 224.0 MB
+Jun 10 21:27:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 74% (5672/7577) 3.5 MB/s 226.0 MB
+Jun 10 21:27:54 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 76% (5779/7577) 3.4 MB/s 226.9 MB
+Jun 10 21:27:55 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 77% (5884/7577) 3.4 MB/s 228.0 MB
+Jun 10 21:27:57 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 80% (6096/7577) 3.3 MB/s 230.0 MB
+Jun 10 21:27:58 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 81% (6205/7577) 3.3 MB/s 231.2 MB
+Jun 10 21:27:59 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 83% (6294/7577) 3.3 MB/s 232.5 MB
+Jun 10 21:28:00 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 84% (6387/7577) 3.2 MB/s 233.6 MB
+Jun 10 21:28:01 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 85% (6485/7577) 3.2 MB/s 234.2 MB
+Jun 10 21:28:02 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 86% (6580/7577) 3.2 MB/s 235.5 MB
+Jun 10 21:28:04 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 89% (6779/7577) 3.1 MB/s 237.9 MB
+Jun 10 21:28:05 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 90% (6878/7577) 3.1 MB/s 238.5 MB
+Jun 10 21:28:07 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 93% (7080/7577) 3.0 MB/s 240.6 MB
+Jun 10 21:28:08 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 94% (7178/7577) 3.0 MB/s 241.9 MB
+Jun 10 21:28:10 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 97% (7378/7577) 3.0 MB/s 243.8 MB
+Jun 10 21:28:12 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Receiving objects: 99% (7575/7577) 2.9 MB/s 246.4 MB
+Jun 10 21:28:13 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: 1451 metadata, 6126 content objects fetched; 240679 KiB transferred in 86 seconds
+Jun 10 21:28:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Copying /etc changes: 20 modified, 0 removed, 61 added
+Jun 10 21:28:23 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Transaction complete; bootconfig swap: yes deployment count change: 0
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Upgraded:
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   ceph-common 1:12.2.4-1.fc27 -> 1:12.2.4-2.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   chrony 3.2-1.fc27 -> 3.3-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   cockpit-bridge 165-1.fc27 -> 166-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   cockpit-docker 165-1.fc27 -> 166-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   cockpit-networkmanager 165-1.fc27 -> 166-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   cockpit-ostree 165-1.fc27 -> 166-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   cockpit-system 165-1.fc27 -> 166-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   coreutils 8.27-20.fc27 -> 8.27-21.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   coreutils-common 8.27-20.fc27 -> 8.27-21.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   criu 3.7-3.fc27 -> 3.8.1-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   file 5.31-10.fc27 -> 5.31-11.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   file-libs 5.31-10.fc27 -> 5.31-11.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   findutils 1:4.6.0-16.fc27 -> 1:4.6.0-19.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   firewalld 0.4.4.5-3.fc27 -> 0.4.4.5-4.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   firewalld-filesystem 0.4.4.5-3.fc27 -> 0.4.4.5-4.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   glusterfs 3.12.7-1.fc27 -> 3.12.9-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   glusterfs-client-xlators 3.12.7-1.fc27 -> 3.12.9-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   glusterfs-fuse 3.12.7-1.fc27 -> 3.12.9-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   glusterfs-libs 3.12.7-1.fc27 -> 3.12.9-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   gnupg2 2.2.5-1.fc27 -> 2.2.6-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   gnupg2-smime 2.2.5-1.fc27 -> 2.2.6-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   gpgme 1.9.0-6.fc27 -> 1.10.0-4.fc27.1
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   kernel 4.15.14-300.fc27 -> 4.16.5-200.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   kernel-core 4.15.14-300.fc27 -> 4.16.5-200.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   kernel-modules 4.15.14-300.fc27 -> 4.16.5-200.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   krb5-libs 1.15.2-8.fc27 -> 1.15.2-9.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   libcephfs2 1:12.2.4-1.fc27 -> 1:12.2.4-2.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   libcgroup 0.41-13.fc27 -> 0.41-17.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   libidn 1.33-4.fc27 -> 1.34-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   libnghttp2 1.25.0-1.fc27 -> 1.31.1-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   librados2 1:12.2.4-1.fc27 -> 1:12.2.4-2.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   libradosstriper1 1:12.2.4-1.fc27 -> 1:12.2.4-2.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   librbd1 1:12.2.4-1.fc27 -> 1:12.2.4-2.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   librgw2 1:12.2.4-1.fc27 -> 1:12.2.4-2.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   libsss_idmap 1.16.1-2.fc27 -> 1.16.1-3.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   libsss_nss_idmap 1.16.1-2.fc27 -> 1.16.1-3.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   libsss_sudo 1.16.1-2.fc27 -> 1.16.1-3.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   libtirpc 1.0.3-1.fc27 -> 1.0.3-2.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   net-tools 2.0-0.46.20160912git.fc27 -> 2.0-0.47.20160912git.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   nss 3.36.0-1.0.fc27 -> 3.36.1-1.0.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   nss-softokn 3.36.0-1.0.fc27 -> 3.36.1-1.0.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   nss-softokn-freebl 3.36.0-1.0.fc27 -> 3.36.1-1.0.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   nss-sysinit 3.36.0-1.0.fc27 -> 3.36.1-1.0.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   nss-tools 3.36.0-1.0.fc27 -> 3.36.1-1.0.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   nss-util 3.36.0-1.0.fc27 -> 3.36.1-1.0.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   passwd 0.80-1.fc27 -> 0.80-2.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   pcre2 10.31-3.fc27 -> 10.31-4.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python-cephfs 1:12.2.4-1.fc27 -> 1:12.2.4-2.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python-rados 1:12.2.4-1.fc27 -> 1:12.2.4-2.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python-rbd 1:12.2.4-1.fc27 -> 1:12.2.4-2.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python-rgw 1:12.2.4-1.fc27 -> 1:12.2.4-2.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python2-pip 9.0.1-14.fc27 -> 9.0.3-1.fc27
+Jun 10 21:28:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python2-requests 2.18.4-1.fc27 -> 2.18.4-2.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python2-urllib3 1.22-3.fc27 -> 1.22-5.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python3 3.6.4-9.fc27 -> 3.6.5-1.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python3-firewall 0.4.4.5-3.fc27 -> 0.4.4.5-4.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python3-jwt 1.5.3-1.fc27 -> 1.6.1-1.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python3-libs 3.6.4-9.fc27 -> 3.6.5-1.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python3-pip 9.0.1-14.fc27 -> 9.0.3-1.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python3-requests 2.18.4-1.fc27 -> 2.18.4-2.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python3-sssdconfig 1.16.1-2.fc27 -> 1.16.1-3.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python3-urllib3 1.22-3.fc27 -> 1.22-5.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   runc 2:1.0.0-19.rc5.git4bb1fe4.fc27 -> 2:1.0.0-31.git0cbfd83.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   selinux-policy 3.13.1-283.30.fc27 -> 3.13.1-283.34.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   selinux-policy-targeted 3.13.1-283.30.fc27 -> 3.13.1-283.34.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   skopeo 0.1.28-1.git0270e56.fc27 -> 0.1.29-1.git7add6fc.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   skopeo-containers 0.1.28-1.git0270e56.fc27 -> 0.1.29-1.git7add6fc.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   sssd-client 1.16.1-2.fc27 -> 1.16.1-3.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   strace 4.21-1.fc27 -> 4.22-1.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   vim-minimal 2:8.0.1573-1.fc27 -> 2:8.0.1763-1.fc27
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Removed:
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python2-pyOpenSSL-17.2.0-2.fc27.noarch
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]:   python3-pyOpenSSL-17.2.0-2.fc27.noarch
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[765]: Run "systemctl reboot" to start a reboot
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Main process exited, code=killed, status=15/TERM
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal systemd[1]: Stopped RPM-OSTree Bisect Testing.
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Unit entered failed state.
+Jun 10 21:28:32 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Failed with result 'signal'.
+-- Reboot --
+Jun 10 21:29:12 ip-10-0-246-17.ec2.internal systemd[1]: Starting RPM-OSTree Bisect Testing...
+Jun 10 21:29:15 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Using data file at: /var/lib/rpm-ostree-bisect.json
+Jun 10 21:29:35 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+Jun 10 21:29:35 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Found mtu 1500. Test Fails
+Jun 10 21:29:35 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Deploying new commit for testing
+Jun 10 21:29:35 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   89c713f85cd331f538eb2c053fe210b9fbbc69dd92e965d4c4c8500e008a7a05 : 27.123
+Jun 10 21:29:35 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Trying to run '['/usr/bin/rpm-ostree', 'deploy', '89c713f85cd331f538eb2c053fe210b9fbbc69dd92e965d4c4c8500e008a7a05']'
+Jun 10 21:29:35 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Validating checksum '89c713f85cd331f538eb2c053fe210b9fbbc69dd92e965d4c4c8500e008a7a05'
+Jun 10 21:29:37 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: 2 metadata, 0 content objects fetched; 19 KiB transferred in 1 seconds
+Jun 10 21:29:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 10/(estimating) 49.8 kB/s 99.6 kB
+Jun 10 21:29:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 19/(estimating) 59.9 kB/s 179.8 kB
+Jun 10 21:29:42 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 8/(estimating) 60.8 kB/s 60.8 kB
+Jun 10 21:29:43 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 18/(estimating) 80.2 kB/s 160.3 kB
+Jun 10 21:29:45 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Writing objects: 1
+Jun 10 21:29:47 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 5/(estimating) 2.2 MB/s 4.4 MB
+Jun 10 21:29:49 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 91% (31/34) 17.7 MB/s 53.2 MB
+Jun 10 21:29:51 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 92% (51/55) 15.6 MB/s 93.8 MB
+Jun 10 21:29:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 52/(estimating) 18.3 MB/s 128.0 MB
+Jun 10 21:29:55 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 209/(estimating) 14.3 MB/s 128.5 MB
+Jun 10 21:29:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 310/(estimating) 12.9 MB/s 128.5 MB
+Jun 10 21:29:58 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 510/(estimating) 10.7 MB/s 128.6 MB
+Jun 10 21:29:59 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 604/(estimating) 9.9 MB/s 128.6 MB
+Jun 10 21:30:00 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 707/(estimating) 9.2 MB/s 128.7 MB
+Jun 10 21:30:01 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 802/(estimating) 8.6 MB/s 128.7 MB
+Jun 10 21:30:02 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving metadata objects: 889/(estimating) 8.0 MB/s 128.7 MB
+Jun 10 21:30:04 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 26% (1112/4263) 7.2 MB/s 130.2 MB
+Jun 10 21:30:05 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 28% (1208/4263) 6.9 MB/s 131.1 MB
+Jun 10 21:30:06 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 30% (1307/4263) 6.6 MB/s 132.1 MB
+Jun 10 21:30:08 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 34% (1481/4263) 6.1 MB/s 133.9 MB
+Jun 10 21:30:09 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 37% (1581/4263) 5.9 MB/s 134.9 MB
+Jun 10 21:30:11 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 41% (1767/4263) 5.5 MB/s 138.0 MB
+Jun 10 21:30:12 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 43% (1857/4263) 5.4 MB/s 139.9 MB
+Jun 10 21:30:13 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 45% (1952/4263) 5.2 MB/s 141.3 MB
+Jun 10 21:30:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 48% (2047/4263) 5.1 MB/s 142.8 MB
+Jun 10 21:30:16 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 51% (2199/4263) 4.8 MB/s 144.9 MB
+Jun 10 21:30:17 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 53% (2298/4263) 4.7 MB/s 146.4 MB
+Jun 10 21:30:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 58% (2491/4263) 4.5 MB/s 149.8 MB
+Jun 10 21:30:20 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 60% (2590/4263) 4.4 MB/s 151.1 MB
+Jun 10 21:30:21 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 63% (2691/4263) 4.4 MB/s 152.5 MB
+Jun 10 21:30:23 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 67% (2882/4263) 4.2 MB/s 155.9 MB
+Jun 10 21:30:25 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 72% (3086/4263) 4.1 MB/s 159.0 MB
+Jun 10 21:30:27 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 76% (3276/4263) 4.0 MB/s 162.3 MB
+Jun 10 21:30:29 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 80% (3445/4263) 3.8 MB/s 164.8 MB
+Jun 10 21:30:30 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 82% (3519/4263) 3.8 MB/s 165.7 MB
+Jun 10 21:30:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 84% (3597/4263) 3.7 MB/s 166.6 MB
+Jun 10 21:30:33 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 89% (3798/4263) 3.6 MB/s 169.2 MB
+Jun 10 21:30:35 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 93% (3979/4263) 3.5 MB/s 172.3 MB
+Jun 10 21:30:36 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 95% (4067/4263) 3.5 MB/s 173.2 MB
+Jun 10 21:30:37 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Receiving objects: 96% (4130/4263) 3.4 MB/s 173.8 MB
+Jun 10 21:30:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: 959 metadata, 3304 content objects fetched; 170970 KiB transferred in 53 seconds
+Jun 10 21:30:44 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Copying /etc changes: 20 modified, 0 removed, 63 added
+Jun 10 21:30:49 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Transaction complete; bootconfig swap: yes deployment count change: 0
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Downgraded:
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   ceph-common 1:12.2.4-2.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   cockpit-bridge 166-1.fc27 -> 165-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   cockpit-docker 166-1.fc27 -> 165-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   cockpit-networkmanager 166-1.fc27 -> 165-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   cockpit-ostree 166-1.fc27 -> 165-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   cockpit-system 166-1.fc27 -> 165-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   coreutils 8.27-21.fc27 -> 8.27-20.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   coreutils-common 8.27-21.fc27 -> 8.27-20.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   file 5.31-11.fc27 -> 5.31-10.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   file-libs 5.31-11.fc27 -> 5.31-10.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   findutils 1:4.6.0-19.fc27 -> 1:4.6.0-16.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   firewalld 0.4.4.5-4.fc27 -> 0.4.4.5-3.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   firewalld-filesystem 0.4.4.5-4.fc27 -> 0.4.4.5-3.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   glusterfs 3.12.9-1.fc27 -> 3.12.8-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   glusterfs-client-xlators 3.12.9-1.fc27 -> 3.12.8-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   glusterfs-fuse 3.12.9-1.fc27 -> 3.12.8-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   glusterfs-libs 3.12.9-1.fc27 -> 3.12.8-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   gpgme 1.10.0-4.fc27.1 -> 1.9.0-6.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   kernel 4.16.5-200.fc27 -> 4.15.17-300.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   kernel-core 4.16.5-200.fc27 -> 4.15.17-300.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   kernel-modules 4.16.5-200.fc27 -> 4.15.17-300.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   krb5-libs 1.15.2-9.fc27 -> 1.15.2-8.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libcephfs2 1:12.2.4-2.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libcgroup 0.41-17.fc27 -> 0.41-13.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   librados2 1:12.2.4-2.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libradosstriper1 1:12.2.4-2.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   librbd1 1:12.2.4-2.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   librgw2 1:12.2.4-2.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libsss_idmap 1.16.1-3.fc27 -> 1.16.1-2.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libsss_nss_idmap 1.16.1-3.fc27 -> 1.16.1-2.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libsss_sudo 1.16.1-3.fc27 -> 1.16.1-2.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   libtirpc 1.0.3-2.fc27 -> 1.0.3-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   net-tools 2.0-0.47.20160912git.fc27 -> 2.0-0.46.20160912git.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   nss 3.36.1-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   nss-softokn 3.36.1-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   nss-softokn-freebl 3.36.1-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   nss-sysinit 3.36.1-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   nss-tools 3.36.1-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   nss-util 3.36.1-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python-cephfs 1:12.2.4-2.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python-rados 1:12.2.4-2.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python-rbd 1:12.2.4-2.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python-rgw 1:12.2.4-2.fc27 -> 1:12.2.4-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python2-requests 2.18.4-2.fc27 -> 2.18.4-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python2-urllib3 1.22-5.fc27 -> 1.22-3.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python3-firewall 0.4.4.5-4.fc27 -> 0.4.4.5-3.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python3-requests 2.18.4-2.fc27 -> 2.18.4-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python3-sssdconfig 1.16.1-3.fc27 -> 1.16.1-2.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python3-urllib3 1.22-5.fc27 -> 1.22-3.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   runc 2:1.0.0-31.git0cbfd83.fc27 -> 2:1.0.0-19.rc5.git4bb1fe4.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   selinux-policy 3.13.1-283.34.fc27 -> 3.13.1-283.30.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   selinux-policy-targeted 3.13.1-283.34.fc27 -> 3.13.1-283.30.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   sssd-client 1.16.1-3.fc27 -> 1.16.1-2.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   vim-minimal 2:8.0.1763-1.fc27 -> 2:8.0.1704-1.fc27
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Added:
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python2-pyOpenSSL-17.2.0-2.fc27.noarch
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]:   python3-pyOpenSSL-17.2.0-2.fc27.noarch
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[783]: Run "systemctl reboot" to start a reboot
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Main process exited, code=killed, status=15/TERM
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal systemd[1]: Stopped RPM-OSTree Bisect Testing.
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Unit entered failed state.
+Jun 10 21:30:56 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Failed with result 'signal'.
+-- Reboot --
+Jun 10 21:31:38 ip-10-0-246-17.ec2.internal systemd[1]: Starting RPM-OSTree Bisect Testing...
+Jun 10 21:31:41 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Using data file at: /var/lib/rpm-ostree-bisect.json
+Jun 10 21:32:01 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Found mtu != 1500. Test Passes
+Jun 10 21:32:01 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Deploying new commit for testing
+Jun 10 21:32:01 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   7d8c10108726d7e071e48a743ab4ac43aca6a2965f3460e2c6001f8d4719456f : 27.128
+Jun 10 21:32:01 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Trying to run '['/usr/bin/rpm-ostree', 'deploy', '7d8c10108726d7e071e48a743ab4ac43aca6a2965f3460e2c6001f8d4719456f']'
+Jun 10 21:32:01 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Validating checksum '7d8c10108726d7e071e48a743ab4ac43aca6a2965f3460e2c6001f8d4719456f'
+Jun 10 21:32:03 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: 2 metadata, 0 content objects fetched; 19 KiB transferred in 1 seconds
+Jun 10 21:32:05 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Writing objects: 1
+Jun 10 21:32:06 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: 22 metadata, 0 content objects fetched; 213 KiB transferred in 3 seconds
+Jun 10 21:32:08 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Writing objects: 1
+Jun 10 21:32:10 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Writing objects: 1
+Jun 10 21:32:11 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: 39 metadata, 0 content objects fetched; 351 KiB transferred in 4 seconds
+Jun 10 21:32:13 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving metadata objects: 17/(estimating) 6.0 MB/s 6.0 MB
+Jun 10 21:32:15 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving metadata objects: 106/(estimating) 12.8 MB/s 51.0 MB
+Jun 10 21:32:16 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 98% (150/153) 17.6 MB/s 88.1 MB
+Jun 10 21:32:18 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Writing objects: 3
+Jun 10 21:32:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving metadata objects: 137/(estimating) 16.1 MB/s 128.4 MB
+Jun 10 21:32:21 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving metadata objects: 313/(estimating) 14.4 MB/s 129.7 MB
+Jun 10 21:32:23 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving metadata objects: 518/(estimating) 11.8 MB/s 129.7 MB
+Jun 10 21:32:24 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving metadata objects: 622/(estimating) 10.8 MB/s 129.7 MB
+Jun 10 21:32:25 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving metadata objects: 722/(estimating) 10.0 MB/s 129.8 MB
+Jun 10 21:32:27 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving metadata objects: 923/(estimating) 8.7 MB/s 129.9 MB
+Jun 10 21:32:28 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 24% (1050/4222) 8.2 MB/s 131.2 MB
+Jun 10 21:32:30 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 29% (1237/4222) 7.5 MB/s 134.5 MB
+Jun 10 21:32:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 31% (1334/4222) 7.1 MB/s 135.6 MB
+Jun 10 21:32:33 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 36% (1529/4222) 6.6 MB/s 138.2 MB
+Jun 10 21:32:35 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 40% (1729/4222) 6.1 MB/s 139.9 MB
+Jun 10 21:32:36 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 43% (1821/4222) 5.9 MB/s 141.0 MB
+Jun 10 21:32:37 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 45% (1917/4222) 5.7 MB/s 142.3 MB
+Jun 10 21:32:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 49% (2103/4222) 5.4 MB/s 144.8 MB
+Jun 10 21:32:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 52% (2203/4222) 5.2 MB/s 145.8 MB
+Jun 10 21:32:41 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 54% (2300/4222) 5.1 MB/s 147.1 MB
+Jun 10 21:32:43 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 59% (2496/4222) 4.9 MB/s 150.5 MB
+Jun 10 21:32:44 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 61% (2593/4222) 4.7 MB/s 151.7 MB
+Jun 10 21:32:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 65% (2776/4222) 4.5 MB/s 154.7 MB
+Jun 10 21:32:47 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 68% (2872/4222) 4.5 MB/s 156.2 MB
+Jun 10 21:32:49 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 72% (3069/4222) 4.3 MB/s 157.8 MB
+Jun 10 21:32:51 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 77% (3266/4222) 4.1 MB/s 160.3 MB
+Jun 10 21:32:52 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 79% (3366/4222) 4.0 MB/s 161.4 MB
+Jun 10 21:32:54 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 84% (3558/4222) 3.9 MB/s 164.9 MB
+Jun 10 21:32:55 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 86% (3656/4222) 3.9 MB/s 167.0 MB
+Jun 10 21:32:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 89% (3758/4222) 3.8 MB/s 168.2 MB
+Jun 10 21:32:58 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 93% (3951/4222) 3.7 MB/s 170.5 MB
+Jun 10 21:33:00 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 97% (4133/4222) 3.6 MB/s 172.6 MB
+Jun 10 21:33:01 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 99% (4218/4222) 3.6 MB/s 174.9 MB
+Jun 10 21:33:07 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Copying /etc changes: 20 modified, 0 removed, 65 added
+Jun 10 21:33:13 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Transaction complete; bootconfig swap: yes deployment count change: 0
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Upgraded:
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   cockpit-bridge 165-1.fc27 -> 166-1.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   cockpit-docker 165-1.fc27 -> 166-1.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   cockpit-networkmanager 165-1.fc27 -> 166-1.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   cockpit-ostree 165-1.fc27 -> 166-1.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   cockpit-system 165-1.fc27 -> 166-1.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   coreutils 8.27-20.fc27 -> 8.27-21.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   coreutils-common 8.27-20.fc27 -> 8.27-21.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   file 5.31-10.fc27 -> 5.31-11.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   file-libs 5.31-10.fc27 -> 5.31-11.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   findutils 1:4.6.0-16.fc27 -> 1:4.6.0-19.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   firewalld 0.4.4.5-3.fc27 -> 0.4.4.5-4.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   firewalld-filesystem 0.4.4.5-3.fc27 -> 0.4.4.5-4.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   gpgme 1.9.0-6.fc27 -> 1.10.0-4.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   kernel 4.15.17-300.fc27 -> 4.16.4-200.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   kernel-core 4.15.17-300.fc27 -> 4.16.4-200.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   kernel-modules 4.15.17-300.fc27 -> 4.16.4-200.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   krb5-libs 1.15.2-8.fc27 -> 1.15.2-9.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   libcgroup 0.41-13.fc27 -> 0.41-17.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   nss 3.36.0-1.0.fc27 -> 3.36.1-1.0.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   nss-softokn 3.36.0-1.0.fc27 -> 3.36.1-1.0.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   nss-softokn-freebl 3.36.0-1.0.fc27 -> 3.36.1-1.0.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   nss-sysinit 3.36.0-1.0.fc27 -> 3.36.1-1.0.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   nss-tools 3.36.0-1.0.fc27 -> 3.36.1-1.0.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   nss-util 3.36.0-1.0.fc27 -> 3.36.1-1.0.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   python2-requests 2.18.4-1.fc27 -> 2.18.4-2.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   python2-urllib3 1.22-3.fc27 -> 1.22-5.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   python3-firewall 0.4.4.5-3.fc27 -> 0.4.4.5-4.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   python3-requests 2.18.4-1.fc27 -> 2.18.4-2.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   python3-urllib3 1.22-3.fc27 -> 1.22-5.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   selinux-policy 3.13.1-283.30.fc27 -> 3.13.1-283.32.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   selinux-policy-targeted 3.13.1-283.30.fc27 -> 3.13.1-283.32.fc27
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Removed:
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   python2-pyOpenSSL-17.2.0-2.fc27.noarch
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   python3-pyOpenSSL-17.2.0-2.fc27.noarch
+Jun 10 21:33:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Run "systemctl reboot" to start a reboot
+Jun 10 21:33:20 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Main process exited, code=killed, status=15/TERM
+Jun 10 21:33:20 ip-10-0-246-17.ec2.internal systemd[1]: Stopped RPM-OSTree Bisect Testing.
+Jun 10 21:33:20 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Unit entered failed state.
+Jun 10 21:33:20 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Failed with result 'signal'.
+-- Reboot --
+Jun 10 21:34:00 ip-10-0-246-17.ec2.internal systemd[1]: Starting RPM-OSTree Bisect Testing...
+Jun 10 21:34:02 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Using data file at: /var/lib/rpm-ostree-bisect.json
+Jun 10 21:34:22 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+Jun 10 21:34:22 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Found mtu 1500. Test Fails
+Jun 10 21:34:22 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Deploying new commit for testing
+Jun 10 21:34:22 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   21e115d93d04f206a874973c91185184c70ba2e7500d5b2619d8c849b6cad3c1 : 27.125
+Jun 10 21:34:22 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Trying to run '['/usr/bin/rpm-ostree', 'deploy', '21e115d93d04f206a874973c91185184c70ba2e7500d5b2619d8c849b6cad3c1']'
+Jun 10 21:34:23 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Validating checksum '21e115d93d04f206a874973c91185184c70ba2e7500d5b2619d8c849b6cad3c1'
+Jun 10 21:34:25 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: 2 metadata, 0 content objects fetched; 19 KiB transferred in 1 seconds
+Jun 10 21:34:27 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Writing objects: 1
+Jun 10 21:34:28 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: 22 metadata, 0 content objects fetched; 213 KiB transferred in 2 seconds
+Jun 10 21:34:30 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Writing objects: 1
+Jun 10 21:34:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Writing objects: 1
+Jun 10 21:34:34 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving metadata objects: 5/(estimating) 41.1 kB/s 41.1 kB
+Jun 10 21:34:35 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving objects: 94% (34/36) 1.8 MB/s 3.5 MB
+Jun 10 21:34:36 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Scanning metadata: 1684
+Jun 10 21:34:37 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Receiving metadata objects: 20/(estimating) 2.1 MB/s 8.3 MB
+Jun 10 21:34:43 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Copying /etc changes: 20 modified, 0 removed, 67 added
+Jun 10 21:34:47 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Transaction complete; bootconfig swap: yes deployment count change: 0
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Downgraded:
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   cockpit-bridge 166-1.fc27 -> 165-1.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   cockpit-docker 166-1.fc27 -> 165-1.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   cockpit-networkmanager 166-1.fc27 -> 165-1.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   cockpit-ostree 166-1.fc27 -> 165-1.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   cockpit-system 166-1.fc27 -> 165-1.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   coreutils 8.27-21.fc27 -> 8.27-20.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   coreutils-common 8.27-21.fc27 -> 8.27-20.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   findutils 1:4.6.0-19.fc27 -> 1:4.6.0-16.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   kernel 4.16.4-200.fc27 -> 4.15.17-300.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   kernel-core 4.16.4-200.fc27 -> 4.15.17-300.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   kernel-modules 4.16.4-200.fc27 -> 4.15.17-300.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   krb5-libs 1.15.2-9.fc27 -> 1.15.2-8.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   libcgroup 0.41-17.fc27 -> 0.41-13.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   nss 3.36.1-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   nss-softokn 3.36.1-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   nss-softokn-freebl 3.36.1-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   nss-sysinit 3.36.1-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   nss-tools 3.36.1-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   nss-util 3.36.1-1.0.fc27 -> 3.36.0-1.0.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   python2-requests 2.18.4-2.fc27 -> 2.18.4-1.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   python2-urllib3 1.22-5.fc27 -> 1.22-3.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   python3-requests 2.18.4-2.fc27 -> 2.18.4-1.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   python3-urllib3 1.22-5.fc27 -> 1.22-3.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   selinux-policy 3.13.1-283.32.fc27 -> 3.13.1-283.30.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   selinux-policy-targeted 3.13.1-283.32.fc27 -> 3.13.1-283.30.fc27
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Added:
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   python2-pyOpenSSL-17.2.0-2.fc27.noarch
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]:   python3-pyOpenSSL-17.2.0-2.fc27.noarch
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[775]: Run "systemctl reboot" to start a reboot
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Main process exited, code=killed, status=15/TERM
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal systemd[1]: Stopped RPM-OSTree Bisect Testing.
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Unit entered failed state.
+Jun 10 21:34:53 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Failed with result 'signal'.
+-- Reboot --
+Jun 10 21:35:35 ip-10-0-246-17.ec2.internal systemd[1]: Starting RPM-OSTree Bisect Testing...
+Jun 10 21:35:37 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Using data file at: /var/lib/rpm-ostree-bisect.json
+Jun 10 21:35:57 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Found mtu != 1500. Test Passes
+Jun 10 21:35:57 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Deploying new commit for testing
+Jun 10 21:35:57 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   e59f9373145bae36f90571feff24719537827273891c822692d037b05d1ff470 : 27.126
+Jun 10 21:35:57 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Trying to run '['/usr/bin/rpm-ostree', 'deploy', 'e59f9373145bae36f90571feff24719537827273891c822692d037b05d1ff470']'
+Jun 10 21:35:58 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Validating checksum 'e59f9373145bae36f90571feff24719537827273891c822692d037b05d1ff470'
+Jun 10 21:36:00 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: 2 metadata, 0 content objects fetched; 19 KiB transferred in 1 seconds
+Jun 10 21:36:01 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Writing objects: 1
+Jun 10 21:36:02 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: 22 metadata, 0 content objects fetched; 213 KiB transferred in 2 seconds
+Jun 10 21:36:04 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving metadata objects: 8/(estimating) 60.8 kB/s 60.8 kB
+Jun 10 21:36:05 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving metadata objects: 19/(estimating) 89.8 kB/s 179.7 kB
+Jun 10 21:36:07 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: 39 metadata, 0 content objects fetched; 351 KiB transferred in 4 seconds
+Jun 10 21:36:09 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 87% (14/16) 7.1 MB/s 14.2 MB
+Jun 10 21:36:10 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 87% (21/24) 14.0 MB/s 41.9 MB
+Jun 10 21:36:11 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving metadata objects: 26/(estimating) 20.3 MB/s 81.1 MB
+Jun 10 21:36:13 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 94% (79/84) 20.0 MB/s 119.9 MB
+Jun 10 21:36:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Writing objects: 2
+Jun 10 21:36:16 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving metadata objects: 89/(estimating) 14.3 MB/s 128.3 MB
+Jun 10 21:36:17 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving metadata objects: 186/(estimating) 12.8 MB/s 128.3 MB
+Jun 10 21:36:18 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving metadata objects: 288/(estimating) 11.7 MB/s 128.3 MB
+Jun 10 21:36:19 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving metadata objects: 394/(estimating) 10.7 MB/s 128.4 MB
+Jun 10 21:36:20 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving metadata objects: 500/(estimating) 9.9 MB/s 128.4 MB
+Jun 10 21:36:22 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving metadata objects: 713/(estimating) 8.6 MB/s 128.4 MB
+Jun 10 21:36:24 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 23% (953/4093) 7.6 MB/s 129.3 MB
+Jun 10 21:36:25 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 25% (1045/4093) 7.2 MB/s 130.3 MB
+Jun 10 21:36:26 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 27% (1141/4093) 6.9 MB/s 131.7 MB
+Jun 10 21:36:27 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 30% (1240/4093) 6.6 MB/s 132.5 MB
+Jun 10 21:36:29 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 35% (1442/4093) 6.1 MB/s 135.2 MB
+Jun 10 21:36:30 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 37% (1540/4093) 5.9 MB/s 136.0 MB
+Jun 10 21:36:31 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 40% (1641/4093) 5.7 MB/s 137.7 MB
+Jun 10 21:36:32 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 42% (1743/4093) 5.6 MB/s 139.1 MB
+Jun 10 21:36:33 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 45% (1843/4093) 5.4 MB/s 140.4 MB
+Jun 10 21:36:35 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 50% (2049/4093) 5.1 MB/s 142.8 MB
+Jun 10 21:36:36 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 52% (2144/4093) 5.0 MB/s 144.0 MB
+Jun 10 21:36:38 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 57% (2347/4093) 4.7 MB/s 147.1 MB
+Jun 10 21:36:39 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 59% (2446/4093) 4.6 MB/s 148.7 MB
+Jun 10 21:36:40 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 62% (2542/4093) 4.5 MB/s 149.7 MB
+Jun 10 21:36:41 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 64% (2642/4093) 4.4 MB/s 150.7 MB
+Jun 10 21:36:42 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 67% (2744/4093) 4.3 MB/s 151.9 MB
+Jun 10 21:36:43 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 69% (2847/4093) 4.3 MB/s 153.4 MB
+Jun 10 21:36:45 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 74% (3052/4093) 4.1 MB/s 157.0 MB
+Jun 10 21:36:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 77% (3155/4093) 4.1 MB/s 158.3 MB
+Jun 10 21:36:47 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 79% (3255/4093) 4.0 MB/s 159.7 MB
+Jun 10 21:36:48 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 81% (3347/4093) 3.9 MB/s 160.6 MB
+Jun 10 21:36:50 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 86% (3556/4093) 3.8 MB/s 163.6 MB
+Jun 10 21:36:51 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 89% (3659/4093) 3.7 MB/s 164.8 MB
+Jun 10 21:36:52 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 91% (3757/4093) 3.7 MB/s 166.8 MB
+Jun 10 21:36:53 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 94% (3861/4093) 3.7 MB/s 168.0 MB
+Jun 10 21:36:55 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Receiving objects: 99% (4053/4093) 3.6 MB/s 171.3 MB
+Jun 10 21:36:56 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: 836 metadata, 3257 content objects fetched; 167862 KiB transferred in 49 seconds
+Jun 10 21:37:02 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Copying /etc changes: 20 modified, 0 removed, 70 added
+Jun 10 21:37:07 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Transaction complete; bootconfig swap: yes deployment count change: 0
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Upgraded:
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   cockpit-bridge 165-1.fc27 -> 166-1.fc27
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   cockpit-docker 165-1.fc27 -> 166-1.fc27
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   cockpit-networkmanager 165-1.fc27 -> 166-1.fc27
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   cockpit-ostree 165-1.fc27 -> 166-1.fc27
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   cockpit-system 165-1.fc27 -> 166-1.fc27
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   coreutils 8.27-20.fc27 -> 8.27-21.fc27
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   coreutils-common 8.27-20.fc27 -> 8.27-21.fc27
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   findutils 1:4.6.0-16.fc27 -> 1:4.6.0-19.fc27
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   kernel 4.15.17-300.fc27 -> 4.16.3-200.fc27
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   kernel-core 4.15.17-300.fc27 -> 4.16.3-200.fc27
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   kernel-modules 4.15.17-300.fc27 -> 4.16.3-200.fc27
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   libcgroup 0.41-13.fc27 -> 0.41-17.fc27
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   selinux-policy 3.13.1-283.30.fc27 -> 3.13.1-283.32.fc27
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]:   selinux-policy-targeted 3.13.1-283.30.fc27 -> 3.13.1-283.32.fc27
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[804]: Run "systemctl reboot" to start a reboot
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Main process exited, code=killed, status=15/TERM
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal systemd[1]: Stopped RPM-OSTree Bisect Testing.
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Unit entered failed state.
+Jun 10 21:37:14 ip-10-0-246-17.ec2.internal systemd[1]: rpm-ostree-bisect.service: Failed with result 'signal'.
+-- Reboot --
+Jun 10 21:37:54 ip-10-0-246-17.ec2.internal systemd[1]: Starting RPM-OSTree Bisect Testing...
+Jun 10 21:37:57 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]: Using data file at: /var/lib/rpm-ostree-bisect.json
+Jun 10 21:38:17 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]: 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+Jun 10 21:38:17 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]: Found mtu 1500. Test Fails
+Jun 10 21:38:17 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]: Last known good commit:
+Jun 10 21:38:17 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   21e115d93d04f206a874973c91185184c70ba2e7500d5b2619d8c849b6cad3c1 : 27.125
+Jun 10 21:38:17 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]: First known bad commit:
+Jun 10 21:38:17 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   e59f9373145bae36f90571feff24719537827273891c822692d037b05d1ff470 : 27.126
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal python3[792]: libostree pull from 'fedora-atomic' for fedora/27/x86_64/atomic-host complete
+                                                          security: GPG: commit http: TLS
+                                                          non-delta: meta: 306 content: 0
+                                                          transfer: secs: 28 size: 1.7 MB
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]: ostree diff commit old: 21e115d93d04f206a874973c91185184c70ba2e7500d5b2619d8c849b6cad3c1
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]: ostree diff commit new: e59f9373145bae36f90571feff24719537827273891c822692d037b05d1ff470
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]: Upgraded:
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   cockpit-bridge 165-1.fc27 -> 166-1.fc27
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   cockpit-docker 165-1.fc27 -> 166-1.fc27
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   cockpit-networkmanager 165-1.fc27 -> 166-1.fc27
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   cockpit-ostree 165-1.fc27 -> 166-1.fc27
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   cockpit-system 165-1.fc27 -> 166-1.fc27
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   coreutils 8.27-20.fc27 -> 8.27-21.fc27
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   coreutils-common 8.27-20.fc27 -> 8.27-21.fc27
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   findutils 1:4.6.0-16.fc27 -> 1:4.6.0-19.fc27
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   kernel 4.15.17-300.fc27 -> 4.16.3-200.fc27
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   kernel-core 4.15.17-300.fc27 -> 4.16.3-200.fc27
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   kernel-modules 4.15.17-300.fc27 -> 4.16.3-200.fc27
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   libcgroup 0.41-13.fc27 -> 0.41-17.fc27
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   selinux-policy 3.13.1-283.30.fc27 -> 3.13.1-283.32.fc27
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal rpm-ostree-bisect[792]:   selinux-policy-targeted 3.13.1-283.30.fc27 -> 3.13.1-283.32.fc27
+Jun 10 21:38:46 ip-10-0-246-17.ec2.internal systemd[1]: Started RPM-OSTree Bisect Testing.

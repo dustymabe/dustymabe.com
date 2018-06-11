@@ -1,0 +1,775 @@
+{
+    "commits_info": {
+        "ddaa675df9ea91b0233ef996691f7f7fdf4eb84fccdf21a49f46a84fa0b39355": {
+            "version": "27.153",
+            "heuristic": "TESTED",
+            "status": "BAD"
+        },
+        "892983cd174980ea35f54e571e828aa4365addf2a0f5acdcda770f7b4b87a3a5": {
+            "version": "27.152",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "85e520803454e23770506bdc5eec90de4fdfecad37abfb1aeb1f6e1754fefee3": {
+            "version": "27.151",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "492e8afbd2439fa6b9b4ea485b51fcbf613d13929f6bd69e4c2dd6a54b5a2d19": {
+            "version": "27.150",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "320586985a873099135146a79ec1612779f0507152e4d8030277482748d7108a": {
+            "version": "27.149",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "fc2c0a6b8a21ad386df033a12bf88cfd735d80053a1abd9611e0176113ef2602": {
+            "version": "27.148",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "f17d0abcf5fc2dcd47fdfc8378fabebf1a5212500cc98beab83935b209830923": {
+            "version": "27.147",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "0f95e5796cbef2065262eabcb0d96832f5522ebc8faf1f50e672ad7dc1e2611d": {
+            "version": "27.146",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "073518601c5fc468ea6494a779e9d3390dbabaafed06976819f1d25214347a63": {
+            "version": "27.145",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "2d348146efd17ce1ac70ed0f8654273b359728dbf632ac3c5f907ea6fabd1f11": {
+            "version": "27.144",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "6a2d946914ddc9a2dd1dcd4f8fe6055ce8b08327ecc4c343c7cae577b430373a": {
+            "version": "27.143",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "f706d61f51e7bb986cff87b12c5552c2f83dab2722604d7321a4355b56b9d5b8": {
+            "version": "27.142",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "97e54990e0bcb57beff4236f47e1589d3fbb74ae0b1be82db03de657e7c1d176": {
+            "version": "27.141",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "1b3f813582b794b619b2619c3823ffd207dff78669e2e45b3d25d460ad61e3f7": {
+            "version": "27.140",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "83fb30ef6e0b58613e2fa64ee34ab29d5ea169a1f1f4897e1fe3c82c16130518": {
+            "version": "27.139",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "f10107a54f12a6ee55d23adf639f02ee7c845ea08f1ffa2c4ef0c51cd8323c58": {
+            "version": "27.138",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "553568b4bac05c305dadfc13f276431b60cc667d911d734431e80228d7c26357": {
+            "version": "27.137",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "f5556324917a84a588aa590147f6097e33f85331efff13127ee5ed294b84ff59": {
+            "version": "27.136",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "ee13ba69ccf10433b2eb45ee644701b3447db76bb9e0bfbcc493e923baadd924": {
+            "version": "27.135",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "242a0694f9dd5511b34d673837a746d45a00884dd2698b28c8953c8d6c23ee27": {
+            "version": "27.134",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "dea196c6952ee9326efef86dbc8f36b71212afd2a39d1535c7c158e3d4efdaa3": {
+            "version": "27.133",
+            "heuristic": "TESTED",
+            "status": "BAD"
+        },
+        "a9b4a0fc58097b34cf4ed03e9b568a85f5a722dab1361d583256a43f01aaa1de": {
+            "version": "27.132",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "d4ddff9a3cce934807dbccef91c1dba367e1849e922a5e133e2371516f51d9e9": {
+            "version": "27.131",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "aee677e69bf38a9d594c6aec3f0a59a0e3ae45427ef032992144199cf71a40e5": {
+            "version": "27.130",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "b7fa5a5cd5185de9e370c4738caf91fa0bbd98ba25f9477a96cf5570f0872b3c": {
+            "version": "27.129",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "7d8c10108726d7e071e48a743ab4ac43aca6a2965f3460e2c6001f8d4719456f": {
+            "version": "27.128",
+            "heuristic": "TESTED",
+            "status": "BAD"
+        },
+        "0ec40415649c224e1ab68e2a9e889b21ac166ab4495334fdbfee67d43764f47e": {
+            "version": "27.127",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "e59f9373145bae36f90571feff24719537827273891c822692d037b05d1ff470": {
+            "version": "27.126",
+            "heuristic": "TESTED",
+            "status": "BAD"
+        },
+        "21e115d93d04f206a874973c91185184c70ba2e7500d5b2619d8c849b6cad3c1": {
+            "version": "27.125",
+            "heuristic": "TESTED",
+            "status": "GOOD"
+        },
+        "77fc2c1fd51bbf9f96a053e611229f24fd54244f6e732f08974bb6042a2dbfdb": {
+            "version": "27.124",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "89c713f85cd331f538eb2c053fe210b9fbbc69dd92e965d4c4c8500e008a7a05": {
+            "version": "27.123",
+            "heuristic": "TESTED",
+            "status": "GOOD"
+        },
+        "931ebb3941fc49af706ac5a90ad3b5a493be4ae35e85721dabbfd966b1ecbf99": {
+            "version": "27.122",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "623b9e8f741360ac63f4a358fe312c09d5728cd2ba938cde2e34cbac7ad6f427": {
+            "version": "27.121",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "16848601dca40140da18b58e24927908837a76f73a59ee4c9b528d0a38b6985b": {
+            "version": "27.120",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "33afaf592a8ad0d6c2d6a03dd9d0f71ba2b4f1ff3ec3713a0e8515c9a54082c2": {
+            "version": "27.119",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "485d95a32eacdd73c2434d2bfc63885b6b26756f6f8bb4bd6385fd02f015a163": {
+            "version": "27.118",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "9dd20f4babddf56e0b697adb9547dc72e5c2e830dcfd3afb1d5505fccf2419b0": {
+            "version": "27.117",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "ad25aa80e4f8db5dd7e99413d448ecd1711a20802250395e077b7e8b1f19a98d": {
+            "version": "27.116",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "d0930b22c249d62a2acba12c2255aacb080935ba6eae6e9806f93173c8f2f758": {
+            "version": "27.115",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "2e00b712038bd8c67a9e516359b5b8a2c4d55937b596bdf6d5b8766e62500378": {
+            "version": "27.114",
+            "heuristic": "TESTED",
+            "status": "GOOD"
+        },
+        "f6463b45407204adaaadc0ab8e244d4573b1e390120eaa1b51ebb7fdc2d014cf": {
+            "version": "27.113",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "31885a8fd35c315fb171f22f1a6f166c7f511211970b16a268761a59bf468690": {
+            "version": "27.112",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "04a79ba8f33be391d6e9f807a18ea400b6d169a37b9846056f59db3beeadbd43": {
+            "version": "27.111",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "490e4f9bc6566fa564a27039f4970c3856319c09c8e324cb97f4ab205833a01a": {
+            "version": "27.110",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "810e23ff8c29e90964d8d9990422f3122c07647042af7e89205baa0251785ce1": {
+            "version": "27.109",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "f0ed58609d659579184bd5f3569a262b011a622079d0e8842cbd528dc153cdbf": {
+            "version": "27.108",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "1e9d899fe755d9daeaf8a49a4d7aa2a5aa86b45dab79822d9808801bb1134981": {
+            "version": "27.107",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "08bf989310a914710ef676444fe7da602133f13f0201bc8d080ef24d77348bd0": {
+            "version": "27.106",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "c4015063c00515ddbbaa4c484573d38376db270b09adb22a4859faa0a39d5d93": {
+            "version": "27.105",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "5f3f6afe2b7be6d0d87d014cd5f86f25d6540a59938c21905aa39ea8ebaec7eb": {
+            "version": "27.104",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "8285565570c8f022eb19ea5a8d25e9a70d514af7607006db8dcb7f576cc08df8": {
+            "version": "27.103",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "0967b1f3d86803ebf9896cfc5396ac7938229d86f5b06b454c89424596f34b9b": {
+            "version": "27.102",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "bfc04870c9bf619ae9d973379cfdbb369c100bd961b2a11f07a35f273863bf02": {
+            "version": "27.101",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "326f62b93a5cc836c97d31e73a71b6b6b6955c0f225f7651b52a693718e6aa91": {
+            "version": "27.100",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "1ac578142574e622701c5d19c34349d09f29852fdc40c40b308f3ead7b7c4ac4": {
+            "version": "27.99",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "27f70ba4e7e5e2cc06806d4e994b2e264027d64e740e9c38c81e917d06e7ca44": {
+            "version": "27.98",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "e1e222c4979077c30bb68b32e5eebd278f7279faa612160fa71517f3773fe945": {
+            "version": "27.97",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "dffde5ec932e7af475f593d03d4c21ce35399563348301b023e3afd3600cc407": {
+            "version": "27.96",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "cd760c4c16b03593a211a13a2fe0199d5f1cc6b9d1e1806cd91d27f0cb8d5db7": {
+            "version": "27.95",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "2f6d1e941b344656c3657af557dcf4671548e5baa4037800c530804f839527cf": {
+            "version": "27.94",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "da0bd968610aa1e29c5bb37065649407fbbfffa53e63831afdadbd34a3b05327": {
+            "version": "27.93",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "3dc967bd4b8e43af21103a796fb1a0215338f14d961a2598c866e4e6cc7a1b30": {
+            "version": "27.92",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "e5633393cbf20ec0363192596ae6f618e87046a205dc68347f4387c7e108cc58": {
+            "version": "27.91",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "941682b0240e6192c33ecad869b08cf31ed1c13b207c65cf1f6b05a151d86e2a": {
+            "version": "27.90",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "2c92c5a895094949df140504b6d502662f78ba87f11c5bd421025a441e859862": {
+            "version": "27.89",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "b665bb29658f217b453bf19283ff07c24fcc828c467d485fbe04471ecaa40e6d": {
+            "version": "27.88",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "4e533ee22fcaec73460eafaedee0bf46f73422c551139ad0b3648c5bf473d125": {
+            "version": "27.87",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "1b98f87e055ca07095c1a0fdb6f532c2429bfc3e0a40a7b02d65bb76bdedb328": {
+            "version": "27.86",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "7c80b88b8697ab72d78cad0d6ecfbd980017ff1ea1da0f043d746cd32d4b0674": {
+            "version": "27.85",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "61de3926507a698c0cacbc98e7549a920ef31304125984893dc8e1aa44ca3eb8": {
+            "version": "27.84",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "ef74584fee828b3543477b2b4bd6e28f24672583b7459bb4235c4bfaa581a658": {
+            "version": "27.83",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "34d31182b7ddaf6e6229bdc0e6303841ffa9b829bf242afb02dd38b41ba1b7c3": {
+            "version": "27.82",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "b25bde0109441817f912ece57ca1fc39efc60e6cef4a7a23ad9de51b1f36b742": {
+            "version": "27.81",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "4af682962778f2850e480c1c2d40be277ed224b4396c36ff7179d7bdef7c8fcd": {
+            "version": "27.80",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "10269039f3dcea23d23bf6fd13694ab86269fe53eec5be0f0397a3c20873adc9": {
+            "version": "27.79",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "a5e6d5b4e4bb180fb50ef963d27de5d29b07513f475b7220ddbed83e076480fc": {
+            "version": "27.78",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "395a75ef1f605f890e1782e5e71fd996973edff484de107884adeee2a3ed7770": {
+            "version": "27.77",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "e71bd0da34e393381691dc1bafb1efc8ddab83c17422129f2c495002f1aa0f8a": {
+            "version": "27.76",
+            "heuristic": "TESTED",
+            "status": "GOOD"
+        },
+        "ed36395764815e45e07f5c40bc750a01b2a1d9a2dfb8971eb527d94b381165f0": {
+            "version": "27.75",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "faf41301901a7b52b8d83b8146d18ffe9fa147396663a5e8391c4cc96bd33b94": {
+            "version": "27.74",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "6d2a4fa82c0b2b7859e817d16b06571984d6ab6a13bae4890019e4bab2f08906": {
+            "version": "27.73",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "39848372585a65dc63fb3052f997139b8b30d6b55ce378337db3664177489d28": {
+            "version": "27.72",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "724f24b0821b9e8660fc3981247a5f76751a3c263d5f418634bb3818e16b377b": {
+            "version": "27.71",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "87c5f68600bef2fef8aa8b469af13fed7741788ba1980854ad59cc236f275fe4": {
+            "version": "27.70",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "3ef8053dd5918484fe2149d50f6e4213d07dc0bdc79270a17368c13e8ce8a68e": {
+            "version": "27.69",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "54a0169b686a215acc68b0ddc0aa1fcc9453fd1f6110d13e8f859f9a6ed23efc": {
+            "version": "27.68",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "fbc1644ffd6f2e8a665d715f475e7622821fe8397eb15651b0139da668623b77": {
+            "version": "27.67",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "1739babf958fa7221f6f066e756f322773b631c2c01e0718964aa61ad5442e15": {
+            "version": "27.66",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "124de66b585597b1655a5e75e5162f2c259cda89ffd6f61b4f72bcd1fd4ecf14": {
+            "version": "27.65",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "eaf75d4438f6865345646ab1a7ada92cc508c90f88488bb15404cb51c5bb556d": {
+            "version": "27.64",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "b450f3667443f204e1ba9e489bf10d02b1670e21d889a039bacb9cea5cabcda3": {
+            "version": "27.63",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "b5f9c02d5bc9fa8612cf0b0e8963966aff4801cf93dd285833426e43dbd8c650": {
+            "version": "27.62",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "772ab185b0752b0d6bc8b2096d08955660d80ed95579e13e136e6a54e3559ca9": {
+            "version": "27.61",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "972e5a8158b610fec80f3f73f3372b7bea2b841038f2e246aa7623dbf5b5a751": {
+            "version": "27.60",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "d9ec96a8ed7ac4a7c97e5e464953c1b0a3da6bb15b99121fc104a53f82ba5c52": {
+            "version": "27.59",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "460b88235ea65d6f511edd9ff56e135a0960f7c5a6f1afb1b00a870468702f8c": {
+            "version": "27.58",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "5bb743ca42f936f7c5ae5aa475153a6d2ce3f44ce363f5fc63233e9b58dfa55c": {
+            "version": "27.57",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "64b43ad0aa4861ce9f6aaec0a47a349951f14e1c633b90196ae819e899ab38e8": {
+            "version": "27.56",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "39c635333c6e2c030e52d2ca85e1a7c689e3968e9855f382fd2083150cb89638": {
+            "version": "27.55",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "8c998e2cf89133935f9a2e9c6cc59dfa37f429314d59e06a2aced7ae3739596a": {
+            "version": "27.54",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "06571423a090089e4e4e9c2dc422556ab4e46a34a7e70bcd1d0a01fcc0c11676": {
+            "version": "27.53",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "e0e96665c72cb7013d916ee8cce795de5020beabd83314c989395e69b725270e": {
+            "version": "27.52",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "6825fba95763753863ae1aca55ffb0bc99179e932a268c43d85ffccd099a6254": {
+            "version": "27.51",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "4804cdb95884bfb5d2bee7129b3d165e5443c98d39f2b57b2ec9ff4b12087e3e": {
+            "version": "27.50",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "11f97873c8ad4b0d86738ba5a71926baddf351a9759c576b99ef9c223c24c11b": {
+            "version": "27.49",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "64c7ce17a944e2a18bed9c01aa56a71c6b0211fbf88150d41bdff24a6f0ccdc3": {
+            "version": "27.48",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "397e907961adafaeff11b807ceade8da5783134072406fcdba627f1195e0db76": {
+            "version": "27.47",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "b1d7a0c446a91c9a0d86e37f6e498dbc7a1a734559eb5527ceb901710697abcf": {
+            "version": "27.46",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "86a4c4ce90df12e2ea9c1ac05874b6b4b3a47ff0d57944e0a056fa52fe6239d6": {
+            "version": "27.45",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "b5845ebd002b2ec829c937d68645400aa163e7265936b3e91734c6f33a510473": {
+            "version": "27.44",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "feff6e3d0922ff8757aeaf9dc3c9ef45e9b64bbc64c27e4a0e505ea2ae523622": {
+            "version": "27.43",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "c2204a33c6745a2ba4d4a0f3f31a1346721d462d6aeeb6bbe5c37abdabf990f5": {
+            "version": "27.42",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "33679a647105afa5da1568e9cf7362b7a565d3b58aa80dbcf1e525cb4a7e99d3": {
+            "version": "27.41",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "d092671c4f134879802ebe81e273a76e3a261f6bf9e8d95bd9fdd969950f059e": {
+            "version": "27.40",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "2db2405ca5914957175da89a950864d69da2d0a9aefa3de832e49c96a4edec38": {
+            "version": "27.39",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "869216d16a025ea0f6f42e99b0ade0b732f6e32901d18bb337bef497be5bbe7f": {
+            "version": "27.38",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "11f37df279073de4ab809d721f88ef6fbc5d3cb169444dce0f89e89e8b03c215": {
+            "version": "27.37",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "f115d32a1f761734b431f0cbd1ee1cafeada32a7f38a5da8090ef2ae10477415": {
+            "version": "27.36",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "516be409748dd5740ffe6367d401a5c4117a915f1832ab9252ea213f77632d61": {
+            "version": "27.35",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "62f6c4f194c0f26641b0c0fe31d56b16d58a41760985fe2c9d972482c50644a4": {
+            "version": "27.34",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "c5ca7eacd4924a69e155c19b4ecaba375eee0050773a9bf38f493a1b5eece0ba": {
+            "version": "27.33",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "4dd60d7fda7cc9ee3325384f475648db4dd3a1232c35ce7c45e132710ada1d7c": {
+            "version": "27.32",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "2c6d9caed938813a22fb14567d7f6b5fd59fa2fc5b8c2abfaa9531c442bf4ea3": {
+            "version": "27.31",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "5d9cc9bb2a42001c892136f2440ebe62e20a2bddd9f93c23d772e0ced4102778": {
+            "version": "27.30",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "560970af8a0729d3aec313d16a9c2bd895ad62bbacb50f1e8e781da15bb01415": {
+            "version": "27.29",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "3fe3132bb0183f8dfe89c7b97136f14958d00c5ac954f74a0b1bdf61ea3ef1b4": {
+            "version": "27.28",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "6811ac4f643e90a0a6972cfa9d9a4e555dc9077b1dfab0759fd4cc9f5f12a0bf": {
+            "version": "27.27",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "e3b342f42af7b7a7f399e84928dc17df31cabb37d41b58b06a0bf9f5a14bdb6f": {
+            "version": "27.26",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "a2b80278eea897eb1fec7d008b18ef74941ff5a54f86b447a2f4da0451c4291a": {
+            "version": "27.25",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "81ca2338717a39ee4b8fb8b91f1e89760936e7d67f60b76a5320e1d0e58ced8c": {
+            "version": "27.24",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "9c7ff4113d9eb051fc271e18b9c8d3b68ce87c0404740d15fff4aa1514699b9a": {
+            "version": "27.23",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "2052b8e42d2a8b08d5576fbdd5a4bd0ffba4c7ee70a3b6bf20c8e887fb7718fd": {
+            "version": "27.22",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "64f9093e9a288c84fad7e2c778730b0e83d09b5fccdf23e1052e998f24c3ca0c": {
+            "version": "27.21",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "2527859926a8108afb7c3c82eb5bbca32bbe0c7d1209feb7a485ff0ea25182c7": {
+            "version": "27.20",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "1c333a274996e55a17a76c0e52f55bd95b146292484e16777f7d2174cc451522": {
+            "version": "27.19",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "03e13c20acbb75547607b93fb43711dfbcee26f208d1c33509d9591e4f512ad9": {
+            "version": "27.18",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "bbbe7653c8221b0922d82efcf90e5f0fecd8f397df2546fb4a2d2fdb8ba25685": {
+            "version": "27.17",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "86727cdbc928b7f7dd0e32f62d3b973a8395d61e0ff751cfea7cc0bc5222142f": {
+            "version": "27.16",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "67419892c4172f8e46b59a6758255dadabc047050236f712667780f01056b146": {
+            "version": "27.15",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "af94eb2d4a734f31541ac055d5414d8cf52f7207f5ce84059b3479d850df88ba": {
+            "version": "27.14",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "cd2c2dec0772188164ba936e696416ff2a9b5b338f8e427eacf58c264e2d120d": {
+            "version": "27.13",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "ac36a7b80c80ea03a34378b218846595de8b1f8c7e9d1beb79f356fc90676a5e": {
+            "version": "27.12",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "9c16bc19da2c12b305dc36b5dd769e61bac916fe41d32d6e8351fd31deddcdb3": {
+            "version": "27.11",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "482f7cccdd9ef43ebca8883fdb2952fefc218b92dcf311dbba08102ee05b0776": {
+            "version": "27.10",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "305ac28be6d57369bf6ac309303c22c163d016a4291dac002871f2fe0a9e95ae": {
+            "version": "27.9",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "6cfc09032f806665173418e99bd47fc7d30740ad7ba400002aaa658887e9356a": {
+            "version": "27.8",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "fa17c21075d4f873c65980b976ca138c59e4661ce02fec7013de217ff3dbb425": {
+            "version": "27.7",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "1d2112106e7258d3d4e7c1f907aaadd70d15c920ef2aeec10b5b7b46e0519f53": {
+            "version": "27.6",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "264118197ced9e9bb633eb4af2f137d035deae2a2166426ce98ede91634224e1": {
+            "version": "27.5",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "253267389fc2e8e1e7125aac9edb5426c4b1c586dfabb3038c8a8161519921c5": {
+            "version": "27.4",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "5252baa24d77d5d8f94e066686afbd24878eb0a2cdc58fcbc596254dcde9d78b": {
+            "version": "27.3",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "051e5a53e886a067c38fe561c8876cf7b32686d55cd2e7efe87faa6a90c2c53c": {
+            "version": "27.2",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "d428d3ad8ecf44e53d138042bad56a10308883a0c5d64b9c51eff27fdc9da82c": {
+            "version": "27.1",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "19ad44721caec507709bc43b8d3f976db2763573670a3bc26ab3c9f0de888440": {
+            "version": "27",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        }
+    },
+    "test_script": "/usr/local/bin/test.sh"
+}
