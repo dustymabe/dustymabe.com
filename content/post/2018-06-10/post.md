@@ -114,7 +114,7 @@ Now we can grab
 testing, and set it up. 
 
 ```nohighlight
-[root@ip-10-0-246-17 ~]# curl -L https://raw.githubusercontent.com/ostreedev/ostree-releng-scripts/master/rpm-ostree-bisect
+[root@ip-10-0-246-17 ~]# curl -L https://raw.githubusercontent.com/ostreedev/ostree-releng-scripts/master/rpm-ostree-bisect > /usr/local/bin/rpm-ostree-bisect
 [root@ip-10-0-246-17 ~]# chmod +x /usr/local/bin/rpm-ostree-bisect 
 [root@ip-10-0-246-17 ~]# rpm-ostree-bisect --testscript /usr/local/bin/test.sh 
 Using data file at: /var/lib/rpm-ostree-bisect.json
