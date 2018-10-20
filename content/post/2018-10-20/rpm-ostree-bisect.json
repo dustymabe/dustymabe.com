@@ -1,0 +1,821 @@
+{
+    "commits_info": {
+        "8df48fa2e70ad1952153ae00edbba08ed18b53c3d4095a22985d1085f5203ac6": {
+            "version": "28.20181007.0",
+            "timestamp": "2018-10-07T20:43:44Z",
+            "heuristic": "GIVEN",
+            "status": "BAD"
+        },
+        "78cac1a687a83d69f9c03e620c9d4f47584175aabe5618355ca2318826c47cc2": {
+            "version": "28.20181005.0",
+            "timestamp": "2018-10-05T15:23:20Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "6e885450031501d261da9387d08bbd90a37c1159a2b30134e76d2535f6a3ce0c": {
+            "version": "28.20181004.0",
+            "timestamp": "2018-10-04T15:22:28Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "2d8d3c8156e1a3bcaaf67433d3ba8ef286c7a26f67225500815948825bb8726b": {
+            "version": "28.20181003.0",
+            "timestamp": "2018-10-03T14:03:28Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "ae7b4f5b29f720529374d9653ef761cde61ce07796cc5d4a401173b1cc824d51": {
+            "version": "28.20181002.0",
+            "timestamp": "2018-10-02T14:27:47Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "6216986febd24d7bdc37c4282a2ba64bb851ea26f121ee49be46c78d6af58b30": {
+            "version": "28.20180930.0",
+            "timestamp": "2018-10-01T00:48:14Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "bcc7a5191406bab438412de4c45e1ac51860fa6fedef61983a776858263ac1b1": {
+            "version": "28.20180929.0",
+            "timestamp": "2018-09-29T23:30:03Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "6b94585367a8f22ab01bfb492a56752a0de05df8ecc34f9a4fbcf9e86ce0a98c": {
+            "version": "28.20180928.0",
+            "timestamp": "2018-09-28T16:33:50Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "0f525b9d8eca523e90fad18d4e6087b5531ef4d3bacb067145f2ec35a97a5653": {
+            "version": "28.20180927.0",
+            "timestamp": "2018-09-27T15:30:53Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "a16041924547e09472036ae48d3d648b227b649a2b56a624ea8f2bed24825c77": {
+            "version": "28.20180925.0",
+            "timestamp": "2018-09-25T20:34:13Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "8b82902a0ca203645e9e288b8a0bbf9fe525749ec67cd674e6715daa64e5b7dd": {
+            "version": "28.20180923.0",
+            "timestamp": "2018-09-23T18:54:39Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "2993faeee33986ec764eb596561ab13e6c0ec84d3483184e59624b4dd50c36dc": {
+            "version": "28.20180922.0",
+            "timestamp": "2018-09-22T19:15:06Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "50902d579655643926beea115f2031fb60fcf3ce6d5edf3edc3753796eac063c": {
+            "version": "28.20180921.0",
+            "timestamp": "2018-09-21T06:12:18Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "bcbc052f72bdec83e00b9fe82fdaa85ea6b8de3461203f2e49ebf00abf47ea52": {
+            "version": "28.20180920.0",
+            "timestamp": "2018-09-20T17:47:49Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "084e535a25386617c2f7288c3e89f28cc9b72419a5672d7ff8bc75f15e518341": {
+            "version": "28.20180919.0",
+            "timestamp": "2018-09-19T07:20:10Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "f0efdf2faf228305d16875cb3ea3130eb7d0f1740eeac40a9786eaaf7c6e7d49": {
+            "version": "28.20180918.0",
+            "timestamp": "2018-09-18T09:00:28Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "25f51e57b47fb79940759d0914ec266ac28d503e3ef7d711115bb2cdc1ee168f": {
+            "version": "28.20180917.1",
+            "timestamp": "2018-09-17T20:02:20Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "17b11d74047ded1264a57555a64ae6fc5d02a332c556679bfcf32864fc91f11e": {
+            "version": "28.20180917.0",
+            "timestamp": "2018-09-17T02:21:22Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "e111334dd1126397d0d7b992d1d4ac4060264f726cfc29b098bca57ccbcf30d0": {
+            "version": "28.20180914.0",
+            "timestamp": "2018-09-14T21:35:11Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "00a5cb710ebc985577f4345540d623d34b91e8092d2231e348e08d191584a0db": {
+            "version": "28.20180913.0",
+            "timestamp": "2018-09-13T17:36:46Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "919916872764b645a0dc25d206fd6c18e28c664e439b9b1293248f11f96af1d6": {
+            "version": "28.20180911.0",
+            "timestamp": "2018-09-11T14:44:37Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "56a02c7e7c2fec143c0c445aeb425f603594a4103c7402fd12a389dfcdc9f176": {
+            "version": "28.20180908.0",
+            "timestamp": "2018-09-08T22:48:08Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "80d09c2d37e380691256bce676675e0cb858735217a8440df0a0acf52b26d551": {
+            "version": "28.20180907.0",
+            "timestamp": "2018-09-07T14:36:59Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "4656902ec8f0a2d4df2e0fa2941720e2ccc43065f0320ca16bc62dfcb1a0cc57": {
+            "version": "28.20180906.0",
+            "timestamp": "2018-09-06T01:22:36Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "24d4ceb612af5abfa84f275ca9d8aff862e69d47aaeb177c0d64f30865fd7a9f": {
+            "version": "28.20180902.0",
+            "timestamp": "2018-09-02T04:10:33Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "43a4086dd6c79d3a9cb6767dbef9cda821a2c008f870a4d7c67c97397776a25c": {
+            "version": "28.20180831.0",
+            "timestamp": "2018-08-31T19:28:06Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "f7d9b455a050a52115459ae93fb201c3be7a9b44fc4d41698a340bd7ede5055f": {
+            "version": "28.20180830.1",
+            "timestamp": "2018-08-30T17:42:22Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "5aa05828534af755c7b741c896af99bce306abc5401f6c260993c399e77f8389": {
+            "version": "28.20180830.0",
+            "timestamp": "2018-08-30T03:12:41Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "9129ee8def431a88414e940af08672696e5c6f154b3f2d7d7509475911f7b212": {
+            "version": "28.20180828.1",
+            "timestamp": "2018-08-28T23:26:37Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "4339246e2886711e31cb16b7df906366a5f232a12a62be2d510b3874228da451": {
+            "version": "28.20180826.0",
+            "timestamp": "2018-08-26T23:27:24Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "f8bd48ad54b19f4c3fcd373d86ad028ab1594cb575cc33d081fdf5b2cce5480e": {
+            "version": "28.20180825.0",
+            "timestamp": "2018-08-25T20:05:06Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "e9c81c670f54c3ae79c1540b7fcc16f975b7c2e09a28836031b02fe9be8edc8c": {
+            "version": "28.20180824.0",
+            "timestamp": "2018-08-24T06:28:02Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "3f5d037054deecf63e7aaa07656c3a279e4c83e80632fa225757bc4d547ff81f": {
+            "version": "28.20180823.0",
+            "timestamp": "2018-08-23T08:47:12Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "e583526664625b39ed15dae349292c5396c24a4a731dc3bfcbd2a1f667ee093c": {
+            "version": "28.20180822.0",
+            "timestamp": "2018-08-22T10:03:24Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "48ad28459fa580dafcdfaf5d80142c8ee26df2040da1cde247253713b9c3822b": {
+            "version": "28.20180821.0",
+            "timestamp": "2018-08-21T23:37:42Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "df00137bba689acca6240667475eab9e6fbf539ccfa03ad55022faaf10e71433": {
+            "version": "28.20180820.0",
+            "timestamp": "2018-08-20T15:01:12Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "d240f7161fc4204c722e2fea023e8f33935e7c6220e8adbe195bb18d2b7b1b72": {
+            "version": "28.20180819.0",
+            "timestamp": "2018-08-19T21:06:41Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "3c1b319541453383d181ab97f059c5ffdec014e4b046e1e668cdd5582c333853": {
+            "version": "28.20180818.0",
+            "timestamp": "2018-08-19T00:11:51Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "9b2bedce7d51019bdcf18519468e9f3e7290e0a6af31a90a433dbeb582a7200b": {
+            "version": "28.20180817.0",
+            "timestamp": "2018-08-17T14:45:01Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "c6b1e97b93424c260baa98518277d87f7f4ebf036c09a9a0aeb7097c33c2099c": {
+            "version": "28.20180816.1",
+            "timestamp": "2018-08-16T15:03:58Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "b92cd0155717a415e3185d09fdfd9379b52f1142516939f99cc045bd82d863af": {
+            "version": "28.20180816.0",
+            "timestamp": "2018-08-16T06:25:43Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "605d60c8e8ef596a354c916f5ebcc5948c41ece8b1e0895ebbe81374eff1c799": {
+            "version": "28.20180815.1",
+            "timestamp": "2018-08-15T18:23:53Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "25d5ee4d8413324318026c17613e6d283f3c66e6fc4a7e644a8725b0ed2afc03": {
+            "version": "28.20180815.0",
+            "timestamp": "2018-08-15T03:06:35Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "c9d069ca58273d13d4a3bb6694dd9192c38a3411e9ab4156aa95a071aa443bce": {
+            "version": "28.20180814.0",
+            "timestamp": "2018-08-14T18:16:54Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "11066de5b28bf6129147dc30492e57f8164a6f53d2d8de925264f1ffe804c8c6": {
+            "version": "28.20180811.0",
+            "timestamp": "2018-08-11T17:40:06Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "b87abfc1a44d5ee448bf753334f968be10d4cb0e8feb00b151e3f370ef978dcb": {
+            "version": "28.20180809.0",
+            "timestamp": "2018-08-09T15:55:12Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "e4bc1b0c00787cdc6a3e20d730eaa7f29b1b92680c155930397015877b32cc5d": {
+            "version": "28.20180808.0",
+            "timestamp": "2018-08-08T14:33:45Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "fe47363798868599a3a4ce17ea731d8b16372d72b4069174621c0a49c83fdae6": {
+            "version": "28.20180807.0",
+            "timestamp": "2018-08-07T14:12:15Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "3f53da3dc87971895cc663de8814900b42e00b9848dd5a111a7b3f0349871dec": {
+            "version": "28.20180806.0",
+            "timestamp": "2018-08-06T23:19:05Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "5633f5b369b166d104720a4da31da1ac6b5e3c0de5c5bae70cb40a850dede502": {
+            "version": "28.20180804.0",
+            "timestamp": "2018-08-04T19:52:51Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "76c491296c4d329b104d2fb0419b948768c789649c7a25d9b456f8f11c4c61ec": {
+            "version": "28.20180803.0",
+            "timestamp": "2018-08-03T19:11:03Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "cbe255bb9bcacc2c5a0659e10c1437514b49f04601edba10e9466e938213c2bb": {
+            "version": "28.20180802.0",
+            "timestamp": "2018-08-02T14:47:20Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "d0daac4d3e085045c38f9a43a38d669240cf9c50b5aaa496d9e20b94c255cac3": {
+            "version": "28.20180801.0",
+            "timestamp": "2018-08-01T16:04:25Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "d252745f9fe04e285922237a70c4cae4b0c818b01f1ce47b621f246f93bf2abc": {
+            "version": "28.20180731.0",
+            "timestamp": "2018-07-31T15:56:55Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "66eecf8157eb39a7688cf3188153f0345db71d9d2a7cafdfac6716c619abf2ae": {
+            "version": "28.20180730.1",
+            "timestamp": "2018-07-30T15:51:17Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "53cf7baef7f81adcd74017810c3b99b6aadb3a274bd1e1ae0fa54b54c2d2e3f2": {
+            "version": "28.20180730.0",
+            "timestamp": "2018-07-30T01:08:49Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "54a39b36e7af500ece59c184993e722347f8498ad62fe488c306f42cdf7159f1": {
+            "version": "28.20180728.0",
+            "timestamp": "2018-07-29T01:14:34Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "f55ee6025eb3fbb75fb2a688bf75f4ecebe8906424f1a9dc0f93adb744a3ac47": {
+            "version": "28.20180727.0",
+            "timestamp": "2018-07-27T15:05:08Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "7d37108ae083b7f61b2abde58011d1299deef6e0270050ddb0aba1efed6d147c": {
+            "version": "28.20180726.0",
+            "timestamp": "2018-07-26T13:33:37Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "1a268407ac5f09c673d0998d87fa4d0627038a96be298dfa51224676c2aa50e1": {
+            "version": "28.20180725.0",
+            "timestamp": "2018-07-25T17:55:48Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "dfdb93f9b8c72f93e71f4a50792c3bfda941ceb56fb4b9c8ae3f2aaad6feaa14": {
+            "version": "28.20180724.0",
+            "timestamp": "2018-07-24T15:19:33Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "9fba2114caa0d86f40b63c25fcd81ffe055d4a22fae413a7e37a8f5b8c084cc8": {
+            "version": "28.20180723.0",
+            "timestamp": "2018-07-23T19:48:13Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "106a7095fd46741948ba60dbd0586668ae7abe6336671444ec790d7541a88778": {
+            "version": "28.20180722.0",
+            "timestamp": "2018-07-23T00:38:05Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "c966f030bb932f38ca039e70307e3ca7f44b9d71446a01459232b805a4876b3e": {
+            "version": "28.20180721.0",
+            "timestamp": "2018-07-22T00:45:15Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "abc21ee3e8f16adb2070f09be54457ea6a7d3c5ff24c679272e5889778ea8703": {
+            "version": "28.20180720.0",
+            "timestamp": "2018-07-20T15:55:50Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "f4027a337893e5ed6a25ab5b820141503c75ba02c99067f22811e0b2c4c646c7": {
+            "version": "28.20180719.0",
+            "timestamp": "2018-07-19T16:15:44Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "47f8b6f9bed0efa3639b80be0bcbeda655c1dfac72b17d2217832955b250b7cf": {
+            "version": "28.20180718.0",
+            "timestamp": "2018-07-18T16:59:19Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "2058d9656a5117f2592cfba00c6df024837fc5072572dda1ab467b26247ee516": {
+            "version": "28.20180717.0",
+            "timestamp": "2018-07-17T13:40:02Z",
+            "heuristic": "TESTED",
+            "status": "BAD"
+        },
+        "11a9f8188a5bc77bdc64703335dd39edfbf25f4d630b05cd6db580fa85ea097c": {
+            "version": "28.20180716.0",
+            "timestamp": "2018-07-16T16:32:20Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "3bdea77137d52e0345695f22533aec67ba9c0b9402186c2b2f655e4c794beb10": {
+            "version": "28.20180715.0",
+            "timestamp": "2018-07-15T01:38:59Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "f32a74e42a3f1dc3f5bcf67d486d9e116cafdb76af7af222994539348754c84a": {
+            "version": "28.20180713.0",
+            "timestamp": "2018-07-13T15:27:19Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "fe0430fc5963aef059951c5a41d8cb4fb5e6578cb03ea7306af9761fb125a160": {
+            "version": "28.20180712.0",
+            "timestamp": "2018-07-12T12:49:36Z",
+            "heuristic": "ASSUMED",
+            "status": "BAD"
+        },
+        "bc3aa17a5ad6c04103563bd93c4c668996ef786ec04f989a3209a9887c8e982c": {
+            "version": "28.20180711.0",
+            "timestamp": "2018-07-11T18:26:22Z",
+            "heuristic": "TESTED",
+            "status": "BAD"
+        },
+        "5736e832b1fd59208465458265136fbe2aa4ba89517d8bdcc91bc84724f40a8e": {
+            "version": "28.20180708.0",
+            "timestamp": "2018-07-08T20:03:31Z",
+            "heuristic": "TESTED",
+            "status": "GOOD"
+        },
+        "414cfbf8912d86a3018a825f6e107b2970cab05e230aed3aa82a537b1b391149": {
+            "version": "28.20180707.0",
+            "timestamp": "2018-07-07T20:56:37Z",
+            "heuristic": "TESTED",
+            "status": "GOOD"
+        },
+        "f16ed413a761377aaca80e6c0f7675197e4baffd72e986f1a025ac316c89b6a8": {
+            "version": "28.20180706.0",
+            "timestamp": "2018-07-06T14:48:59Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "442a2ab01d5d4fb9f92181dbfc14630d770f34cb30228a552ff7b7217202af29": {
+            "version": "28.20180705.0",
+            "timestamp": "2018-07-05T14:18:30Z",
+            "heuristic": "TESTED",
+            "status": "GOOD"
+        },
+        "c1c595ecb149369d3b50780097923dc52c6046ccdf160e8d2cfdc20006693f78": {
+            "version": "28.20180704.0",
+            "timestamp": "2018-07-04T16:42:16Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "ac9323e2a3b5a0c43816ff23afd2fbf82563f6a4400bea929ff25560f9e85f1b": {
+            "version": "28.20180703.0",
+            "timestamp": "2018-07-03T12:58:22Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "b6fb12b817eb2a5299b9bd56d1639f4475a40909b26c593fbbd248aaf21bf69f": {
+            "version": "28.20180630.0",
+            "timestamp": "2018-06-30T23:57:04Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "f7ce24fb0309614af9c4d4f6fa46ff50ccd00cdc477a9c0b959d8fec313fa7cd": {
+            "version": "28.20180629.0",
+            "timestamp": "2018-06-29T07:16:27Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "fc9cf8e5bb781fdeb799575ef3deaee16dcbdfcf007c3fe37a60574a7c15a1d3": {
+            "version": "28.20180628.0",
+            "timestamp": "2018-06-28T12:30:03Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "5ec38339ab36938f9fa1061679a67121baf9bf2bbf7dfc0baee72b5f3387fd30": {
+            "version": "28.20180626.0",
+            "timestamp": "2018-06-26T15:28:19Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "fbed0e26736fc189129f80e9547bfd71497377ca49f0cfd421f173667f5ea825": {
+            "version": "28.20180625.0",
+            "timestamp": "2018-06-25T08:58:55Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "5cd042553d8c2f5d49f91630279eaf29af30ffca99ce42bf9ee14bc4c233fdcd": {
+            "version": "28.20180623.0",
+            "timestamp": "2018-06-23T18:55:35Z",
+            "heuristic": "TESTED",
+            "status": "GOOD"
+        },
+        "4a8b87b00d069150dca46882e74352ce9c12fb6e7b4eb4ea00366109acde853d": {
+            "version": "28.20180620.0",
+            "timestamp": "2018-06-20T13:19:26Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "813cd84313baf061f663cab54385a84fdfdce2cb8d049d4a093e035c258e541c": {
+            "version": "28.20180619.0",
+            "timestamp": "2018-06-19T14:22:08Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "07e0cd9a98b34a66ecabf26f679f5c50962c9ee202b965bb4b66d3c0acd1046f": {
+            "version": "28.20180618.0",
+            "timestamp": "2018-06-18T14:41:51Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "00b3d1159fdca9c538b06eaa508af137493443f393ac3894c98f260c7db7a4f9": {
+            "version": "28.20180616.0",
+            "timestamp": "2018-06-16T18:49:57Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "54f9ba0f8ed872a3561bc94baea8e5c5b1a1eba49e2eecd31b814c7ae8a19117": {
+            "version": "28.20180615.0",
+            "timestamp": "2018-06-15T14:14:36Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "035cb74a3209578c47822d1a83c0530b1803a08b0e577d0575ffa93f9810ce61": {
+            "version": "28.20180614.0",
+            "timestamp": "2018-06-14T17:39:03Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "c51100f14cf12b25c16562cede7455191e536c0534e3b2ef87e66be9e12899ae": {
+            "version": "28.20180613.0",
+            "timestamp": "2018-06-13T13:52:10Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "efeeaa1e00d11f686c9970eae0ef19365d9fb8e0ce9374c4a935acd351d4f8de": {
+            "version": "28.20180612.0",
+            "timestamp": "2018-06-12T14:20:55Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "c593e1d580788b7cfd11e04d3998f536493922cee30db263ec86ae4bae266b61": {
+            "version": "28.20180610.0",
+            "timestamp": "2018-06-10T17:24:09Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "79f04fb84eab5433161b9c17e39d2921a54e1af9d5445ef65e260095e9830562": {
+            "version": "28.20180609.0",
+            "timestamp": "2018-06-09T19:18:47Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "18e8ce23e2f0a9c1a8eea6716b1d579279825157eb433bfd2f159c4559b9fa89": {
+            "version": "28.20180608.0",
+            "timestamp": "2018-06-08T11:49:06Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "848b8c7f816788b82d5910a0c98fdaa42a96008b2c71090e475465175e985d33": {
+            "version": "28.20180607.0",
+            "timestamp": "2018-06-07T11:13:24Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "d5e60deb28c9a81a7e5dba60b40951b48251e1438dff966179dd7c68c9a5c353": {
+            "version": "28.20180605.0",
+            "timestamp": "2018-06-05T13:20:59Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "7eea73af71be1a16911781f580c6ded2542a35ae2204dacba457d1e0c6c15995": {
+            "version": "28.20180604.0",
+            "timestamp": "2018-06-04T12:55:05Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "bdfa92820dd50f89fe827fb264164484fdeb87354ba49ae3ead73bc0f3442b0d": {
+            "version": "28.20180603.0",
+            "timestamp": "2018-06-03T18:53:28Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "95bacd6ffb538e9dc714b528e38bdb26eeb521d9caa9712078d00ba30f78271f": {
+            "version": "28.20180602.0",
+            "timestamp": "2018-06-02T20:19:30Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "ced4a595a7d24f19ebca904886b93ef62e8343579100d5ade9d21abdbd015930": {
+            "version": "28.20180601.0",
+            "timestamp": "2018-06-01T11:41:27Z",
+            "heuristic": "TESTED",
+            "status": "GOOD"
+        },
+        "56a07fb7194e387f45ac85469b4da935bc1ee9cbb22ba98ef0137296551a954c": {
+            "version": "28.20180531.1",
+            "timestamp": "2018-05-31T14:10:55Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "cefc79e6ea4d7e5eec51a32c00e1ecd6ca678d322406fecd347bc9c49e5d5255": {
+            "version": "28.20180530.0",
+            "timestamp": "2018-05-30T13:43:53Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "a5f1234a302fb064f67f09afe8ddd9cbac524a406a257a562fd18000dac99ba8": {
+            "version": "28.20180529.0",
+            "timestamp": "2018-05-29T10:51:46Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "291ea90da29bc5abe757b5a50813b3de1396b08412939a89b3b671aba9856093": {
+            "version": "28.20180527.0",
+            "timestamp": "2018-05-27T19:05:29Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "41c169fa160025f6ad265eab979af97a89b43d7643fb5bb463586765cdef33fb": {
+            "version": "28.20180526.0",
+            "timestamp": "2018-05-26T20:12:22Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "060f0e6e378aede19375bcb5d18ef5296d6f3fbae4852697d4bbc1f753985da8": {
+            "version": "28.20180525.0",
+            "timestamp": "2018-05-25T14:34:18Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "43e0eb8280d29856ea5107f475150faaa44ab8baa091b57a02ddb9fe9fec54d2": {
+            "version": "28.20180524.0",
+            "timestamp": "2018-05-24T13:32:29Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "81493baee536f7ca846fcc8dc3a51d0a638149914823fc31f3015a158d856398": {
+            "version": "28.20180523.0",
+            "timestamp": "2018-05-23T15:14:36Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "64f02a95ac73227b9e3de3b0a849fd9fc13fdc6934049519051386495d151461": {
+            "version": "28.20180522.0",
+            "timestamp": "2018-05-22T14:14:12Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "765786980a9362a8963978850076bfeee03c2bc4368e97f62793f695ce2b079f": {
+            "version": "28.20180521.0",
+            "timestamp": "2018-05-21T13:37:29Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "27d257eba424583cd243e30d62f6d7f7bc491940177a308a63713b54373dbe65": {
+            "version": "28.20180519.1",
+            "timestamp": "2018-05-19T20:33:28Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "24d872705932f3c5b76e85becee24cba9a15e6887280d11b8bbc92bd552300d2": {
+            "version": "28.20180519.0",
+            "timestamp": "2018-05-19T01:32:32Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "da247f3130dc6ad34cdf7b940274c50e511573874108489f1d0f1e5b2c4958db": {
+            "version": "28.20180517.0",
+            "timestamp": "2018-05-17T12:29:07Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "e7e773842add0a1a623a8cc27a47fdf154f4ecf379660fd05b22762f3f75345a": {
+            "version": "28.20180516.0",
+            "timestamp": "2018-05-16T12:42:43Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "a29367c58417c28e2bd8306c1f438b934df79eba13706e078fe8564d9e0eb32b": {
+            "version": "28.20180515.1",
+            "timestamp": "2018-05-15T16:32:35Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "354084a0b68f2cd1cae5e1a07bc756b3b7d32741dcf11ddf646bc87f824e9669": {
+            "version": "28.20180515.0",
+            "timestamp": "2018-05-15T14:27:06Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "369aee9a49d285a6af165e683829dd4480e6aebe335bcd74e22d27e48c2b0756": {
+            "version": "28.20180514.0",
+            "timestamp": "2018-05-14T17:27:48Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "991ffa4730e795873cbf7e8de7e18f8c88eccdbca3760d8898a46c14237f81cb": {
+            "version": "28.20180513.0",
+            "timestamp": "2018-05-13T19:31:36Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "584a625ef3b5b809b2a3844b9ac988dcb22690896fc6e038d035a39d02a28e3b": {
+            "version": "28.20180512.0",
+            "timestamp": "2018-05-12T17:57:36Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "9de10847a6e24321fc2f6c793b7f79b14b08cae7c5f6411f6456fb9634a38c2e": {
+            "version": "28.20180511.1",
+            "timestamp": "2018-05-11T20:52:39Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "7080bb372d11518a57534361c5afc427a7a51e22f3d44463f52c027798edbf89": {
+            "version": "28.20180511.0",
+            "timestamp": "2018-05-11T15:31:19Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "c8db65776a1f1efe5b00cca01dec80718665dfd67353be056864dbcdd4c575d0": {
+            "version": "28.20180510.0",
+            "timestamp": "2018-05-10T19:34:15Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "148af274be7b618900ba180407bc9222b35f1532aec5809e7ddae8d60615bb66": {
+            "version": "28.20180509.0",
+            "timestamp": "2018-05-09T15:27:21Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "c8619d98654c7f34374b2c4c659ac686ecdf90f1b91f9e41a4e8487d212bcf99": {
+            "version": "28.20180507.0",
+            "timestamp": "2018-05-07T18:13:28Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "afa4570aea70aa59004c53e9c0e8cbfb20fbd9e3c6c4ff0f8dd646a3681b1e62": {
+            "version": "28.20180505.0",
+            "timestamp": "2018-05-05T19:38:48Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "61bac7be4b6966b6f0f955aea68135c90c496936f8ac0fab95ec1663cfa296eb": {
+            "version": "28.20180503.0",
+            "timestamp": "2018-05-03T11:18:37Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "ce452ac3ccf86ce7c813be406c76598ce90d30f3dd4cf4efae813c8b069e553e": {
+            "version": "28.20180502.0",
+            "timestamp": "2018-05-02T09:57:00Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "f2ed1d328d75e1825ab4487c876801ea234743f6f6ad3be9e7220908176df687": {
+            "version": "28.20180501.0",
+            "timestamp": "2018-05-01T07:19:12Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "3aacdc186d77947a2dc32dfdd11ec1805abad0dc40f8c5259c89ed0ff1125fb9": {
+            "version": "28.20180430.0",
+            "timestamp": "2018-04-30T20:25:52Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "bacc3e336253d4d91836f957254106b0dc93dd98a71f8a0fb316cc3213cec4df": {
+            "version": "28.20180429.1",
+            "timestamp": "2018-04-29T20:02:59Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "d6c2bcdcfe3c4e1f97e8c3235ca6f7ff3176f8300ad16d8ee2e904052686e428": {
+            "version": "28.20180427.0",
+            "timestamp": "2018-04-27T20:42:21Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "e97268b556faf88773266cd39ce263853398c5ed57fb3fab0d03a851b5b6b636": {
+            "version": "28.20180426.0",
+            "timestamp": "2018-04-26T22:05:18Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        },
+        "94a9d06eef34aa6774c056356d3d2e024e57a0013b6f8048dbae392a84a137ca": {
+            "version": "28.20180425.0",
+            "timestamp": "2018-04-25T19:14:57Z",
+            "heuristic": "TESTED",
+            "status": "GOOD"
+        },
+        "94a3052db445dab955e0ea33ccc6755ccaa1904258736ca5bf8ea9249d28b2c3": {
+            "version": "28.20180424.4",
+            "timestamp": "2018-04-24T23:53:29Z",
+            "heuristic": "ASSUMED",
+            "status": "GOOD"
+        }
+    },
+    "test_script": "/usr/local/bin/test.sh"
+}
