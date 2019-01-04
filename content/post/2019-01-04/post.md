@@ -129,6 +129,9 @@ $ tree -L 2
 
 We'll go ahead and start the web server in this terminal:
 
+**NOTE**: You may need to poke a hole in your firewall for port
+          `8000`. You can use a command like `sudo firewall-cmd --add-port 8080/tcp`.
+
 ```nohighlight
 $ python3 -m http.server 
 Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
