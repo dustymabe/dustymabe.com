@@ -71,6 +71,7 @@ create a default pxelinux configuration file and specify the location of the
 kernel and initrd.
 
 ```nohighlight
+$ mkdir pxelinux.cfg
 $ cat <<EOF > pxelinux.cfg/default
 DEFAULT pxeboot
 TIMEOUT 20
@@ -130,7 +131,7 @@ $ tree -L 2
 We'll go ahead and start the web server in this terminal:
 
 **NOTE**: You may need to poke a hole in your firewall for port
-          `8000`. You can use a command like `sudo firewall-cmd --add-port 8080/tcp`.
+          `8000`. You can use a command like `sudo firewall-cmd --add-port 8000/tcp`.
 
 ```nohighlight
 $ python3 -m http.server 
