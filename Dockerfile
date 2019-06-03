@@ -1,12 +1,12 @@
-FROM registry.fedoraproject.org/f27/httpd
+FROM registry.fedoraproject.org/f29/httpd
 
 USER root
 
-# Install rst2html (convert rst) and git (for git hash)
-RUN dnf install -y git /usr/bin/rst2html && dnf clean all
-
-# Install hugo from f27 (not in f26)
-RUN dnf install --releasever=27 -y hugo && dnf clean all
+# Perform updates && Install rpms:
+#     - rst2html (convert rst)
+#     - git (for git hash)
+#     - hugo (static web site generation)
+RUN dnf -y update && dnf install -y /usr/bin/rst2html git hugo && dnf clean all
 
 # Generate SSL certs
 # https://bugzilla.redhat.com/show_bug.cgi?id=1585533
