@@ -26,8 +26,8 @@ RUN cd /context/hugo && \
     hugo || true
 
 # Copy static website files over to html directory to be served
-#RUN cp -R /context/hugo/public/* /var/www/html/
-#RUN chown -R apache:apache /var/www/html/
+RUN cp -R /context/hugo/public/* /var/www/html/
+RUN chown -R apache:apache /var/www/html/
 
 #RUN sed -i 's/Listen 80/Listen 8080/' /etc/httpd/conf/httpd.conf
 
@@ -37,4 +37,5 @@ USER 1001
 #EXPOSE 80
 
 #CMD cp httpd -DFOREGROUND
-CMD mkdir -p /var/www/html/ && cp -R /context/hugo/public/* /var/www/html/ && /usr/bin/run-httpd
+#CMD mkdir -p /var/www/html/ && cp -R /context/hugo/public/* /var/www/html/ && /usr/bin/run-httpd
+CMD /usr/bin/run-httpd
