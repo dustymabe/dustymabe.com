@@ -25,14 +25,16 @@ RUN cd /context/hugo && \
 #   export GIT_COMMIT_SHA_SHORT=$(git rev-parse --short HEAD) && \
     hugo || true
 
-# Copy static website files over to html directory to be served
-RUN cp -R /context/hugo/public/* /var/www/html/
-RUN chown -R apache:apache /var/www/html/
 
 # In OpenShift we run as random uid and root group
 # Make /etc/httpd/conf{,.d} (root:root) group writable
 RUN chmod g+w /etc/httpd/conf
 RUN chmod g+w /etc/httpd/conf.d
+
+# Copy static website files over to html directory to be served
+# Make all files group owned by root for OpenShift
+RUN cp -R /context/hugo/public/* /var/www/html/
+RUN chown -R apache:root /var/www/html/
 
 #RUN sed -i 's/Listen 80/Listen 8080/' /etc/httpd/conf/httpd.conf
 
