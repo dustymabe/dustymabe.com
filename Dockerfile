@@ -27,9 +27,12 @@ RUN cd /context/hugo && \
 
 
 # In OpenShift we run as random uid and root group
-# Make /etc/httpd/conf{,.d} (root:root) group writable
-RUN chmod g+w /etc/httpd/conf
-RUN chmod g+w /etc/httpd/conf.d
+# - Make /etc/httpd/conf{,.d} (root:root) group writable
+# - Make *run* dirs group owned by root and group writable
+RUN chmod g+w /etc/httpd/conf /etc/httpd/conf.d
+RUN chown root:root /run/httpd /etc/httpd/run /run/httpd/htcacheclean
+RUN chmod g+w /run/httpd /etc/httpd/run /run/httpd/htcacheclean
+
 
 # Copy static website files over to html directory to be served
 # Make all files group owned by root for OpenShift
