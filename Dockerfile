@@ -29,6 +29,11 @@ RUN cd /context/hugo && \
 RUN cp -R /context/hugo/public/* /var/www/html/
 RUN chown -R apache:apache /var/www/html/
 
+# In OpenShift we run as random uid and root group
+# Make /etc/httpd/conf{,.d} (root:root) group writable
+RUN chmod g+w /etc/httpd/conf
+RUN chmod g+w /etc/httpd/conf.d
+
 #RUN sed -i 's/Listen 80/Listen 8080/' /etc/httpd/conf/httpd.conf
 
 #VOLUME /var/www/html/
