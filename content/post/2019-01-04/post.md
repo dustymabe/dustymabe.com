@@ -6,6 +6,10 @@ tags: [ fedora, libvirt, PXE ]
 published: true
 ---
 
+**Update**: A future
+            [post](/2019/09/13/update-on-easy-pxe-boot-testing-post-minus-pxelinux/)
+            explains how to do this even easier without PXELINUX.
+
 # Introduction
 
 Occasionally I have a need to test out a PXE install workflow. All of
