@@ -1,0 +1,39 @@
+{
+  "ignition": {
+    "version": "2.3.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "groups": [
+          "sudo"
+        ],
+        "sshAuthorizedKeys": [
+          "ssh-rsa AAAA"
+        ]
+      }
+    ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "contents": "[Unit]\nBefore=console-login-helper-messages-issuegen.service\nAfter=network-online.target\n[Service]\nType=oneshot\nExecStart=/usr/local/bin/public-ipv4.sh\n[Install]\nWantedBy=console-login-helper-messages-issuegen.service\n",
+        "enabled": true,
+        "name": "issuegen-public-ipv4.service"
+      }
+    ]
+  },
+  "storage": {
+    "files": [
+      {
+        "contents": {
+          "source": "data:text/plain;base64,IyEvYmluL2Jhc2gKZWNobyAiRGV0ZWN0ZWQgUHVibGljIElQdjQ6IGlzICQoY3VybCBodHRwczovL2lwdjQuaWNhbmhhemlwLmNvbSkiID4gXAogICAgICAgICAvcnVuL2NvbnNvbGUtbG9naW4taGVscGVyLW1lc3NhZ2VzL2lzc3VlLmQvMzBfcHVibGljLWlwdjQuaXNzdWUK"
+        },
+        "mode": 493,
+        "filesystem": "root",
+        "path": "/usr/local/bin/public-ipv4.sh"
+      }
+    ]
+  }
+}
