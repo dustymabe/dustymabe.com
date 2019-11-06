@@ -20,7 +20,7 @@ Fedora CoreOS (or RHEL CoreOS) host so that it will be run on first boot.
 
 Let's say we have a small script we want to run that updates the
 issuegen from
-[console-login-helper-messages]()
+[console-login-helper-messages](https://github.com/rfairley/console-login-helper-messages)
 to output the node's public IPv4 address on the serial console during
 bootup.
 
