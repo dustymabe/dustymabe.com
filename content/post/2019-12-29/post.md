@@ -99,7 +99,6 @@ Use `snapper` command to create a configuration for
 Now we can look at the snapshot setup and the current configuration:
 
 ```nohighlight
-[root@localhost ~]# snapper --config=root create-config /
 [root@localhost ~]# snapper ls
  # | Type   | Pre # | Date | User | Used Space | Cleanup | Description | Userdata
 ---+--------+-------+------+------+------------+---------+-------------+---------
