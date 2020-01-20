@@ -1,0 +1,57 @@
+{
+  "ignition": {
+    "config": {
+      "replace": {
+        "source": null,
+        "verification": {}
+      }
+    },
+    "security": {
+      "tls": {}
+    },
+    "timeouts": {},
+    "version": "3.0.0"
+  },
+  "passwd": {},
+  "storage": {
+    "files": [
+      {
+        "group": {},
+        "path": "/etc/zincati/config.d/90-disable-auto-updates.toml",
+        "user": {},
+        "contents": {
+          "source": "data:,%5Bupdates%5D%0Aenabled%20%3D%20false%0A",
+          "verification": {}
+        }
+      },
+      {
+        "group": {},
+        "path": "/usr/local/bin/public-ipv4.sh",
+        "user": {},
+        "contents": {
+          "source": "data:,%23!%2Fbin%2Fbash%0Aecho%20%22Detected%20Public%20IPv4%3A%20is%20%24(curl%20https%3A%2F%2Fipv4.icanhazip.com)%22%20%3E%20%5C%0A%20%20%20%20%2Frun%2Fconsole-login-helper-messages%2Fissue.d%2F30_public-ipv4.issue%0A",
+          "verification": {}
+        },
+        "mode": 493
+      }
+    ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "dropins": [
+          {
+            "contents": "[Service]\n# Override Execstart in main unit\nExecStart=\n# Add new Execstart with `-` prefix to ignore failure\nExecStart=-/usr/sbin/agetty --autologin core --noclear %I $TERM\nTTYVTDisallocate=no\n",
+            "name": "autologin-core.conf"
+          }
+        ],
+        "name": "serial-getty@ttyS0.service"
+      },
+      {
+        "contents": "[Unit]\nBefore=console-login-helper-messages-issuegen.service\nAfter=network-online.target\nConditionPathExists=!/var/lib/issuegen-public-ipv4\n[Service]\nType=oneshot\nExecStart=/usr/local/bin/public-ipv4.sh\nExecStartPost=/usr/bin/touch /var/lib/issuegen-public-ipv4\nRemainAfterExit=yes\n[Install]\nWantedBy=console-login-helper-messages-issuegen.service\n",
+        "enabled": true,
+        "name": "issuegen-public-ipv4.service"
+      }
+    ]
+  }
+}

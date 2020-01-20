@@ -1,0 +1,61 @@
+{
+  "ignition": {
+    "config": {
+      "replace": {
+        "source": null,
+        "verification": {}
+      }
+    },
+    "security": {
+      "tls": {}
+    },
+    "timeouts": {},
+    "version": "3.0.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "sshAuthorizedKeys": [
+          "ssh-rsa AAAA..."
+        ]
+      }
+    ]
+  },
+  "storage": {
+    "files": [
+      {
+        "group": {},
+        "path": "/etc/zincati/config.d/90-disable-auto-updates.toml",
+        "user": {},
+        "contents": {
+          "source": "data:,%5Bupdates%5D%0Aenabled%20%3D%20false%0A",
+          "verification": {}
+        }
+      }
+    ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "dropins": [
+          {
+            "contents": "[Service]\n# Override Execstart in main unit\nExecStart=\n# Add new Execstart with `-` prefix to ignore failure\nExecStart=-/usr/sbin/agetty --autologin core --noclear %I $TERM\nTTYVTDisallocate=no\n",
+            "name": "autologin-core.conf"
+          }
+        ],
+        "name": "serial-getty@ttyS0.service"
+      },
+      {
+        "contents": "[Service]\nType=oneshot\nExecStart=/usr/bin/false\nRemainAfterExit=yes\n[Install]\nWantedBy=multi-user.target\n",
+        "enabled": true,
+        "name": "failure.service"
+      },
+      {
+        "contents": "[Unit]\nDescription=Run single node etcd\nAfter=network-online.target\nWants=network-online.target\n[Service]\nExecStartPre=mkdir -p /var/lib/etcd\nExecStartPre=-/bin/podman kill etcd\nExecStartPre=-/bin/podman rm etcd\nExecStartPre=-/bin/podman pull quay.io/coreos/etcd\nExecStart=/bin/podman run --name etcd --net=host \\\n            --volume /var/lib/etcd:/etcd-data:z  \\\n            quay.io/coreos/etcd:latest /usr/local/bin/etcd              \\\n                    --data-dir /etcd-data --name node1                  \\\n                    --initial-advertise-peer-urls http://127.0.0.1:2380 \\\n                    --listen-peer-urls http://127.0.0.1:2380            \\\n                    --advertise-client-urls http://127.0.0.1:2379       \\\n                    --listen-client-urls http://127.0.0.1:2379          \\\n                    --initial-cluster node1=http://127.0.0.1:2380\nExecStop=/bin/podman stop etcd\n[Install]\nWantedBy=multi-user.target\n",
+        "enabled": true,
+        "name": "etcd-member.service"
+      }
+    ]
+  }
+}

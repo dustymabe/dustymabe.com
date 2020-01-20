@@ -1,0 +1,59 @@
+variant: fcos
+version: 1.0.0
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - ssh-rsa AAAA...
+systemd:
+  units:
+    - name: serial-getty@ttyS0.service
+      dropins:
+      - name: autologin-core.conf
+        contents: |
+          [Service]
+          # Override Execstart in main unit
+          ExecStart=
+          # Add new Execstart with `-` prefix to ignore failure
+          ExecStart=-/usr/sbin/agetty --autologin core --noclear %I $TERM
+          TTYVTDisallocate=no
+    - name: failure.service
+      enabled: true
+      contents: |
+        [Service]
+        Type=oneshot
+        ExecStart=/usr/bin/false
+        RemainAfterExit=yes
+        [Install]
+        WantedBy=multi-user.target
+    - name: etcd-member.service
+      enabled: true
+      contents: |
+        [Unit]
+        Description=Run single node etcd
+        After=network-online.target
+        Wants=network-online.target
+        [Service]
+        ExecStartPre=mkdir -p /var/lib/etcd
+        ExecStartPre=-/bin/podman kill etcd
+        ExecStartPre=-/bin/podman rm etcd
+        ExecStartPre=-/bin/podman pull quay.io/coreos/etcd
+        ExecStart=/bin/podman run --name etcd --net=host \
+                    --volume /var/lib/etcd:/etcd-data:z  \
+                    quay.io/coreos/etcd:latest /usr/local/bin/etcd              \
+                            --data-dir /etcd-data --name node1                  \
+                            --initial-advertise-peer-urls http://127.0.0.1:2380 \
+                            --listen-peer-urls http://127.0.0.1:2380            \
+                            --advertise-client-urls http://127.0.0.1:2379       \
+                            --listen-client-urls http://127.0.0.1:2379          \
+                            --initial-cluster node1=http://127.0.0.1:2380
+        ExecStop=/bin/podman stop etcd
+        [Install]
+        WantedBy=multi-user.target
+storage:
+  files:
+    - path: /etc/zincati/config.d/90-disable-auto-updates.toml
+      contents:
+        inline: |
+          [updates]
+          enabled = false

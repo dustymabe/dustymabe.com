@@ -1,0 +1,21 @@
+variant: fcos
+version: 1.0.0
+systemd:
+  units:
+    - name: serial-getty@ttyS0.service
+      dropins:
+      - name: autologin-core.conf
+        contents: |
+          [Service]
+          # Override Execstart in main unit
+          ExecStart=
+          # Add new Execstart with `-` prefix to ignore failure
+          ExecStart=-/usr/sbin/agetty --autologin core --noclear %I $TERM
+          TTYVTDisallocate=no
+storage:
+  files:
+    - path: /etc/zincati/config.d/52-updates.toml
+      contents:
+        inline: |
+          [updates]
+          enabled = false
