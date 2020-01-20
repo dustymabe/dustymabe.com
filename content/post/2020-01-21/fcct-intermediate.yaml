@@ -1,0 +1,42 @@
+variant: fcos
+version: 1.0.0
+systemd:
+  units:
+    - name: serial-getty@ttyS0.service
+      dropins:
+      - name: autologin-core.conf
+        contents: |
+          [Service]
+          # Override Execstart in main unit
+          ExecStart=
+          # Add new Execstart with `-` prefix to ignore failure
+          ExecStart=-/usr/sbin/agetty --autologin core --noclear %I $TERM
+          TTYVTDisallocate=no
+    - name: issuegen-public-ipv4.service
+      enabled: true
+      contents: |
+        [Unit]
+        Before=console-login-helper-messages-issuegen.service
+        After=network-online.target
+        ConditionPathExists=!/var/lib/issuegen-public-ipv4
+        [Service]
+        Type=oneshot
+        ExecStart=/usr/local/bin/public-ipv4.sh
+        ExecStartPost=/usr/bin/touch /var/lib/issuegen-public-ipv4
+        RemainAfterExit=yes
+        [Install]
+        WantedBy=console-login-helper-messages-issuegen.service
+storage:
+  files:
+    - path: /etc/zincati/config.d/90-disable-auto-updates.toml
+      contents:
+        inline: |
+          [updates]
+          enabled = false
+    - path: /usr/local/bin/public-ipv4.sh
+      mode: 0755
+      contents:
+        inline: |
+          #!/bin/bash
+          echo "Detected Public IPv4: is $(curl https://ipv4.icanhazip.com)" > \
+              /run/console-login-helper-messages/issue.d/30_public-ipv4.issue
