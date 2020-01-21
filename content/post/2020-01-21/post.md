@@ -11,7 +11,7 @@ published: true
 This lab uses a Fedora CoreOS image and several utilities 
 (`fcct`, `ignition-validate`) to introduce a user to provisioning
 and exploring a Fedora CoreOS system. This lab is written targeting
-a Linux environment with a working libvirt/kvm setup.
+a Linux environment with a working `libvirt`/`kvm` setup.
 
 To perform this lab you need 
 to download the tar archive at 
@@ -25,7 +25,7 @@ We recommend extracting it into your home directory like so:
 [host]$ mkdir ~/fcos-lab && cd ~/fcos-lab
 [host]$ curl -O -L https://202001-fedora-coreos-lab.fra1.digitaloceanspaces.com/202001-fedora-coreos-lab.tar.xz
 [host]$ curl -O -L https://202001-fedora-coreos-lab.fra1.digitaloceanspaces.com/202001-fedora-coreos-lab.tar.xz-CHECKSUM
-[host]$ curl https://dustymabe.com/dustymabe.gpg | gpg2 --import --batch
+[host]$ curl https://dustymabe.com/dustymabe.gpg | gpg2 --import
 [host]$ gpg2 --verify 202001-fedora-coreos-lab.tar.xz-CHECKSUM
 [host]$ sha256sum --check 202001-fedora-coreos-lab.tar.xz-CHECKSUM
 [host]$ tar -xf 202001-fedora-coreos-lab.tar.xz
@@ -33,9 +33,10 @@ We recommend extracting it into your home directory like so:
 [host]$ sha256sum --check SHA256-CHECKSUM
 ```
 
-We've now downloaded and verified the tarball (checksums signed by
-Dusty Mabe's GPG keys) as well as the contents of the tarball after 
-extraction. In this case the included Fedora CoreOS qcow image is the
+We've now downloaded and verified the tarball and the contents of the
+tarball after extraction; plaintext inline signatures were erified using
+[Dusty Mabe's public GPG key](https://dustymabe.com/dustymabe.gpg).
+In this case the included Fedora CoreOS qcow image is the
 exact image that was produced by the production Fedora CoreOS release
 pipeline and signed by Fedora release engineering. Any time you download
 a Fedora CoreOS image it's always good to verify it was signed by Fedora.
@@ -220,12 +221,12 @@ CoreOS from the qemu image.
 ```
 
 This command will start an instance named `fcos` from the 
-`fedora-coreos-31.20200113.3.1-qemu.x86_64.qcow2` image using the
-`auto-login-ttyS0.ign` Ignition config. It will auto-attach to the
+`fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2` image using the
+`simple.ign` Ignition config. It will auto-attach to the
 serial console of the machine so you'll be able to see the image
 bootup messages. Also of note is that it uses the `backing_store`
-option to `--disk` so it won't write to the downloaded image, but
-rather a new disk image that can easily be thrown away.
+option to `virt-install --disk` so it won't write to the downloaded
+image, but rather a new disk image that can easily be thrown away.
 
 Once the machine is booted up you should see a few prompts and then
 you should be automatically logged in and presented with a bash shell:
@@ -290,7 +291,7 @@ Deployments:
 And check on `zincati.service`, which communicates with our update server and
 tells `rpm-ostree` when to do an update and to what version to update to:
 
-```
+```nohighlight
 $ systemctl status zincati.service | cat
 ● zincati.service - Zincati Update Agent
    Loaded: loaded (/usr/lib/systemd/system/zincati.service; enabled; vendor preset: enabled)
@@ -309,11 +310,9 @@ Jan 20 20:01:14 localhost zincati[1063]: [INFO ] agent running on node 'ead8e3b8
 Jan 20 20:01:14 localhost zincati[1063]: [WARN ] initialization complete, auto-updates logic disabled by configuration
 ```
 
-```
 **NOTE:** You can see from the `auto-updates logic disabled by configuration` message that 
-        `zincati` properly picked up the configuration to disable updates that was placed
-        in `/etc/zincati/config.d/90-disable-auto-updates.toml`.
-```
+          `zincati` properly picked up the configuration to disable updates that was placed
+          in `/etc/zincati/config.d/90-disable-auto-updates.toml`.
 
 One other interesting thing to do is view the logs from Ignition in case
 there is anything interesting there you may want to investigate:
@@ -332,16 +331,16 @@ $ sudo docker info
 $ sudo docker version
 ```
 
-```
 **NOTE:** You need `sudo` for docker commands. `podman` commands can be run as 
           `root` or non-root.
+
 **NOTE:** Running a `docker` command will cause the docker daemon to be started
           if it was not already started.
-```
 
 ## Taking down the Virtual Machine
 
-Let's now get rid of that VM so we can start again from scratch:
+Let's now get rid of that VM so we can start again from scratch. First
+escape out of the serial console by pressing `CTRL` + `]` and then type:
 
 ```
 [host]$ virsh destroy fcos
@@ -361,7 +360,7 @@ add to the the `fcct` config from the previous scenario such that we now:
 
 ## Write the Script
 
-So what script should we run? Let's write one:
+So what script should we run? Here's a good small script:
 
 ```
 #!/bin/bash
@@ -377,7 +376,7 @@ bootup. This is useful in cloud environments when you might have different
 public and private addresses.
 
 We'll store this script into `/usr/local/bin/public-ipv4.sh` when we
-provision the machine.
+provision the machine. We'll encode it into an FCCT config here shortly.
 
 ## Write the Systemd Service
 
@@ -399,7 +398,8 @@ RemainAfterExit=yes
 WantedBy=console-login-helper-messages-issuegen.service
 ```
 
-We'll call this unit `issuegen-public-ipv4.service`.
+We'll call this unit `issuegen-public-ipv4.service` and we'll embed it
+into the FCCT config in the next section.
 
 ## Write FCCT and convert to Ignition
 
@@ -506,7 +506,9 @@ Jan 20 20:57:04 localhost public-ipv4.sh[1118]: [237B blob data]
 Jan 20 20:57:04 localhost systemd[1]: Started issuegen-public-ipv4.service.
 ```
 
-Now let's take down the instance for the next test:
+Now let's take down the instance for the next test. First, disconnect 
+from the serial console by pressing `CTRL` + `]` and then destroy the
+machine:
 
 ```
 [host]$ virsh destroy fcos
@@ -636,7 +638,9 @@ Failed Units: 1
   failure.service
 ```
 
-Now, using the reported IP address for `eth0` log in via SSH:
+If you'd like to connect via SSH disconnect from the serial console by
+pressing `CTRL` + `]` and then use the reported IP address for `eth0`
+from the serial console to log in using the `core` user via SSH:
 
 ```
 $ ssh core@192.168.122.163
