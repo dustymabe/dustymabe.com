@@ -35,8 +35,10 @@ RUN chmod g+w /run/httpd /etc/httpd/run /run/httpd/htcacheclean
 
 
 # Copy static website files over to html directory to be served
-# Make all files group owned by root for OpenShift
 RUN cp -R /context/hugo/public/* /var/www/html/
+# Copy files in 'toplevel' dir to root of the html directory as well
+RUN cp -R /context/toplevel/* /var/www/html/
+# Make all files group owned by root for OpenShift
 RUN chown -R apache:root /var/www/html/
 
 USER 1001
