@@ -15,28 +15,36 @@ a Linux environment with a working libvirt/kvm setup.
 
 To perform this lab you need 
 to download the tar archive at 
-[this link]()
+[this link](https://202001-fedora-coreos-lab.fra1.digitaloceanspaces.com/202001-fedora-coreos-lab.tar.xz)
+([signed checksum file](https://202001-fedora-coreos-lab.fra1.digitaloceanspaces.com/202001-fedora-coreos-lab.tar.xz-CHECKSUM))
 and extract it.
 
 We recommend extracting it into your home directory like so:
 
 ```
-[host]$ curl -O -L  
-[host]$ sha256sum 
-[host]$
-        mkdir ~/fcos-lab
-[host]$ tar fjak
+[host]$ mkdir ~/fcos-lab && cd ~/fcos-lab
+[host]$ curl -O -L https://202001-fedora-coreos-lab.fra1.digitaloceanspaces.com/202001-fedora-coreos-lab.tar.xz
+[host]$ curl -O -L https://202001-fedora-coreos-lab.fra1.digitaloceanspaces.com/202001-fedora-coreos-lab.tar.xz-CHECKSUM
+[host]$ curl https://dustymabe.com/dustymabe.gpg | gpg2 --import --batch
+[host]$ gpg2 --verify 202001-fedora-coreos-lab.tar.xz-CHECKSUM
+[host]$ sha256sum --check 202001-fedora-coreos-lab.tar.xz-CHECKSUM
+[host]$ tar -xf 202001-fedora-coreos-lab.tar.xz
+[host]$ gpg2 --verify SHA256-CHECKSUM
+[host]$ sha256sum --check SHA256-CHECKSUM
 ```
 
-Any time you download a Fedora CoreOS image it's always good to verify
-it was signed by Fedora. We can import the latest releases Fedora GPG key
-(not necessary if you are already on a Fedora system) and verify like
-so:
+We've now downloaded and verified the tarball (checksums signed by
+Dusty Mabe's GPG keys) as well as the contents of the tarball after 
+extraction. In this case the included Fedora CoreOS qcow image is the
+exact image that was produced by the production Fedora CoreOS release
+pipeline and signed by Fedora release engineering. Any time you download
+a Fedora CoreOS image it's always good to verify it was signed by Fedora.
+We can import the latest release's Fedora GPG key and verify the signature:
 
 
 ```
-[host]$ curl | 
-[host]$ gpg --verify fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2.xz.sig fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2.xz
+[host]$ curl https://getfedora.org/static/fedora.gpg | gpg2 --import
+[host]$ gpg2 --verify fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2.xz.sig
 gpg: Signature made Thu 09 Jan 2020 05:56:25 PM EST
 gpg:                using RSA key 50CB390B3C3359C4
 gpg: Good signature from "Fedora (31) <fedora-31-primary@fedoraproject.org>" [unknown]
@@ -45,6 +53,17 @@ gpg:          There is no indication that the signature belongs to the owner.
 Primary key fingerprint: 7D22 D586 7F2A 4236 474B  F7B8 50CB 390B 3C33 59C4
 ```
 
+Now that we've got everything all verified let's decompress the qcow
+and also alias the `fcct` and `ignition-validate` binaries so we can
+use them in our shell:
+
+```
+[host]$ unxz fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2.xz
+[host]$ alias fcct="${PWD}/fcct"
+[host]$ alias ignition-validate="${PWD}/ignition-validate"
+```
+
+Now we're all set up and can get started!
 
 # Introduction
 
@@ -92,6 +111,7 @@ Let's create a very simple config that will do two things:
   automatic updates while we poke around the booted machine for the lab.
 
 ```
+[host]$ cat ./fcct-simple.yaml
 variant: fcos
 version: 1.0.0
 systemd:
@@ -120,6 +140,48 @@ We'll then use `fcct` to convert that into an ignition config:
 ```
 [host]$ fcct -pretty -strict -input ./fcct-simple.yaml -output simple.ign
 [host]$ cat simple.ign
+{
+  "ignition": {
+    "config": {
+      "replace": {
+        "source": null,
+        "verification": {}
+      }
+    },
+    "security": {
+      "tls": {}
+    },
+    "timeouts": {},
+    "version": "3.0.0"
+  },
+  "passwd": {},
+  "storage": {
+    "files": [
+      {
+        "group": {},
+        "path": "/etc/zincati/config.d/90-disable-auto-updates.toml",
+        "user": {},
+        "contents": {
+          "source": "data:,%5Bupdates%5D%0Aenabled%20%3D%20false%0A",
+          "verification": {}
+        }
+      }
+    ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "dropins": [
+          {
+            "contents": "[Service]\n# Override Execstart in main unit\nExecStart=\n# Add new Execstart with `-` prefix to ignore failure\nExecStart=-/usr/sbin/agetty --autologin core --noclear %I $TERM\nTTYVTDisallocate=no\n",
+            "name": "autologin-core.conf"
+          }
+        ],
+        "name": "serial-getty@ttyS0.service"
+      }
+    ]
+  }
+}
 ```
 
 Luckily `fcct` outputs valid Ignition configs. However, if you are tweaking the
@@ -150,11 +212,11 @@ In this case we'll use `libvirt`/`qemu`/`kvm` to boot directly into Fedora
 CoreOS from the qemu image.
 
 ```
-[host]$ cp /var/b/shared/code/github.com/dustymabe/dustymabe.com/content/post/2020-01-21/simple.ign /run/user/1001/
+[host]$ chcon --verbose unconfined_u:object_r:svirt_home_t:s0 simple.ign
 [host]$ virt-install --name=fcos --vcpus=2 --ram=2048 --import \
             --network=bridge=virbr0 --graphics=none \
-            --qemu-commandline="-fw_cfg name=opt/com.coreos/config,file=/run/user/1001/simple.ign" \
-            --disk=size=20,backing_store=/var/b/images/fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2
+            --qemu-commandline="-fw_cfg name=opt/com.coreos/config,file=${PWD}/simple.ign" \
+            --disk=size=20,backing_store=${PWD}/fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2
 ```
 
 This command will start an instance named `fcos` from the 
@@ -401,11 +463,11 @@ And then convert to Igntion:
 Just as before we'll use the following to boot the instance:
 
 ```
-[host]$ cp /var/b/shared/code/github.com/dustymabe/dustymabe.com/content/post/2020-01-21/intermediate.ign /run/user/1001/
+[host]$ chcon --verbose unconfined_u:object_r:svirt_home_t:s0 intermediate.ign
 [host]$ virt-install --name=fcos --vcpus=2 --ram=2048 --import \
             --network=bridge=virbr0 --graphics=none \
-            --qemu-commandline="-fw_cfg name=opt/com.coreos/config,file=/run/user/1001/intermediate.ign" \
-            --disk=size=20,backing_store=/var/b/images/fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2
+            --qemu-commandline="-fw_cfg name=opt/com.coreos/config,file=${PWD}/intermediate.ign" \
+            --disk=size=20,backing_store=${PWD}/fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2
 ```
 
 And view on the serial console that the `Detected Public IPv4` is
@@ -550,11 +612,11 @@ Run `fcct` to convert that to an Ignition config:
 
 
 ```
-[host]$ cp /var/b/shared/code/github.com/dustymabe/dustymabe.com/content/post/2020-01-21/advanced.ign /run/user/1001/
+[host]$ chcon --verbose unconfined_u:object_r:svirt_home_t:s0 advanced.ign
 [host]$ virt-install --name=fcos --vcpus=2 --ram=2048 --import \
-            --network=bridge=virbr0 --graphics=none            \
-            --qemu-commandline="-fw_cfg name=opt/com.coreos/config,file=/run/user/1001/advanced.ign" \
-            --disk=size=20,backing_store=/var/b/images/fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2
+            --network=bridge=virbr0 --graphics=none \
+            --qemu-commandline="-fw_cfg name=opt/com.coreos/config,file=${PWD}/advanced.ign" \
+            --disk=size=20,backing_store=${PWD}/fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2
 ```
 
 On the serial console you see:
@@ -721,6 +783,3 @@ $ sudo rpm-ostree rollback --reboot
 
 
 We've seen how to blah blah.
-
-
-
