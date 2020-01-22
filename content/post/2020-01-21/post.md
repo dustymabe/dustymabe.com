@@ -263,7 +263,7 @@ $ cat /etc/zincati/config.d/90-disable-auto-updates.toml
 enabled = false
 ```
 
-## Exploring Fedora CoreOS Internals
+### Exploring Fedora CoreOS Internals
 
 Once you have access to the console of the machine you can browse around a bit
 to see some of the different pieces of the operating system. For example, even
@@ -343,7 +343,7 @@ $ sudo docker version
 **NOTE:** Running a `docker` command will cause the docker daemon to be started
           if it was not already started.
 
-## Taking down the Virtual Machine
+### Taking down the Virtual Machine
 
 Let's now get rid of that VM so we can start again from scratch. First
 escape out of the serial console by pressing `CTRL` + `]` and then type:
@@ -470,7 +470,7 @@ And then convert to Igntion:
           [intermediate.ign](/2020-01-21/intermediate.ign)
 
 
-## Test it out
+### Test it out
 
 Just as before we'll use the following to boot the instance:
 
