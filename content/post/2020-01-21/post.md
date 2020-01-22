@@ -21,7 +21,7 @@ and extract it.
 
 We recommend extracting it into your home directory like so:
 
-```bash
+```nohighlight
 [host]$ mkdir ~/fcos-lab && cd ~/fcos-lab
 [host]$ curl -O -L https://202001-fedora-coreos-lab.fra1.digitaloceanspaces.com/202001-fedora-coreos-lab.tar.xz
 [host]$ curl -O -L https://202001-fedora-coreos-lab.fra1.digitaloceanspaces.com/202001-fedora-coreos-lab.tar.xz-CHECKSUM
@@ -43,7 +43,7 @@ a Fedora CoreOS image it's always good to verify it was signed by Fedora.
 We can import the latest release's Fedora GPG key and verify the signature:
 
 
-```bash
+```nohighlight
 [host]$ curl https://getfedora.org/static/fedora.gpg | gpg2 --import
 [host]$ gpg2 --verify fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2.xz.sig
 gpg: Signature made Thu 09 Jan 2020 05:56:25 PM EST
@@ -58,7 +58,7 @@ Now that we've got everything all verified let's decompress the qcow
 and also alias the `fcct` and `ignition-validate` binaries so we can
 use them in our shell:
 
-```bash
+```nohighlight
 [host]$ unxz fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2.xz
 [host]$ alias fcct="${PWD}/fcct"
 [host]$ alias ignition-validate="${PWD}/ignition-validate"
@@ -102,7 +102,7 @@ Let's create a very simple FCCT config that will do two things:
 - Place a file at `/etc/zincati/config.d/90-disable-auto-updates.toml` to disable
   automatic updates while we poke around the booted machine for the lab.
 
-```yaml
+```nohighlight
 [host]$ cat ./fcct-simple.yaml
 variant: fcos
 version: 1.0.0
@@ -129,7 +129,7 @@ storage:
 
 We'll then use `fcct` to convert that into an Ignition config:
 
-```json
+```nohighlight
 [host]$ fcct -pretty -strict -input ./fcct-simple.yaml -output simple.ign
 [host]$ cat simple.ign
 {
@@ -181,7 +181,7 @@ config after `fcct`, or otherwise providing hand edited Ignition configs you'll 
 to always use `ignition-validate` to perform some verification on the config. We'll
 do that now to illustrate how:
 
-```
+```nohighlight
 [host]$ ignition-validate --version
 Ignition 2.1.1
 [host]$ ignition-validate ./simple.ign && echo 'success!'
@@ -209,7 +209,7 @@ artifacts that are published for a Fedora CoreOS release.
 In this case we'll use `libvirt`/`qemu`/`kvm` to boot directly into Fedora
 CoreOS from the qemu image.
 
-```
+```nohighlight
 [host]$ chcon --verbose unconfined_u:object_r:svirt_home_t:s0 simple.ign
 [host]$ virt-install --name=fcos --vcpus=2 --ram=2048 --import \
             --network=bridge=virbr0 --graphics=none \
@@ -228,7 +228,7 @@ image, but rather a new disk image that can easily be thrown away.
 Once the machine is booted up you should see a few prompts and then
 you should be automatically logged in and presented with a bash shell:
 
-```
+```nohighlight
 [  OK  ] Started RPM-OSTree System Management Daemon.
 
 Fedora CoreOS preview 31.20200108.3.0
@@ -249,7 +249,7 @@ by using `systemctl cat serial-getty@ttyS0.service`.
 
 We can also check that the zincati configuration file got created by Ignition:
 
-```
+```nohighlight
 $ cat /etc/zincati/config.d/90-disable-auto-updates.toml
 [updates]
 enabled = false
@@ -261,7 +261,7 @@ Once you have access to the console of the machine you can browse around a bit
 to see some of the different pieces of the operating system. For one you can still
 inspect the system to see what it was composed of by using `rpm`:
 
-```
+```nohighlight
 $ rpm -q ignition kernel moby-engine podman systemd rpm-ostree zincati
 ignition-2.1.1-3.git40c0b57.fc31.x86_64
 kernel-5.4.7-200.fc31.x86_64
@@ -274,7 +274,7 @@ zincati-0.0.6-1.fc31.x86_64
 
 You can also inspect the current revision of Fedora CoreOS:
 
-```
+```nohighlight
 $ rpm-ostree status
 State: idle
 AutomaticUpdates: disabled
@@ -314,14 +314,14 @@ Jan 20 20:01:14 localhost zincati[1063]: [WARN ] initialization complete, auto-u
 One other interesting thing to do is view the logs from Ignition in case
 there is anything interesting there you may want to investigate:
 
-```
+```nohighlight
 $ journalctl -t ignition | cat
 ```
 
 And finally, of course you can use the `docker` (provided by `moby-engine` rpm)
 or `podman` commands to inspect the current state of containers on the system:
 
-```
+```nohighlight
 $ podman version
 $ podman info
 $ sudo docker info
@@ -339,7 +339,7 @@ $ sudo docker version
 Let's now get rid of that VM so we can start again from scratch. First
 escape out of the serial console by pressing `CTRL` + `]` and then type:
 
-```
+```nohighlight
 [host]$ virsh destroy fcos
 [host]$ virsh undefine --remove-all-storage fcos
 ```
@@ -359,7 +359,7 @@ add to the the `fcct` config from the previous scenario such that we now:
 
 So what script should we run? Here's a good small script:
 
-```
+```nohighlight
 #!/bin/bash
 echo "Detected Public IPv4: is $(curl https://ipv4.icanhazip.com)" > \
          /run/console-login-helper-messages/issue.d/30_public-ipv4.issue
@@ -381,7 +381,7 @@ We need to call the script we made above by using a systemd unit. Here is
 one that works for what we want, which is to execute on first boot and not
 again:
 
-```
+```nohighlight
 [Unit]
 Before=console-login-helper-messages-issuegen.service
 After=network-online.target
@@ -403,7 +403,7 @@ into the FCCT config in the next section.
 The final FCCT for what we want to do is shown below. We'll
 store these contents in `fcct-intermediate.yaml`.
 
-```
+```nohighlight
 variant: fcos
 version: 1.0.0
 systemd:
@@ -450,7 +450,7 @@ storage:
 
 And then convert to Igntion:
 
-```
+```nohighlight
 [host]$ fcct -pretty -strict -input ./fcct-intermediate.yaml -output intermediate.ign
 ```
 
@@ -464,7 +464,7 @@ And then convert to Igntion:
 
 Just as before we'll use the following to boot the instance:
 
-```
+```nohighlight
 [host]$ chcon --verbose unconfined_u:object_r:svirt_home_t:s0 intermediate.ign
 [host]$ virt-install --name=fcos --vcpus=2 --ram=2048 --import \
             --network=bridge=virbr0 --graphics=none \
@@ -476,7 +476,7 @@ And view on the serial console that the `Detected Public IPv4` is
 shown in the serial console output right before you're dropped to a
 login prompt:
 
-```
+```nohighlight
 Fedora CoreOS preview 31.20200108.3.0
 Kernel 5.4.7-200.fc31.x86_64 on an x86_64 (ttyS0)
 
@@ -512,7 +512,7 @@ Now let's take down the instance for the next test. First, disconnect
 from the serial console by pressing `CTRL` + `]` and then destroy the
 machine:
 
-```
+```nohighlight
 [host]$ virsh destroy fcos
 [host]$ virsh undefine --remove-all-storage fcos
 ```
@@ -539,7 +539,7 @@ disabling of updates, but we'll also:
 
 We'll create this config in a file called `./fcct-advanced.yaml`
 
-```
+```nohighlight
 [host]$ cat fcct-advanced.yaml
 variant: fcos
 version: 1.0.0
@@ -609,7 +609,7 @@ storage:
 
 Run `fcct` to convert that to an Ignition config:
 
-```
+```nohighlight
 [host]$ fcct -pretty -strict -input ./fcct-advanced.yaml -output advanced.ign
 ```
 
@@ -620,7 +620,7 @@ Run `fcct` to convert that to an Ignition config:
 
 
 
-```
+```nohighlight
 [host]$ chcon --verbose unconfined_u:object_r:svirt_home_t:s0 advanced.ign
 [host]$ virt-install --name=fcos --vcpus=2 --ram=2048 --import \
             --network=bridge=virbr0 --graphics=none \
@@ -630,7 +630,7 @@ Run `fcct` to convert that to an Ignition config:
 
 On the serial console you see:
 
-```
+```nohighlight
 Fedora CoreOS preview 31.20200108.3.0
 Kernel 5.4.7-200.fc31.x86_64 on an x86_64 (ttyS0)
 
@@ -649,7 +649,7 @@ If you'd like to connect via SSH disconnect from the serial console by
 pressing `CTRL` + `]` and then use the reported IP address for `eth0`
 from the serial console to log in using the `core` user via SSH:
 
-```
+```nohighlight
 $ ssh core@192.168.122.163
 The authenticity of host '192.168.122.163 (192.168.122.163)' can't be established.
 ECDSA key fingerprint is SHA256:OAmR5Ab5eH9eZHC+D1gYmRsoUgJ/jufTNArrskBCxr4.
@@ -675,7 +675,7 @@ Now that we are up let's check on the status of the `etcd-member`
 service:
 
 
-```
+```nohighlight
 $ systemctl status etcd-member.service
 ● etcd-member.service - Run single node etcd
    Loaded: loaded (/etc/systemd/system/etcd-member.service; enabled; vendor preset: enabled)
@@ -705,7 +705,7 @@ Jan 20 22:15:10 localhost podman[1971]: 2020-01-20 22:15:10.498521 I | etcdserve
 We can also inspect the state of the container that was run by
 the systemd service:
 
-```
+```nohighlight
 $ sudo podman ps -a
 CONTAINER ID  IMAGE                       COMMAND               CREATED        STATUS            PORTS  NAMES
 85cf5d500626  quay.io/coreos/etcd:latest  /usr/local/bin/et...  4 minutes ago  Up 4 minutes ago         etcd
@@ -714,7 +714,7 @@ CONTAINER ID  IMAGE                       COMMAND               CREATED        S
 And we can set a key/value pair in etcd. For now let's set the key
 `fedora` to the value `fun`:
 
-```
+```nohighlight
 $ curl -L -X PUT http://127.0.0.1:2379/v2/keys/fedora -d value="fun"
 {"action":"set","node":{"key":"/fedora","value":"fun","modifiedIndex":4,"createdIndex":4}}
 $ curl -L http://127.0.0.1:2379/v2/keys/ 2>/dev/null | jq .
@@ -742,7 +742,7 @@ automatic updates. Let's see them in action.
 Let's remove the `zincati` config that is disabling the updates and
 restart the zincati service:
 
-```
+```nohighlight
 $ sudo rm /etc/zincati/config.d/90-disable-auto-updates.toml 
 $ sudo systemctl restart zincati.service
 Connection to 192.168.122.163 closed.
@@ -756,7 +756,7 @@ When we log back in we can view the current version of Fedora CoreOS,
 which will also show the older version, which still exists in case
 we need to rollback:
 
-```
+```nohighlight
 $ rpm-ostree status
 State: idle
 AutomaticUpdates: disabled
@@ -775,7 +775,7 @@ Deployments:
 You can view the differences between the two versions by running an `rpm-ostree db diff`
 command:
 
-```
+```nohighlight
 $ rpm-ostree db diff 113aa27efe1bbcf6324af7423f64ef7deb0acbf21b928faec84bf66a60a5c933 f480038412cba26ab010d2cd5a09ddec736204a6e9faa8370edaa943cf33c932
 ostree diff commit from: 113aa27efe1bbcf6324af7423f64ef7deb0acbf21b928faec84bf66a60a5c933
 ostree diff commit to:   f480038412cba26ab010d2cd5a09ddec736204a6e9faa8370edaa943cf33c932
@@ -786,7 +786,7 @@ Upgraded:
 
 If the system is not functioning fully for whatever reason we can go back to the previous version:
 
-```
+```nohighlight
 $ sudo rpm-ostree rollback --reboot
 ```
 
