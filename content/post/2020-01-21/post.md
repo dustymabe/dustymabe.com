@@ -21,7 +21,7 @@ and extract it.
 
 We recommend extracting it into your home directory like so:
 
-```
+```bash
 [host]$ mkdir ~/fcos-lab && cd ~/fcos-lab
 [host]$ curl -O -L https://202001-fedora-coreos-lab.fra1.digitaloceanspaces.com/202001-fedora-coreos-lab.tar.xz
 [host]$ curl -O -L https://202001-fedora-coreos-lab.fra1.digitaloceanspaces.com/202001-fedora-coreos-lab.tar.xz-CHECKSUM
@@ -43,7 +43,7 @@ a Fedora CoreOS image it's always good to verify it was signed by Fedora.
 We can import the latest release's Fedora GPG key and verify the signature:
 
 
-```
+```bash
 [host]$ curl https://getfedora.org/static/fedora.gpg | gpg2 --import
 [host]$ gpg2 --verify fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2.xz.sig
 gpg: Signature made Thu 09 Jan 2020 05:56:25 PM EST
@@ -58,7 +58,7 @@ Now that we've got everything all verified let's decompress the qcow
 and also alias the `fcct` and `ignition-validate` binaries so we can
 use them in our shell:
 
-```
+```bash
 [host]$ unxz fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2.xz
 [host]$ alias fcct="${PWD}/fcct"
 [host]$ alias ignition-validate="${PWD}/ignition-validate"
@@ -68,42 +68,33 @@ Now we're all set up and can get started!
 
 # Introduction
 
-Fedora CoreOS is blah blah blah auto updates blah containers blah.
-
-
-Fedora CoreOS is delivered as a disk image. In every environment where
+Fedora CoreOS is a container focused operating system, coupled with
+automatic updates, to enable the next wave of cloud native infrastructure.
+Fedora CoreOS is built for many platforms, each of them delivered as a
+pre-built disk image. In every environment where
 Fedora CoreOS is started the initial boot starts with roughly the same
 disk image. In cloud environments these are cloud images that were
 made specifically for that cloud. For bare metal environments the
 [coreos-installer](https://github.com/coreos/coreos-installer)
-can be used, which performs a glorified bit for bit
-copy of the disk image with some convenience factors added.
+can be used, which performs a bit for bit copy of the disk image
+with some convenience factors added.
 
-If the delivered artifact is a disk image how do I customize a Fedora CoreOS 
-to do what I need it to do? Create an Ignition config!
+If the delivered artifact is a disk image how can it be customized?
+The answer to that is [Ignition](https://github.com/coreos/ignition).
 
-
-# What is Ignition?
-
-Fedora CoreOS uses 
-[Ignition](https://github.com/coreos/ignition)
-to provision a node in an automated fashion. Ignition config files are
-written in JSON and typically not user friendly. For that reason
-Fedora CoreOS offers the
+Fedora CoreOS uses Ignition to provision a node in an automated fashion.
+Ignition config files are written in JSON and typically not user friendly.
+For that reason Fedora CoreOS offers the
 [Fedora CoreOS Config Transpiler](https://github.com/coreos/fcct)
-(also known as FCCT)
-that will create igntion configs from a more user friendly format and
-also the
+(also known as FCCT) that will create Ignition configs from a more user
+friendly format and also the
 [ignition-validate](https://github.com/coreos/ignition#config-validation)
 sub-utility that can be used to verify Ignition config files before
 attempting to launch a machine.
 
+# First Ignition config via the Fedora CoreOS Config Transpiler
 
-
-
-# First Ignition config (created with FCCT):
-
-Let's create a very simple config that will do two things:
+Let's create a very simple FCCT config that will do two things:
 
 - Add a systemd dropin to override the normal `serial-getty@ttyS0.service`.
   The override will make the service automatically log the `core` user in to the
@@ -111,7 +102,7 @@ Let's create a very simple config that will do two things:
 - Place a file at `/etc/zincati/config.d/90-disable-auto-updates.toml` to disable
   automatic updates while we poke around the booted machine for the lab.
 
-```
+```yaml
 [host]$ cat ./fcct-simple.yaml
 variant: fcos
 version: 1.0.0
@@ -136,9 +127,9 @@ storage:
           enabled = false
 ```
 
-We'll then use `fcct` to convert that into an ignition config:
+We'll then use `fcct` to convert that into an Ignition config:
 
-```
+```json
 [host]$ fcct -pretty -strict -input ./fcct-simple.yaml -output simple.ign
 [host]$ cat simple.ign
 {
@@ -201,6 +192,12 @@ success!
 You'll notice that `ignition-validate` will print out warnings for
 common configurations that you may want to fix or change before
 proceeding. 
+
+**NOTE:** The config files used for this section can be downloaded
+          at the following links:
+          [fcct-simple.yaml](/2020-01-21/fcct-simple.yaml),
+          [simple.ign](/2020-01-21/simple.ign)
+          
 
 # Booting Fedora CoreOS: Simple Provisioning Scenario
 
@@ -457,6 +454,11 @@ And then convert to Igntion:
 [host]$ fcct -pretty -strict -input ./fcct-intermediate.yaml -output intermediate.ign
 ```
 
+**NOTE:** The config files used for this section can be downloaded
+          at the following links:
+          [fcct-intermediate.yaml](/2020-01-21/fcct-intermediate.yaml),
+          [intermediate.ign](/2020-01-21/intermediate.ign)
+
 
 ## Test it out
 
@@ -610,6 +612,11 @@ Run `fcct` to convert that to an Ignition config:
 ```
 [host]$ fcct -pretty -strict -input ./fcct-advanced.yaml -output advanced.ign
 ```
+
+**NOTE:** The config files used for this section can be downloaded
+          at the following links:
+          [fcct-advanced.yaml](/2020-01-21/fcct-advanced.yaml),
+          [advanced.ign](/2020-01-21/advanced.ign)
 
 
 
