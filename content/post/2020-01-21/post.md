@@ -767,7 +767,7 @@ the latest software.
 
 When we log back in we can view the current version of Fedora CoreOS
 is now `31.20200113.3.1`. The `rpm-ostree status` output will also
-show the older version, which still exists in case we need to rollback:
+how the older version, which still exists in case we need to rollback:
 
 ```nohighlight
 $ rpm-ostree status
@@ -827,8 +827,8 @@ Deployments:
 
 # Conclusion
 
-In this lab we've learned a little bit about Fedora CoreOS;
-how it's delivered as a pre-created disk image, how it's 
+In this lab we've learned a little bit about Fedora CoreOS. We've
+learned how it's delivered as a pre-created disk image, how it's 
 provisioned in an automated fashion via Ignition, and also how
 automated updates are configured and achieved via zincati and
 RPM-OSTree. The next step is to try out Fedora CoreOS for your
