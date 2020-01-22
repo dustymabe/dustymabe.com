@@ -34,7 +34,7 @@ We recommend extracting it into your home directory like so:
 ```
 
 We've now downloaded and verified the tarball and the contents of the
-tarball after extraction; plaintext inline signatures were erified using
+tarball after extraction; plaintext inline signatures were verified using
 [Dusty Mabe's public GPG key](https://dustymabe.com/dustymabe.gpg).
 In this case the included Fedora CoreOS qcow image is the
 exact image that was produced by the production Fedora CoreOS release
@@ -46,6 +46,7 @@ We can import the latest release's Fedora GPG key and verify the signature:
 ```nohighlight
 [host]$ curl https://getfedora.org/static/fedora.gpg | gpg2 --import
 [host]$ gpg2 --verify fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2.xz.sig
+gpg: assuming signed data in 'fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2.xz'
 gpg: Signature made Thu 09 Jan 2020 05:56:25 PM EST
 gpg:                using RSA key 50CB390B3C3359C4
 gpg: Good signature from "Fedora (31) <fedora-31-primary@fedoraproject.org>" [unknown]
@@ -72,7 +73,7 @@ Fedora CoreOS is a container focused operating system, coupled with
 automatic updates, to enable the next wave of cloud native infrastructure.
 Fedora CoreOS is built for many platforms, each of them delivered as a
 pre-built disk image. In every environment where
-Fedora CoreOS is started the initial boot starts with roughly the same
+Fedora CoreOS is deployed the initial boot starts with roughly the same
 disk image. In cloud environments these are cloud images that were
 made specifically for that cloud. For bare metal environments the
 [coreos-installer](https://github.com/coreos/coreos-installer)
@@ -87,10 +88,10 @@ Ignition config files are written in JSON and typically not user friendly.
 For that reason Fedora CoreOS offers the
 [Fedora CoreOS Config Transpiler](https://github.com/coreos/fcct)
 (also known as FCCT) that will create Ignition configs from a more user
-friendly format and also the
+friendly format. Additionally we offer the
 [ignition-validate](https://github.com/coreos/ignition#config-validation)
-sub-utility that can be used to verify Ignition config files before
-attempting to launch a machine.
+sub-utility that can be used to verify Ignition config and catch
+issues before launching a machine.
 
 # First Ignition config via the Fedora CoreOS Config Transpiler
 
@@ -99,8 +100,11 @@ Let's create a very simple FCCT config that will do two things:
 - Add a systemd dropin to override the normal `serial-getty@ttyS0.service`.
   The override will make the service automatically log the `core` user in to the
   serial console of the booted machine:
-- Place a file at `/etc/zincati/config.d/90-disable-auto-updates.toml` to disable
-  automatic updates while we poke around the booted machine for the lab.
+- Place a file at `/etc/zincati/config.d/90-disable-auto-updates.toml` to
+  [disable automatic updates](https://github.com/coreos/zincati/blob/master/docs/usage/auto-updates.md#disabling-auto-updates)
+  while we poke around the booted machine for the lab.
+
+We can create that FCCT in a file named `fcct-simple.yaml` now:
 
 ```nohighlight
 [host]$ cat ./fcct-simple.yaml
@@ -127,7 +131,7 @@ storage:
           enabled = false
 ```
 
-We'll then use `fcct` to convert that into an Ignition config:
+We'll then use the `fcct` utility to convert that into an Ignition config:
 
 ```nohighlight
 [host]$ fcct -pretty -strict -input ./fcct-simple.yaml -output simple.ign
@@ -201,9 +205,9 @@ proceeding.
 
 # Booting Fedora CoreOS: Simple Provisioning Scenario
 
-Given that we've now created an ignition config. Let's try to boot a
+Given that we've now created an Ignition config. Let's try to boot a
 VM with an image and that config. For this lab we'll use the `qemu` image
-but you should be able to use that ignition config with any of the
+but you should be able to use that Ignition config with any of the
 artifacts that are published for a Fedora CoreOS release.
 
 In this case we'll use `libvirt`/`qemu`/`kvm` to boot directly into Fedora
@@ -216,6 +220,10 @@ CoreOS from the qemu image.
             --qemu-commandline="-fw_cfg name=opt/com.coreos/config,file=${PWD}/simple.ign" \
             --disk=size=20,backing_store=${PWD}/fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2
 ```
+
+**NOTE:** We used `chcon` here to set appropriate SELinux file
+          contexts on the Ignition config file so that the resulting
+          process would be able to access the file.
 
 This command will start an instance named `fcos` from the 
 `fedora-coreos-31.20200108.3.0-qemu.x86_64.qcow2` image using the
@@ -258,8 +266,9 @@ enabled = false
 ## Exploring Fedora CoreOS Internals
 
 Once you have access to the console of the machine you can browse around a bit
-to see some of the different pieces of the operating system. For one you can still
-inspect the system to see what it was composed of by using `rpm`:
+to see some of the different pieces of the operating system. For example, even
+though this is an OSTree based system it was still composed via RPMs
+and you can inspect the system to see what it was composed of by using `rpm`:
 
 ```nohighlight
 $ rpm -q ignition kernel moby-engine podman systemd rpm-ostree zincati
@@ -307,7 +316,7 @@ Jan 20 20:01:14 localhost zincati[1063]: [INFO ] agent running on node 'ead8e3b8
 Jan 20 20:01:14 localhost zincati[1063]: [WARN ] initialization complete, auto-updates logic disabled by configuration
 ```
 
-**NOTE:** You can see from the `auto-updates logic disabled by configuration` message that 
+**NOTE:** You can see from the *"auto-updates logic disabled by configuration"* message that 
           `zincati` properly picked up the configuration to disable updates that was placed
           in `/etc/zincati/config.d/90-disable-auto-updates.toml`.
 
@@ -329,7 +338,7 @@ $ sudo docker version
 ```
 
 **NOTE:** You need `sudo` for docker commands. `podman` commands can be run as 
-          `root` or non-root.
+          root or as a non-root user.
 
 **NOTE:** Running a `docker` command will cause the docker daemon to be started
           if it was not already started.
@@ -346,16 +355,17 @@ escape out of the serial console by pressing `CTRL` + `]` and then type:
 
 # Booting Fedora CoreOS: Intermediate Provisioning Scenario
 
-For a more intermediate provisioning scenario, let's add an SSH key to
+For a more intermediate provisioning scenario let's add an SSH key to
 our `authorized_keys` file and run a script on the first boot. We'll
-add to the the `fcct` config from the previous scenario such that we now:
+add to the `fcct` config from the previous scenario such that the
+provisioning configuration will now tell Ignition to:
 
 - Add a systemd dropin for auto login from serial console.
 - Disable automatic updates.
 - Add a script at `/usr/local/bin/public-ipv4.sh` to run on boot.
 - Configure a systemd service to run the script on first boot.
 
-## Write the Script
+### Write the Script
 
 So what script should we run? Here's a good small script:
 
@@ -375,10 +385,10 @@ public and private addresses.
 We'll store this script into `/usr/local/bin/public-ipv4.sh` when we
 provision the machine. We'll encode it into an FCCT config here shortly.
 
-## Write the Systemd Service
+### Write the Systemd Service
 
-We need to call the script we made above by using a systemd unit. Here is
-one that works for what we want, which is to execute on first boot and not
+We need to call the script from the previous section by using a systemd unit.
+Here is one that works for what we want, which is to execute on first boot and not
 again:
 
 ```nohighlight
@@ -398,7 +408,7 @@ WantedBy=console-login-helper-messages-issuegen.service
 We'll call this unit `issuegen-public-ipv4.service` and we'll embed it
 into the FCCT config in the next section.
 
-## Write FCCT and convert to Ignition
+### Write FCCT and convert to Ignition
 
 The final FCCT for what we want to do is shown below. We'll
 store these contents in `fcct-intermediate.yaml`.
@@ -520,8 +530,8 @@ machine:
 # Booting Fedora CoreOS: Advanced Provisioning Scenario
 
 So what is running a server all about? Hosting services, crunching data,
-mining bitcoin? Ding ding ding. Let's actually do something with our Fedora
-CoreOS node! 
+mining bitcoin? **DING DING DING**! Let's actually do something with our Fedora
+CoreOS node.
 
 Since Fedora CoreOS is focused on running applications/services in
 containers we recommend trying to only run containers and not modifying the
@@ -668,12 +678,12 @@ Failed Units: 1
 The `Failed Units` message is coming from the
 [console login helper messages](https://github.com/rfairley/console-login-helper-messages)
 helpers. This particular helper shows us when `systemd` has services
-that are in a failed state.
+that are in a failed state. In this case we made `failure.service`
+with `ExecStart=/usr/bin/false`, so we intentionally created a service
+that will always fail in order to illustrate the helper messages.
 
-
-Now that we are up let's check on the status of the `etcd-member`
-service:
-
+Now that we're up and we don't have any *real* failures we can check
+out our service we care about (`etcd-member.service`):
 
 ```nohighlight
 $ systemctl status etcd-member.service
@@ -734,13 +744,15 @@ $ curl -L http://127.0.0.1:2379/v2/keys/ 2>/dev/null | jq .
 }
 ```
 
+Looks like everything is working!
+
 # Updates!
 
 So far we've been disabling one of the best features of Fedora CoreOS: 
 automatic updates. Let's see them in action.
 
-Let's remove the `zincati` config that is disabling the updates and
-restart the zincati service:
+We can do this by removing the `zincati` config that is disabling the
+updates and restarting the zincati service:
 
 ```nohighlight
 $ sudo rm /etc/zincati/config.d/90-disable-auto-updates.toml 
@@ -748,13 +760,14 @@ $ sudo systemctl restart zincati.service
 Connection to 192.168.122.163 closed.
 ```
 
-Just as shown above after a short period of time you should see the 
-machine reboot. The update has been staged and the system rebooted
-in order to boot into the new deployment with the latest software.
+After restarting `zincati.service` the machine will reboot after a
+short period of time. In this case the update has been staged and
+the system rebooted in order to boot into the new deployment with
+the latest software.
 
-When we log back in we can view the current version of Fedora CoreOS,
-which will also show the older version, which still exists in case
-we need to rollback:
+When we log back in we can view the current version of Fedora CoreOS
+is now `31.20200113.3.1`. The `rpm-ostree status` output will also
+show the older version, which still exists in case we need to rollback:
 
 ```nohighlight
 $ rpm-ostree status
@@ -772,6 +785,8 @@ Deployments:
               GPGSignature: Valid signature by 7D22D5867F2A4236474BF7B850CB390B3C3359C4
 ```
 
+**NOTE:** The currently booted deployment is denoted by the `●` character.
+
 You can view the differences between the two versions by running an `rpm-ostree db diff`
 command:
 
@@ -788,6 +803,26 @@ If the system is not functioning fully for whatever reason we can go back to the
 
 ```nohighlight
 $ sudo rpm-ostree rollback --reboot
+```
+
+After logging back in after reboot we can see we are now booted back into the old
+`31.20200108.3.0` deployment from before the upgrade occurred:
+
+```nohighlight
+$ rpm-ostree status 
+State: idle
+AutomaticUpdates: disabled
+Deployments:
+● ostree://fedora:fedora/x86_64/coreos/stable
+                   Version: 31.20200108.3.0 (2020-01-09T21:51:07Z)
+                    Commit: 113aa27efe1bbcf6324af7423f64ef7deb0acbf21b928faec84bf66a60a5c933
+              GPGSignature: Valid signature by 7D22D5867F2A4236474BF7B850CB390B3C3359C4
+
+  ostree://fedora:fedora/x86_64/coreos/stable
+                   Version: 31.20200113.3.1 (2020-01-14T00:20:15Z)
+                    Commit: f480038412cba26ab010d2cd5a09ddec736204a6e9faa8370edaa943cf33c932
+              GPGSignature: Valid signature by 7D22D5867F2A4236474BF7B850CB390B3C3359C4
+
 ```
 
 # Conclusion
