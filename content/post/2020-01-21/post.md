@@ -792,5 +792,12 @@ $ sudo rpm-ostree rollback --reboot
 
 # Conclusion
 
+In this lab we've learned a little bit about Fedora CoreOS;
+how it's delivered as a pre-created disk image, how it's 
+provisioned in an automated fashion via Ignition, and also how
+automated updates are configured and achieved via zincati and
+RPM-OSTree. The next step is to try out Fedora CoreOS for your
+own use cases and
+[join the community](https://github.com/coreos/fedora-coreos-tracker/blob/master/README.md#communication-channels-for-fedora-coreos)!
 
-We've seen how to blah blah.
+
