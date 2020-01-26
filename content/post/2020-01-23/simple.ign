@@ -17,7 +17,7 @@
     "files": [
       {
         "group": {},
-        "path": "/etc/zincati/config.d/52-updates.toml",
+        "path": "/etc/zincati/config.d/90-disable-auto-updates.toml",
         "user": {},
         "contents": {
           "source": "data:,%5Bupdates%5D%0Aenabled%20%3D%20false%0A",

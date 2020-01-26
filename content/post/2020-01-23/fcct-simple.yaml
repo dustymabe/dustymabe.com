@@ -14,7 +14,7 @@ systemd:
           TTYVTDisallocate=no
 storage:
   files:
-    - path: /etc/zincati/config.d/52-updates.toml
+    - path: /etc/zincati/config.d/90-disable-auto-updates.toml
       contents:
         inline: |
           [updates]
