@@ -199,8 +199,8 @@ proceeding.
 
 **NOTE:** The config files used for this section can be downloaded
           at the following links:
-          [fcct-simple.yaml](/2020-01-21/fcct-simple.yaml),
-          [simple.ign](/2020-01-21/simple.ign)
+          [fcct-simple.yaml](/2020-01-23/fcct-simple.yaml),
+          [simple.ign](/2020-01-23/simple.ign)
           
 
 # Booting Fedora CoreOS: Simple Provisioning Scenario
@@ -466,8 +466,8 @@ And then convert to Igntion:
 
 **NOTE:** The config files used for this section can be downloaded
           at the following links:
-          [fcct-intermediate.yaml](/2020-01-21/fcct-intermediate.yaml),
-          [intermediate.ign](/2020-01-21/intermediate.ign)
+          [fcct-intermediate.yaml](/2020-01-23/fcct-intermediate.yaml),
+          [intermediate.ign](/2020-01-23/intermediate.ign)
 
 
 ### Test it out
@@ -625,8 +625,8 @@ Run `fcct` to convert that to an Ignition config:
 
 **NOTE:** The config files used for this section can be downloaded
           at the following links:
-          [fcct-advanced.yaml](/2020-01-21/fcct-advanced.yaml),
-          [advanced.ign](/2020-01-21/advanced.ign)
+          [fcct-advanced.yaml](/2020-01-23/fcct-advanced.yaml),
+          [advanced.ign](/2020-01-23/advanced.ign)
 
 
 
