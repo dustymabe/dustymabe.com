@@ -68,7 +68,7 @@ an install of Fedora CoreOS to the `sda` disk:
 ```nohighlight
 $ kernel=https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/31.20200118.3.0/x86_64/fedora-coreos-31.20200118.3.0-live-kernel-x86_64
 $ initrd=https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/31.20200118.3.0/x86_64/fedora-coreos-31.20200118.3.0-live-initramfs.x86_64.img
-kernel_args='ip=dhcp rd.neednet=1 console=tty0 console=ttyS0 coreos.inst.install_dev=/dev/sda coreos.inst.stream=stable coreos.inst.ignition_url=https://dustymabe.com/2020-01-30/auto-login-serial-console-ttyS0.ign'
+$ kernel_args='ip=dhcp rd.neednet=1 console=tty0 console=ttyS0 coreos.inst.install_dev=/dev/sda coreos.inst.stream=stable coreos.inst.ignition_url=https://dustymabe.com/2020-01-30/auto-login-serial-console-ttyS0.ign'
 $
 $ virt-install --name fcos --ram 2048 --vcpus 2 --disk size=20 \
                --network bridge=virbr0 --graphics=none \
