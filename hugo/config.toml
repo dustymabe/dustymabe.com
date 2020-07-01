@@ -4,7 +4,7 @@ title = "A Random Walk Down Tech Street"
 theme = "beautifulhugo"
 
 [Params]
-  subtitle = "random musings of a computer engineer"
+  subtitle = "musings of a computer engineer"
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
