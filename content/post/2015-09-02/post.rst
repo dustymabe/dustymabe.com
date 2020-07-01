@@ -17,8 +17,8 @@ WG has elected to do a temperature check on September 8th.
 
 For this test day we are going to concentrate on the base image. We
 will have vagrant boxes (see 
-`this <http://fedoramagazine.org/running-vagrant-fedora-22/>`_
-page for how to set up 
+`this page <http://fedoramagazine.org/running-vagrant-fedora-22/>`_
+for how to set up 
 your machine), qcow images, raw images, and AWS EC2 images. 
 In a later test day we will focus on the Atomic images and Docker images. 
 

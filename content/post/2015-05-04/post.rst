@@ -27,7 +27,7 @@ Host cloud image. The landing pages where we are organizing instructions and inf
 are 
 `here <https://fedoraproject.org/wiki/Test_Day:2015-05-07_Cloud>`_ 
 (for Cloud Base) and 
-`here <https://fedoraproject.org/wiki/Test_Day:2015-05-07_Atomic>`_
+`there <https://fedoraproject.org/wiki/Test_Day:2015-05-07_Atomic>`_
 (for Atomic). If you're
 available to test on the test day (or any other time) please go there
 and fill out your name and test results.
