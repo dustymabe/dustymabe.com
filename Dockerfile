@@ -5,7 +5,8 @@ FROM registry.fedoraproject.org/fedora:32
 #     - git (for git hash)
 #     - hugo (static web site generation)
 #     - httpd (web server)
-RUN dnf -y update && dnf install -y httpd /usr/bin/rst2html git hugo && dnf clean all
+#     - findutils for /usr/bin/find
+RUN dnf -y update && dnf install -y httpd /usr/bin/rst2html findutils git hugo && dnf clean all
 
 
 #### APACHE STUFF #########
