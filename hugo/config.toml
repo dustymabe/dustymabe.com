@@ -53,3 +53,9 @@ theme = "beautifulhugo"
 
 [permalinks]
     post = "/:year/:month/:day/:title/"
+
+# Allow for raw html to be processed
+# https://discourse.gohugo.io/t/raw-html-getting-omitted-in-0-60-0/22032
+# https://gohugo.io/news/0.60.0-relnotes/
+[markup.goldmark.renderer]
+unsafe= true
