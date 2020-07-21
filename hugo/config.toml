@@ -5,8 +5,8 @@ theme = "beautifulhugo"
 
 [Params]
   subtitle = "musings of a computer engineer"
-  logo = "img/avatar-icon.png"
-  favicon = "img/favicon.ico"
+  logo = "img/dustymabecom-logo.png"
+  favicon = "img/dustymabecom-favicon.ico"
   dateFormat = "January 2, 2006"
   commit = "https://github.com/dustymabe/dustymabe.com/tree/"
   rss = true
