@@ -136,3 +136,5 @@ with the following domains:
 This post goes through some preparation steps for you to deploy an OKD 
 cluster on DigitalOcean. Followup entries in this series will further
 detail how to bring up and administer a cluster.
+
+**NOTE**: The next post in this series is available [here](/2020/08/13/openshift-okd-on-fedora-coreos-on-digitalocean-part-1-deployment/).
