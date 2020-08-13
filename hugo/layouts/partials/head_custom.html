@@ -1,0 +1,24 @@
+<!--
+This file overwrites hugo/themes/beautifulhugo/layouts/partials/head_custom.html
+and adds custom CSS to use. Tips taken from
+
+    - https://mattmayes.com/posts/2019/hugo-add-custom-css-properly/
+    - https://github.com/matcornic/hugo-theme-learn/issues/81#issuecomment-474775893
+
+--> 
+
+<style type="text/css">
+
+/* --- Make nohighlight code blocks scroll --- */
+/* --- Overrides pre code from hugo/themes/beautifulhugo/static/css/bootstrap.min.css --- */
+pre code {
+    white-space: pre;
+}
+
+/* --- Make highlight code blocks scroll --- */
+/* --- Overrides code from hugo/themes/beautifulhugo/static/css/codeblock.css --- */
+.highlight td:first-child pre, .highlight pre {
+    overflow: scroll
+}
+
+</style>
