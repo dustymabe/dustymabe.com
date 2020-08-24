@@ -488,3 +488,5 @@ In this post we analyzed the `digitalocean-okd-install` automation script
 and learned how to use it to bring up a cluster in DigitalOcean. In
 future posts we'll learn how to do some more configuration and start
 using and administering the cluster.
+
+**NOTE**: The next post in this series is available [here](/2020/08/23/openshift-okd-on-fedora-coreos-on-digitalocean-part-2-configuration/).
