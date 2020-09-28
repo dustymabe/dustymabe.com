@@ -224,3 +224,5 @@ certificates signed by a certificate authority and we configured the
 cluster to allow specific users to log in via the GitLab identity
 provider. In the next post we'll cover performing an upgrade of the
 cluster.
+
+**NOTE**: The next post in this series is available [here](/2020/09/27/openshift-okd-on-fedora-coreos-on-digitalocean-part-3-upgrading/).
