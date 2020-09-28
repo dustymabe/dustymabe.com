@@ -13,7 +13,7 @@ set up an [OpenShift OKD](https://www.okd.io/) cluster on
 [DigitalOcean](https://www.digitalocean.com/).
 
 Back on August 17th I highlighted this blog post series with a
-presentation and demo for the OKD working group's Demo Marathan.
+presentation and demo for the OKD working group's Demo Marathon.
 
 The video is [posted on YouTube](https://www.youtube.com/watch?v=Ow-AFgUQOqk)
 and also available below. If you're interested take some time and
