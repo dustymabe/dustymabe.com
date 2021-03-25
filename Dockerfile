@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora:32
+FROM registry.fedoraproject.org/fedora:33
 
 # Perform updates && Install rpms:
 #     - rst2html (convert rst)
@@ -6,7 +6,7 @@ FROM registry.fedoraproject.org/fedora:32
 #     - hugo (static web site generation)
 #     - httpd (web server)
 #     - findutils for /usr/bin/find
-RUN dnf -y update && dnf install -y httpd /usr/bin/rst2html findutils git hugo && dnf clean all
+RUN dnf -y update && dnf install -y httpd mod_ssl openssl /usr/bin/rst2html findutils git hugo && dnf clean all
 
 
 #### APACHE STUFF #########
@@ -21,11 +21,14 @@ RUN chmod g+w /etc/httpd/conf /etc/httpd/conf.d
 RUN chown root:root /run/httpd /etc/httpd/run /run/httpd/htcacheclean
 RUN chmod g+w /run/httpd /etc/httpd/run /run/httpd/htcacheclean
 
-# Remove any existing configs in conf.d and don't try to bind to port 80
-RUN rm -f /etc/httpd/conf.d/* && \
-    sed -i 's/^Listen 80/Listen 8080/' /etc/httpd/conf/httpd.conf
+# Remove extraneous configs in conf.d and don't try to bind to port 80 or 443
+RUN rm -f /etc/httpd/conf.d/[^ssl]*.conf && \
+    sed -i 's/^Listen 80/Listen 8080/' /etc/httpd/conf/httpd.conf && \
+    sed -i 's/443/8443/' /etc/httpd/conf.d/ssl.conf
+#   sed -i 's/^Listen 443 https/Listen 8443 https/' /etc/httpd/conf.d/ssl.conf
 
 EXPOSE 8080
+EXPOSE 8443
 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
