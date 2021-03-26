@@ -37,6 +37,9 @@ CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
 # Add in files and run hugo to generate static website
 ADD . /context/
+# podman doesn't recurse submodules
+# https://github.com/containers/buildah/issues/3104
+RUN test -f /context/hugo/themes/beautifulhugo/LICENSE || git -C /context/ submodule update --init
 RUN cd /context/hugo && \
 # hugo no longer allows the static dir to be a symlink so let's
 # copy the content over:
