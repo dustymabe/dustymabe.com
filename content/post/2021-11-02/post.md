@@ -40,8 +40,9 @@ To run FCOS on a Raspberry Pi 4 via U-Boot the SD card or USB disk needs to be p
 In this case we can grab these files from the `uboot-images-armv8`, `bcm283x-firmware`, `bcm283x-overlays` RPMs from the Fedora Linux repositories. First download them and store them in a temporary directory on your system:
 
 ```
+RELEASE=34 # The target Fedora Release. Use the same one that current FCOS is based on.
 mkdir -p /tmp/RPi4boot/boot/efi/
-sudo dnf install -y --downloadonly --release=34 --forcearch=aarch64 --destdir=/tmp/RPi4boot/  uboot-images-armv8 bcm283x-firmware bcm283x-overlays
+sudo dnf install -y --downloadonly --release=$RELEASE --forcearch=aarch64 --destdir=/tmp/RPi4boot/  uboot-images-armv8 bcm283x-firmware bcm283x-overlays
 ```
 
 Now extract the contents of the RPMs and copy the proper `u-boot.bin` for the RPi4 into place:
@@ -54,7 +55,7 @@ sudo mv /tmp/RPi4boot/usr/share/uboot/rpi_4/u-boot.bin /tmp/RPi4boot/boot/efi/rp
 Run `coreos-installer` to install to the target disk. There are [various ways](https://coreos.github.io/coreos-installer/getting-started/) to run `coreos-installer` and install to a target disk. We won't cover them all here, but this workflow most closely mirrors the ["Installing from the container"](https://docs.fedoraproject.org/en-US/fedora-coreos/bare-metal/#_installing_from_the_container) documentation.
 
 ```
-FCOSDISK="/dev/sdX"
+FCOSDISK=/dev/sdX
 sudo coreos-installer install --architecture=aarch64 -i config.ign $FCOSDISK
 ```
 
@@ -134,6 +135,10 @@ sudo rsync -avh /tmp/mnt1/ /tmp/mnt2/
 sudo umount /tmp/mnt1 /tmp/mnt2
 ```
 
+Now you can remove the extra disk from the RPi4 and reboot the machine.
+
+TIP: It can take some time to boot, especially if the disk is slow. Be patient. You may not see anything on the screen for 20-30 seconds.
+
 #### UEFI: Combined Disk Mode Alternate Machine Disk Preparation
 
 When preparing the RPi4 disk from an alternate machine (i.e. creating the disk from your laptop) then you can mount up the 2nd partition **after** running `coreos-installer` and pull down the UEFI firmware files.
@@ -141,14 +146,13 @@ When preparing the RPi4 disk from an alternate machine (i.e. creating the disk f
 First, run `coreos-installer` to install to the target disk:
 
 ```
-FCOSDISK="/dev/sdX"
+FCOSDISK=/dev/sdX
 sudo coreos-installer install --architecture=aarch64 -i config.ign $FCOSDISK
 ```
 
 Now you can mount up the 2nd partition and pull down the UEFI firmware files:
 
 ```
-FCOSDISK=/dev/sdX
 mkdir /tmp/FCOSEFIpart
 sudo mount ${FCOSDISK}2 /tmp/FCOSEFIpart
 pushd /tmp/FCOSEFIpart
