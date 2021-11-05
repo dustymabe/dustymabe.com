@@ -6,6 +6,8 @@ tags: [ coreos fedora aarch64 ]
 published: true
 ---
 
+Note: A more permanent version of this tutorial exists in the [Fedora CoreOS documentation](https://docs.fedoraproject.org/en-US/fedora-coreos/provisioning-raspberry-pi4/).
+
 Fedora CoreOS recently started producing 64-bit ARM (`aarch64`) artifacts. These images can be used as the Operating System for the Raspberry Pi 4 device. Before trying to get FCOS up and running on your Raspberry Pi4 you'll want to [Update the EEPROM](#Updating-EEPROM-on-Raspberry-Pi4) to the latest version and choose how you want to boot the Raspberry Pi 4. There are two options:
 
 - [Installing FCOS and Booting via U-Boot](#Installing-FCOS-and-Booting-via-U-Boot)
@@ -77,9 +79,9 @@ TIP: It can take some time to boot, especially if the disk is slow. Be patient. 
 
 ## Installing FCOS and Booting via UEFI {#Installing-FCOS-and-Booting-via-UEFI}
 
-There is a UEFI firwmare implementation for the RPi4 ([pftf/RPi4](https://github.com/pftf/RPi4/)) that attempts to make the RPi4 ServerReady (SBBC compliant) and allows you to pretend that the RPi4 is just like any other server hardware with UEFI.
+There is a UEFI firmware implementation for the RPi4 ([pftf/RPi4](https://github.com/pftf/RPi4/)) that attempts to make the RPi4 ServerReady (SBBC compliant) and allows you to pretend that the RPi4 is just like any other server hardware with UEFI.
 
-You can write the firwmare to a disk (USB or SD card) and then boot/install FCOS as you would on any bare metal server. However, the firmware files need to be on an SD card or USB disk and will take up either the SD card slot or a USB slot. Depending on your needs this may be acceptable or not. Depending on the answer you have a few options:
+You can write the firmware to a disk (USB or SD card) and then boot/install FCOS as you would on any bare metal server. However, the firmware files need to be on an SD card or USB disk and will take up either the SD card slot or a USB slot. Depending on your needs this may be acceptable or not. Depending on the answer you have a few options:
 
 - Separate UEFI Firmware Disk (aka "separate disk mode")
 - Combined Fedora CoreOS + UEFI Firmware Disk (aka "combined disk mode")
