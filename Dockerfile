@@ -2,11 +2,11 @@ FROM registry.fedoraproject.org/fedora:35
 
 # Perform updates && Install rpms:
 #     - rst2html (convert rst)
-#     - git (for git hash)
+#     - git-core (for git hash)
 #     - hugo (static web site generation)
 #     - httpd (web server)
 #     - findutils for /usr/bin/find
-RUN dnf -y update && dnf install -y httpd mod_ssl openssl /usr/bin/rst2html findutils git hugo && dnf clean all
+RUN dnf -y update && dnf install -y httpd mod_ssl openssl /usr/bin/rst2html findutils git-core hugo && dnf clean all
 
 
 #### APACHE STUFF #########
