@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora:37
+FROM registry.fedoraproject.org/fedora:37 AS hugo
 
 # Perform updates && Install rpms:
 #     - rst2html (convert rst)
@@ -6,34 +6,8 @@ FROM registry.fedoraproject.org/fedora:37
 #     - hugo (static web site generation)
 #     - httpd (web server)
 #     - findutils for /usr/bin/find
-RUN dnf -y update && dnf install -y httpd mod_ssl openssl /usr/bin/rst2html findutils git-core hugo && dnf clean all
-
-
-#### APACHE STUFF #########
-
-# Fix permissions so that httpd can run in the restricted scc
-RUN chgrp root /var/run/httpd && chmod g+rwx /var/run/httpd  && \
-    chgrp root /var/log/httpd && chmod g+rwx /var/log/httpd
-# In OpenShift we run as random uid and root group
-# - Make /etc/httpd/conf{,.d} (root:root) group writable
-# - Make *run* dirs group owned by root and group writable
-RUN chmod g+w /etc/httpd/conf /etc/httpd/conf.d
-RUN chown root:root /run/httpd /etc/httpd/run /run/httpd/htcacheclean
-RUN chmod g+w /run/httpd /etc/httpd/run /run/httpd/htcacheclean
-
-# Remove extraneous configs in conf.d and don't try to bind to port 80 or 443
-RUN rm -f /etc/httpd/conf.d/[^ssl]*.conf && \
-    sed -i 's/^Listen 80/Listen 8080/' /etc/httpd/conf/httpd.conf && \
-    sed -i 's/443/8443/' /etc/httpd/conf.d/ssl.conf
-#   sed -i 's/^Listen 443 https/Listen 8443 https/' /etc/httpd/conf.d/ssl.conf
-
-EXPOSE 8080
-EXPOSE 8443
-
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-
-
-#### HUGO STUFF #########
+RUN dnf -y update
+RUN dnf install -y /usr/bin/rst2html findutils git-core hugo
 
 # Add in files and run hugo to generate static website
 ADD . /context/
@@ -56,12 +30,37 @@ RUN cd /context/hugo && \
     export export HUGO_SECURITY_EXEC_ALLOW="^(rst2html|dart-sass-embedded|go|npx|postcss)$" && \
     hugo
 
+FROM registry.fedoraproject.org/fedora:37
 
+# Do update and install apache
+RUN dnf -y update
+RUN dnf install -y httpd mod_ssl openssl
+
+# Fix permissions so that httpd can run in the restricted scc
+RUN chgrp root /var/run/httpd && chmod g+rwx /var/run/httpd  && \
+    chgrp root /var/log/httpd && chmod g+rwx /var/log/httpd
+# In OpenShift we run as random uid and root group
+# - Make /etc/httpd/conf{,.d} (root:root) group writable
+# - Make *run* dirs group owned by root and group writable
+RUN chmod g+w /etc/httpd/conf /etc/httpd/conf.d
+RUN chown root:root /run/httpd /etc/httpd/run /run/httpd/htcacheclean
+RUN chmod g+w /run/httpd /etc/httpd/run /run/httpd/htcacheclean
+
+# Remove extraneous configs in conf.d and don't try to bind to port 80 or 443
+RUN rm -f /etc/httpd/conf.d/[^ssl]*.conf && \
+    sed -i 's/^Listen 80/Listen 8080/' /etc/httpd/conf/httpd.conf && \
+    sed -i 's/443/8443/' /etc/httpd/conf.d/ssl.conf
+#   sed -i 's/^Listen 443 https/Listen 8443 https/' /etc/httpd/conf.d/ssl.conf
+
+EXPOSE 8080
+EXPOSE 8443
+
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
 # Copy static website files over to html directory to be served
-RUN cp -R /context/hugo/public/* /var/www/html/
+COPY --from=hugo /context/hugo/public/ /var/www/html/
 # Copy files in 'toplevel' dir to root of the html directory as well
-RUN cp -R /context/toplevel/* /var/www/html/
+COPY --from=hugo /context/toplevel/ /var/www/html/
 # Make all files group owned by root for OpenShift
 RUN chown -R apache:root /var/www/html/
 
