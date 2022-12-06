@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora:35
+FROM registry.fedoraproject.org/fedora:37
 
 # Perform updates && Install rpms:
 #     - rst2html (convert rst)
@@ -55,6 +55,8 @@ RUN cd /context/hugo && \
     export GIT_COMMIT_SHA_SHORT=${GIT_COMMIT_SHA:0:7} && \
 #   export GIT_COMMIT_SHA=$(git rev-parse --verify HEAD)      && \
 #   export GIT_COMMIT_SHA_SHORT=$(git rev-parse --short HEAD) && \
+# allow rst2html to run. See https://gohugo.io/about/security-model/#security-policy
+    export export HUGO_SECURITY_EXEC_ALLOW="^(rst2html|dart-sass-embedded|go|npx|postcss)$" && \
     hugo
 
 
