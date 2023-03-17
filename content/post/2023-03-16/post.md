@@ -1,5 +1,5 @@
 ---
-title: 'NetworkManager: Limiting Bond Subordinate devices by Mac Address'
+title: 'NetworkManager: Limiting Bond Subordinate devices by MAC Address'
 author: dustymabe
 date: 2023-03-16
 tags: [ coreos fedora networkmanager ]
@@ -17,11 +17,11 @@ you don't even really need to care about the NIC device names if you
 know the MAC Addresses of the interfaces you want to use.
 
 
-## Defining Bond Nics via Mac Adresses Using NM Keyfiles
+## Defining Bond Nics via MAC Adresses Using NM Keyfiles
 
 If we want to define a bond named `bond0` with two subordinate
 interfaces that have the `52:54:00:20:65:3f` and `52:54:00:3a:45:8f`
-Mac Addresses then we would write out three connection profiles for NetworkManager
+MAC Addresses then we would write out three connection profiles for NetworkManager
 to achieve this goal:
 
 ```
