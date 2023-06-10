@@ -16,11 +16,12 @@ theme = "beautifulhugo"
 [Author]
   name = "Dusty Mabe"
   email = "dusty@dustymabe.com"
+  mastodon = "https://fosstodon.org/@dustymabe"
   #facebook = "username"
   #googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
   github = "dustymabe"
   gitlab = "dustymabe"
-  twitter = "dustymabe"
+  #twitter = "dustymabe"
   #reddit = "username"
   linkedin = "dustymabe"
   #xing = "username"
