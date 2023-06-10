@@ -49,7 +49,7 @@ theme = "beautifulhugo"
 
 [[menu.main]]
     name = "Tags"
-    url = "tags"
+    url = "tags/"
     weight = 3
 
 [permalinks]
