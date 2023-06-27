@@ -6,7 +6,7 @@ comments: false
 - 2015/06 — **Red Hat Summit** — Boston, MA
     - **Containerizing Applications: Existing and New**
         - Type: Workshop/Lab
-        - Co-Speakers:
+        - Co-Presenters:
             - [Scott Collier](https://www.linkedin.com/in/scottcollier/) — Senior Principal Systems Engineer, Red Hat
             - [Aaron Weitekamp](https://www.linkedin.com/in/aaronweitekamp/) — Senior Software Engineer, Red Hat
             - [Langdon White](https://www.linkedin.com/in/1angdon/) — Platform Architect, Developer Experience, Red Hat
@@ -14,14 +14,14 @@ comments: false
         - Links: [Git](https://github.com/langdon/summit-2015-lab-15812)
     - **Hands-on Red Hat Enterprise Linux Atomic Host**
         - Type: Workshop/Lab
-        - Co-Speakers:
+        - Co-Presenters:
             - [Bob Kozdemba](https://www.linkedin.com/in/bob-kozdemba-230743/) — Principal Solution Architect, Red Hat
             - [Rob Wilmoth](https://www.linkedin.com/in/robwilmoth/) — Senior Solutions Architect, Red Hat
         - Links: [Blog](https://dustymabe.com/2015/06/26/atomic-host-red-hat-summit-lab/)
 - 2015/08 — **LinuxCon/ContainerCon** — Seattle, WA
     - **Building Containerized Applications**
         - Type: Workshop/Lab
-        - Co-Speakers:
+        - Co-Presenters:
             - [Daniel Walsh](https://www.linkedin.com/in/dan-walsh-a8729b2/) — Senior Distinguished Engineer, Red Hat
             - [Bob Kozdemba](https://www.linkedin.com/in/bob-kozdemba-230743/) — Principal Solution Architect, Red Hat
         - Links: [Sched](https://lccocc2015.sched.com/event/4402/building-containerized-applications-dusty-mabe-red-hat-daniel-walsh-red-hat)
@@ -36,7 +36,7 @@ comments: false
 - 2016/06 — **Red Hat Summit** — San Francisco, CA
     - **Containerizing Applications: Existing and New**
         - Type: Workshop/Lab
-        - Co-Speakers:
+        - Co-Presenters:
             - [Scott Collier](https://www.linkedin.com/in/scottcollier/) — Senior Principal Systems Engineer, Red Hat
             - [Langdon White](https://www.linkedin.com/in/1angdon/) — Platform Architect, Developer Experience, Red Hat
         - Awards: Top Presenter
@@ -47,7 +47,7 @@ comments: false
         - Links: [Agenda](https://flock2016.sched.com/event/76oC/dont-destroy-your-machine-with-development), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2016-08-03_FLOCK-Dont-Destroy-Your-Machine-With-Development.pdf), Recording (no audio): [YouTube](https://www.youtube.com/watch?v=ua8TDUvVHa8)
     - **Bringing Developers into the Flock**
         - Type: Talk
-        - Co-Speakers:
+        - Co-Presenters:
             - [Brian Exelbierd](https://www.linkedin.com/in/bcexelbi/) — Community Business Owner, Red Hat
         - Links: [Agenda](https://flock2016.sched.com/event/76na/bringing-developers-into-the-flock), Recording: [YouTube](https://www.youtube.com/watch?v=YG-AzHCmBLY) [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2016-08-03_Bringing-Developers-Into-The-Flock.webm)
 - 2017/04 — **Navops NYC Tech Talk** — New York, NY
@@ -57,7 +57,7 @@ comments: false
 - 2017/05 — **Red Hat Summit** — Boston, MA
     - **Containerizing Applications: Existing and New**
         - Type: Workshop/Lab
-        - Co-Speakers:
+        - Co-Presenters:
             - [Scott Collier](https://www.linkedin.com/in/scottcollier/) — Senior Principal Systems Engineer, Red Hat
             - [Langdon White](https://www.linkedin.com/in/1angdon/) — Platform Architect, Developer Experience, Red Hat
         - Awards: Top Presenter
@@ -79,20 +79,20 @@ comments: false
         - Links: [Agenda](https://devconfcz2018.sched.com/event/DJWO/atomic-host-101-lab)
     - **Catching Up With Atomic: Retrospective & BOF**
         - Type: Birds of a Feather
-        - Co-Speakers:
+        - Co-Presenters:
             - [Josh Berkus](https://www.linkedin.com/in/josh-berkus-1792412/) — Kubernetes Community Manager, Red Hat
         - Links: [Agenda](https://devconfcz2018.sched.com/event/DJWc/catching-up-with-atomic-retrospective-bof), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2018-01-27_DevConfCZ-Atomic-Host-Intro.pdf)
 - 2018/05 — **Red Hat Summit** — San Francisco, CA
     - **Containerizing Applications: Existing and New**
         - Type: Workshop/Lab
-        - Co-Speakers:
+        - Co-Presenters:
             - [Scott Collier](https://www.linkedin.com/in/scottcollier/) — Senior Principal Systems Engineer, Red Hat
             - [Langdon White](https://www.linkedin.com/in/1angdon/) — Platform Architect, Developer Experience, Red Hat
             - [Tommy Hughes](https://www.linkedin.com/in/tommyhughes4/) — Principal Software Engineer, Red Hat
         - Links: [Git](https://github.com/dustymabe/summit-2018-container-lab)
     - **Atomic BOF**
         - Type: Birds of a Feather
-        - Co-Speakers:
+        - Co-Presenters:
             - [Josh Berkus](https://www.linkedin.com/in/josh-berkus-1792412/) — Kubernetes Community Manager, Red Hat
 - 2018/06 — **LINUX Unplugged** — Podcast
     - **Episode 255: Fedora to the Core**
@@ -100,24 +100,24 @@ comments: false
         - Links: [Agenda](https://www.jupiterbroadcasting.com/show/linux-unplugged/255/), Recording: [YouTube](https://www.youtube.com/watch?v=BkmSD3Z0kUk) [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2018-06-27_LinuxUnplugged-Fedora-To-The-Core.mp3)
     - **Catching Up With Atomic: Retrospective & BOF**
         - Type: Birds of a Feather
-        - Co-Speakers:
+        - Co-Presenters:
             - [Josh Berkus](https://www.linkedin.com/in/josh-berkus-1792412/) — Kubernetes Community Manager, Red Hat
         - Links: [Agenda](https://devconfcz2018.sched.com/event/DJWc/catching-up-with-atomic-retrospective-bof), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2018-01-27_DevConfCZ-Atomic-Host-Intro.pdf)
 - 2018/08 — **Flock** — Dresden, Germany
     - **State of Fedora Keynote/Objectives & Editions**
         - Type: Talk
-        - Co-Speakers:
+        - Co-Presenters:
             - [Matthew Miller](https://www.linkedin.com/in/matthewmiller/) — Fedora Project Leader, Red Hat
         - Links: [Agenda](https://flock2018.sched.com/event/FjdG/state-of-fedora-keynoteobjectives-editions), Recording: [YouTube](https://youtu.be/2_60CA8zNGY?t=2630)
     - **Building Fedora CoreOS**
         - Type: Talk
-        - Co-Speakers:
+        - Co-Presenters:
             - [Benjamin Gilbert](https://github.com/bgilbert) — Senior Software Engineer, Red Hat
         - Links: [Agenda](https://flock2018.sched.com/event/Fjcr/building-fedora-coreos), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2018-08-09_FLOCK-Building-Fedora-CoreOS.pdf), Recording: [YouTube](https://www.youtube.com/watch?v=DjnMnFwamGo) [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2018-08-09_FLOCK-Building-Fedora-CoreOS.webm)
 - 2020/01 — **DevConf.CZ** — Brno, Czech Republic
     - **Fedora CoreOS Hands-On**
         - Type: Workshop/Lab
-        - Co-Speakers:
+        - Co-Presenters:
             - [Vadim Rutkovsky](https://social.vrutkovs.eu/@vadim) — Senior Software Engineer, Red Hat
             - [Ben Howard](https://www.linkedin.com/in/darkmuggle/) — Principal Software Engineer, Red Hat
         - Links: [Agenda](https://devconfcz2020a.sched.com/event/YOp3/fedora-coreos-hands-on)
@@ -127,20 +127,20 @@ comments: false
         - Links: [Agenda](https://hopin.com/events/nest-with-fedora#schedule), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2020-08-08_FLOCK-Fedora-CoreOS-Whats-Now-Whats-Next.pdf), Recording: [YouTube](https://www.youtube.com/watch?v=mxiLgB9tua8) [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2020-08-08_FLOCK-Fedora-CoreOS-Whats-Now-Whats-Next.mp4)
     - **Getting Started with Fedora CoreOS: A Hands-On Lab**
         - Type: Workshop/Lab
-        - Co-Speakers:
+        - Co-Presenters:
             - [Timothée Ravier](https://www.linkedin.com/in/timotheeravier/) — Senior Software Engineer, Red Hat
             - [Nasir Hussain](https://www.linkedin.com/in/nasirhm/) — Student
         - Links: [Agenda](https://hopin.com/events/nest-with-fedora#schedule), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2020-08-09_FLOCK-Fedora-CoreOS-Hands-On-Lab.pdf), Recording: [YouTube](https://www.youtube.com/watch?v=tSusAbbdB7s)
 - 2020/08 — **OKD Working Group** — Online, Worldwide
     - **OKD on Fedora CoreOS on DigitalOcean**
         - Type: Talk
-        - Co-Speakers:
+        - Co-Presenters:
             - [Neal Gompa](https://www.linkedin.com/in/ngompa/) — Senior DevOps Engineer, Datto
         - Links: [Git](https://github.com/dustymabe/digitalocean-okd-install), [Blog](https://dustymabe.com/2020/09/28/openshift-okd-on-fedora-coreos-on-digitalocean-part-4-recorded-demo/), Recording: [YouTube](https://www.youtube.com/watch?v=Ow-AFgUQOqk), [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2020-09-28_OKD-FCOS-DigitalOcean.mp4)
 - 2020/11 — **KubeCon North America** — Online, Worldwide
     - **Linux in the Kubernetes Era: Does The OS Still Matter?**
         - Type: Panel
-        - Co-Speakers:
+        - Co-Presenters:
             - [Tasha Drew](https://www.linkedin.com/in/tashy/) — Director of Product Incubation, VMware
             - [Christian "Kiko" Reis](https://www.linkedin.com/in/kikoreis/) — VP Public Cloud, Canonical
             - [Darren Shepherd](https://www.linkedin.com/in/ibuildthecloud/) — Chief Technology Officer, Rancher Labs
@@ -149,7 +149,7 @@ comments: false
 - 2021/08 — **Flock/Nest** — Online, Worldwide
     - **What's New and What's Next in Fedora CoreOS**
         - Type: Talk
-        - Co-Speakers:
+        - Co-Presenters:
             - [Timothée Ravier](https://www.linkedin.com/in/timotheeravier/) — Senior Software Engineer, Red Hat
         - Links: [Agenda](https://fedoraproject.org/wiki/Nest_with_Fedora_2021_Schedule), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2021-08-05_FLOCK-Whats-New-And-Whats-Next-Fedora-CoreOS.pdf), Recording: [YouTube](https://www.youtube.com/watch?v=MAHCZItlXBM) [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2021-08-05_FLOCK-Whats-New-And-Whats-Next-Fedora-CoreOS.mp4)
 - 2022/05 — **Fedora 36 Release Party** — Online, Worldwide
@@ -159,24 +159,24 @@ comments: false
 - 2022/08 — **Flock/Nest** — Online, Worldwide
     - **Fedora on the World's Computer - Onboarding Fedora to Microsoft Azure**
         - Type: Talk
-        - Co-Speakers:
+        - Co-Presenters:
             - [Jack Aboutboul](https://www.linkedin.com/in/jackaboutboul/) — LSG Program Manager, Microsoft
         - Links: [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2022-08-05_FLOCK-Onboarding-Fedora-to-Microsoft-Azure.pdf), Recording: [YouTube](https://www.youtube.com/watch?v=2K7hvxLyREE) [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2022-08-05_FLOCK-Onboarding-Fedora-to-Microsoft-Azure.mp4)
 - 2022/08 — **DevConf.US** — Boston, MA
     - **Fedora CoreOS: What's Now, What's Next**
         - Type: Talk
-        - Co-Speakers:
+        - Co-Presenters:
             - [Mike Nguyen](https://www.linkedin.com/in/michael-nguyen-0473b07/) — Senior Software Quality Engineer, Red Hat
         - Links: [Agenda](https://devconfus2022.sched.com/event/15qCj/fedora-coreos-whats-now-whats-next), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2022-08-19_DevConfUS-Fedora-CoreOS-Whats-New-Whats-Next.pdf), Recording: [YouTube](https://youtu.be/u5Soo0jBPbc?list=PLU1vS0speL2aJI0v9POTxEnymWDemJ_ia&t=2256)
     - **Hands On with Fedora CoreOS**
         - Type: Workshop/Lab
-        - Co-Speakers:
+        - Co-Presenters:
             - [Sohan Kunkerkar](https://www.linkedin.com/in/sohan179/) — Senior Software Engineer, Red Hat
         - Links: [Agenda](https://devconfus2022.sched.com/event/14eSj/hands-on-with-fedora-coreos), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2022-08-17_DevConfUS-Hands-on-with-Fedora-CoreOS.pdf)
 - 2023/06 — **Fedora 38 Release Party** — Online, Worldwide
     - **Fedora CoreOS News & How Columbia University Uses Fedora CoreOS**
         - Type: Talk
-        - Co-Speakers:
+        - Co-Presenters:
             - [Marc Pusey](https://www.linkedin.com/in/marcpusey/) — Chief of Software Engineering & Architecture, Columbia University
         - Links: [Agenda](https://fedoraproject.org/wiki/Fedora_Linux_38_Release_Party_Schedule) [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2023-06-02_Fedora38ReleaseParty-FCOS-News-And-Columbia-University.pdf)
 - 2023/10 — **All Things Open** — Raleigh, NC
