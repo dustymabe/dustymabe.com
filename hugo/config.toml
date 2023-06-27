@@ -52,6 +52,11 @@ theme = "beautifulhugo"
     url = "tags/"
     weight = 3
 
+[[menu.main]]
+    name = "Speaking"
+    url = "page/speaking/"
+    weight = 3
+
 [permalinks]
     post = "/:year/:month/:day/:title/"
 

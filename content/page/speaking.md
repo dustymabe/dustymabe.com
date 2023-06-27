@@ -1,0 +1,65 @@
+---
+title: Speaking Experience
+comments: false
+---
+
+- 2015/06 — **Red Hat Summit** — Boston, MA
+    - **Containerizing Applications: Existing and New**
+        - Type: Workshop/Lab
+        - Co-Speakers:
+            - [Scott Collier](https://www.linkedin.com/in/scottcollier/) — Senior Principal Systems Engineer, Red Hat
+            - [Aaron Weitekamp](https://www.linkedin.com/in/aaronweitekamp/) — Senior Software Engineer, Red Hat
+            - [Langdon White](https://www.linkedin.com/in/1angdon/) — Platform Architect, Developer Experience, Red Hat
+        - Awards: Top Presenter
+        - Links: [Git](https://github.com/langdon/summit-2015-lab-15812)
+    - **Hands-on Red Hat Enterprise Linux Atomic Host**
+        - Type: Workshop/Lab
+        - Co-Speakers:
+            - [Bob Kozdemba](https://www.linkedin.com/in/bob-kozdemba-230743/) — Principal Solution Architect, Red Hat
+            - [Rob Wilmoth](https://www.linkedin.com/in/robwilmoth/) — Senior Solutions Architect, Red Hat
+        - Links: [Blog](https://dustymabe.com/2015/06/26/atomic-host-red-hat-summit-lab/)
+- 2015/08 — **LinuxCon/ContainerCon** — Seattle, WA
+    - **Building Containerized Applications**
+        - Type: Workshop/Lab
+        - Co-Speakers:
+            - [Daniel Walsh](https://www.linkedin.com/in/dan-walsh-a8729b2/) — Senior Distinguished Engineer, Red Hat
+            - [Bob Kozdemba](https://www.linkedin.com/in/bob-kozdemba-230743/) — Principal Solution Architect, Red Hat
+        - Links: [Sched](https://lccocc2015.sched.com/event/4402/building-containerized-applications-dusty-mabe-red-hat-daniel-walsh-red-hat)
+- 2016/01 — **CentOS Dojo** — Brussels, Belgium
+    - **The CentOS CI Getting Started Guide**
+        - Type: Talk
+        - Links: [Agenda](https://wiki.centos.org/Events/Dojo/Brussels2016), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2016-01-29_CentOSDojo-CentOS-CI.pdf)
+- 2016/01 — **FOSDEM** — Brussels, Belgium
+    - **The CentOS CI: A Getting Started Guide**
+        - Type: Talk
+        - Links: [Description](https://archive.fosdem.org/2016/schedule/event/centos_ci_getting_started/), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2016-01-30_FOSDEM-CentOS-CI.pdf), Recording: [video.fosdem.org](http://video.fosdem.org/2016/k4201/the-centos-ci-a-getting-started-guide.webm), [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2016-01-30_FOSDEM-CentOS-CI.webm)
+- 2016/06 — **Red Hat Summit** — San Francisco, CA
+    - **Containerizing Applications: Existing and New**
+        - Type: Workshop/Lab
+        - Co-Speakers:
+            - [Scott Collier](https://www.linkedin.com/in/scottcollier/) — Senior Principal Systems Engineer, Red Hat
+            - [Langdon White](https://www.linkedin.com/in/1angdon/) — Platform Architect, Developer Experience, Red Hat
+        - Awards: Top Presenter
+        - Links: [Git](https://github.com/dustymabe/summit-2016-container-lab)
+- 2016/08 — **Flock** — Kraków, Poland
+    - **Don't Destroy Your Machine with Development**
+        - Type: Talk
+        - Links: [Agenda](https://flock2016.sched.com/event/76oC/dont-destroy-your-machine-with-development), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2016-08-03_FLOCK-Dont-Destroy-Your-Machine-With-Development.pdf), Recording: [YouTube](https://www.youtube.com/watch?v=ua8TDUvVHa8), [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2016-08-03_FLOCK-Dont-Destroy-Your-Machine-With-Development.webm)
+    - **Bringing Developers into the Flock**
+        - Type: Talk
+        - Co-Speakers:
+            - [Brian Exelbierd](https://www.linkedin.com/in/bcexelbi/) — Community Business Owner, Red Hat
+        - Links: [Agenda](https://flock2016.sched.com/event/76na/bringing-developers-into-the-flock), 
+        Recording: [YouTube](https://www.youtube.com/watch?v=YG-AzHCmBLY), [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2016-08-03_Bringing-Developers-Into-The-Flock.webm)
+- 2017/04 — **Navops NYC Tech Talk** — New York, NY
+    - **Project Atomic and Atomic Host**
+        - Type: Talk
+        - Links: [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2017-04-27_NAVOPS-Project-Atomic-and-Atomic-Host.pdf) 
+- 2017/05 — **Red Hat Summit** — Boston, MA
+    - **Containerizing Applications: Existing and New**
+        - Type: Workshop/Lab
+        - Co-Speakers:
+            - [Scott Collier](https://www.linkedin.com/in/scottcollier/) — Senior Principal Systems Engineer, Red Hat
+            - [Langdon White](https://www.linkedin.com/in/1angdon/) — Platform Architect, Developer Experience, Red Hat
+        - Awards: Top Presenter
+        - Links: [Git](https://github.com/dustymabe/summit-2017-container-lab)
