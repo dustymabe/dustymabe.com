@@ -11,7 +11,7 @@ comments: false
         - Type: Talk
         - Co-Presenters:
             - [Marc Pusey](https://www.linkedin.com/in/marcpusey/) — Chief of Software Engineering & Architecture, Columbia University
-        - Links: [Agenda](https://fedoraproject.org/wiki/Fedora_Linux_38_Release_Party_Schedule), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2023-06-02_Fedora38ReleaseParty-FCOS-News-And-Columbia-University.pdf)
+        - Links: [Agenda](https://fedoraproject.org/wiki/Fedora_Linux_38_Release_Party_Schedule), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2023-06-02_Fedora38ReleaseParty-FCOS-News-And-Columbia-University.pdf), Recording: [YouTube](https://www.youtube.com/watch?v=coh55IyUc1M) [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2023-06-02_Fedora38ReleaseParty-Fedora-CoreOS-with-Columbia-University.webm)
 - 2022/08 — **DevConf.US** — Boston, MA
     - **Fedora CoreOS: What's Now, What's Next**
         - Type: Talk
