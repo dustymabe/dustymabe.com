@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora:38 AS hugo
+FROM registry.fedoraproject.org/fedora:39 AS hugo
 
 # Perform updates && Install rpms:
 #     - rst2html (convert rst)
@@ -33,7 +33,7 @@ RUN cd /context/hugo && \
     export export HUGO_SECURITY_EXEC_ALLOW="^(rst2html|dart-sass-embedded|go|npx|postcss)$" && \
     hugo
 
-FROM registry.fedoraproject.org/fedora:38
+FROM registry.fedoraproject.org/fedora:39
 
 # Do update and install apache
 RUN dnf -y update
