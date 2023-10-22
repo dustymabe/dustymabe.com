@@ -3,9 +3,14 @@ title: Speaking Experience
 comments: false
 ---
 
+- 2023/10 — **OpenShift Commons** — Raleigh, NC
+    - **CoreOS Layering Updates**
+        - Type: Talk
+        - Links: [Agenda](https://commons.openshift.org/gatherings/raleigh-23-oct-18/), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2023-10-18_OpenShift-Commons-CoreOS-Layering.pdf)
 - 2023/10 — **All Things Open** — Raleigh, NC
     - **What is Fedora CoreOS?**
         - Type: Talk
+        - Links: [Agenda](https://2023.allthingsopen.org/sessions/what-is-fedora-coreos/), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2023-10-16_ATO-What-Is-FCOS.pdf)
 - 2023/06 — **Fedora 38 Release Party** — Online, Worldwide
     - **Fedora CoreOS News & How Columbia University Uses Fedora CoreOS**
         - Type: Talk
