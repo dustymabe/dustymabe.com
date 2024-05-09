@@ -69,6 +69,10 @@ comments: false
             - [Timothée Ravier](https://www.linkedin.com/in/timotheeravier/) — Senior Software Engineer, Red Hat
             - [Nasir Hussain](https://www.linkedin.com/in/nasirhm/) — Student
         - Links: [Agenda](https://hopin.com/events/nest-with-fedora#schedule), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2020-08-09_FLOCK-Fedora-CoreOS-Hands-On-Lab.pdf), Recording: [YouTube](https://www.youtube.com/watch?v=tSusAbbdB7s)
+- 2020/05 — **Fedora Podcast** — Podcast
+    - **Episode 07: Fedora Atomic, Fedora CoreOS and Fedora Silverblue**
+        - Type: Podcast
+        - Links: Recording: [fedorapeople](https://x3mboy.fedorapeople.org/podcast/Episode07.html), [fireside.fm](https://fedoraproject.fireside.fm/7), [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2020-05-14_Fedora-Podcast-Fedora-CoreOS.mp3)
 - 2020/01 — **DevConf.CZ** — Brno, Czech Republic
     - **Fedora CoreOS Hands-On**
         - Type: Workshop/Lab
