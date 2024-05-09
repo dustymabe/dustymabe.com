@@ -4,9 +4,9 @@ comments: false
 ---
 
 - 2023/10 — **OpenShift Commons** — Raleigh, NC
-    - **CoreOS Layering Updates**
+    - **Red Hat CoreOS Layering Updates**
         - Type: Talk
-        - Links: [Agenda](https://commons.openshift.org/gatherings/raleigh-23-oct-18/), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2023-10-18_OpenShift-Commons-CoreOS-Layering.pdf)
+        - Links: [Agenda](https://commons.openshift.org/gatherings/raleigh-23-oct-18/), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2023-10-18_OpenShift-Commons-CoreOS-Layering.pdf), Recording: [YouTube](https://youtu.be/csgCyfnq7qs?si=b39GCVGN9RgjFVfe), [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2023-10-18_Red-Hat-CoreOS-Layering-Update.webm)
 - 2023/10 — **All Things Open** — Raleigh, NC
     - **What is Fedora CoreOS?**
         - Type: Talk
