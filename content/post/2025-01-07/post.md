@@ -127,8 +127,6 @@ root@fedora:~# snapper --config=root create-config /
 Now we can look at the snapshot setup and the current configuration:
 
 ```nohighlight
-root@fedora:~# snapper --config=root create-config /
-
 root@fedora:~# snapper ls
 # │ Type   │ Pre # │ Date │ User │ Used Space │ Cleanup │ Description │ Userdata
 ──┼────────┼───────┼──────┼──────┼────────────┼─────────┼─────────────┼─────────
