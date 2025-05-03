@@ -2,7 +2,7 @@
 title: "F23 Cloud Base Test Day September 8th!"
 tags:
 date: "2015-09-02"
-published: true
+draft: false
 ---
 
 .. F23 Cloud Base Test Day September 8th!

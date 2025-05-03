@@ -3,7 +3,7 @@ title: 'Easy PXE boot testing with only HTTP using iPXE and libvirt'
 author: dustymabe
 date: 2019-01-04
 tags: [ fedora, libvirt, PXE ]
-published: true
+draft: false
 ---
 
 **Update**: A future

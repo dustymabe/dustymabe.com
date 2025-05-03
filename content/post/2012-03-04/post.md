@@ -2,7 +2,7 @@
 title: "Automatically Extend LVM Snapshots"
 tags:
 date: "2012-03-04"
-published: true
+draft: false
 ---
 
 [Snapshot logical

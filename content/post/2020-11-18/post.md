@@ -3,7 +3,7 @@ title: 'CoreOS install via Live ISO --copy-network'
 author: dustymabe
 date: 2020-11-18
 tags: [ coreos fedora ]
-published: true
+draft: false
 ---
 
 A couple of us recently gave an update to our Customer Experience team

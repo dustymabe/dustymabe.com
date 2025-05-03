@@ -2,7 +2,7 @@
 title: "Crisis Averted.. I'm using Atomic Host"
 tags:
 date: "2015-01-31"
-published: true
+draft: false
 ---
 
 

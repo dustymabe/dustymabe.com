@@ -2,7 +2,7 @@
 title: "Thin LVM Snapshots: Why Size Is Less Important"
 tags:
 date: "2013-07-17"
-published: true
+draft: false
 ---
 
 Traditionally with LVM snapshots you need to be especially careful when

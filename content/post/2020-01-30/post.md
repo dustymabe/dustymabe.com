@@ -3,7 +3,7 @@ title: 'virt-install: boot from specific kernel/initrd just for install'
 author: dustymabe
 date: 2020-01-30
 tags: [ fedora, libvirt, virsh, virt-install ]
-published: true
+draft: false
 ---
 
 # Introduction

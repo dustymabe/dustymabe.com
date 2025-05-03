@@ -3,7 +3,7 @@ title: Fedora 26 Atomic Host August 08 Release
 author: dustymabe
 date: 2017-08-09
 tags: [ fedora, atomic ]
-published: true
+draft: false
 ---
 
 *cross posted with [this](http://www.projectatomic.io/blog/2017/08/fedora-atomic-august-08/)

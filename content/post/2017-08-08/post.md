@@ -3,7 +3,7 @@ title: 'How Do We Create OSTree Repos and Artifacts in Fedora'
 author: dustymabe
 date: 2017-08-08
 tags: [ fedora, atomic ]
-published: true
+draft: false
 ---
 
 *a more permanent version of this content lives 

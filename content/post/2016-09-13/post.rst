@@ -2,7 +2,7 @@
 title: "Sharing a Go library to Python (using CFFI)"
 tags:
 date: "2016-09-13"
-published: true
+draft: false
 ---
 
 .. Sharing a Go library to Python (using CFFI)

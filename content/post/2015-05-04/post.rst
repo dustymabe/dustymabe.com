@@ -2,7 +2,7 @@
 title: "F22 Cloud/Atomic Test Day May 7th!"
 tags:
 date: "2015-05-04"
-published: true
+draft: false
 url: "/2015/05/04/f22-cloudatomic-test-day-may-7th/"
 ---
 

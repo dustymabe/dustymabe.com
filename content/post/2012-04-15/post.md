@@ -2,7 +2,7 @@
 title: "Terminal Screencast Revisit: Log output from a multiplexed terminal"
 tags:
 date: "2012-04-15"
-published: true
+draft: false
 ---
 
 Traditionally with `script` you have really only been able to log the

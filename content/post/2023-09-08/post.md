@@ -3,7 +3,7 @@ title: 'Using virtiofs with libvirt/virt-install'
 author: dustymabe
 date: 2023-09-08
 tags: [ libvirt virtiofs ]
-published: true
+draft: false
 ---
 
 Recently we

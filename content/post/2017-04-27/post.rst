@@ -2,7 +2,7 @@
 title: "Fedora Atomic Host Available in DigitalOcean"
 tags:
 date: "2017-04-27"
-published: true
+draft: false
 ---
 .. Fedora Atomic Host Available in DigitalOcean
 .. ================================================

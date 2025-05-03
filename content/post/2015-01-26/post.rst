@@ -2,7 +2,7 @@
 title: "quick audit rules for sanity check"
 tags:
 date: "2015-01-26"
-published: true
+draft: false
 ---
 .. quick audit rules for sanity check
 .. ==================================

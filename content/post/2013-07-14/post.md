@@ -2,7 +2,7 @@
 title: "Find Guest IP address using QEMU Guest Agent"
 tags:
 date: "2013-07-14"
-published: true
+draft: false
 ---
 
 Ever needed to find the IP address of a particular guest? Of course, the

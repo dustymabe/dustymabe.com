@@ -3,7 +3,7 @@ title: 'Columbia University and Fedora CoreOS'
 author: dustymabe
 date: 2023-08-01
 tags: [ coreos fedora community ]
-published: true
+draft: false
 ---
 
 Earlier this summer I spoke at the

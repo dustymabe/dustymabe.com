@@ -3,7 +3,7 @@ title: 'Update on Easy PXE boot testing post: minus PXELINUX'
 author: dustymabe
 date: 2019-09-13
 tags: [ fedora, libvirt, PXE ]
-published: true
+draft: false
 ---
 
 # Introduction

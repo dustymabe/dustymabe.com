@@ -2,7 +2,7 @@
 title: "Fedora BTRFS+Snapper - The Fedora 27 Edition"
 tags: [ fedora, grub, btrfs, snapper ]
 date: "2017-12-17"
-published: true
+draft: false
 url: "2017/12/17/fedora-btrfssnapper-the-fedora-27-edition/"
 ---
 

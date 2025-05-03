@@ -2,7 +2,7 @@
 title: "Pruning Policy for Specific Branches of OSTree Repos"
 tags: [ fedora, atomic ]
 date: "2018-03-04"
-published: true
+draft: false
 ---
 
 

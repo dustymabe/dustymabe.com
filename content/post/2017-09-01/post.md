@@ -3,7 +3,7 @@ title: 'Atomic Host 101 Lab Part 3: Rebase, Upgrade, Rollback'
 author: dustymabe
 date: 2017-09-01
 tags: [ fedora, atomic ]
-published: true
+draft: false
 ---
 
 # Introduction

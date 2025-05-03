@@ -2,7 +2,7 @@
 title: "F21 Atomic Test Day && Test steps for Atomic Host"
 tags:
 date: "2014-11-18"
-published: true
+draft: false
 ---
 
 Test Day on Thursday 11/20

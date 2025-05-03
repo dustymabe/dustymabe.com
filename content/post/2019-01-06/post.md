@@ -2,7 +2,7 @@
 title: "Fedora BTRFS+Snapper - The Fedora 29 Edition"
 tags: [ fedora, grub, btrfs, snapper ]
 date: "2019-01-06"
-published: true
+draft: false
 ---
 
 # History

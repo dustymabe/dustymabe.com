@@ -2,7 +2,7 @@
 title: "Fedora 22 Now Swimming in DigitalOcean"
 tags:
 date: "2015-06-05"
-published: true
+draft: false
 ---
 
 .. Fedora 22 Now Swimming in DigitalOcean

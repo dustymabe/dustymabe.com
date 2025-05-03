@@ -2,7 +2,7 @@
 title: "kubernetes skydns setup for testing on a single node"
 tags:
 date: "2015-09-23"
-published: true
+draft: false
 ---
 
 .. kubernetes skydns setup for testing on a single node

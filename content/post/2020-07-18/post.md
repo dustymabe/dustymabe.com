@@ -3,7 +3,7 @@ title: 'The K9s TUI for Kubernetes'
 author: dustymabe
 date: 2020-07-18
 tags: [ kubernetes, openshift, okd ]
-published: true
+draft: false
 ---
 
 If you've ever had a chance to _"nerd out"_ with me much I've probably

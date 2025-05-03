@@ -2,7 +2,7 @@
 title: "OS Upgrade and Rollback Using BTRFS"
 tags:
 date: "2013-01-06"
-published: true
+draft: false
 ---
 
 I recently decided to try out the snapshotting capabilities of the

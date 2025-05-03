@@ -2,7 +2,7 @@
 # Used for fedmag blog post
 # Updated with notes from paul frields
 title: 'Fedora 25->26 Atomic Host Upgrade Guide'
-published: false
+draft: true
 ---
 
 

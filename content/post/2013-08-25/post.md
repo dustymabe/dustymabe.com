@@ -2,7 +2,7 @@
 title: "RPM File Colors"
 tags:
 date: "2013-08-25"
-published: true
+draft: false
 ---
 
 #### *What are RPM file colors?*

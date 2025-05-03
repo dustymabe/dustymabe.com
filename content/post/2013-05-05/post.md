@@ -2,7 +2,7 @@
 title: "Booting Anaconda from Software RAID1 Device"
 tags:
 date: "2013-05-05"
-published: true
+draft: false
 ---
 
 Sometimes you just want to boot Anaconda from a software raid device

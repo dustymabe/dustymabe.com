@@ -7,7 +7,7 @@ title: 'Fedora Atomic Host Available in DigitalOcean'
 author: dustymabe
 date: 2017-04-27 19:30:06 UTC
 tags: fedora, atomic
-published: true
+draft: false
 comments: true
 ---
 

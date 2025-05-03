@@ -2,7 +2,7 @@
 title: "Booting Lenovo T460s after Fedora 24 Updates"
 tags:
 date: "2016-08-15"
-published: true
+draft: false
 ---
 
 .. Booting Lenovo T460s after Fedora 24 Updates

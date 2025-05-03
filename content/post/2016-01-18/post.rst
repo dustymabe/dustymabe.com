@@ -2,7 +2,7 @@
 title: "Running Nulecules in Openshift via oc new-app"
 tags:
 date: "2016-01-18"
-published: true
+draft: false
 ---
 
 .. Running Nulecules in Openshift via oc new-app

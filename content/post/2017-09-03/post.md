@@ -3,7 +3,7 @@ title: 'Atomic Host 101 Lab Part 5: Containerized and Non-Containerized Applicat
 author: dustymabe
 date: 2017-09-03
 tags: [ fedora, atomic ]
-published: true
+draft: false
 ---
 
 # Introduction

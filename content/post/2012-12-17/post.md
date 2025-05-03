@@ -2,7 +2,7 @@
 title: "Trace Function Calls Using GDB Revisited!"
 tags:
 date: "2012-12-17"
-published: true
+draft: false
 ---
 
 In an earlier [post](/2012/10/14/trace-function-calls-using-gdb/) I

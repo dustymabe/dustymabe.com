@@ -2,7 +2,7 @@
 title: "Exchanging SSH keys using ssh-copy-id"
 tags:
 date: "2012-08-18"
-published: true
+draft: false
 ---
 
 It is common practice among Linux users to exchange ssh keys between

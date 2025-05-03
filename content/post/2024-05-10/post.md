@@ -3,7 +3,7 @@ title: 'Configuring and using iSCSI'
 author: dustymabe
 date: 2024-05-10
 tags: [ iscsi ]
-published: true
+draft: false
 ---
 
 Recently I looked into enabling and testing multipath on top of iSCSI

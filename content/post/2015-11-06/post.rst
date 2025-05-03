@@ -2,7 +2,7 @@
 title: "Fedora 23: In the Ocean Again"
 tags:
 date: "2015-11-06"
-published: true
+draft: false
 ---
 
 .. Fedora 23: In the Ocean Again

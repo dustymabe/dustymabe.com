@@ -3,7 +3,7 @@ title: 'Setting up an Atomic Host Build Server'
 author: dustymabe
 date: 2017-10-05
 tags: [ fedora, atomic ]
-published: true
+draft: false
 ---
 
 # Introduction

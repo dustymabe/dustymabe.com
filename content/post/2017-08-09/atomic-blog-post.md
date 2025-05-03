@@ -2,9 +2,8 @@
 # used for pa.io setting published to false
 title: Fedora 26 Atomic Host August 08 Release
 author: dustymabe
-date: 2017-08-09 22:00:00 UTC
-published: false
-comments: true
+date: 2017-08-09
+draft: true
 tags: atomic, fedora, kubernetes
 ---
 

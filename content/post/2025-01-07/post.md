@@ -2,7 +2,7 @@
 title: "Fedora BTRFS+Snapper - The Fedora 41 Edition"
 tags: [ fedora, grub, btrfs, snapper ]
 date: "2025-01-07"
-published: true
+draft: false
 ---
 
 # History

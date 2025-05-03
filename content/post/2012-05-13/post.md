@@ -2,7 +2,7 @@
 title: "Easily Resize LVs and Underlying Filesystems"
 tags:
 date: "2012-05-13"
-published: true
+draft: false
 ---
 
 Part of the reason I use Logical Volumes for my block devices rather

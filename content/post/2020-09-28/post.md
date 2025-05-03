@@ -3,7 +3,7 @@ title: 'OpenShift OKD on Fedora CoreOS on DigitalOcean Part 4: Recorded Demo'
 author: dustymabe
 date: 2020-09-28
 tags: [ kubernetes, openshift, okd, fedora, coreos, digitalocean ]
-published: true
+draft: false
 ---
 
 **NOTE**: The fourth post of this series is available [here](/2020/09/27/openshift-okd-on-fedora-coreos-on-digitalocean-part-3-upgrading/).

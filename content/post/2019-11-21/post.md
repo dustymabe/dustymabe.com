@@ -3,7 +3,7 @@ title: 'Fedora Atomic Host Nearing End Of Life'
 author: dustymabe
 date: 2019-11-21
 tags: [ fedora, atomic, coreos ]
-published: true
+draft: false
 ---
 
 *cross posted with [this](https://www.projectatomic.io/blog/2019/11/fedora-atomic-host-nearing-eol/)

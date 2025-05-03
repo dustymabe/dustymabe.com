@@ -2,7 +2,7 @@
 title: "Getting Ansible Working on Fedora 23"
 tags:
 date: "2015-11-05"
-published: true
+draft: false
 ---
 
 .. Getting Ansible Working on Fedora 23

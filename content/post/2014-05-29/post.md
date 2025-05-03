@@ -2,7 +2,7 @@
 title: "Manual Linux Installs with Funky Storage Configurations"
 tags:
 date: "2014-05-29"
-published: true
+draft: false
 ---
 
 #### *Introduction*

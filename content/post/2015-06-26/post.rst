@@ -2,7 +2,7 @@
 title: "Atomic Host Red Hat Summit Lab"
 tags:
 date: "2015-06-26"
-published: true
+draft: false
 ---
 .. Atomic Host Red Hat Summit Lab
 .. ==============================

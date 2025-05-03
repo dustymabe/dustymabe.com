@@ -2,7 +2,7 @@
 title: "Pinning Deployments in OSTree Based Systems"
 tags: [ fedora, atomic ]
 date: "2018-05-22"
-published: true
+draft: false
 ---
 
 *cross posted with [this](http://www.projectatomic.io/blog/2018/05/pinning-deployments-ostree-based-systems/)

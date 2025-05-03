@@ -2,7 +2,7 @@
 title: "April Fedora Infrastructure Hackfest"
 tags: [ fedora, atomic ]
 date: "2018-04-23"
-published: true
+draft: false
 ---
 
 

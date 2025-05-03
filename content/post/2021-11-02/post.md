@@ -3,7 +3,7 @@ title: 'Running FCOS on your Raspberry Pi 4'
 author: dustymabe
 date: 2021-11-02
 tags: [ coreos fedora aarch64 ]
-published: true
+draft: false
 ---
 
 Note: A more permanent version of this tutorial exists in the [Fedora CoreOS documentation](https://docs.fedoraproject.org/en-US/fedora-coreos/provisioning-raspberry-pi4/).

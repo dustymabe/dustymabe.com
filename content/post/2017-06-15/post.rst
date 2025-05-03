@@ -2,7 +2,7 @@
 title: "F26 Atomic/Cloud Test Day June 20th!"
 tags:
 date: "2017-06-15"
-published: true
+draft: false
 ---
 
 .. F26 Atomic/Cloud Test Day June 20th!

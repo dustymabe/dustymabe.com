@@ -2,7 +2,7 @@
 title: "Automated Bisect Testing Of An Entire OS with RPM-OSTree"
 tags: [ fedora, atomic ]
 date: "2018-06-10"
-published: true
+draft: false
 ---
 
 # Introduction

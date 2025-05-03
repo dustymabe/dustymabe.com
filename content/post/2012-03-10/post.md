@@ -2,7 +2,7 @@
 title: "Hard Drive Monitoring and E-mail Alerts Using smartd"
 tags:
 date: "2012-03-10"
-published: true
+draft: false
 ---
 
 A while back I set up `mdadm` to monitor my RAID array and send email

@@ -3,7 +3,7 @@ title: 'Fedora 28->29 Atomic Host Upgrade Guide'
 author: dustymabe
 date: 2018-10-31
 tags: [ fedora, atomic ]
-published: true
+draft: false
 ---
 
 *cross posted with [this](http://www.projectatomic.io/blog/2018/10/fedora-atomic-28-to-29-upgrade/)

@@ -2,7 +2,7 @@
 title: "Docker: Copy Into A Container Volume"
 tags:
 date: "2014-08-27"
-published: true
+draft: false
 ---
 
 I need to copy a few files into my docker container.. Should be easy

@@ -2,7 +2,7 @@
 title: "Fedup 19 to 20 with a Thin LVM Configuration"
 tags:
 date: "2014-05-04"
-published: true
+draft: false
 ---
 
 #### *Introduction*

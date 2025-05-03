@@ -2,7 +2,7 @@
 title: "Capture Elusive cloud-init Debug Output With journalctl"
 tags:
 date: "2014-09-08"
-published: true
+draft: false
 ---
 
 Recently I have been trying to debug some problems with cloud-init in

@@ -3,7 +3,7 @@ title: 'OpenShift OKD on Fedora CoreOS on DigitalOcean Part 2: Configuration'
 author: dustymabe
 date: 2020-08-23
 tags: [ kubernetes, openshift, okd, fedora, coreos, digitalocean ]
-published: true
+draft: false
 ---
 
 # Introduction

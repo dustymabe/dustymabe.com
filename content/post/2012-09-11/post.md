@@ -2,7 +2,7 @@
 title: "Share a Folder Between KVM Host and Guest"
 tags:
 date: "2012-09-11"
-published: true
+draft: false
 ---
 
 I often find myself in situations where I need to share information or

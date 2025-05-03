@@ -2,7 +2,7 @@
 title: "RPM-OSTree Bisecting Helps Track Down Boot Timeout Issue"
 tags: [ fedora, atomic ]
 date: "2018-10-20"
-published: true
+draft: false
 ---
 
 # Introduction

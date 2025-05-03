@@ -3,7 +3,7 @@ title: 'Running a script on bootup via Ignition'
 author: dustymabe
 date: 2019-11-06
 tags: [ fedora, coreos, ignition ]
-published: true
+draft: false
 ---
 
 # Introduction

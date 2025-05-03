@@ -2,7 +2,7 @@
 title: "TermRecord: Terminal Screencast in a Self-Contained HTML File"
 tags:
 date: "2014-05-19"
-published: true
+draft: false
 ---
 
 #### *Introduction*

@@ -2,7 +2,7 @@
 title: "Trace Function Calls Using GDB"
 tags:
 date: "2012-10-14"
-published: true
+draft: false
 ---
 
 Sometimes it is easier to debug when you are able to view a call trace

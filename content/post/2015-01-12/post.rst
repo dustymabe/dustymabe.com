@@ -2,7 +2,7 @@
 title: "Fedora 21 now available on Digital Ocean"
 tags:
 date: "2015-01-12"
-published: true
+draft: false
 ---
 
 .. Fedora 21 now available on Digital Ocean

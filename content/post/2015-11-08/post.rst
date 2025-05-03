@@ -2,7 +2,7 @@
 title: "Fedora Cloud Vagrant Boxes in Atlas"
 tags:
 date: "2015-11-08"
-published: true
+draft: false
 ---
 
 .. Fedora Cloud Vagrant Boxes in Atlas 

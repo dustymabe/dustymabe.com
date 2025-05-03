@@ -2,9 +2,9 @@
 # Used for pa.io/blog
 title: 'Fedora 26->27 Atomic Host Upgrade Guide'
 author: dustymabe
-date: 2017-11-14 18:00:00 UTC
+date: 2017-11-14
 tags: fedora, atomic
-published: false
+draft: true
 ---
 
 

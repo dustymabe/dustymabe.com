@@ -2,7 +2,7 @@
 title: "Matching Fedora OSTree Released Content With Each 2 Week Atomic Release"
 tags:
 date: "2017-02-14"
-published: true
+draft: false
 ---
 .. Matching Fedora OSTree Released Content With Each 2 Week Atomic Release
 .. =======================================================================

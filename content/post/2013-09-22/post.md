@@ -2,7 +2,7 @@
 title: "BTRFS: How big are my snapshots?"
 tags:
 date: "2013-09-22"
-published: true
+draft: false
 ---
 
 #### *Introduction*

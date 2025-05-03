@@ -2,7 +2,7 @@
 title: "Running Benchmarks With the Phoronix Test Suite!"
 tags:
 date: "2012-12-30"
-published: true
+draft: false
 ---
 
 Benchmarking software can be invaluable when testing new

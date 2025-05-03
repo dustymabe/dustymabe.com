@@ -2,7 +2,7 @@
 title: "Excellent LVM Tutorial for Beginners or Experts"
 tags:
 date: "2013-09-15"
-published: true
+draft: false
 ---
 
 I ran across a great

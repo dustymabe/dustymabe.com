@@ -2,7 +2,7 @@
 title: "Firewalld in Atomic Host"
 tags: [ fedora, atomic ]
 date: "2018-02-01"
-published: true
+draft: false
 ---
 
 *cross posted with [this](http://www.projectatomic.io/blog/2018/02/firewalld-in-atomic-host/)

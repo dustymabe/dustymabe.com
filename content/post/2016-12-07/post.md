@@ -7,7 +7,7 @@ title: 'Installing an OpenShift Origin Cluster on Fedora 25 Atomic Host: Part 1'
 author: dustymabe
 date: 2016-12-07 15:23:32 UTC
 tags: fedora, atomic, origin, openshift, kubernetes
-published: true
+draft: false
 comments: true
 ---
 

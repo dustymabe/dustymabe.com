@@ -3,7 +3,7 @@ title: 'Network teaming using NetworkManager keyfiles on Fedora CoreOS'
 author: dustymabe
 date: 2020-03-05
 tags: [ fedora, coreos, NetworkManager ]
-published: true
+draft: false
 ---
 
 # Introduction

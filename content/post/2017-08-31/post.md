@@ -3,7 +3,7 @@ title: 'Atomic Host 101 Lab Part 2: Container Storage'
 author: dustymabe
 date: 2017-08-31
 tags: [ fedora, atomic ]
-published: true
+draft: false
 ---
 
 # Introduction 

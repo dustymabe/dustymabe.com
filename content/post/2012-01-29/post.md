@@ -2,7 +2,7 @@
 title: "Monitor RAID Arrays and Get E-mail Alerts Using mdadm"
 tags:
 date: "2012-01-29"
-published: true
+draft: false
 ---
 \
 In my Desktop computer I use a software

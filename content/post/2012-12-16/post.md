@@ -2,7 +2,7 @@
 title: "Mount Complex Disk Images Using libguestfs"
 tags:
 date: "2012-12-16"
-published: true
+draft: false
 ---
 
 In my previous

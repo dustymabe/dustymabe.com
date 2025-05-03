@@ -3,7 +3,7 @@ title: 'Fedora 26->27 Atomic Host Upgrade Guide'
 author: dustymabe
 date: 2017-11-14
 tags: [ fedora, atomic ]
-published: true
+draft: false
 ---
 
 *cross posted with [this](http://www.projectatomic.io/blog/2017/11/fedora-atomic-26-to-27-upgrade/)

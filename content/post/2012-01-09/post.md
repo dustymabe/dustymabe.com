@@ -2,7 +2,7 @@
 title: "Hi Planet! - SSH: Disable checking host key against known_hosts file."
 tags:
 date: "2012-01-09"
-published: true
+draft: false
 ---
 
 Hi Everyone! Since this is my first post it is going to be short and

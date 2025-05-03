@@ -2,7 +2,7 @@
 title: "Vagrant: Sharing Folders with vagrant-sshfs"
 tags:
 date: "2016-04-05"
-published: true
+draft: false
 ---
 
 .. Vagrant: Sharing Folders with vagrant-sshfs

@@ -3,7 +3,7 @@ title: 'GCP Quickstart Guide for OpenShift OKD'
 author: dustymabe
 date: 2020-10-07
 tags: [ kubernetes, openshift, okd, fedora, coreos, gcp ]
-published: true
+draft: false
 ---
 
 # Introduction

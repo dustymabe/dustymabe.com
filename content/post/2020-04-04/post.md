@@ -3,7 +3,7 @@ title: 'Automating a Custom Install of Fedora CoreOS'
 author: dustymabe
 date: 2020-04-04
 tags: [ fedora, coreos, coreos-installer ]
-published: true
+draft: false
 ---
 
 # Introduction

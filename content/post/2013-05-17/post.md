@@ -2,7 +2,7 @@
 title: "Easy getopt for a BASH script"
 tags:
 date: "2013-05-17"
-published: true
+draft: false
 ---
 
 [getopt](http://en.wikipedia.org/wiki/Getopt) is extremely useful for

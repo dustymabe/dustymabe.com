@@ -2,7 +2,7 @@
 title: "Kompose Up for OpenShift and Kubernetes"
 tags:
 date: "2016-12-01"
-published: true
+draft: false
 ---
 
 .. Kompose Up for OpenShift and Kubernetes

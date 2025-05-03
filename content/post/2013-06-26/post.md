@@ -2,7 +2,7 @@
 title: "Enabling QEMU Guest Agent anddddd FSTRIM (AGAIN)"
 tags:
 date: "2013-06-26"
-published: true
+draft: false
 ---
 
 In an earlier post I walked through [reclaiming disk space from guests

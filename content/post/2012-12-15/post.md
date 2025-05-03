@@ -2,7 +2,7 @@
 title: "Mounting a Partition Within a Disk Image"
 tags:
 date: "2012-12-15"
-published: true
+draft: false
 ---
 
 [Last time](/2012/11/15/create-a-disk-image-without-enough-free-space/)

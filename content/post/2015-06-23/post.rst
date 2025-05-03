@@ -2,7 +2,7 @@
 title: "Fedora 22 Updates-Testing Atomic Tree"
 tags:
 date: "2015-06-23"
-published: true
+draft: false
 ---
 
 .. Fedora 22 Updates-Testing Atomic Tree

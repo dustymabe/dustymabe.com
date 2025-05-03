@@ -3,7 +3,7 @@ title: 'Atomic Host 101 Lab Part 1: Getting Familiar'
 author: dustymabe
 date: 2017-08-30
 tags: [ fedora, atomic ]
-published: true
+draft: false
 ---
 
 # Introduction

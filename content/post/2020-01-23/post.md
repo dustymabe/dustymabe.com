@@ -3,7 +3,7 @@ title: 'Devconf.cz 2020 Fedora CoreOS Lab'
 author: dustymabe
 date: 2020-01-23
 tags: [ fedora, coreos, ignition ]
-published: true
+draft: false
 ---
 
 # Setting Up For The Lab

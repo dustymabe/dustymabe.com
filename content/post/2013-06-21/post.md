@@ -2,7 +2,7 @@
 title: "Guest Discard/FSTRIM On Thin LVs"
 tags:
 date: "2013-06-21"
-published: true
+draft: false
 url: "/2013/06/21/guest-discardfstrim-on-thin-lvs/"
 ---
 

@@ -2,7 +2,7 @@
 title: "Convert an Existing System to Use Thin LVs"
 tags:
 date: "2013-09-07"
-published: true
+draft: false
 ---
 
 #### *Introduction*

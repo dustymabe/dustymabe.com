@@ -2,7 +2,7 @@
 title: "Recover Space From VM Disk Images By Using Discard/FSTRIM"
 tags:
 date: "2013-06-11"
-published: true
+draft: false
 url: "/2013/06/11/recover-space-from-vm-disk-images-by-using-discardfstrim/"
 ---
 

@@ -2,7 +2,7 @@
 title: "Fedora BTRFS+Snapper - The Fedora 24 Edition"
 tags:
 date: "2016-04-23"
-published: true
+draft: false
 url: "/2016/04/23/fedora-btrfssnapper-the-fedora-24-edition/"
 ---
 

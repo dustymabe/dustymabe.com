@@ -2,7 +2,7 @@
 title: "The CentOS CI Infrastructure: A Getting Started Guide"
 tags:
 date: "2016-01-23"
-published: true
+draft: false
 ---
 
 .. The CentOS CI Infrastructure: A Getting Started Guide

@@ -3,7 +3,7 @@ title: 'NetworkManager: Limiting Bond Subordinate devices by MAC Address'
 author: dustymabe
 date: 2023-03-16
 tags: [ coreos fedora networkmanager ]
-published: true
+draft: false
 ---
 
 Someone recently asked me about locking down a bond to specific NIC

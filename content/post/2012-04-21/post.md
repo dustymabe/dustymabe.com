@@ -2,7 +2,7 @@
 title: "Send Magic SysRq to a KVM guest using virsh"
 tags:
 date: "2012-04-21"
-published: true
+draft: false
 ---
 
 When a linux computer is "hung" or "frozen" you can use a [Magic

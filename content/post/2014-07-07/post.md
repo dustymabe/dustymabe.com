@@ -2,7 +2,7 @@
 title: "Creating Your Own Minimal Docker Image in Fedora"
 tags:
 date: "2014-07-07"
-published: true
+draft: false
 ---
 
 Sometimes it can be useful to have a docker image with just the bare
