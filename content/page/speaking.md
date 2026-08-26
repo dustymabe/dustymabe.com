@@ -3,6 +3,10 @@ title: Speaking Experience
 comments: false
 ---
 
+- 2025/06 — **Flock** — Prague, Czech Republic
+    - **The Future of Fedora CoreOS**
+        - Type: Talk
+        - Links: [Agenda](https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/UPJKTZ/), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2025-06-05_The-Future-of-FCOS.pdf), Recording: [YouTube](https://youtu.be/LvkFho1l238?t=3808), [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2025-06-05_The-Future-of-FCOS.mp4)
 - 2023/10 — **OpenShift Commons** — Raleigh, NC
     - **Red Hat CoreOS Layering Updates**
         - Type: Talk
