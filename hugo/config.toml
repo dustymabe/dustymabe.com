@@ -12,8 +12,8 @@ theme = "beautifulhugo"
   rss = true
   comments = true
   # Disable darkmode features / Force light mode on all devices.
-  # https://github.com/halogenica/beautifulhugo/pull/500
-  disableDarkmode = true
+  # https://github.com/halogenica/beautifulhugo/pull/619
+  colorScheme = "light" # Options: "auto" (default), "dark", or "light"
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
 [Author]
