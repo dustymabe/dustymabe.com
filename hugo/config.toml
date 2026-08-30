@@ -68,3 +68,8 @@ theme = "beautifulhugo"
 # https://gohugo.io/news/0.60.0-relnotes/
 [markup.goldmark.renderer]
 unsafe= true
+
+# Need to allow all for HTML pages to be processed.
+# https://github.com/gohugoio/hugo/commit/e41a06447daa3071a01f333fdcec0a5153c3c8d1
+[security]
+allowContent = ['.*']
