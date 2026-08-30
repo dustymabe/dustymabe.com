@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora:43 AS base
+FROM quay.io/fedora/fedora:44 AS base
 FROM base AS hugo
 
 # Perform updates && Install rpms:
