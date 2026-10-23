@@ -3,6 +3,10 @@ title: Speaking Experience
 comments: false
 ---
 
+- 2026/09 — **DevConf.US** — Boston, MA
+    - **The Future of Fedora CoreOS**
+        - Type: Talk
+        - Links: [Agenda](https://pretalx.devconf.info/devconf-us-2026/talk/BFKC8C/), [Slides](https://dustymabecom.sfo2.digitaloceanspaces.com/2026-09-25_The-Future-of-Image-Based-Fedora.pdf), Recording: [YouTube](https://www.youtube.com/live/pPUI3h26l_k?t=2728s), [dustymabe.com](https://dustymabecom.sfo2.digitaloceanspaces.com/2026-09-25_The-Future-of-Image-Based-Fedora.mp4)
 - 2025/06 — **Flock** — Prague, Czech Republic
     - **The Future of Fedora CoreOS**
         - Type: Talk
